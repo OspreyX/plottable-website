@@ -1,0 +1,272 @@
+---
+page_id: page-overview
+---
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" href="/favicon.ico" sizes="16x16 32x32" type="image/x-icon">
+  <title>Plottable.js | Palantir</title>
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="description" content="Flexible, interactive, performant charts for the web made easy">
+  <link rel="stylesheet" href="{{ site.baseurl }}/build/css/style.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/bower_components/plottable/plottable.css">
+  <script src="{{ site.baseurl }}/build/js/modernizr-custom-2.8.2.min.js"></script>
+  <script src="{{ site.baseurl }}/bower_components/d3/d3.min.js"></script>
+  <script src="{{ site.baseurl }}/bower_components/plottable/plottable.js"></script>
+
+  <!--[if lt IE 9]>
+  <script src="{{ site.baseurl }}/build/js/respond-1.4.2.min.js"></script>
+  <link rel="stylesheet" href="{{ site.baseurl }}/build/css/ie.css" media="screen, projection" type="text/css">
+  <![endif]-->
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Home">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="//palantir.github.io/plottable/">
+  <meta property="og:site_name" content="Plottable.js">
+  <meta property="og:description" content="Flexible, interactive, performant charts for the web made easy.">
+</head>
+<body id="page-index" data-spy="scroll" data-target=".navbar-page">
+  <header id="section-overview">
+    <div id="nav-content">
+      {% include nav.html %}
+      <h1>
+        Plottable.js
+        <small>Flexible, interactive, performant charts<br>for the web made easy</small>
+      </h1>
+      <div id="download-container">
+        <p>
+          <a href="https://github.com/palantir/plottable/archive/master.zip" class="button icon-download no-arrow">Download <span id="version-tag">({{ site.plottable_version }})</span></a>
+        </p>
+        <p>
+          Follow our development on <a href="https://github.com/palantir/plottable" title="Plottable on Github.">Github</a>
+        </p>
+      </div>
+    </div>
+
+    <div id="home-bottom">
+      <div class="content">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-offset-3 col-sm-6">
+              <h2>Built On Top Of D3</h2>
+              <p><strong>Plottable.js</strong> consists of pluggable set of Components which encapsulate rendering logic, and a layout engine that is responsible for positioning them.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header><!-- /header -->
+
+  <div id="page-nav">
+    <nav class="navbar-page">
+      <ul class="nav" role="tablist">
+        <li><a href="#section-overview" data-toggle="tooltip" data-placement="left" title="Overview">Overview</a></li>
+        <li><a href="#section-example-1" data-toggle="tooltip" data-placement="left" title="Example">Example</a></li>
+        <li><a href="#section-easier-more-usable" data-toggle="tooltip" data-placement="left" title="Easier, More Usable">Easier, More Usable</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div id="section-example-1">
+    <div class="content">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-3">
+            <h3>
+              <span class="badge">Example</span><br>
+              Plottable Commits Over Time
+            </h3>
+            <p>This Plottable chart displays large commits to Plottable over time, with the y-axis showing time of day and the x-axis showing date. The commits are color-coded based on contributor. Try scrolling to zoom in and out of it!</p>
+            <p><a id="button-show-source-example-1-source" href="#example-1-source" class="button button-small">Show Source</a></p>
+          </div>
+
+          <div id="example-chart-1-container" class="col-md-8 col-md-offset-1">
+            <svg id="example-chart-1" class="example-svg"></svg>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div id="example-chart-1-source-wrapper" class="source-code" style="display: none;">
+      <div class="container">
+        <div class="row">
+          <div id="example-chart-1-source" class="col-sm-8 col-md-offset-2">
+{% highlight javascript %}
+function commitScatterPlot(commitData) {
+  // Define the scales that will map data to visual properties
+  var xScale = new Plottable.Scale.Time();
+  var yScale = new Plottable.Scale.Linear();
+  var colorScale = new Plottable.Scale.Color("10");
+
+  // Create the components we use: axes, gridlines, and a legend
+  var xAxis = new Plottable.Axis.Time(xScale, "bottom");
+  var yAxis = new Plottable.Axis.Numeric(yScale, "left", hourFormatter);
+  var gridlines = new Plottable.Component.Gridlines(xScale, yScale);
+  var legend = new Plottable.Component.Legend(colorScale);
+
+  // Create the scatter plot - this where most of the action happens; it grabs keyed values out of the data store
+  // and then projects it through our scales. In the case of yAxis, it uses custom logic (the hourAccessor) to compute
+  // what hour the commit was given the date object attached.
+  // We project through the colorScale to have fills that synchronize with the legend, and then project constant
+  // values for radius and opacity, although we could have used a scale to have these be data-dependent as well.
+  var scatter = new Plottable.Plot.Scatter(commitData, xScale, yScale)
+                        .project("x", "parsedDate", xScale)
+                        .project("y", hourAccessor, yScale)
+                        .project("fill", "authorName", colorScale)
+                        .project("r", 5)
+                        .project("opacity", 0.4 );
+
+  // finally, merge the pieces together into a StandardChart, render it, and attach an interaction.
+  var center = gridlines.merge(scatter).merge(legend);
+  new Plottable.Template.StandardChart().center(center).xAxis(xAxis).yAxis(yAxis).renderTo("svg");
+  new Plottable.Interaction.PanZoom(scatter, xScale, new Plottable.Scale.Linear()).registerWithComponent();
+}
+
+function hourAccessor(d) {
+  var date = d.parsedDate;
+  var hour =  date.getHours() + date.getMinutes() / 60;
+  hour = hour < 5 ? hour + 24 : hour;
+  return hour;
+}
+
+function hourFormatter(hour) {
+  if (hour < 12) {
+    return hour + "AM";
+  } else if (hour === 12) {
+    return "12PM";
+  } else if (hour < 24) {
+    return (hour - 12) + "PM";
+  } else if (hour == 24) {
+    return "12AM";
+  } else {
+    return (hour - 24) + "AM";
+  }
+}
+
+{% endhighlight %}
+          </div> <!-- example1 -->
+        </div> <!-- row1 -->
+      </div><!-- container -->
+    </div>
+
+  </div><!-- /#section-example-1 -->
+
+  <section id="section-easier-more-usable">
+    <div class="content">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-offset-3 col-sm-6">
+            <h2>Easier, More Usable</h2>
+
+            <div id="plot-separator">
+              <img class="no-svg" src="{{ site.baseurl }}/build/images/plots.png">
+              <img class="svg" src="{{ site.baseurl }}/build/images/plots.svg">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <p>Because Plottable handles layout, sizing, and positioning, Plottable charts are easier to create and more reusable than charts built only with D3. And, since Plottable Components are powered by D3, the full flexibility of D3 is still available.</p>
+          </div>
+          <div class="col-sm-6">
+            <p>Plottable currently includes components like <strong>LinePlots</strong>, <strong>AreaPlots</strong>, <strong>BarPlots</strong>, <strong>CategoryAxes</strong> (with automatic word-wrapping), <strong>interactive Legends</strong>, and <strong>Labels</strong>. Plottable is open-sourced under the MIT license, and is under active development by <strong>Palantir Technologies</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer role="contentinfo">
+    © 2014 <a href="https://palantir.com/" title="Palantir Technologies">Palantir Technologies</a>. <a href="https://github.com/palantir/plottable" title="Plottable on Github.">Plottable.js</a> is released under the <a href="https://github.com/palantir/plottable/blob/master/LICENSE">MIT license</a>.
+  </footer><!-- /footer -->
+
+  {% if site.google_analytics != '' %}
+  <!-- Google Analytics -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', '{{ site.google_analytics }}', 'none');
+    ga('send', 'pageview');
+  </script>
+  {% endif %}
+
+  <script src="{{ site.baseurl }}/build/js/compiled.min.js"></script>
+  <script src="{{ site.baseurl }}/examples/commitScatterPlot.js"></script>
+  <script id="example-1-source">
+      window.onload = function() {
+          d3.json("examples/data/src-aggregated-commits.json", function(data) {
+              var authors = ["Daniel Mane", "Justin Lan", "Ashwin Ramaswamy", "Bill Dwyer", "crmorford", "Brian Malehorn", "lewin"];
+              data.forEach(function(d) {
+                d.parsedDate = new Date(d.authorDate.seconds * 1000);
+                a = d.authorName;
+                d.authorName = authors.indexOf(a) !== -1 ? a : "other";
+              });
+              data = data.filter(function(d) {return d.additions > 20});
+              var svg = d3.select("#example-chart-1 svg");
+              commitScatterPlot(data);
+          });
+      }
+
+  </script>
+  <script>
+    (function() {
+      var $window = $(window),
+          $document = $(document);
+
+      $(function() {
+        $('a#button-show-source-example-1-source').on('click', function(event) {
+          var $this = $(this);
+          if ($this.data('showing-source')) {
+            $this.data('showing-source', false);
+            $this.text('Show Source');
+          } else {
+            $this.data('showing-source', true);
+            $this.text('Hide Source');
+          }
+
+          var $sourceWrapper = $('#example-chart-1-source-wrapper').show(),
+              $source = $('#example-chart-1-source');
+          if ($this.data('showing-source')) {
+            if (!$source.length) {
+              $source = $("<div/>").attr('id', 'example-chart-1-source').html('<pre>' + $('#example-1-source').html() + '</pre>');
+            }
+            $sourceWrapper.find('div.container > div.row').append($source);
+            $('html, body').animate({ scrollTop: $source.offset().top });
+          } else {
+            $sourceWrapper.hide();
+          }
+
+          event.preventDefault();
+        });
+
+        if (!Modernizr.touch) {
+          // disable scrolling and implement paging
+          var pager = new VerticalPager($('#section-overview, section, #section-example-1'));
+
+          window.setTimeout(function() {
+            pager.init();
+          }, 100);
+
+          $('#page-nav a').on('click', function(event) {
+            event.preventDefault();
+            var $this = $(this);
+            pager.gotoSection($($this.attr('href')));
+          });
+        }
+      }); // ready
+    })(window, window.document);
+  </script>
+</body>
+</html>

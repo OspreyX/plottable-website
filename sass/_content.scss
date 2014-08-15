@@ -1,0 +1,463 @@
+// -------------------------------------------
+// Content: Page styles should be defined here
+// -------------------------------------------
+header {
+  .navbar {
+    background: transparent;
+    border: none;
+    text-align: center;
+
+    button.navbar-toggle {
+      margin-top: -2em;
+      border: none;
+      @include transition-property(opacity);
+      @include transition-duration($transition-duration);
+      @include opacity(1);
+
+      .no-touch &:hover {
+        background: transparent;
+        @include opacity(0.4);
+      }
+
+      span.icon-bar {
+        background-color: $COLOR_GRAY2;
+      }
+
+    }
+  }
+
+  .navbar .nav,
+  .navbar .nav > li {
+    @include rem(font-size, 13px);
+    @include relative-line-height(14px, 13px);
+
+    @media (min-width: $screen-md-min) {
+      @include rem(font-size, 16px);
+    }
+
+    a {
+      display: inline-block;
+      border-top: 2px solid transparent;
+      margin: 0 8px;
+      @include transition-property(color, border-color);
+      @include transition-duration($transition-duration);
+      @include opacity(1);
+      color: $COLOR_ORANGE1;
+      padding: 0;
+
+      @media (min-width: $screen-md-min) {
+        padding: 4px 0;
+      }
+
+      .no-touch &:hover {
+        border-color: $COLOR_ORANGE2;
+        color: $COLOR_ORANGE2;
+      }
+
+      &#plottable-logo {
+        @include rem(font-size, 20px);
+        font-family: $font-headers;
+        text-transform: uppercase;
+        font-weight: $font-weight-bold;
+        color: $COLOR_BLUE1;
+
+        .no-touch &:hover {
+          border-color: transparent;
+          color: $COLOR_BLUE2;
+        }
+      }
+    }
+
+    &.active a,
+    .no-touch &.active a:hover {
+      color: $COLOR_ORANGE1;
+      border-color: $COLOR_ORANGE1;
+      background: transparent;
+    }
+
+    .touch &.active a {
+      border-color: transparent;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  //@media (min-width: $screen-sm-min) {
+    .navbar .nav,
+    .navbar .nav > li {
+      float: none;
+      display: inline-block;
+      *display: inline; /* ie7 fix */
+      *zoom: 1; /* hasLayout ie7 trigger */
+      &.separator {
+        display: inline-block;
+      }
+    }
+
+    .container-fluid {
+      text-align: center;
+    }
+  //}
+}
+
+/*
+ * Homepage
+ */
+body#page-index {
+
+  header {
+    position: relative;
+    height: 100%;
+    min-height: 620px;
+
+    @media (min-width: $screen-md-min) {
+      min-height: 800px;
+    }
+
+    color: $COLOR_BLUE1;
+    background-color: $COLOR_BLUE3;
+
+    h1 {
+      margin-bottom: 20px;
+      font-weight: $font-weight-bold;
+      @include rem(font-size, 36px);
+
+      small {
+        margin-top: 1em;
+        @include rem(font-size, 10px);
+        color: $COLOR_BLUE1;
+        text-transform: none;
+        font-family: $font-body;
+        display: block;
+        text-align: center;
+      }
+
+      @media (min-width: $screen-md-min) {
+        margin-top: 60px;
+        @include rem(font-size, 72px);
+
+        small {
+          @include rem(font-size, 20px);
+        }
+      }
+    }
+
+    p {
+      margin: 2em 0;
+      color: $COLOR_BLUE1;
+      font-weight: $font-weight-normal;
+
+      a {
+        color: $COLOR_BLUE1;
+        font-weight: $font-weight-bold;
+
+        .no-touch &:hover {
+          @include opacity(0.6);
+        }
+      }
+    }
+
+    div#nav-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 550px;
+      background-repeat: repeat;
+      background-size: 24px 24px;
+      text-align: center;
+
+      .no-retina & { background-image: url(../images/background-pattern.png); }
+      .retina & { background-image: url(../images/background-pattern@2x.png); }
+    }
+
+    div#home-bottom {
+      position: absolute;
+      z-index: 2;
+      top: 250px;
+      bottom: 50px;
+      width: 100%;
+      text-align: center;
+
+      background-size: 1500px 212px;
+      background-position: center top;
+      background-repeat: no-repeat;
+
+      margin-bottom: 20px;
+
+      @media (min-width: $screen-lg-min) {
+        background-size: 3005px 424px;
+      }
+
+      .no-svg & { background-image: url(../images/plot-background.png); }
+      .svg & { background-image: url(../images/plot-background.svg); }
+
+      div.content {
+        background: $COLOR_BLUE3;
+        margin-top: 155px;
+
+        @media (min-width: $screen-md-min) {
+          margin-top: 200px;
+        }
+
+        @media (min-width: $screen-lg-min) {
+          margin-top: 300px;
+        }
+      }
+
+      p {
+        color: $COLOR_BLUE4;
+      }
+
+      h2 {
+        color: $COLOR_BLUE4;
+        margin-top: 0;
+        background-repeat: no-repeat;
+        padding-top: 64px;
+        background-position: center top;
+        background-size: 46px 44px;
+
+        .no-retina & { background-image: url(../images/d3-logo.png); }
+        .retina & { background-image: url(../images/d3-logo@2x.png); }
+      }
+
+      @media (min-width: $screen-md-min) {
+        top: 350px;
+      }
+
+      @media (min-width: $screen-lg-min) {
+        top: 250px;
+      }
+
+    }
+  }
+
+  section {
+    width: 100%;
+    height: 100%;
+    display: table;
+
+    > div.content {
+      display: table-cell;
+      height: 100%;
+      vertical-align: middle;
+    }
+
+    &#section-easier-more-usable {
+      background: $COLOR_BLUE4;
+      color: $COLOR_WHITE1;
+
+      h2 {
+        text-align: center;
+        margin-bottom: 1em;
+      }
+
+      p {
+        color: $COLOR_WHITE1;
+      }
+
+      div#plot-separator {
+        margin: 4em 0;
+        img {
+          max-width: 100%;
+          .no-svg &.svg { display: none; }
+          .svg &.no-svg { display: none; }
+        }
+      }
+    }
+
+  }
+
+}
+
+
+/*
+ * Sticky nav for homepage
+ */
+div#page-nav {
+  position: fixed;
+  top: 0;
+  right: 20px;
+  display: none;
+  height: 100%;
+  z-index: 100;
+
+  @media (min-width: $screen-sm-min) {
+    display: table;
+  }
+
+  nav {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+
+    ul.nav {
+      list-style: none;
+
+      li {
+        margin-top: 10px;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        a {
+          @include transition-property(background, border);
+          @include transition-duration(200ms, 200ms);
+          display: block;
+          width:  14px;
+          height: 14px;
+          @include border-radius(2px);
+          text-indent: -9999px;
+          overflow: hidden;
+          background: #4BB5E2;
+          border: 1px solid rgba(255,255,255,0.54);
+          padding: 0;
+        }
+
+        .no-touch a:hover,
+        &.active a {
+          /* Rectangle 11: */
+          background: #FF9E1B;
+          border: 1px solid #FFFFFF;
+        }
+
+        div.tooltip {
+          white-space: nowrap;
+          div.tooltip-arrow {
+            border-left-color: $COLOR_ORANGE1;
+          }
+          div.tooltip-inner {
+            background-color: $COLOR_ORANGE1;
+            text-transform: uppercase;
+            font-family: $font-headers;
+            color: $COLOR_ORANGE2;
+            font-weight: $font-weight-bold;
+            box-shadow: 0 1px 0 $COLOR_ORANGE2;
+            @include rem(font-size, 14px);
+            padding: 4px 8px;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+/* Example */
+#section-example-1 {
+  padding: 40px 0;
+  min-height: 100%;
+}
+
+/*
+ * Code
+ */
+
+div.source-code {
+  margin-top: 20px;
+  border-top:    2px solid $COLOR_ORANGE4;
+  border-bottom: 2px solid $COLOR_ORANGE4;
+  background-color: $COLOR_ORANGE3;
+  padding: 20px 0;
+
+
+  div.highlight {
+    background-color: transparent;
+    pre {
+      border: none;
+      background-color: transparent;
+      @include rem(font-size, 12px);
+    }
+  }
+
+}
+
+
+/*
+ * Footer
+ */
+footer {
+  padding: 2em 0;
+  text-align: center;
+  @include rem(font-size, 12px);
+
+  a {
+    color: $COLOR_BLUE1;
+
+    .no-touch &:hover {
+
+    }
+  }
+}
+
+/*
+ * Tutorial/Generic Page
+ */
+div#page-content {
+
+  > * {
+    width: 100%;
+    max-width: 800px;
+    margin: 1em auto;
+
+    @media (max-width: 800px) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  h1, h2, h3, h4 {
+    color: $COLOR_ORANGE1;
+  }
+
+  nav {
+    ul {
+      li {
+        a {
+          color: $COLOR_ORANGE1;
+        }
+      }
+    }
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  p {
+    margin: 1em auto;
+
+    strong {
+      font-family: $font-headers;
+      font-weight: $font-weight-normal;
+      text-transform: uppercase;
+    }
+  }
+
+  div.highlight {
+    max-width: 100%;
+    margin-top: 20px;
+    border-top:    2px solid $COLOR_ORANGE4;
+    border-bottom: 2px solid $COLOR_ORANGE4;
+    background-color: $COLOR_ORANGE3;
+    padding: 20px 0;
+
+    pre {
+      background-color: transparent;
+      border: none;
+
+      & > code {
+        max-width: 800px;
+        margin: 0 auto;
+        display: block;
+
+        @media (max-width: $screen-xs-min) {
+          @include rem(font-size, 10px);
+        }
+      }
+    }
+  }
+
+}

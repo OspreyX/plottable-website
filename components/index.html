@@ -1,0 +1,115 @@
+---
+layout: subpage
+page_id: page-components
+---
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-12">
+      <h1 style="text-align: center;">Listing of Plottable Components</h1>
+      <div>
+      <h1> Axes </h1>
+      <svg id="table1" height=1500 width=1000></svg>
+      </div>
+      <br/><br/>
+      <div>
+      <h1> Plots </h1>
+      <svg id="table2" height=2000 width=1000></svg></div>
+      <br/><br/>
+      <div>
+      <h1> Gridlines </h1>
+      <svg id="table3" height=400 width=1000></svg></div>
+
+      <script src="component_example_list.js"></script>
+    <script>
+    window.onload = function() {
+      // axis
+      var axisTypes = ["numeric", "time", "category"];
+      var orient = ["top", "left", "bottom", "right"];
+      var x = [0, 1, 2, 1];
+      var y = [1, 0, 1, 2];
+
+      var table = new Plottable.Component.Table();
+      var innerTable = new Plottable.Component.Table();
+      axisTypes.forEach(function(type, index1) {
+        orient.forEach(function(or, index2) {
+          if (type === "time" && (or === "left" || or === "right" || or === "top")) {
+            return; // unsupported for now
+          }
+          var component = axis(type, or);
+          new Plottable.Interaction.PanZoom(component, component._scale);
+          innerTable.addComponent(x[index2] + index1 * 3, y[index2], component);
+        })
+      });
+      table.addComponent(1, 0, innerTable);
+      table.renderTo("#table1");
+
+      axisTypes.forEach(function(type, index1) {
+        orient.forEach(function(or, index2) {
+          if (type === "time" && (or === "left" || or === "right" || or === "top")) {
+            return; // unsupported for now
+          }
+          if (type == "category") {
+            return; // zooming for category axes
+          }
+          var component = innerTable.rows[x[index2] + index1 * 3][y[index2]];
+          if (or == "bottom" || or == "top") {
+            new Plottable.Interaction.PanZoom(component, component._scale).registerWithComponent();
+          } else {
+            new Plottable.Interaction.PanZoom(component, null, component._scale).registerWithComponent();
+          }
+        })
+      });
+
+      // plots
+      var innerTable2 = new Plottable.Component.Table();
+      innerTable2.addComponent(0, 1, verticalBarPlot());
+      innerTable2.addComponent(0, 2, horizontalBarPlot());
+
+      var xyPlotTypes = ["area", "line", "scatter"];
+      xyPlotTypes.forEach(function(type, index) {
+        innerTable2.addComponent(index + 1, 1, makeXYPlot(type));
+      });
+
+      xyPlotTypes.forEach(function(type, index) {
+        innerTable2.addComponent(index + 1, 2, makeXYPlotMulti(type));
+      });
+
+      innerTable2.addComponent(4, 1, gridPlot());
+      innerTable2.addComponent(0, 0, makeTitle("bar"));
+      innerTable2.addComponent(1, 0, makeTitle("area"));
+      innerTable2.addComponent(2, 0, makeTitle("line"));
+      innerTable2.addComponent(3, 0, makeTitle("scatter"));
+      innerTable2.addComponent(4, 0, makeTitle("grid"));
+
+      var table2 = new Plottable.Component.Table();
+      table2.addComponent(1, 1, innerTable2);
+      table2.renderTo("#table2");
+
+      new Plottable.Interaction.Click(table2).callback(function() {table2.renderTo("#table2")}).registerWithComponent();
+
+      // gridlines
+      var innerTable3 = new Plottable.Component.Table();
+      var showx = [true, false, true];
+      var showy = [false, true, true];
+      for (var i = 0; i < 3; i++) {
+        innerTable3.addComponent(0, i, gridline(showx[i], showy[i]));
+      }
+
+      var table3 = new Plottable.Component.Table();
+      table3.addComponent(1, 1, innerTable3);
+      table3.renderTo("#table3");
+
+      for (var i = 0; i < 3; i++) {
+        var comp = innerTable3.rows[0][i];
+        new Plottable.Interaction.PanZoom(comp.rows[0][1], showx[i] ? comp.rows[1][1]._scale : null,
+                                          showy[i] ? comp.rows[0][0]._scale : null).registerWithComponent();
+      }
+
+
+    }
+   </script>
+    </div>
+
+  </div>
+</div>
