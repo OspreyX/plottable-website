@@ -54,9 +54,9 @@ page_id: page-overview
       <div class="content">
         <div class="container">
           <div class="row">
-            <div class="col-sm-offset-3 col-sm-6">
+            <div class="col-sm-offset-3 col-sm-6 col-md-offset-2 col-md-8 ">
               <h2>Built On Top Of D3</h2>
-              <p><strong>Plottable.js</strong> consists of pluggable set of Components which encapsulate rendering logic, and a layout engine that is responsible for positioning them.</p>
+              <p><strong>Plottable.js</strong> consists of pluggable set of Components which encapsulate rendering logic, and a layout engine that is responsible <span class="nowrap">for positioning them.</span></p>
             </div>
           </div>
         </div>
@@ -97,9 +97,10 @@ page_id: page-overview
     </div>
 
     <div id="example-chart-1-source-wrapper" class="source-code" style="display: none;">
-      <div class="container">
-        <div class="row">
-          <div id="example-chart-1-source" class="col-sm-8 col-md-offset-2">
+      <div class="content">
+        <div class="container">
+          <div class="row">
+            <div id="example-chart-1-source" class="col-sm-8 col-md-offset-2">
 {% highlight javascript %}
 function commitScatterPlot(commitData) {
   // Define the scales that will map data to visual properties
@@ -153,9 +154,11 @@ function hourFormatter(hour) {
 }
 
 {% endhighlight %}
-          </div> <!-- example1 -->
-        </div> <!-- row1 -->
-      </div><!-- container -->
+            </div> <!-- example1 -->
+          </div> <!-- row1 -->
+        </div><!-- container -->
+      </div>
+
     </div>
 
   </div><!-- /#section-example-1 -->
