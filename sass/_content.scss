@@ -392,15 +392,25 @@ div.source-code {
  * Footer
  */
 footer {
-  padding: 2em 0;
-  text-align: center;
+  background-repeat: no-repeat;
+  background-color: $COLOR_BLUE3;
+  background-position: 20px 25px;
+  padding: 40px 20px 30px 20px;
+  text-align: left;
+  color: $COLOR_WHITE1;
   @include rem(font-size, 12px);
 
+  @media (min-width: $screen-sm-min) {
+    text-align: right;
+    .no-svg & { background-image: url(../images/palantir-logo.png); }
+    .svg & { background-image: url(../images/palantir-logo.svg); }
+  }
+
   a {
-    color: $COLOR_BLUE1;
+    color: $COLOR_WHITE1;
 
     .no-touch &:hover {
-
+      color: $COLOR_BLUE1;
     }
   }
 }
