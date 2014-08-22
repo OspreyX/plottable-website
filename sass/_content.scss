@@ -277,6 +277,13 @@ body#page-index {
           .svg &.no-svg { display: none; }
         }
       }
+
+      div#plots {
+        position: relative;
+        height: 150px;
+        margin: 0 0 40px 0;
+      }
+
     }
 
   }

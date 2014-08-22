@@ -167,12 +167,10 @@ function hourFormatter(hour) {
     <div class="content">
       <div class="container">
         <div class="row">
-          <div class="col-sm-offset-3 col-sm-6">
+          <div class="col-sm-offset-1 col-sm-10">
             <h2>Easier, More Usable</h2>
-
-            <div id="plot-separator">
-              <img class="no-svg" src="{{ site.baseurl }}/build/images/plots.png">
-              <img class="svg" src="{{ site.baseurl }}/build/images/plots.svg">
+            <div id="plots">
+              <svg id="preview-plot"></svg>
             </div>
           </div>
         </div>
@@ -207,6 +205,7 @@ function hourFormatter(hour) {
 
   <script src="{{ site.baseurl }}/build/js/compiled.min.js"></script>
   <script src="{{ site.baseurl }}/examples/commitScatterPlot.js"></script>
+  <script src="{{ site.baseurl }}/components/component_example_list.js"></script>
   <script id="example-1-source">
       window.onload = function() {
           d3.json("examples/data/src-aggregated-commits.json", function(data) {
@@ -221,7 +220,6 @@ function hourFormatter(hour) {
               commitScatterPlot(data);
           });
       }
-
   </script>
   <script>
     (function() {
@@ -268,6 +266,20 @@ function hourFormatter(hour) {
             pager.gotoSection($($this.attr('href')));
           });
         }
+
+        // Preview Plots
+        // plots
+        var innerTable = new Plottable.Component.Table();
+        innerTable.addComponent(0, 0, makeXYPlotMulti('area'));
+        innerTable.addComponent(0, 1, makeXYPlotMulti('line'));
+        innerTable.addComponent(0, 2, verticalBarPlot());
+        innerTable.addComponent(0, 3, makeXYPlot('area'));
+
+        var table = new Plottable.Component.Table();
+        table.addComponent(0, 0, innerTable);
+        table.renderTo("#preview-plot");
+
+        new Plottable.Interaction.Click(table).callback(function() {table.renderTo("#preview-plot")}).registerWithComponent();
       }); // ready
     })(window, window.document);
   </script>
