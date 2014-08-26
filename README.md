@@ -35,6 +35,13 @@ Run default Grunt task:
 Running
 -------
 
+To run Jekyll and Grunt watch, all you need to run is the following:
+
+    foreman start
+
+
+_We now use Foreman to run both of these tasks with one simple command_
+
 To start building pages using Jekyll and compiling assets with Grunt, run these two commands:
 
 To run Jekyll:

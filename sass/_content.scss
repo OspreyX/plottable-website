@@ -110,7 +110,7 @@ body#page-index {
     min-height: 620px;
 
     @media (min-width: $screen-md-min) {
-      min-height: 800px;
+      min-height: 850px;
     }
 
     color: $COLOR_BLUE1;
@@ -119,11 +119,11 @@ body#page-index {
     h1 {
       margin-bottom: 20px;
       font-weight: $font-weight-bold;
-      @include rem(font-size, 36px);
+      @include rem(font-size, 42px);
 
       small {
         margin-top: 1em;
-        @include rem(font-size, 10px);
+        @include rem(font-size, 14px);
         color: $COLOR_BLUE1;
         text-transform: none;
         font-family: $font-body;
@@ -131,12 +131,12 @@ body#page-index {
         text-align: center;
       }
 
-      @media (min-width: $screen-md-min) {
+      @media (min-width: $screen-sm-min) {
         margin-top: 60px;
         @include rem(font-size, 72px);
 
         small {
-          @include rem(font-size, 20px);
+          @include rem(font-size, 28px);
         }
       }
     }
@@ -161,13 +161,25 @@ body#page-index {
       top: 0;
       left: 0;
       width: 100%;
-      height: 550px;
+      height: 460px;
       background-repeat: repeat;
       background-size: 24px 24px;
       text-align: center;
 
       .no-retina & { background-image: url(../images/background-pattern.png); }
       .retina & { background-image: url(../images/background-pattern@2x.png); }
+
+      @media (min-width: $screen-sm-min) {
+        height: 490px;
+      }
+
+      @media (min-width: $screen-md-min) {
+        height: 560px;
+      }
+
+      @media (min-width: $screen-lg-min) {
+        height: 570px;
+      }
     }
 
     div#home-bottom {
@@ -194,17 +206,21 @@ body#page-index {
       div.content {
         background: $COLOR_BLUE3;
         margin-top: 155px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
 
         @media (min-width: $screen-md-min) {
           margin-top: 200px;
         }
 
         @media (min-width: $screen-lg-min) {
-          margin-top: 300px;
+          margin-top: 320px;
         }
       }
 
       p {
+        margin: 1em 0;
         color: $COLOR_BLUE4;
       }
 
@@ -218,10 +234,19 @@ body#page-index {
 
         .no-retina & { background-image: url(../images/d3-logo.png); }
         .retina & { background-image: url(../images/d3-logo@2x.png); }
+
+        @media (min-width: $screen-md-min) {
+          @include rem(font-size, 24px);
+        }
+      }
+
+      @media (min-width: $screen-sm-min) {
+        top: 350px;
       }
 
       @media (min-width: $screen-md-min) {
-        top: 350px;
+        @include rem(font-size, 24px);
+        @include relative-line-height(32px, 24px);
       }
 
       @media (min-width: $screen-lg-min) {
@@ -249,6 +274,10 @@ body#page-index {
       h2 {
         text-align: center;
         margin-bottom: 1em;
+
+        @media (min-width: $screen-md-min) {
+          @include rem(font-size, 36px);
+        }
       }
 
       p {
@@ -263,6 +292,13 @@ body#page-index {
           .svg &.no-svg { display: none; }
         }
       }
+
+      div#plots {
+        position: relative;
+        height: 150px;
+        margin: 0 0 40px 0;
+      }
+
     }
 
   }
@@ -346,7 +382,15 @@ div#page-nav {
 /* Example */
 #section-example-1 {
   padding: 40px 0;
+  width: 100%;
   min-height: 100%;
+}
+
+div#example-content {
+  @include box-sizing(border-box);
+  min-height: 100%;
+  padding: 0 0 88px 0;
+  margin: 0 0 -88px 0;
 }
 
 /*
@@ -377,15 +421,25 @@ div.source-code {
  * Footer
  */
 footer {
-  padding: 2em 0;
-  text-align: center;
+  background-repeat: no-repeat;
+  background-color: $COLOR_BLUE3;
+  background-position: 20px 25px;
+  padding: 40px 20px 30px 20px;
+  text-align: left;
+  color: $COLOR_WHITE1;
   @include rem(font-size, 12px);
 
+  @media (min-width: $screen-sm-min) {
+    text-align: right;
+    .no-svg & { background-image: url(../images/palantir-logo.png); }
+    .svg & { background-image: url(../images/palantir-logo.svg); }
+  }
+
   a {
-    color: $COLOR_BLUE1;
+    color: $COLOR_WHITE1;
 
     .no-touch &:hover {
-
+      color: $COLOR_BLUE1;
     }
   }
 }
