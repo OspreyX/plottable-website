@@ -36,12 +36,14 @@
   <meta property="og:description" content="Flexible, interactive, performant charts for the web made easy.">
 </head>
 <body>
-  <header>
-    {% include nav.html %}
-  </header><!-- /header -->
-
   <div id="example-content">
-    {{ content }}
+    <header>
+      {% include nav.html %}
+    </header><!-- /header -->
+
+    <div id="example-content">
+      {{ content }}
+    </div>
   </div>
 
   <!-- Footer -->

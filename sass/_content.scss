@@ -110,7 +110,7 @@ body#page-index {
     min-height: 620px;
 
     @media (min-width: $screen-md-min) {
-      min-height: 800px;
+      min-height: 850px;
     }
 
     color: $COLOR_BLUE1;
@@ -161,13 +161,25 @@ body#page-index {
       top: 0;
       left: 0;
       width: 100%;
-      height: 560px;
+      height: 460px;
       background-repeat: repeat;
       background-size: 24px 24px;
       text-align: center;
 
       .no-retina & { background-image: url(../images/background-pattern.png); }
       .retina & { background-image: url(../images/background-pattern@2x.png); }
+
+      @media (min-width: $screen-sm-min) {
+        height: 490px;
+      }
+
+      @media (min-width: $screen-md-min) {
+        height: 560px;
+      }
+
+      @media (min-width: $screen-lg-min) {
+        height: 570px;
+      }
     }
 
     div#home-bottom {
@@ -194,6 +206,9 @@ body#page-index {
       div.content {
         background: $COLOR_BLUE3;
         margin-top: 155px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
 
         @media (min-width: $screen-md-min) {
           margin-top: 200px;
@@ -369,6 +384,13 @@ div#page-nav {
   padding: 40px 0;
   width: 100%;
   min-height: 100%;
+}
+
+div#example-content {
+  @include box-sizing(border-box);
+  min-height: 100%;
+  padding: 0 0 88px 0;
+  margin: 0 0 -88px 0;
 }
 
 /*
