@@ -107,10 +107,10 @@ body#page-index {
   header {
     position: relative;
     height: 100%;
-    min-height: 620px;
+    min-height: 630px;
 
     @media (min-width: $screen-md-min) {
-      min-height: 850px;
+      min-height: 900px;
     }
 
     color: $COLOR_BLUE1;
@@ -131,7 +131,7 @@ body#page-index {
         text-align: center;
       }
 
-      @media (min-width: $screen-sm-min) {
+      @media (min-width: $screen-md-min) {
         margin-top: 60px;
         @include rem(font-size, 72px);
 
@@ -161,62 +161,63 @@ body#page-index {
       top: 0;
       left: 0;
       width: 100%;
-      height: 460px;
+      height: 380px;
       background-repeat: repeat;
       background-size: 24px 24px;
       text-align: center;
+      z-index: 2;
+      overflow: hidden;
 
       .no-retina & { background-image: url(../images/background-pattern.png); }
       .retina & { background-image: url(../images/background-pattern@2x.png); }
 
       @media (min-width: $screen-sm-min) {
-        height: 490px;
+        height: 380px;
       }
 
       @media (min-width: $screen-md-min) {
-        height: 560px;
+        height: 500px;
       }
 
       @media (min-width: $screen-lg-min) {
-        height: 570px;
+        height: 613px;
+      }
+
+      div#download-container {
+        background-size: 1500px 212px;
+        background-position: center 20px;
+        background-repeat: no-repeat;
+        height: 320px;
+
+        margin-bottom: 20px;
+
+        @media (min-width: $screen-md-min) {
+          background-position: center 40px;
+        }
+
+        @media (min-width: $screen-lg-min) {
+          background-size: 3005px 424px;
+          background-position: center top;
+        }
+
+        .no-svg & { background-image: url(../images/plot-background.png); }
+        .svg & { background-image: url(../images/plot-background.svg); }
       }
     }
 
     div#home-bottom {
       position: absolute;
-      z-index: 2;
-      top: 250px;
+      z-index: 1;
+      top: 360px;
       bottom: 50px;
       width: 100%;
       text-align: center;
 
-      background-size: 1500px 212px;
-      background-position: center top;
-      background-repeat: no-repeat;
-
-      margin-bottom: 20px;
-
-      @media (min-width: $screen-lg-min) {
-        background-size: 3005px 424px;
-      }
-
-      .no-svg & { background-image: url(../images/plot-background.png); }
-      .svg & { background-image: url(../images/plot-background.svg); }
-
       div.content {
         background: $COLOR_BLUE3;
-        margin-top: 155px;
         position: absolute;
-        bottom: 0;
+        top: 10%;
         width: 100%;
-
-        @media (min-width: $screen-md-min) {
-          margin-top: 200px;
-        }
-
-        @media (min-width: $screen-lg-min) {
-          margin-top: 320px;
-        }
       }
 
       p {
@@ -241,7 +242,7 @@ body#page-index {
       }
 
       @media (min-width: $screen-sm-min) {
-        top: 350px;
+        top: 462px;
       }
 
       @media (min-width: $screen-md-min) {
@@ -250,7 +251,10 @@ body#page-index {
       }
 
       @media (min-width: $screen-lg-min) {
-        top: 250px;
+        top: 280px;
+        div.content {
+          top: 60%;
+        }
       }
 
     }
@@ -380,7 +384,7 @@ div#page-nav {
 }
 
 /* Example */
-#section-example-1 {
+#section-example {
   padding: 40px 0;
   width: 100%;
   min-height: 100%;
@@ -391,6 +395,11 @@ div#example-content {
   min-height: 100%;
   padding: 0 0 88px 0;
   margin: 0 0 -88px 0;
+}
+
+div.svg-demo {
+  overflow: hidden;
+  height: 640px;
 }
 
 /*
@@ -490,6 +499,10 @@ div#page-content {
     }
   }
 
+}
+
+div#page-content,
+div#example-content {
   div.highlight {
     max-width: 100%;
     margin-top: 20px;
@@ -506,12 +519,12 @@ div#page-content {
         max-width: 800px;
         margin: 0 auto;
         display: block;
+        @include rem(font-size, 11px);
 
         @media (max-width: $screen-xs-min) {
-          @include rem(font-size, 10px);
+          @include rem(font-size, 9px);
         }
       }
     }
   }
-
 }
