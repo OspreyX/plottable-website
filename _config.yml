@@ -8,3 +8,6 @@ google_analytics: ''
 baseurl: /plottable-website
 
 plottable_version: 0.23.0
+
+exclude:
+- _typedoc

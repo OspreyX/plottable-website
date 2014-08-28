@@ -78,17 +78,25 @@ module.exports = function(grunt) {
     compass: {
       dist: {
         options: {
-          specify: ['sass/style.scss'],
+          specify: ['sass/style.scss', 'sass/ie.scss'],
           banner: _banner,
           sassDir: 'sass',
           cssDir: 'build/css',
           fontsDir: 'fonts',
           outputStyle: 'compressed',
           imagesDir: 'build/images'
-        },
-        files: {
-          'build/css/style.css': 'sass/style.scss',
-          'build/css/ie.css': 'sass/ie.scss',
+        }
+      },
+
+      theme: {
+        options: {
+          specify: ['_typedoc/themes/plottable/assets/css/theme.scss'],
+          banner: _banner,
+          sassDir: '_typedoc/themes/plottable/assets/css',
+          cssDir: '_typedoc/themes/plottable/assets/css',
+          fontsDir: 'fonts',
+          outputStyle: 'compressed',
+          imagesDir: '_typedoc/themes/plottable/assets/images'
         }
       }
     },
@@ -100,7 +108,7 @@ module.exports = function(grunt) {
         options: { spawn: false }
       },
       css: {
-        files: ['sass/**/*.scss'],
+        files: ['sass/**/*.scss', '_typedoc/themes/plottable/assets/css/theme.scss'],
         tasks: ['compass'],
         options: { spawn: false }
       }
