@@ -528,3 +528,39 @@ div#example-content {
     }
   }
 }
+
+// example page
+div#example-navigation {
+  margin-top: -30px;
+  text-align: center;
+  @include rem(font-size, 11px);
+
+  @media (min-width: $screen-md-min) {
+    @include rem(font-size, 14px);
+  }
+
+  nav {
+    display: inline-block;
+    margin: 0 auto;
+
+    ul {
+      list-style: none;
+
+      li {
+        display: inline-block;
+        margin: 0 4px;
+
+        a {
+          color: $COLOR_GRAY3;
+
+          &.active,
+          .no-touch &:hover {
+            color: $COLOR_GRAY1;
+          }
+        }
+      }
+    }
+
+  }
+
+}

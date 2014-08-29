@@ -1,0 +1,235 @@
+@import "compass";
+@import "../../../../../sass/bootstrap";
+@import "../../../../../sass/bootstrap-compass";
+@import "../../../../../sass/colors";
+@import "../../../../../sass/utility";
+
+$font-size-base: 15px;
+$line-height-base: 1.666667;
+$line-height-base-px: 23px;
+$brand-primary: $COLOR_BLACK1;
+$screen-md-min: 1024px;
+$transition-duration: 200ms;
+
+// ---------------------------------------
+// Fonts: Define all @font-face fonts here
+// ---------------------------------------
+
+$font-weight-lighter: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weight-bolder: 800;
+
+@font-face {
+  font-family: "DIN";
+  src: url('../../../fonts/DIN/DINNextLTW04-Regular.eot');
+  src: url('../../../fonts/DIN/DINNextLTW04-Regular.eot#iefix') format('embedded-opentype'),
+       url('../../../fonts/DIN/DINNextLTW04-Regular.woff') format('woff');
+  font-weight: $font-weight-normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DIN";
+  src: url('../../../fonts/DIN/DINNextLTW04-Italic.eot');
+  src: url('../../../fonts/DIN/DINNextLTW04-Italic.eot#iefix') format('embedded-opentype'),
+       url('../../../fonts/DIN/DINNextLTW04-Italic.woff') format('woff'),
+       url('../../../fonts/DIN/DINNextLTW04-Italic.ttf') format('truetype');
+  font-weight: $font-weight-normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "DIN";
+  src: url('../../../fonts/DIN/DINNextLTW04-Bold.eot');
+  src: url('../../../fonts/DIN/DINNextLTW04-Bold.eot#iefix') format('embedded-opentype'),
+       url('../../../fonts/DIN/DINNextLTW04-Bold.woff') format('woff'),
+       url('../../../fonts/DIN/DINNextLTW04-Bold.ttf') format('truetype');
+  font-weight: $font-weight-bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DIN";
+  src: url('../../../fonts/DIN/DINNextLTW04-Light.eot');
+  src: url('../../../fonts/DIN/DINNextLTW04-Light.eot#iefix') format('embedded-opentype'),
+       url('../../../fonts/DIN/DINNextLTW04-Light.woff') format('woff'),
+       url('../../../fonts/DIN/DINNextLTW04-Light.ttf') format('truetype');
+  font-weight: $font-weight-lighter;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Blender";
+  src: url('../../../fonts/blenderpro/blenderpro-medium-webfont.eot');
+  src: url('../../../fonts/blenderpro/blenderpro-medium-webfont.eot#iefix') format('embedded-opentype'),
+       url('../../../fonts/blenderpro/blenderpro-medium-webfont.woff') format('woff'),
+       url('../../../fonts/blenderpro/blenderpro-medium-webfont.ttf') format('truetype');
+  font-weight: $font-weight-normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Blender";
+  src: url('../../../fonts/blenderpro/blenderpro-bold-webfont.eot');
+  src: url('../../../fonts/blenderpro/blenderpro-bold-webfont.eot#iefix') format('embedded-opentype'),
+       url('../../../fonts/blenderpro/blenderpro-bold-webfont.woff') format('woff'),
+       url('../../../fonts/blenderpro/blenderpro-bold-webfont.ttf') format('truetype');
+  font-weight: $font-weight-bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Blender";
+  src: url('../../../fonts/blenderpro/blenderpro-heavy-webfont.eot');
+  src: url('../../../fonts/blenderpro/blenderpro-heavy-webfont.eot#iefix') format('embedded-opentype'),
+       url('../../../fonts/blenderpro/blenderpro-heavy-webfont.woff') format('woff'),
+       url('../../../fonts/blenderpro/blenderpro-heavy-webfont.ttf') format('truetype');
+  font-weight: $font-weight-bolder;
+  font-style: normal;
+}
+
+/** Type Variables
+ -------------------------------------------------- */
+$font-headers: "Blender", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-body: "DIN", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@import "../../../../../sass/base-class";
+
+body {
+  font-family: $font-body;
+  -webkit-font-smoothing: antialiased;
+}
+
+div#plottable-header {
+  .navbar {
+    background: transparent;
+    border: none;
+    text-align: center;
+    min-height: 0;
+    margin-bottom: 0;
+
+    button.navbar-toggle {
+      margin-top: -2em;
+      border: none;
+      @include transition-property(opacity);
+      @include transition-duration($transition-duration);
+      @include opacity(1);
+
+      .no-touch &:hover {
+        background: transparent;
+        @include opacity(0.4);
+      }
+
+      span.icon-bar {
+        background-color: $COLOR_GRAY2;
+      }
+
+    }
+  }
+
+  .navbar .nav,
+  .navbar .nav > li {
+    @include rem(font-size, 13px);
+    @include relative-line-height(14px, 13px);
+
+    @media (min-width: $screen-md-min) {
+      @include rem(font-size, 16px);
+      @include relative-line-height(16px, 25px);
+    }
+
+    a {
+      display: inline-block;
+      border-top: 2px solid transparent;
+      margin: 0 8px;
+      @include transition-property(color, border-color);
+      @include transition-duration($transition-duration);
+      @include opacity(1);
+      color: $COLOR_ORANGE1;
+      padding: 0;
+
+      @media (min-width: $screen-md-min) {
+        padding: 6px 0;
+      }
+
+      .no-touch &:hover {
+        border-color: $COLOR_ORANGE2;
+        color: $COLOR_ORANGE2;
+      }
+
+      &#plottable-logo {
+        @include rem(font-size, 20px);
+        font-family: $font-headers;
+        text-transform: uppercase;
+        font-weight: $font-weight-bold;
+        color: $COLOR_BLUE1;
+
+        .no-touch &:hover {
+          border-color: transparent;
+          color: $COLOR_BLUE2;
+        }
+      }
+    }
+
+    &.active a,
+    .no-touch &.active a:hover {
+      color: $COLOR_ORANGE1;
+      border-color: $COLOR_ORANGE1;
+      background: transparent;
+    }
+
+    .touch &.active a {
+      border-color: transparent;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  .navbar-nav li {
+    float: none;
+    display: inline-block;
+  }
+
+  .container-fluid {
+    text-align: center;
+
+    > div {
+      display: table;
+      margin: 0 auto;
+    }
+  }
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: $font-headers;
+  text-transform: uppercase;
+}
+
+header {
+  position: relative;
+  overflow: hidden;
+}
+
+#tsd-search .field label {
+  left: -12px;
+}
+
+#tsd-search .field input {
+  left: 12px;
+}
+
+div.tsd-page-toolbar {
+  @include box-shadow(none);
+}
+
+div.tsd-page-title {
+  @include box-shadow(none);
+}
+
+section.tsd-index-panel {
+  @include box-shadow(none);
+}

@@ -39,6 +39,14 @@
   <div id="example-content">
     <header>
       {% include nav.html %}
+      <div id="example-navigation">
+        <nav>
+          <ul>
+            <li><a{% if page.page_id == 'page-example-linechart' %} class="active"{% endif %} href="{{ site.baseurl }}/examples/linechart/">Line Chart</a></li>
+            <li><a{% if page.page_id == 'page-example-scatterplot' %} class="active"{% endif %} href="{{ site.baseurl }}/examples/scatterplot/">Scatter Plot</a></li>
+          </ul>
+        </nav>
+      </div>
     </header><!-- /header -->
 
     <div id="example-content">
