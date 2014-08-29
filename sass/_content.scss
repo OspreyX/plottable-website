@@ -390,11 +390,29 @@ div#page-nav {
   min-height: 100%;
 }
 
+/* Example */
 div#example-content {
   @include box-sizing(border-box);
   min-height: 100%;
   padding: 0 0 88px 0;
   margin: 0 0 -88px 0;
+
+  a.example-block {
+    display: block;
+    text-align: center;
+    @include border-radius(2px);
+    @include box-sizing(border-box);
+    @include transition-property(border-color, color);
+    @include transition-duration(300ms, 300ms);
+    padding: 4px 14px;
+    border: 2px solid $COLOR_BLUE2;
+    color: $COLOR_BLUE3;
+
+    .no-touch &:hover {
+      border-color: $COLOR_BLUE1;
+      color: $COLOR_BLUE1;
+    }
+  }
 }
 
 div.svg-demo {
@@ -502,7 +520,7 @@ div#page-content {
 }
 
 div#page-content,
-div#example-content {
+div#example-body-content {
   div.highlight {
     max-width: 100%;
     margin-top: 20px;

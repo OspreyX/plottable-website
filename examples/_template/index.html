@@ -1,7 +1,11 @@
 ---
 layout: example
-page_id: page-example-linechart
+page_id: page-example-template-name
 ---
+
+{% comment %}
+Define any inline styles necessary for D3
+{% endcomment %}
 <style media="screen">
 svg#linechart-d3-demo {
   font-family: sans-serif;
@@ -30,6 +34,9 @@ svg#linechart-d3-demo .line {
   <div class="container">
     <div id="row">
 
+      {% comment %}
+      Left side column, showing Plottable example
+      {% endcomment %}
       <div class="col-md-6">
         <div class="svg-demo">
           <svg width="100%" height="600" id="linechart-plottable-demo"></svg>
@@ -38,12 +45,21 @@ svg#linechart-d3-demo .line {
           <p>
             <a href="http://bl.ocks.org/mbostock/3884955">D3 multi-series line chart</a> using Plottable
           </p>
+          {% comment %}
+          Include Javascript File for this example. File should be in `_includes/examples/example-name/plottable.js`
+
+          Make sure you don't indent it the {% include %} line. Otherwise it will insert blank space on the first line.
+          {% endcomment %}
+
           {% highlight javascript %}
 {% include examples/linechart/plottable.js %}
           {% endhighlight %}
         </div>
       </div>
 
+      {% comment %}
+      Right side column, showing D3 example
+      {% endcomment %}
       <div class="col-md-6">
         <div class="svg-demo">
           <svg width="100%" height="600" id="linechart-d3-demo"></svg>
@@ -52,6 +68,11 @@ svg#linechart-d3-demo .line {
           <p>
             <a href="http://bl.ocks.org/mbostock/3884955">D3 multi-series line chart</a>
           </p>
+
+          {% comment %}
+          Include Javascript File for this example. File should be in `_includes/examples/example-name/d3.js`
+          {% endcomment %}
+
           {% highlight javascript %}
 {% include examples/linechart/d3.js %}
           {% endhighlight %}
@@ -62,7 +83,14 @@ svg#linechart-d3-demo .line {
   </div>
 </section>
 
+{% comment %}
+Script block, use this to insert JavaScript that needs to run the example.
+{% endcomment %}
 <script>
+
+{% comment %}
+Insert JS required to make the example work. ie. setup code since the isolated example code may not be complete.
+{% endcomment %}
 var margin = {top: 20, right: 80, bottom: 30, left: 50},
   width = 550 - margin.left - margin.right,
   height = 600 - margin.top - margin.bottom;
@@ -95,6 +123,11 @@ var svg = d3.select("svg#linechart-d3-demo")
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+{% comment %}
+Include the JavaScript snippet for both d3 and plottable.
+{% endcomment %}
+
 {% include examples/linechart/d3.js %}
 {% include examples/linechart/plottable.js %}
 </script>
