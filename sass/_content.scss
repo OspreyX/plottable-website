@@ -471,6 +471,19 @@ footer {
   }
 }
 
+
+/*
+ * Component Page
+ */
+div.component-group {
+  border-top: 2px solid $COLOR_ORANGE1;
+  padding-bottom: 40px;
+
+  h2 {
+    margin: 30px 0;
+  }
+}
+
 /*
  * Tutorial/Generic Page
  */
