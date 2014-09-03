@@ -3,19 +3,19 @@ layout: example
 page_id: page-example-scatterplot
 ---
 <style media="screen">
-svg#d3-demo {
+svg#scatterplot-d3-demo {
   font-family: sans-serif;
   font-size: 10px;
 }
 
-svg#d3-demo .axis path,
-svg#d3-demo .axis line {
+svg#scatterplot-d3-demo .axis path,
+svg#scatterplot-d3-demo .axis line {
   fill: none;
   stroke: #000;
   shape-rendering: crispEdges;
 }
 
-svg#d3-demo .dot {
+svg#scatterplot-d3-demo .dot {
   stroke: #000;
 }
 </style>
@@ -25,7 +25,7 @@ svg#d3-demo .dot {
     <div id="row">
       <div class="col-md-6">
         <div class="svg-demo">
-          <svg width="100%" height="600" id="plottable-demo"></svg>
+          <svg width="100%" height="600" id="scatterplot-plottable-demo"></svg>
         </div>
 
         <div>
@@ -40,7 +40,7 @@ svg#d3-demo .dot {
 
       <div class="col-md-6">
         <div class="svg-demo">
-          <svg width="100%" height="600" id="d3-demo"></svg>
+          <svg width="100%" height="600" id="scatterplot-d3-demo"></svg>
         </div>
 
         <div>
@@ -78,7 +78,7 @@ var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left");
 
-var svg = d3.select("svg#d3-demo")
+var svg = d3.select("svg#scatterplot-d3-demo")
     .attr("width", '100%')
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");

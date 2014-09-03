@@ -39,6 +39,7 @@
   <div id="example-content">
     <header>
       {% include nav.html %}
+      {% if page.page_id != 'page-examples' %}
       <div id="example-navigation">
         <nav>
           <ul>
@@ -47,9 +48,10 @@
           </ul>
         </nav>
       </div>
+      {% endif %}
     </header><!-- /header -->
 
-    <div id="example-content">
+    <div id="example-body-content">
       {{ content }}
     </div>
   </div>

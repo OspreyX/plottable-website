@@ -25,5 +25,5 @@ d3.tsv("data.tsv", function(error, data) {
                 [yLabel, yAxis, center],
                 [null, null, xAxis],
                 [null, null, xLabel]
-        ]).renderTo(d3.select("#plottable-demo"));
+        ]).renderTo(d3.select("#scatterplot-plottable-demo"));
 });
