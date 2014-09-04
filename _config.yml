@@ -5,7 +5,7 @@ markdown: kramdown
 company: 'Palantir'
 title: 'Palantir'
 google_analytics: ''
-baseurl: /plottable-website
+baseurl: 
 
 plottable_version: 0.23.0
 
