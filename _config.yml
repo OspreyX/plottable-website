@@ -5,9 +5,9 @@ markdown: kramdown
 company: 'Palantir'
 title: 'Palantir'
 google_analytics: ''
-baseurl: 
+baseurl:
 
-plottable_version: 0.23.0
+plottable_version: 0.27.1
 
 exclude:
 - _typedoc
