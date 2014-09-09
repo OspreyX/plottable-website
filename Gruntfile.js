@@ -34,9 +34,9 @@ module.exports = function(grunt) {
       },
       build: {
         files: {
-          'build/js/respond-1.4.2.min.js': 'js/respond-1.4.2.js',
-          'build/js/modernizr-custom-2.8.2.min.js': 'js/modernizr-custom-2.8.2.js',
-          'build/js/compiled.min.js': 'build/js/compiled.js'
+          'build/js/respond-1.4.2.min.js'          : 'js/respond-1.4.2.js',
+          'build/js/modernizr-custom-2.8.2.min.js' : 'js/modernizr-custom-2.8.2.js',
+          'build/js/compiled.min.js'               : 'build/js/compiled.js'
         }
       }
     },
@@ -47,10 +47,10 @@ module.exports = function(grunt) {
       },
       dist: {
         files: [{
-          expand: true,
-          cwd: 'images/',
-          src: ['**/*.{png,jpg,gif}'],
-          dest: 'build/images/'
+          expand : true,
+          cwd    : 'images/',
+          src    : ['**/*.{png,jpg,gif}'],
+          dest   : 'build/images/'
         }]
       }
     },
@@ -58,19 +58,19 @@ module.exports = function(grunt) {
     svgmin: {
       options: {
         plugins: [
-          { removeViewBox: false },
-          { removeUselessStrokeAndFill: false },
-          { removeEmptyAttrs: false },
-          { removeEmptyTile: false },
-          { removeUnknownsAndDefaults: false }
+          { removeViewBox              : false },
+          { removeUselessStrokeAndFill : false },
+          { removeEmptyAttrs           : false },
+          { removeEmptyTile            : false },
+          { removeUnknownsAndDefaults  : false }
         ]
       },
       dist: {
         files: [{
-          expand: true,
-          cwd: 'images/',
-          src: ['**/*.svg'],
-          dest: 'build/images/'
+          expand : true,
+          cwd    : 'images/',
+          src    : ['**/*.svg'],
+          dest   : 'build/images/'
         }]
       }
     },
@@ -78,25 +78,25 @@ module.exports = function(grunt) {
     compass: {
       dist: {
         options: {
-          specify: ['sass/style.scss', 'sass/ie.scss'],
-          banner: _banner,
-          sassDir: 'sass',
-          cssDir: 'build/css',
-          fontsDir: 'fonts',
-          outputStyle: 'compressed',
-          imagesDir: 'build/images'
+          specify     : ['sass/style.scss', 'sass/ie.scss'],
+          banner      : _banner,
+          sassDir     : 'sass',
+          cssDir      : 'build/css',
+          fontsDir    : 'fonts',
+          outputStyle : 'compressed',
+          imagesDir   : 'build/images'
         }
       },
 
       theme: {
         options: {
-          specify: ['_typedoc/themes/plottable/assets/css/theme.scss'],
-          banner: _banner,
-          sassDir: '_typedoc/themes/plottable/assets/css',
-          cssDir: '_typedoc/themes/plottable/assets/css',
-          fontsDir: 'fonts',
-          outputStyle: 'compressed',
-          imagesDir: '_typedoc/themes/plottable/assets/images'
+          specify     : ['_typedoc/themes/plottable/assets/css/theme.scss'],
+          banner      : _banner,
+          sassDir     : '_typedoc/themes/plottable/assets/css',
+          cssDir      : '_typedoc/themes/plottable/assets/css',
+          fontsDir    : 'fonts',
+          outputStyle : 'compressed',
+          imagesDir   : '_typedoc/themes/plottable/assets/images'
         }
       }
     },
