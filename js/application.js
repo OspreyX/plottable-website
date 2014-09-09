@@ -22,7 +22,7 @@ Modernizr.addTest('retina', function() {
     this.$sections = $sections;
     this.$currentSection = null;
     this.isPaging = false;
-    this.pageDelay = 1200;
+    this.pageDelay = 100;
   };
   VerticalPager.prototype = {
 

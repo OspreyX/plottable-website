@@ -68,7 +68,7 @@ page_id: page-overview
     <nav class="navbar-page">
       <ul class="nav" role="tablist">
         <li><a href="#section-overview" data-toggle="tooltip" data-placement="left" title="Overview">Overview</a></li>
-        <li><a href="#section-example-1" data-toggle="tooltip" data-placement="left" title="Example">Example</a></li>
+        <li><a href="#section-example" data-toggle="tooltip" data-placement="left" title="Example">Example</a></li>
         <li><a href="#section-easier-more-usable" data-toggle="tooltip" data-placement="left" title="Easier, More Usable">Easier, More Usable</a></li>
       </ul>
     </nav>
@@ -161,7 +161,7 @@ function hourFormatter(hour) {
 
     </div>
 
-  </div><!-- /#section-example-1 -->
+  </div><!-- /#section-example -->
 
   <section id="section-easier-more-usable">
     <div class="content">
@@ -254,7 +254,7 @@ function hourFormatter(hour) {
 
         if (!Modernizr.touch) {
           // disable scrolling and implement paging
-          var pager = new VerticalPager($('#section-overview, section, #section-example-1'));
+          var pager = new VerticalPager($('#section-overview, section, #section-example'));
 
           window.setTimeout(function() {
             pager.init();
