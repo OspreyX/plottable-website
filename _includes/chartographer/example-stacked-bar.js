@@ -15,7 +15,7 @@ function randomStackedCategories(numSeries, scaleFactor) {
 
 // Create a chart!
 new Chartographer.StackedBarChart(randomStackedCategories(10, 100))
-  .titleLabel('Otter Classification')
+  .titleLabel('Otter Efficiency')
   .xLabel('Otter Species')
   .yLabel('Time to Stack Cup')
   .renderTo('#chartographer-example-stacked-bar');
