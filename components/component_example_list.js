@@ -34,7 +34,7 @@ function verticalBarPlot() {
 
     xScale.domain(ordinalDomain);
 
-    var ds = new Plottable.DataSource(ordinalData);
+    var ds = new Plottable.Dataset(ordinalData);
     var plot = new Plottable.Plot.VerticalBar(ds, xScale, yScale);
     plot.animate(true);
     return plot;
@@ -45,7 +45,7 @@ function horizontalBarPlot() {
     var yScale = new Plottable.Scale.Ordinal();
 
     yScale.domain(ordinalDomain);
-    var ds = new Plottable.DataSource(ordinalData);
+    var ds = new Plottable.Dataset(ordinalData);
 
     // need to reverse the x/y data
     var plot = new Plottable.Plot.HorizontalBar(ds, xScale, yScale).project("x", "y", xScale).project("y", "x", yScale);
@@ -73,7 +73,7 @@ function gridPlot() {
 function getXYPlot(type, data) {
     var xScale = new Plottable.Scale.Linear();
     var yScale = new Plottable.Scale.Linear();
-    var ds = new Plottable.DataSource(data);
+    var ds = new Plottable.Dataset(data);
 
     var plot;
     switch (type) {
@@ -113,7 +113,7 @@ function makeXYPlotMulti(type) {
 function makeAreaStroke() {
     var xScale = new Plottable.Scale.Linear();
     var yScale = new Plottable.Scale.Linear();
-    var ds = new Plottable.DataSource(quantitativeData);
+    var ds = new Plottable.Dataset(quantitativeData);
 
     var plot = new Plottable.Plot.Area(ds, xScale, yScale);
     plot.project("stroke", colors[0]);
