@@ -15,9 +15,6 @@
   ],
   "dependencies": {
     "plottable"     : "0.28.0",
-    "chartographer" : "0.0.2"
-  },
-  "resolutions": {
-    "d3" : "3.4.5"
+    "chartographer" : "0.0.3"
   }
 }
