@@ -1,9 +1,11 @@
 ///<reference path="exampleReference.ts" />
-var ordinalDomain = ["a", "b", "c", "d", "e"];
-var ordinalData = [{ x: "a", y: 3 }, { x: "b", y: -2 }, { x: "c", y: 4 }, { x: "d", y: -3 }, { x: "e", y: 5 }];
-var quantitativeData = [{ x: -2, y: 15 }, { x: 1, y: 20 }, { x: 4, y: -3 }, { x: 8, y: 0 }, { x: 10, y: -10 }];
+var ordinalDomain     = ["a", "b", "c", "d", "e"];
+var ordinalData       = [{ x: "a", y: 3 }, { x: "b", y: -2 }, { x: "c", y: 4 }, { x: "d", y: -3 }, { x: "e", y: 5 }];
+var ordinalData2      = [{ x: "a", y: 3 }, { x: "b", y: 2 }, { x: "c", y: 4 }, { x: "d", y: 3 }, { x: "e", y: 5 }];
+var ordinalData3      = [{ x: "a", y: 1 }, { x: "b", y: 3 }, { x: "c", y: 4 }, { x: "d", y: 2 }, { x: "e", y: 5 }];
+var quantitativeData  = [{ x: -2, y: 15 }, { x: 1, y: 20 }, { x: 4, y: -3 }, { x: 8, y: 0 }, { x: 10, y: -10 }];
 var quantitativeData2 = [{ x: -2, y: 20 }, { x: 5, y: -10 }, { x: 7, y: 10 }, { x: 10, y: 7 }];
-var colors = new Plottable.Scale.Color("Category10").range();
+var colors            = new Plottable.Scale.Color("Category10").range();
 
 function makeTitle(text) {
     return new Plottable.Component.Label(text, "horizontal");
@@ -28,34 +30,60 @@ function axis(type, orientation) {
     return axis;
 }
 
-function verticalBarPlot() {
+function verticalBarPlot(plotData) {
+    var data   = plotData ? plotData : ordinalData;
     var xScale = new Plottable.Scale.Ordinal();
     var yScale = new Plottable.Scale.Linear();
-
-    xScale.domain(ordinalDomain);
-
-    var ds = new Plottable.Dataset(ordinalData);
-    var plot = new Plottable.Plot.VerticalBar(ds, xScale, yScale);
+    var ds     = new Plottable.Dataset(data);
+    var plot   = new Plottable.Plot.VerticalBar(ds, xScale, yScale);
+    plot.project('fill', function(d){return colors[0];});
     plot.animate(true);
+    return plot;
+}
+
+function clusteredBarPlot(plotData) {
+    var xScale = new Plottable.Scale.Ordinal();
+    var yScale = new Plottable.Scale.Linear();
+    var plot   = new Plottable.Plot.ClusteredBar(xScale, yScale);
+    plot.animate(true);
+    plotData.forEach(function(data, i){
+        plot.addDataset(data);
+        data.forEach(function(d){d.i = i;});
+    });
+    plot.project('fill', function(d){return colors[d.i];});
+    return plot;
+}
+
+function stackedBarPlot(plotData) {
+    var xScale = new Plottable.Scale.Ordinal();
+    var yScale = new Plottable.Scale.Linear();
+    var plot   = new Plottable.Plot.StackedBar(xScale, yScale);
+    plot.animate(true);
+    plotData.forEach(function(data, i){
+        plot.addDataset(data);
+        data.forEach(function(d){d.i = i;});
+    });
+    plot.project('fill', function(d){return colors[d.i];});
     return plot;
 }
 
 function horizontalBarPlot() {
     var xScale = new Plottable.Scale.Linear();
     var yScale = new Plottable.Scale.Ordinal();
-
-    yScale.domain(ordinalDomain);
-    var ds = new Plottable.Dataset(ordinalData);
+    var ds     = new Plottable.Dataset(ordinalData);
 
     // need to reverse the x/y data
-    var plot = new Plottable.Plot.HorizontalBar(ds, xScale, yScale).project("x", "y", xScale).project("y", "x", yScale);
+    var plot = new Plottable.Plot.HorizontalBar(ds, xScale, yScale)
+        .project("x", "y", xScale)
+        .project("y", "x", yScale);
     plot.animate(true);
+    plot.project('fill', function(d){return colors[0];});
     return plot;
 }
 
 function gridPlot() {
-    var xScale = new Plottable.Scale.Ordinal();
-    var yScale = new Plottable.Scale.Ordinal();
+    var xScale     = new Plottable.Scale.Ordinal();
+    var yScale     = new Plottable.Scale.Ordinal();
     var colorScale = new Plottable.Scale.InterpolatedColor();
 
     xScale.domain(["a", "b", "c"]);
@@ -73,7 +101,7 @@ function gridPlot() {
 function getXYPlot(type, data) {
     var xScale = new Plottable.Scale.Linear();
     var yScale = new Plottable.Scale.Linear();
-    var ds = new Plottable.Dataset(data);
+    var ds     = new Plottable.Dataset(data);
 
     var plot;
     switch (type) {

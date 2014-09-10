@@ -388,40 +388,43 @@ div#page-nav {
 }
 
 /* Example */
+.row-gap {
+  margin-top : 20px;
+}
+
 #section-example {
-  padding: 40px 0;
-  width: 100%;
-  min-height: 100%;
+  padding    : 40px 0;
+  width      : 100%;
+  min-height : 100%;
 }
 
 /* Example */
 div#example-content {
   @include box-sizing(border-box);
-  min-height: 100%;
-  padding: 0 0 88px 0;
-  margin: 0 0 -88px 0;
+  min-height : 100%;
+  padding    : 0 0 88px 0;
+  margin     : 0 0 -88px 0;
 
   a.example-block {
-    display: block;
-    text-align: center;
+    display    : block;
+    text-align : center;
     @include border-radius(2px);
     @include box-sizing(border-box);
     @include transition-property(border-color, color);
     @include transition-duration(300ms, 300ms);
-    padding: 4px 14px;
-    border: 2px solid $COLOR_BLUE2;
-    color: $COLOR_BLUE3;
+    padding : 10px 15px;
+    border  : 2px solid $COLOR_BLUE2;
+    color   : $COLOR_BLUE3;
 
     .no-touch &:hover {
-      border-color: $COLOR_BLUE1;
-      color: $COLOR_BLUE1;
+      border-color : $COLOR_BLUE1;
+      color        : $COLOR_BLUE1;
     }
   }
 }
 
 div.svg-demo {
-  overflow: hidden;
-  height: 640px;
+  overflow : hidden;
 }
 
 /*
@@ -429,18 +432,18 @@ div.svg-demo {
  */
 
 div.source-code {
-  margin-top: 20px;
-  border-top:    2px solid $COLOR_ORANGE4;
-  border-bottom: 2px solid $COLOR_ORANGE4;
-  background-color: $COLOR_ORANGE3;
-  padding: 20px 0;
-
+  margin-top       : 20px;
+  border-top       : 2px solid $COLOR_ORANGE4;
+  border-bottom    : 2px solid $COLOR_ORANGE4;
+  background-color : $COLOR_ORANGE3;
+  padding          : 20px 0;
 
   div.highlight {
-    background-color: transparent;
+    background-color : transparent;
+
     pre {
-      border: none;
-      background-color: transparent;
+      border           : none;
+      background-color : transparent;
       @include rem(font-size, 12px);
     }
   }
