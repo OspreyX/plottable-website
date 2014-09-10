@@ -1,29 +1,29 @@
 ---
-layout: example
-page_id: page-example-linechart
+layout  : example
+page_id : page-example-linechart
 ---
 <style media="screen">
-svg#linechart-d3-demo {
-  font-family: sans-serif;
-  font-size: 10px;
-}
+  svg#linechart-d3-demo {
+    font-family : sans-serif;
+    font-size   : 10px;
+  }
 
-svg#linechart-d3-demo .axis path,
-svg#linechart-d3-demo .axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
+  svg#linechart-d3-demo .axis path,
+  svg#linechart-d3-demo .axis line {
+    fill            : none;
+    stroke          : #000;
+    shape-rendering : crispEdges;
+  }
 
-svg#linechart-d3-demo .x.axis path {
-  display: none;
-}
+  svg#linechart-d3-demo .x.axis path {
+    display : none;
+  }
 
-svg#linechart-d3-demo .line {
-  fill: none;
-  stroke: steelblue;
-  stroke-width: 1.5px;
-}
+  svg#linechart-d3-demo .line {
+    fill         : none;
+    stroke       : steelblue;
+    stroke-width : 1.5px;
+  }
 </style>
 
 <section id="section-example">
@@ -39,7 +39,7 @@ svg#linechart-d3-demo .line {
             <a href="http://bl.ocks.org/mbostock/3884955">D3 multi-series line chart</a> using Plottable
           </p>
           {% highlight javascript %}
-{% include examples/linechart/plottable.js %}
+          {% include examples/linechart/plottable.js %}
           {% endhighlight %}
         </div>
       </div>
@@ -53,7 +53,7 @@ svg#linechart-d3-demo .line {
             <a href="http://bl.ocks.org/mbostock/3884955">D3 multi-series line chart</a>
           </p>
           {% highlight javascript %}
-{% include examples/linechart/d3.js %}
+          {% include examples/linechart/d3.js %}
           {% endhighlight %}
         </div>
       </div>
