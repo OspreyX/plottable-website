@@ -1,13 +1,11 @@
-url: 'http://0.0.0.0:4000'
-timezone: America/Los_Angeles
-exclude: ['Gemfile', 'Gemfile.lock', 'README.md', 'Gruntfile.js', 'package.json', 'sass', 'node_modules', '/js', '/images', 'vendor']
-markdown: kramdown
-company: 'Palantir'
-title: 'Palantir'
-google_analytics: ''
-baseurl:
-
-plottable_version: 0.27.1
-
-exclude:
+url               : 'http://0.0.0.0:4000'
+timezone          : America/Los_Angeles
+exclude           : ['Gemfile', 'Gemfile.lock', 'README.md', 'Gruntfile.js', 'package.json', 'sass', 'node_modules', '/js', '/images', 'vendor']
+markdown          : kramdown
+company           : 'Palantir'
+title             : 'Palantir'
+google_analytics  : ''
+baseurl           :
+plottable_version : 0.27.1
+exclude           :
 - _typedoc

@@ -13,17 +13,16 @@ d3.tsv("data.tsv", function(error, data) {
   var yLabel = new Plottable.Component.Label("Sepal Length (cm)", "left");
 
   var legend = new Plottable.Component.Legend(colorScale);
-  var gridlines = new Plottable.Component.Gridlines(xScale, yScale);
 
   var plot = new Plottable.Plot.Scatter(data, xScale, yScale)
                       .project("x", "sepalWidth", xScale)
                       .project("y", "sepalLength", yScale)
                       .project("fill", "species", colorScale);
 
-  var center = plot.merge(gridlines).merge(legend);
+  var center = plot.merge(legend);
   var table = new Plottable.Component.Table([
                 [yLabel, yAxis, center],
-                [null, null, xAxis],
-                [null, null, xLabel]
+                [null  , null , xAxis],
+                [null  , null , xLabel]
         ]).renderTo(d3.select("#scatterplot-plottable-demo"));
 });

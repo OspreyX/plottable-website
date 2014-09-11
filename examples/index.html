@@ -1,15 +1,22 @@
 ---
-layout: example
-page_id: page-examples
+layout  : example
+page_id : page-examples
 ---
 <section>
   <div class="container">
-    <div class="row">
 
-      <div class="col-md-2 col-md-offset-4">
-        <a class="example-block" href="{{ site.baseurl }}/examples/linechart/" title="Line Chart">
+    <div class="row">
+      <div class="col-md-2 col-md-offset-2">
+        <a class="example-block" href="{{ site.baseurl }}/examples/linechart/" title="Line Plot">
           <svg id="example-linechart" height="150"></svg>
-          Line Chart
+          Line Plot (vs. D3)
+        </a>
+      </div>
+
+      <div class="col-md-2">
+        <a class="example-block" href="{{ site.baseurl }}/examples/linechartaxes/" title="Line Plot">
+          <svg id="example-linechartaxes" height="150"></svg>
+          Multiple Axes
         </a>
       </div>
 
@@ -20,20 +27,82 @@ page_id: page-examples
         </a>
       </div>
 
+      <div class="col-md-2">
+        <a class="example-block" href="{{ site.baseurl }}/examples/grid/" title="Grid Plot">
+          <svg id="example-gridplot" height="150"></svg>
+          Grid Plot
+        </a>
+      </div>
     </div>
-  </div><!-- /.container -->
+
+    <div class="row row-gap">
+      <div class="col-md-2 col-md-offset-2">
+        <a class="example-block" href="{{ site.baseurl }}/examples/bar/" title="Bar Plot">
+          <svg id="example-bar" height="150"></svg>
+          Bar Plot
+        </a>
+      </div>
+
+      <div class="col-md-2">
+        <a class="example-block" href="{{ site.baseurl }}/examples/multibar/" title="Multi Bar Plot">
+          <svg id="example-multibar" height="150"></svg>
+          Multi Bar
+        </a>
+      </div>
+
+      <div class="col-md-2">
+        <a class="example-block" href="{{ site.baseurl }}/examples/clusteredbar/" title="Clustered Bar Plot">
+          <svg id="example-clusteredbar" height="150"></svg>
+          Clustered Bar
+        </a>
+      </div>
+
+      <div class="col-md-2">
+        <a class="example-block" href="{{ site.baseurl }}/examples/stackedbar/" title="Stacked Bar Plot">
+          <svg id="example-stackedbar" height="150"></svg>
+          Stacked Bar
+        </a>
+      </div>
+    </div>
+
+  </div>
 </section>
 
 <script src="{{ site.baseurl }}/components/component_example_list.js"></script>
 <script>
-(function() {
   $(function() {
-    var example_linechart = new Plottable.Component.Table().addComponent(0, 0, makeXYPlotMulti('line'));
-    example_linechart.renderTo("#example-linechart");
+    new Plottable.Component.Table()
+      .addComponent(0, 0, makeXYPlotMulti('line'))
+      .renderTo('#example-linechart');
 
-    var example_scatterplot = new Plottable.Component.Table().addComponent(0, 0, makeXYPlotMulti('scatter'));
-    example_scatterplot.renderTo("#example-scatterplot");
+    new Plottable.Component.Table()
+      .addComponent(0, 0, makeXYPlotMulti('line'))
+      .renderTo('#example-linechartaxes');
+
+    new Plottable.Component.Table()
+      .addComponent(0, 0, makeXYPlotMulti('scatter'))
+      .renderTo('#example-scatterplot');
+
+    new Plottable.Component.Table()
+      .addComponent(0, 0, gridPlot())
+      .renderTo('#example-gridplot');
+
+    new Plottable.Component.Table()
+      .addComponent(0, 0, verticalBarPlot(ordinalData2))
+      .renderTo('#example-bar');
+
+    new Plottable.Component.Table()
+      .addComponent(0, 0, verticalBarPlot(ordinalData2).project('fill', function(){return colors[0];}))
+      .addComponent(1, 0, verticalBarPlot(ordinalData3).project('fill', function(){return colors[1];}))
+      .renderTo('#example-multibar');
+
+    new Plottable.Component.Table()
+      .addComponent(0, 0, clusteredBarPlot([ordinalData2, ordinalData3]))
+      .renderTo('#example-clusteredbar');
+
+    new Plottable.Component.Table()
+      .addComponent(0, 0, stackedBarPlot([ordinalData2, ordinalData3]))
+      .renderTo('#example-stackedbar');
+
   });
-})();
-
 </script>
