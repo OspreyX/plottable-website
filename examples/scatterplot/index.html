@@ -1,23 +1,30 @@
 ---
-layout: example
-page_id: page-example-scatterplot
+layout  : example
+page_id : page-example-scatterplot
 ---
 <style media="screen">
-svg#scatterplot-d3-demo {
-  font-family: sans-serif;
-  font-size: 10px;
-}
+  svg#scatterplot-d3-demo {
+    font-family : sans-serif;
+    font-size   : 10px;
+  }
 
-svg#scatterplot-d3-demo .axis path,
-svg#scatterplot-d3-demo .axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
+  svg#scatterplot-d3-demo .axis path,
+  svg#scatterplot-d3-demo .axis line {
+    fill            : none;
+    stroke          : #000;
+    shape-rendering : crispEdges;
+  }
 
-svg#scatterplot-d3-demo .dot {
-  stroke: #000;
-}
+  .svg-demo {
+    border : 1px solid #DEDEDE;
+  }
+  .svg-demo .svg-inner {
+    padding : 10px;
+  }
+
+  svg#scatterplot-d3-demo .dot {
+    stroke : #000;
+  }
 </style>
 
 <section id="section-example">
@@ -25,7 +32,9 @@ svg#scatterplot-d3-demo .dot {
     <div id="row">
       <div class="col-md-6">
         <div class="svg-demo">
-          <svg width="100%" height="600" id="scatterplot-plottable-demo"></svg>
+          <div class="svg-inner">
+            <svg width="100%" height="600" id="scatterplot-plottable-demo"></svg>
+          </div>
         </div>
 
         <div>
@@ -33,7 +42,7 @@ svg#scatterplot-d3-demo .dot {
             <a href="http://bl.ocks.org/mbostock/3887118">D3 scatterplot</a> using Plottable
           </p>
           {% highlight javascript %}
-{% include examples/scatterplot/plottable.js %}
+          {% include examples/scatterplot/plottable.js %}
           {% endhighlight %}
         </div>
       </div>
@@ -48,7 +57,7 @@ svg#scatterplot-d3-demo .dot {
             <a href="http://bl.ocks.org/mbostock/3887118">D3 scatterplot</a>
           </p>
           {% highlight javascript %}
-{% include examples/scatterplot/d3.js %}
+          {% include examples/scatterplot/d3.js %}
           {% endhighlight %}
         </div>
       </div>
@@ -58,30 +67,6 @@ svg#scatterplot-d3-demo .dot {
 </section>
 
 <script>
-var margin = {top: 20, right: 20, bottom: 30, left: 40},
-    width = 550 - margin.left - margin.right,
-    height = 600 - margin.top - margin.bottom;
-
-var x = d3.scale.linear()
-    .range([0, width]);
-
-var y = d3.scale.linear()
-    .range([height, 0]);
-
-var color = d3.scale.category10();
-
-var xAxis = d3.svg.axis()
-    .scale(x)
-    .orient("bottom");
-
-var yAxis = d3.svg.axis()
-    .scale(y)
-    .orient("left");
-
-var svg = d3.select("svg#scatterplot-d3-demo")
-    .attr("width", '100%')
-  .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 {% include examples/scatterplot/d3.js %}
 {% include examples/scatterplot/plottable.js %}
 </script>

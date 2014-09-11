@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico" sizes="16x16 32x32" type="image/x-icon">
+  {% unless page.title %}
+  <title>Plottable.js | Palantir</title>
+  {% else %}
+  <title>{{ page.title }} | Palantir</title>
+  {% endunless %}
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="description" content="Flexible, interactive, performant charts for the web made easy">
+  <link rel="stylesheet" href="{{ site.baseurl }}/build/css/style.css" media="screen">
+  <!-- Modernizr -->
+  <script src="{{ site.baseurl }}/build/js/modernizr-custom-2.8.2.min.js"></script>
+
+  <!--[if lt IE 9]>
+  <script src="{{ site.baseurl }}/build/js/respond-1.4.2.min.js"></script>
+  <link rel="stylesheet" href="{{ site.baseurl }}/build/css/ie.css" media="screen, projection" type="text/css">
+  <![endif]-->
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/bower_components/plottable/plottable.css">
+  <script src="{{ site.baseurl }}/bower_components/d3/d3.min.js"></script>
+  <script src="{{ site.baseurl }}/bower_components/plottable/plottable.js"></script>
+  <script src="{{ site.baseurl }}/build/js/compiled.min.js"></script>
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Home">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="//palantir.github.io/plottable/">
+  <meta property="og:site_name" content="Plottable.js">
+  <meta property="og:description" content="Flexible, interactive, performant charts for the web made easy.">
+</head>

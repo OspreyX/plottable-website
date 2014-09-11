@@ -1,0 +1,17 @@
+{% include header.html %}
+
+<body>
+  <div id="example-content">
+    <header>
+      {% include nav.html %}
+    </header>
+
+    <div id="example-body-content">
+			{% include examples/template.html script=page.script %}
+    </div>
+  </div>
+
+  {% include footer.html %}
+
+</body>
+</html>
