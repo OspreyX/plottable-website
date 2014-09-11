@@ -9,14 +9,21 @@ page_id : page-examples
       <div class="col-md-2 col-md-offset-2">
         <a class="example-block" href="{{ site.baseurl }}/examples/linechart/" title="Line Plot">
           <svg id="example-linechart" height="150"></svg>
-          Line Plot
+          Line Plot (vs. D3)
+        </a>
+      </div>
+
+      <div class="col-md-2">
+        <a class="example-block" href="{{ site.baseurl }}/examples/linechartaxes/" title="Line Plot">
+          <svg id="example-linechartaxes" height="150"></svg>
+          Multiple Axes
         </a>
       </div>
 
       <div class="col-md-2">
         <a class="example-block" href="{{ site.baseurl }}/examples/scatterplot/" title="Scatter Plot">
           <svg id="example-scatterplot" height="150"></svg>
-          Scatter Plot
+          Scatter Plot (vs. D3)
         </a>
       </div>
 
@@ -67,6 +74,10 @@ page_id : page-examples
     new Plottable.Component.Table()
       .addComponent(0, 0, makeXYPlotMulti('line'))
       .renderTo('#example-linechart');
+
+    new Plottable.Component.Table()
+      .addComponent(0, 0, makeXYPlotMulti('line'))
+      .renderTo('#example-linechartaxes');
 
     new Plottable.Component.Table()
       .addComponent(0, 0, makeXYPlotMulti('scatter'))
