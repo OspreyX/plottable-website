@@ -1,12 +1,12 @@
 {
-  "name"        : "plottable-website",
-  "version"     : "0.1.0",
-  "homepage"    : "palantir.github.io/plottable",
-  "description" : "Plottable's github pages website",
-  "main"        : "index.html",
-  "license"     : "MIT",
-  "private"     : true,
-  "ignore"      : [
+  "name": "plottable-website",
+  "version": "0.1.0",
+  "homepage": "palantir.github.io/plottable",
+  "description": "Plottable's github pages website",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
@@ -14,7 +14,8 @@
     "tests"
   ],
   "dependencies": {
-    "plottable"     : "0.28.0",
-    "chartographer" : "0.0.3"
+    "plottable": "0.28.0",
+    "chartographer": "0.0.3",
+    "lodash": "~2.4.1"
   }
 }
