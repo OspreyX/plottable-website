@@ -19,10 +19,10 @@ var components = new Chartographer.BarChart(randomCategories2(100))
 // Re-arrange!
 components.yAxis.orient("right");
 var table = new Plottable.Component.Table([
-  [components.title,  null],
-  [components.plot,   components.yAxis, components.yLabel],
-  [components.xAxis,  null],
-  [components.xLabel, null]
+  [components.titleLabel,  null],
+  [components.plot,        components.yAxis, components.yLabel],
+  [components.xAxis,       null],
+  [components.xLabel,      null]
 ]);
 
 // Render it
