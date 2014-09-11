@@ -15,7 +15,7 @@
   ],
   "dependencies": {
     "plottable": "0.28.0",
-    "chartographer": "0.0.3",
+    "chartographer": "0.0.4",
     "lodash": "~2.4.1"
   }
 }
