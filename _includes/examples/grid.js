@@ -1,7 +1,13 @@
 var data = [
-    { x: "a", y: "d", value: 3 }, { x: "a", y: "e", value: 4 }, { x: "a", y: "f", value: 7 },
-    { x: "b", y: "d", value: 1 }, { x: "b", y: "e", value: 6 }, { x: "b", y: "f", value: 8 },
-    { x: "c", y: "d", value: 9 }, { x: "c", y: "e", value: 2 }, { x: "c", y: "f", value: 5 }];
+    { x: "Otter", y: "Stacking", value: 9 },
+    { x: "Otter", y: "Swimming", value: 8 },
+    { x: "Otter", y: "Plotting", value: 10 },
+    { x: "Stoat", y: "Stacking", value: 3 },
+    { x: "Stoat", y: "Swimming", value: 1 },
+    { x: "Stoat", y: "Plotting", value: 2 },
+    { x: "Mink",  y: "Stacking", value: 2 },
+    { x: "Mink",  y: "Swimming", value: 5 },
+    { x: "Mink",  y: "Plotting", value: 2 }];
 
 // Scales
 var xScale     = new Plottable.Scale.Ordinal();
@@ -9,17 +15,21 @@ var yScale     = new Plottable.Scale.Ordinal();
 var colorScale = new Plottable.Scale.InterpolatedColor();
 
 // Plot Components
-var xLabel = new Plottable.Component.Label("Category");
-var yLabel = new Plottable.Component.Label("Classification", "left");
+var title  = new Plottable.Component.TitleLabel("Mustelidae Skills");
+var units  = new Plottable.Component.Label("Red is more");
+var xLabel = new Plottable.Component.Label("Species");
+var yLabel = new Plottable.Component.Label("Skill", "left");
 var xAxis  = new Plottable.Axis.Category(xScale, "bottom");
 var yAxis  = new Plottable.Axis.Category(yScale, "left");
 var plot   = new Plottable.Plot.Grid(data, xScale, yScale, colorScale);
 
 // Layout and render
 new Plottable.Component.Table([
+  [null,   null,  title],
+  [null,   null,  units],
   [yLabel, yAxis, plot],
-  [null,   null, xAxis],
-  [null,   null, xLabel]
+  [null,   null,  xAxis],
+  [null,   null,  xLabel]
 ])
 .renderTo(d3.select('svg#example'));
 
