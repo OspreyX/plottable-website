@@ -81,6 +81,26 @@ title: Chartographer
     </div>
   </div>
 
+  <div class="row component-group">
+    <div class="col-md-12">
+      <h2>Overriding Components</h2>
+
+      <p>
+        In case Chartographer's simple interface does not do <i>exactly</i>
+        what you want, don't fret -- you don't have to start over from
+        scratch! You can ask Chartographer to return the raw Plottable
+        components and modify then as you see fit.
+      </p>
+
+      <svg id="chartographer-example-components" height="300"></svg>
+      <p>        
+        {% highlight javascript %}
+        {% include chartographer/example-components.js %}
+        {% endhighlight %}
+      </p>
+    </div>
+  </div>
+
 </div>
 
 <script src="{{ site.baseurl }}/bower_components/chartographer/chartographer.js"></script>
@@ -91,5 +111,6 @@ title: Chartographer
     {% include chartographer/example-scatter.js %}
     {% include chartographer/example-barchart.js %}
     {% include chartographer/example-stacked-bar.js %}
+    {% include chartographer/example-components.js %}
   }
 </script>

@@ -6,64 +6,90 @@ page_id : page-examples
   <div class="container">
 
     <div class="row">
-      <div class="col-md-2 col-md-offset-2">
-        <a class="example-block" href="{{ site.baseurl }}/examples/linechart/" title="Line Plot">
-          <svg id="example-linechart" height="150"></svg>
-          Line Plot (vs. D3)
-        </a>
-      </div>
+      <div class="col-md-8 col-md-offset-2 component-group">
+        <h2>Chart Examples</h2>
+        <div class="col-md-3">
+          <a class="example-block" href="{{ site.baseurl }}/examples/bar/" title="Bar Plot">
+            <svg id="example-bar" height="150"></svg>
+            Bar Plot
+          </a>
+        </div>
 
-      <div class="col-md-2">
-        <a class="example-block" href="{{ site.baseurl }}/examples/linechartaxes/" title="Line Plot">
-          <svg id="example-linechartaxes" height="150"></svg>
-          Multiple Axes
-        </a>
-      </div>
+        <div class="col-md-3">
+          <a class="example-block" href="{{ site.baseurl }}/examples/multibar/" title="Multi Bar Plot">
+            <svg id="example-multibar" height="150"></svg>
+            Multi Bar
+          </a>
+        </div>
 
-      <div class="col-md-2">
-        <a class="example-block" href="{{ site.baseurl }}/examples/scatterplot/" title="Scatter Plot">
-          <svg id="example-scatterplot" height="150"></svg>
-          Scatter Plot
-        </a>
-      </div>
+        <div class="col-md-3">
+          <a class="example-block" href="{{ site.baseurl }}/examples/clusteredbar/" title="Clustered Bar Plot">
+            <svg id="example-clusteredbar" height="150"></svg>
+            Clustered Bar
+          </a>
+        </div>
 
-      <div class="col-md-2">
-        <a class="example-block" href="{{ site.baseurl }}/examples/grid/" title="Grid Plot">
-          <svg id="example-gridplot" height="150"></svg>
-          Grid Plot
-        </a>
+        <div class="col-md-3">
+          <a class="example-block" href="{{ site.baseurl }}/examples/stackedbar/" title="Stacked Bar Plot">
+            <svg id="example-stackedbar" height="150"></svg>
+            Stacked Bar
+          </a>
+        </div>
       </div>
     </div>
 
     <div class="row row-gap">
-      <div class="col-md-2 col-md-offset-2">
-        <a class="example-block" href="{{ site.baseurl }}/examples/bar/" title="Bar Plot">
-          <svg id="example-bar" height="150"></svg>
-          Bar Plot
-        </a>
-      </div>
+      <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-3">
+          <a class="example-block" href="{{ site.baseurl }}/examples/grid/" title="Grid Plot">
+            <svg id="example-gridplot" height="150"></svg>
+            Grid Plot
+          </a>
+        </div>
 
-      <div class="col-md-2">
-        <a class="example-block" href="{{ site.baseurl }}/examples/multibar/" title="Multi Bar Plot">
-          <svg id="example-multibar" height="150"></svg>
-          Multi Bar
-        </a>
-      </div>
-
-      <div class="col-md-2">
-        <a class="example-block" href="{{ site.baseurl }}/examples/clusteredbar/" title="Clustered Bar Plot">
-          <svg id="example-clusteredbar" height="150"></svg>
-          Clustered Bar
-        </a>
-      </div>
-
-      <div class="col-md-2">
-        <a class="example-block" href="{{ site.baseurl }}/examples/stackedbar/" title="Stacked Bar Plot">
-          <svg id="example-stackedbar" height="150"></svg>
-          Stacked Bar
-        </a>
+        <div class="col-md-3">
+          <a class="example-block" href="{{ site.baseurl }}/examples/linechartaxes/" title="Multiple Axes">
+            <svg id="example-linechartaxes" height="150"></svg>
+            Multiple Axes
+          </a>
+        </div>
       </div>
     </div>
+
+    <div class="row row-gap">
+      <div class="col-md-8 col-md-offset-2 component-group">
+        <h2>Compare D3 and Plottable</h2>
+
+        <div class="col-md-3">
+          <a class="example-block" href="{{ site.baseurl }}/examples/linechart/" title="Line Plot">
+            <svg id="example-linechart" height="150"></svg>
+            Line Plot
+          </a>
+        </div>
+
+        <div class="col-md-3">
+          <a class="example-block" href="{{ site.baseurl }}/examples/scatterplot/" title="Scatter Plot">
+            <svg id="example-scatterplot" height="150"></svg>
+            Scatter Plot
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row row-gap">
+      <div class="col-md-8 col-md-offset-2 component-group">
+        <h2>Extended Examples</h2>
+
+        <div class="col-md-3">
+          <a class="example-block" href="{{ site.baseurl }}/examples/spaceships/" title="Space Ships">
+            <svg id="example-spaceships" height="150"></svg>
+            Space Ships
+          </a>
+        </div>
+
+      </div>
+    </div>
+
 
   </div>
 </section>
@@ -71,17 +97,10 @@ page_id : page-examples
 <script src="{{ site.baseurl }}/components/component_example_list.js"></script>
 <script>
   $(function() {
-    new Plottable.Component.Table()
-      .addComponent(0, 0, makeXYPlotMulti('line'))
-      .renderTo('#example-linechart');
-
+    // Charts
     new Plottable.Component.Table()
       .addComponent(0, 0, makeXYPlotMulti('line'))
       .renderTo('#example-linechartaxes');
-
-    new Plottable.Component.Table()
-      .addComponent(0, 0, makeXYPlotMulti('scatter'))
-      .renderTo('#example-scatterplot');
 
     new Plottable.Component.Table()
       .addComponent(0, 0, gridPlot())
@@ -103,6 +122,20 @@ page_id : page-examples
     new Plottable.Component.Table()
       .addComponent(0, 0, stackedBarPlot([ordinalData2, ordinalData3]))
       .renderTo('#example-stackedbar');
+
+    // Compare D3
+    new Plottable.Component.Table()
+      .addComponent(0, 0, makeXYPlotMulti('line'))
+      .renderTo('#example-linechart');
+
+    new Plottable.Component.Table()
+      .addComponent(0, 0, makeXYPlotMulti('scatter'))
+      .renderTo('#example-scatterplot');
+
+    // Extented
+    new Plottable.Component.Table()
+      .addComponent(0, 0, makeXYPlotMulti('scatter'))
+      .renderTo('#example-spaceships');
 
   });
 </script>
