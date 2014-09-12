@@ -31,6 +31,6 @@ new Plottable.Component.Table([
   [null,   null,  xAxis],
   [null,   null,  xLabel]
 ])
-.renderTo(d3.select('svg#example'));
+.renderTo("svg#example");
 
 

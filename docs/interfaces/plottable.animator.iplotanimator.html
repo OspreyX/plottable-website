@@ -102,12 +102,12 @@
 					<a name="animate" class="anchor"></a>
 					<h3>animate</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">animate<span class="tsd-signature-symbol">(</span>selection<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, attrToProjector<span class="tsd-signature-symbol">: </span><a href="plottable.abstract.iattributetoprojector.html" class="tsd-signature-type">IAttributeToProjector</a>, plot<span class="tsd-signature-symbol">: </span><a href="../classes/plottable.abstract.plot.html" class="tsd-signature-type">Plot</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">animate<span class="tsd-signature-symbol">(</span>selection<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, attrToProjector<span class="tsd-signature-symbol">: </span><a href="plottable.iattributetoprojector.html" class="tsd-signature-type">IAttributeToProjector</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="d3.selection.html" class="tsd-signature-type">Selection</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:1136</li>
+									<li>Defined in plottable.d.ts:2644</li>
 								</ul>
 								</aside>        <div class="tsd-comment tsd-typography">
 								<div class="lead">
@@ -123,20 +123,14 @@
 									</div>
 								</li>
 								<li>
-									<h5>attrToProjector:         <a href="plottable.abstract.iattributetoprojector.html" class="tsd-signature-type">IAttributeToProjector</a></h5>
+									<h5>attrToProjector:         <a href="plottable.iattributetoprojector.html" class="tsd-signature-type">IAttributeToProjector</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The set of
 										IAccessors that we will use to set attributes on the selection.</p>
 									</div>
 								</li>
-								<li>
-									<h5>plot:         <a href="../classes/plottable.abstract.plot.html" class="tsd-signature-type">Plot</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The plot being animated.</p>
-									</div>
-								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns         <span class="tsd-signature-type">any</span>
+							<h4 class="tsd-returns-title">Returns         <a href="d3.selection.html" class="tsd-signature-type">Selection</a>
 							</h4>
 							<p>Animators should return the selection or
 								transition object so that plots may chain the transitions between
@@ -173,7 +167,10 @@
 								<a href="../modules/plottable.core.html">Core</a>
 							</li>
 							<li class=" tsd-kind-container tsd-parent-kind-container">
-								<a href="../modules/plottable.formatter.html">Formatter</a>
+								<a href="../modules/plottable.dispatcher.html">Dispatcher</a>
+							</li>
+							<li class=" tsd-kind-container tsd-parent-kind-container">
+								<a href="../modules/plottable.formatters.html">Formatters</a>
 							</li>
 							<li class=" tsd-kind-container tsd-parent-kind-container">
 								<a href="../modules/plottable.interaction.html">Interaction</a>
@@ -185,10 +182,10 @@
 								<a href="../modules/plottable.scale.html">Scale</a>
 							</li>
 							<li class=" tsd-kind-container tsd-parent-kind-container">
-								<a href="../modules/plottable.template.html">Template</a>
+								<a href="../modules/plottable._drawer.html">_<wbr>Drawer</a>
 							</li>
 							<li class=" tsd-kind-container tsd-parent-kind-container">
-								<a href="../modules/plottable.util.html">Util</a>
+								<a href="../modules/plottable._util.html">_<wbr>Util</a>
 							</li>
 						</ul>
 					</li>
@@ -212,13 +209,16 @@
 						<a href="plottable.animator.iplotanimatormap.html" class="tsd-kind-icon">IPlot<wbr>Animator<wbr>Map</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
-						<a href="../classes/plottable.animator.default.html" class="tsd-kind-icon">Default</a>
+						<a href="../classes/plottable.animator.base.html" class="tsd-kind-icon">Base</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
 						<a href="../classes/plottable.animator.iterativedelay.html" class="tsd-kind-icon">Iterative<wbr>Delay</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
 						<a href="../classes/plottable.animator.null.html" class="tsd-kind-icon">Null</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="../classes/plottable.animator.rect.html" class="tsd-kind-icon">Rect</a>
 					</li>
 				</ul>
 			</nav>

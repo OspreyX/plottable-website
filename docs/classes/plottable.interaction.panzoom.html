@@ -84,6 +84,14 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>A class most other Plottable classes inherit from, in order to have a
+						unique ID.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -104,22 +112,12 @@
 						<section class="tsd-index-section ">
 							<h3>Constructor methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor-method tsd-parent-kind-class tsd-is-overwrite"><a href="plottable.interaction.panzoom.html#constructor" class="tsd-kind-icon">constructor</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
-							<h3>Properties</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="plottable.interaction.panzoom.html#componenttolistento" class="tsd-kind-icon">component<wbr>ToListen<wbr>To</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="plottable.interaction.panzoom.html#hitbox" class="tsd-kind-icon">hit<wbr>Box</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="plottable.interaction.panzoom.html#xscale" class="tsd-kind-icon">x<wbr>Scale</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="plottable.interaction.panzoom.html#yscale" class="tsd-kind-icon">y<wbr>Scale</a></li>
+								<li class="tsd-kind-constructor-method tsd-parent-kind-class"><a href="plottable.interaction.panzoom.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="plottable.interaction.panzoom.html#registerwithcomponent" class="tsd-kind-icon">register<wbr>With<wbr>Component</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="plottable.interaction.panzoom.html#resetzoom" class="tsd-kind-icon">reset<wbr>Zoom</a></li>
 							</ul>
 						</section>
@@ -127,23 +125,23 @@
 				</section>
 				</section>            <section class="tsd-panel-group tsd-member-group ">
 				<h2>Constructor methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor-method tsd-parent-kind-class tsd-is-overwrite">
+				<section class="tsd-panel tsd-member tsd-kind-constructor-method tsd-parent-kind-class">
 					<a name="constructor" class="anchor"></a>
 					<h3>constructor</h3>
-					<ul class="tsd-signatures tsd-kind-constructor-method tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">constructor<span class="tsd-signature-symbol">(</span>componentToListenTo<span class="tsd-signature-symbol">: </span><a href="plottable.abstract.component.html" class="tsd-signature-type">Component</a>, xScale<span class="tsd-signature-symbol">: </span><a href="plottable.abstract.quantitativescale.html" class="tsd-signature-type">QuantitativeScale</a>, yScale<span class="tsd-signature-symbol">: </span><a href="plottable.abstract.quantitativescale.html" class="tsd-signature-type">QuantitativeScale</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="plottable.interaction.panzoom.html" class="tsd-signature-type">PanZoom</a></li>
+					<ul class="tsd-signatures tsd-kind-constructor-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">constructor<span class="tsd-signature-symbol">(</span>xScale<span class="tsd-signature-symbol">?: </span><a href="plottable.abstract.quantitativescale.html" class="tsd-signature-type">QuantitativeScale</a>, yScale<span class="tsd-signature-symbol">?: </span><a href="plottable.abstract.quantitativescale.html" class="tsd-signature-type">QuantitativeScale</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="plottable.interaction.panzoom.html" class="tsd-signature-type">PanZoom</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
-								<p>Overwrites         <a href="plottable.abstract.interaction.html">Interaction</a>.<a href="plottable.abstract.interaction.html#constructor">constructor</a>
-								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:2367</li>
+									<li>Defined in plottable.d.ts:2882</li>
 								</ul>
 								</aside>        <div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Creates a PanZoomInteraction.</p>
 								</div>
+								<p>The allows you to move around and zoom in on a plot, interactively. It
+								does so by changing the xScale and yScales&#39; domains repeatedly.</p>
 								<dl class="tsd-comment-tags">
 									<dt>constructor</dt>
 									<dd></dd>
@@ -152,22 +150,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>componentToListenTo:         <a href="plottable.abstract.component.html" class="tsd-signature-type">Component</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The component to listen for interactions on.</p>
-									</div>
+									<h5>xScale?:         <a href="plottable.abstract.quantitativescale.html" class="tsd-signature-type">QuantitativeScale</a> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 								<li>
-									<h5>xScale:         <a href="plottable.abstract.quantitativescale.html" class="tsd-signature-type">QuantitativeScale</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The X scale to update on panning/zooming.</p>
-									</div>
-								</li>
-								<li>
-									<h5>yScale:         <a href="plottable.abstract.quantitativescale.html" class="tsd-signature-type">QuantitativeScale</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The Y scale to update on panning/zooming.</p>
-									</div>
+									<h5>yScale?:         <a href="plottable.abstract.quantitativescale.html" class="tsd-signature-type">QuantitativeScale</a> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns         <a href="plottable.interaction.panzoom.html" class="tsd-signature-type">PanZoom</a>
@@ -175,73 +161,8 @@
 						</li>
 					</ul>
 				</section></section>        <section class="tsd-panel-group tsd-member-group ">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-					<a name="componenttolistento" class="anchor"></a>
-					<h3>component<wbr>ToListen<wbr>To</h3>
-					<div class="tsd-signature tsd-kind-icon">component<wbr>ToListen<wbr>To<span class="tsd-signature-symbol">:</span>         <a href="plottable.abstract.component.html" class="tsd-signature-type">Component</a></div>
-					<aside class="tsd-sources">
-						<p>Inherited from         <a href="plottable.abstract.interaction.html">Interaction</a>.<a href="plottable.abstract.interaction.html#componenttolistento">componentToListenTo</a>
-						</p>
-						<ul>
-							<li>Defined in plottable.d.ts:2274</li>
-						</ul>
-					</aside>
-					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-					<a name="hitbox" class="anchor"></a>
-					<h3>hit<wbr>Box</h3>
-					<div class="tsd-signature tsd-kind-icon">hit<wbr>Box<span class="tsd-signature-symbol">:</span>         <a href="../interfaces/d3.selection.html" class="tsd-signature-type">Selection</a></div>
-					<aside class="tsd-sources">
-						<p>Inherited from         <a href="plottable.abstract.interaction.html">Interaction</a>.<a href="plottable.abstract.interaction.html#hitbox">hitBox</a>
-						</p>
-						<ul>
-							<li>Defined in plottable.d.ts:2273</li>
-						</ul>
-					</aside>
-					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="xscale" class="anchor"></a>
-					<h3>x<wbr>Scale</h3>
-					<div class="tsd-signature tsd-kind-icon">x<wbr>Scale<span class="tsd-signature-symbol">:</span>         <a href="plottable.abstract.quantitativescale.html" class="tsd-signature-type">QuantitativeScale</a></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in plottable.d.ts:2357</li>
-						</ul>
-					</aside>
-					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="yscale" class="anchor"></a>
-					<h3>y<wbr>Scale</h3>
-					<div class="tsd-signature tsd-kind-icon">y<wbr>Scale<span class="tsd-signature-symbol">:</span>         <a href="plottable.abstract.quantitativescale.html" class="tsd-signature-type">QuantitativeScale</a></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in plottable.d.ts:2358</li>
-						</ul>
-					</aside>
-				</section></section>        <section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-					<a name="registerwithcomponent" class="anchor"></a>
-					<h3>register<wbr>With<wbr>Component</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">register<wbr>With<wbr>Component<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="plottable.abstract.interaction.html" class="tsd-signature-type">Interaction</a></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description"><aside class="tsd-sources">
-								<p>Inherited from         <a href="plottable.abstract.interaction.html">Interaction</a>.<a href="plottable.abstract.interaction.html#registerwithcomponent">registerWithComponent</a>
-								</p>
-								<ul>
-									<li>Defined in plottable.d.ts:2286</li>
-								</ul>
-								</aside>        <div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Registers the Interaction on the Component it&#39;s listening to.
-									This needs to be called to activate the interaction.</p>
-								</div>
-							</div>
-							<h4 class="tsd-returns-title">Returns         <a href="plottable.abstract.interaction.html" class="tsd-signature-type">Interaction</a>
-							</h4>
-						</li>
-					</ul>
-					</section>            <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="resetzoom" class="anchor"></a>
 					<h3>reset<wbr>Zoom</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -250,9 +171,13 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:2368</li>
+									<li>Defined in plottable.d.ts:2886</li>
 								</ul>
-							</aside>
+								</aside>        <div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the scales back to their original domains.</p>
+								</div>
+							</div>
 						</li>
 					</ul>
 			</section></section>
@@ -285,7 +210,10 @@
 								<a href="../modules/plottable.core.html">Core</a>
 							</li>
 							<li class=" tsd-kind-container tsd-parent-kind-container">
-								<a href="../modules/plottable.formatter.html">Formatter</a>
+								<a href="../modules/plottable.dispatcher.html">Dispatcher</a>
+							</li>
+							<li class=" tsd-kind-container tsd-parent-kind-container">
+								<a href="../modules/plottable.formatters.html">Formatters</a>
 							</li>
 							<li class="current tsd-kind-container tsd-parent-kind-container">
 								<a href="../modules/plottable.interaction.html">Interaction</a>
@@ -297,10 +225,10 @@
 								<a href="../modules/plottable.scale.html">Scale</a>
 							</li>
 							<li class=" tsd-kind-container tsd-parent-kind-container">
-								<a href="../modules/plottable.template.html">Template</a>
+								<a href="../modules/plottable._drawer.html">_<wbr>Drawer</a>
 							</li>
 							<li class=" tsd-kind-container tsd-parent-kind-container">
-								<a href="../modules/plottable.util.html">Util</a>
+								<a href="../modules/plottable._util.html">_<wbr>Util</a>
 							</li>
 						</ul>
 					</li>
@@ -308,6 +236,9 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="plottable.interaction.barhover.html" class="tsd-kind-icon">Bar<wbr>Hover</a>
+					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
 						<a href="plottable.interaction.click.html" class="tsd-kind-icon">Click</a>
 					</li>
@@ -323,31 +254,13 @@
 					<li class=" tsd-kind-class tsd-parent-kind-container">
 						<a href="plottable.interaction.key.html" class="tsd-kind-icon">Key</a>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-container">
-						<a href="plottable.interaction.mousemove.html" class="tsd-kind-icon">Mousemove</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-container">
 						<a href="plottable.interaction.panzoom.html" class="tsd-kind-icon">Pan<wbr>Zoom</a>
 						<ul>
-							<li class=" tsd-kind-constructor-method tsd-parent-kind-class tsd-is-overwrite">
+							<li class=" tsd-kind-constructor-method tsd-parent-kind-class">
 								<a href="plottable.interaction.panzoom.html#constructor" class="tsd-kind-icon">constructor</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="plottable.interaction.panzoom.html#componenttolistento" class="tsd-kind-icon">component<wbr>ToListen<wbr>To</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="plottable.interaction.panzoom.html#hitbox" class="tsd-kind-icon">hit<wbr>Box</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="plottable.interaction.panzoom.html#xscale" class="tsd-kind-icon">x<wbr>Scale</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="plottable.interaction.panzoom.html#yscale" class="tsd-kind-icon">y<wbr>Scale</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="plottable.interaction.panzoom.html#registerwithcomponent" class="tsd-kind-icon">register<wbr>With<wbr>Component</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="plottable.interaction.panzoom.html#resetzoom" class="tsd-kind-icon">reset<wbr>Zoom</a>

@@ -84,6 +84,14 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>A class most other Plottable classes inherit from, in order to have a
+						unique ID.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -92,11 +100,6 @@
 						<ul class="tsd-hierarchy">
 							<li>
 								<span class="target">Table</span>
-								<ul class="tsd-hierarchy">
-									<li>
-										<a href="plottable.template.standardchart.html" class="tsd-signature-type">StandardChart</a>
-									</li>
-								</ul>
 							</li>
 						</ul>
 					</li>
@@ -115,15 +118,7 @@
 						<section class="tsd-index-section tsd-is-inherited">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="plottable.component.table.html#availableheight" class="tsd-kind-icon">available<wbr>Height</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="plottable.component.table.html#availablewidth" class="tsd-kind-icon">available<wbr>Width</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="plottable.component.table.html#backgroundcontainer" class="tsd-kind-icon">background<wbr>Container</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="plottable.component.table.html#clippathenabled" class="tsd-kind-icon">clip<wbr>Path<wbr>Enabled</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="plottable.component.table.html#content" class="tsd-kind-icon">content</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="plottable.component.table.html#element" class="tsd-kind-icon">element</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="plottable.component.table.html#foregroundcontainer" class="tsd-kind-icon">foreground<wbr>Container</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="plottable.component.table.html#xorigin" class="tsd-kind-icon">x<wbr>Origin</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="plottable.component.table.html#yorigin" class="tsd-kind-icon">y<wbr>Origin</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -137,6 +132,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="plottable.component.table.html#detach" class="tsd-kind-icon">detach</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="plottable.component.table.html#detachall" class="tsd-kind-icon">detach<wbr>All</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="plottable.component.table.html#empty" class="tsd-kind-icon">empty</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="plottable.component.table.html#height" class="tsd-kind-icon">height</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="plottable.component.table.html#merge" class="tsd-kind-icon">merge</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="plottable.component.table.html#padding" class="tsd-kind-icon">padding</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="plottable.component.table.html#registerinteraction" class="tsd-kind-icon">register<wbr>Interaction</a></li>
@@ -144,6 +140,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="plottable.component.table.html#renderto" class="tsd-kind-icon">render<wbr>To</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="plottable.component.table.html#resize" class="tsd-kind-icon">resize</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="plottable.component.table.html#rowweight" class="tsd-kind-icon">row<wbr>Weight</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="plottable.component.table.html#width" class="tsd-kind-icon">width</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="plottable.component.table.html#xalign" class="tsd-kind-icon">x<wbr>Align</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="plottable.component.table.html#xoffset" class="tsd-kind-icon">x<wbr>Offset</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="plottable.component.table.html#yalign" class="tsd-kind-icon">y<wbr>Align</a></li>
@@ -163,12 +160,17 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:841</li>
+									<li>Defined in plottable.d.ts:2124</li>
 								</ul>
 								</aside>        <div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Creates a Table.</p>
+									<p>Constructs a Table.</p>
 								</div>
+								<p>A Table is used to combine multiple Components in the form of a grid. A
+								common case is combining a y-axis, x-axis, and the plotted data via</p>
+								<pre><code class="lang-typescript"><span class="hljs-keyword">new</span> Table([[yAxis, plot],
+                                           [<span class="hljs-literal">null</span>,  xAxis]]);
+                                </code></pre>
 								<dl class="tsd-comment-tags">
 									<dt>constructor</dt>
 									<dd></dd>
@@ -187,39 +189,6 @@
 				</section></section>        <section class="tsd-panel-group tsd-member-group tsd-is-inherited">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-					<a name="availableheight" class="anchor"></a>
-					<h3>available<wbr>Height</h3>
-					<div class="tsd-signature tsd-kind-icon">available<wbr>Height<span class="tsd-signature-symbol">:</span>         <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from         <a href="plottable.abstract.component.html">Component</a>.<a href="plottable.abstract.component.html#availableheight">availableHeight</a>
-						</p>
-						<ul>
-							<li>Defined in plottable.d.ts:679</li>
-						</ul>
-					</aside>
-					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-					<a name="availablewidth" class="anchor"></a>
-					<h3>available<wbr>Width</h3>
-					<div class="tsd-signature tsd-kind-icon">available<wbr>Width<span class="tsd-signature-symbol">:</span>         <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from         <a href="plottable.abstract.component.html">Component</a>.<a href="plottable.abstract.component.html#availablewidth">availableWidth</a>
-						</p>
-						<ul>
-							<li>Defined in plottable.d.ts:678</li>
-						</ul>
-					</aside>
-					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-					<a name="backgroundcontainer" class="anchor"></a>
-					<h3>background<wbr>Container</h3>
-					<div class="tsd-signature tsd-kind-icon">background<wbr>Container<span class="tsd-signature-symbol">:</span>         <a href="../interfaces/d3.selection.html" class="tsd-signature-type">Selection</a></div>
-					<aside class="tsd-sources">
-						<p>Inherited from         <a href="plottable.abstract.component.html">Component</a>.<a href="plottable.abstract.component.html#backgroundcontainer">backgroundContainer</a>
-						</p>
-						<ul>
-							<li>Defined in plottable.d.ts:675</li>
-						</ul>
-					</aside>
-					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="clippathenabled" class="anchor"></a>
 					<h3>clip<wbr>Path<wbr>Enabled</h3>
 					<div class="tsd-signature tsd-kind-icon">clip<wbr>Path<wbr>Enabled<span class="tsd-signature-symbol">:</span>         <span class="tsd-signature-type">boolean</span></div>
@@ -227,62 +196,7 @@
 						<p>Inherited from         <a href="plottable.abstract.component.html">Component</a>.<a href="plottable.abstract.component.html#clippathenabled">clipPathEnabled</a>
 						</p>
 						<ul>
-							<li>Defined in plottable.d.ts:677</li>
-						</ul>
-					</aside>
-					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-					<a name="content" class="anchor"></a>
-					<h3>content</h3>
-					<div class="tsd-signature tsd-kind-icon">content<span class="tsd-signature-symbol">:</span>         <a href="../interfaces/d3.selection.html" class="tsd-signature-type">Selection</a></div>
-					<aside class="tsd-sources">
-						<p>Inherited from         <a href="plottable.abstract.component.html">Component</a>.<a href="plottable.abstract.component.html#content">content</a>
-						</p>
-						<ul>
-							<li>Defined in plottable.d.ts:674</li>
-						</ul>
-					</aside>
-					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-					<a name="element" class="anchor"></a>
-					<h3>element</h3>
-					<div class="tsd-signature tsd-kind-icon">element<span class="tsd-signature-symbol">:</span>         <a href="../interfaces/d3.selection.html" class="tsd-signature-type">Selection</a></div>
-					<aside class="tsd-sources">
-						<p>Inherited from         <a href="plottable.abstract.component.html">Component</a>.<a href="plottable.abstract.component.html#element">element</a>
-						</p>
-						<ul>
-							<li>Defined in plottable.d.ts:673</li>
-						</ul>
-					</aside>
-					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-					<a name="foregroundcontainer" class="anchor"></a>
-					<h3>foreground<wbr>Container</h3>
-					<div class="tsd-signature tsd-kind-icon">foreground<wbr>Container<span class="tsd-signature-symbol">:</span>         <a href="../interfaces/d3.selection.html" class="tsd-signature-type">Selection</a></div>
-					<aside class="tsd-sources">
-						<p>Inherited from         <a href="plottable.abstract.component.html">Component</a>.<a href="plottable.abstract.component.html#foregroundcontainer">foregroundContainer</a>
-						</p>
-						<ul>
-							<li>Defined in plottable.d.ts:676</li>
-						</ul>
-					</aside>
-					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-					<a name="xorigin" class="anchor"></a>
-					<h3>x<wbr>Origin</h3>
-					<div class="tsd-signature tsd-kind-icon">x<wbr>Origin<span class="tsd-signature-symbol">:</span>         <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from         <a href="plottable.abstract.component.html">Component</a>.<a href="plottable.abstract.component.html#xorigin">xOrigin</a>
-						</p>
-						<ul>
-							<li>Defined in plottable.d.ts:680</li>
-						</ul>
-					</aside>
-					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-					<a name="yorigin" class="anchor"></a>
-					<h3>y<wbr>Origin</h3>
-					<div class="tsd-signature tsd-kind-icon">y<wbr>Origin<span class="tsd-signature-symbol">:</span>         <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from         <a href="plottable.abstract.component.html">Component</a>.<a href="plottable.abstract.component.html#yorigin">yOrigin</a>
-						</p>
-						<ul>
-							<li>Defined in plottable.d.ts:681</li>
+							<li>Defined in plottable.d.ts:1451</li>
 						</ul>
 					</aside>
 				</section></section>        <section class="tsd-panel-group tsd-member-group ">
@@ -296,12 +210,19 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:849</li>
+									<li>Defined in plottable.d.ts:2142</li>
 								</ul>
 								</aside>        <div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Adds a Component in the specified cell.</p>
+									<p>Adds a Component in the specified cell. The cell must be unoccupied.</p>
 								</div>
+								<p>For example, instead of calling <code>new Table([[a, b], [null, c]])</code>, you
+								could call</p>
+								<pre><code class="lang-typescript"><span class="hljs-keyword">var</span> table = <span class="hljs-keyword">new</span> Table();
+                                table.addComponent(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, a);
+                                table.addComponent(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, b);
+                                table.addComponent(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, c);
+                                </code></pre>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -326,6 +247,7 @@
 							</ul>
 							<h4 class="tsd-returns-title">Returns         <a href="plottable.component.table.html" class="tsd-signature-type">Table</a>
 							</h4>
+							<p>The calling Table.</p>
 						</li>
 					</ul>
 					</section>            <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
@@ -339,11 +261,11 @@
 								<p>Inherited from         <a href="plottable.abstract.component.html">Component</a>.<a href="plottable.abstract.component.html#autoresize">autoResize</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:706</li>
+									<li>Defined in plottable.d.ts:1481</li>
 								</ul>
 								</aside>        <div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Enables and disables auto-resize.</p>
+									<p>Enables or disables resize on window resizes.</p>
 								</div>
 								<p>If enabled, window resizes will enqueue this component for a re-layout
 									and re-render. Animations are disabled during window resizes when auto-
@@ -354,14 +276,13 @@
 								<li>
 									<h5>flag:         <span class="tsd-signature-type">boolean</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<ul>
-											<li>Enables (true) or disables (false) auto-resize.</li>
-										</ul>
+										<p>Enable (true) or disable (false) auto-resize.</p>
 									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns         <a href="plottable.abstract.component.html" class="tsd-signature-type">Component</a>
 							</h4>
+							<p>The calling component.</p>
 						</li>
 					</ul>
 					</section>            <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
@@ -376,7 +297,7 @@
 								<p>Inherited from         <a href="plottable.abstract.component.html">Component</a>.<a href="plottable.abstract.component.html#classed">classed</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:749</li>
+									<li>Defined in plottable.d.ts:1538</li>
 								</ul>
 								</aside>        <div class="tsd-comment tsd-typography">
 								<div class="lead">
@@ -400,7 +321,7 @@
 								<p>Inherited from         <a href="plottable.abstract.component.html">Component</a>.<a href="plottable.abstract.component.html#classed">classed</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:750</li>
+									<li>Defined in plottable.d.ts:1539</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -425,13 +346,15 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:875</li>
+									<li>Defined in plottable.d.ts:2174</li>
 								</ul>
 								</aside>        <div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Sets the layout weight of a particular column.
 									Space is allocated to columns based on their weight. Columns with higher weights receive proportionally more space.</p>
 								</div>
+								<p>A common case would be to have one graph take up 2/3rds of the space,
+								and the other graph take up 1/3rd.</p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -464,11 +387,11 @@
 								<p>Inherited from         <a href="plottable.abstract.componentcontainer.html">ComponentContainer</a>.<a href="plottable.abstract.componentcontainer.html#components">components</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:787</li>
+									<li>Defined in plottable.d.ts:1593</li>
 								</ul>
 								</aside>        <div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Returns a list of components in the ComponentContainer</p>
+									<p>Returns a list of components in the ComponentContainer.</p>
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns         <a href="plottable.abstract.component.html" class="tsd-signature-type">Component</a><span class="tsd-signature-symbol">[]</span>
@@ -487,12 +410,14 @@
 								<p>Inherited from         <a href="plottable.abstract.component.html">Component</a>.<a href="plottable.abstract.component.html#detach">detach</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:768</li>
+									<li>Defined in plottable.d.ts:1562</li>
 								</ul>
 								</aside>        <div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Detaches a Component from the DOM. The component can be reused.</p>
 								</div>
+								<p>This should only be used if you plan on reusing the calling
+								Components. Otherwise, use remove().</p>
 							</div>
 							<h4 class="tsd-returns-title">Returns         <a href="plottable.abstract.component.html" class="tsd-signature-type">Component</a>
 							</h4>
@@ -510,7 +435,7 @@
 								<p>Inherited from         <a href="plottable.abstract.componentcontainer.html">ComponentContainer</a>.<a href="plottable.abstract.componentcontainer.html#detachall">detachAll</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:800</li>
+									<li>Defined in plottable.d.ts:1606</li>
 								</ul>
 								</aside>        <div class="tsd-comment tsd-typography">
 								<div class="lead">
@@ -534,7 +459,7 @@
 								<p>Inherited from         <a href="plottable.abstract.componentcontainer.html">ComponentContainer</a>.<a href="plottable.abstract.componentcontainer.html#empty">empty</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:793</li>
+									<li>Defined in plottable.d.ts:1599</li>
 								</ul>
 								</aside>        <div class="tsd-comment tsd-typography">
 								<div class="lead">
@@ -544,6 +469,29 @@
 							<h4 class="tsd-returns-title">Returns         <span class="tsd-signature-type">boolean</span>
 							</h4>
 							<p>Whether the calling ComponentContainer is empty.</p>
+						</li>
+					</ul>
+					</section>            <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="height" class="anchor"></a>
+					<h3>height</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">height<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description"><aside class="tsd-sources">
+								<p>Inherited from         <a href="plottable.abstract.component.html">Component</a>.<a href="plottable.abstract.component.html#height">height</a>
+								</p>
+								<ul>
+									<li>Defined in plottable.d.ts:1579</li>
+								</ul>
+								</aside>        <div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Return the height of the component</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns         <span class="tsd-signature-type">number</span>
+							</h4>
+							<p>height of the component</p>
 						</li>
 					</ul>
 					</section>            <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
@@ -557,17 +505,18 @@
 								<p>Inherited from         <a href="plottable.abstract.component.html">Component</a>.<a href="plottable.abstract.component.html#merge">merge</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:762</li>
+									<li>Defined in plottable.d.ts:1553</li>
 								</ul>
 								</aside>        <div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Merges this Component with another Component, returning a ComponentGroup.
-										There are four cases:
-										Component + Component: Returns a ComponentGroup with both components inside it.
-										ComponentGroup + Component: Returns the ComponentGroup with the Component appended.
-										Component + ComponentGroup: Returns the ComponentGroup with the Component prepended.
-									ComponentGroup + ComponentGroup: Returns a new ComponentGroup with two ComponentGroups inside it.</p>
+									<p>Merges this Component with another Component, returning a
+									ComponentGroup. This is used to layer Components on top of each other.</p>
 								</div>
+								<p>There are four cases:
+									Component + Component: Returns a ComponentGroup with both components inside it.
+									ComponentGroup + Component: Returns the ComponentGroup with the Component appended.
+									Component + ComponentGroup: Returns the ComponentGroup with the Component prepended.
+								ComponentGroup + ComponentGroup: Returns a new ComponentGroup with two ComponentGroups inside it.</p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -580,6 +529,7 @@
 							</ul>
 							<h4 class="tsd-returns-title">Returns         <a href="plottable.component.group.html" class="tsd-signature-type">Group</a>
 							</h4>
+							<p>The relevant ComponentGroup out of the above four cases.</p>
 						</li>
 					</ul>
 					</section>            <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
@@ -591,7 +541,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:857</li>
+									<li>Defined in plottable.d.ts:2150</li>
 								</ul>
 								</aside>        <div class="tsd-comment tsd-typography">
 								<div class="lead">
@@ -629,7 +579,7 @@
 								<p>Inherited from         <a href="plottable.abstract.component.html">Component</a>.<a href="plottable.abstract.component.html#registerinteraction">registerInteraction</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:741</li>
+									<li>Defined in plottable.d.ts:1530</li>
 								</ul>
 								</aside>        <div class="tsd-comment tsd-typography">
 								<div class="lead">
@@ -663,7 +613,7 @@
 								<p>Overwrites         <a href="plottable.abstract.component.html">Component</a>.<a href="plottable.abstract.component.html#remove">remove</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:801</li>
+									<li>Defined in plottable.d.ts:1607</li>
 								</ul>
 							</aside>
 						</li>
@@ -672,32 +622,46 @@
 					<a name="renderto" class="anchor"></a>
 					<h3>render<wbr>To</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">render<wbr>To<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="plottable.abstract.component.html" class="tsd-signature-type">Component</a></li>
+						<li class="tsd-signature tsd-kind-icon">render<wbr>To<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">String</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="plottable.abstract.component.html" class="tsd-signature-type">Component</a></li>
+						<li class="tsd-signature tsd-kind-icon">render<wbr>To<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><a href="../interfaces/d3.selection.html" class="tsd-signature-type">Selection</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="plottable.abstract.component.html" class="tsd-signature-type">Component</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<p>Inherited from         <a href="plottable.abstract.component.html">Component</a>.<a href="plottable.abstract.component.html#renderto">renderTo</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:689</li>
+									<li>Defined in plottable.d.ts:1458</li>
 								</ul>
 								</aside>        <div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Renders the Component into a given DOM element.</p>
+									<p>Renders the Component into a given DOM element. The element must be as <svg>.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>element:         <span class="tsd-signature-type">any</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>A D3 selection or a selector for getting the element to render into.</p>
-									</div>
+									<h5>selector:         <span class="tsd-signature-type">String</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns         <a href="plottable.abstract.component.html" class="tsd-signature-type">Component</a>
 							</h4>
 							<p>The calling component.</p>
+						</li>
+						<li class="tsd-description"><aside class="tsd-sources">
+								<p>Inherited from         <a href="plottable.abstract.component.html">Component</a>.<a href="plottable.abstract.component.html#renderto">renderTo</a>
+								</p>
+								<ul>
+									<li>Defined in plottable.d.ts:1459</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>element:         <a href="../interfaces/d3.selection.html" class="tsd-signature-type">Selection</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns         <a href="plottable.abstract.component.html" class="tsd-signature-type">Component</a>
+							</h4>
 						</li>
 					</ul>
 					</section>            <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
@@ -711,12 +675,14 @@
 								<p>Inherited from         <a href="plottable.abstract.component.html">Component</a>.<a href="plottable.abstract.component.html#resize">resize</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:696</li>
+									<li>Defined in plottable.d.ts:1470</li>
 								</ul>
 								</aside>        <div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Cause the Component to recompute layout and redraw. If passed arguments, will resize the root SVG it lives in.</p>
+									<p>Causes the Component to recompute layout and redraw. If passed arguments, will resize the root SVG it lives in.</p>
 								</div>
+								<p>This function should be called when CSS changes could influence the size
+								of the components, e.g. changing the font size.</p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -729,6 +695,7 @@
 							</ul>
 							<h4 class="tsd-returns-title">Returns         <a href="plottable.abstract.component.html" class="tsd-signature-type">Component</a>
 							</h4>
+							<p>The calling component.</p>
 						</li>
 					</ul>
 					</section>            <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
@@ -740,13 +707,15 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:866</li>
+									<li>Defined in plottable.d.ts:2162</li>
 								</ul>
 								</aside>        <div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Sets the layout weight of a particular row.
 									Space is allocated to rows based on their weight. Rows with higher weights receive proportionally more space.</p>
 								</div>
+								<p>A common case would be to have one graph take up 2/3rds of the space,
+								and the other graph take up 1/3rd.</p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -769,6 +738,29 @@
 						</li>
 					</ul>
 					</section>            <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="width" class="anchor"></a>
+					<h3>width</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">width<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description"><aside class="tsd-sources">
+								<p>Inherited from         <a href="plottable.abstract.component.html">Component</a>.<a href="plottable.abstract.component.html#width">width</a>
+								</p>
+								<ul>
+									<li>Defined in plottable.d.ts:1573</li>
+								</ul>
+								</aside>        <div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Return the width of the component</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns         <span class="tsd-signature-type">number</span>
+							</h4>
+							<p>width of the component</p>
+						</li>
+					</ul>
+					</section>            <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="xalign" class="anchor"></a>
 					<h3>x<wbr>Align</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
@@ -779,19 +771,23 @@
 								<p>Inherited from         <a href="plottable.abstract.component.html">Component</a>.<a href="plottable.abstract.component.html#xalign">xAlign</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:713</li>
+									<li>Defined in plottable.d.ts:1493</li>
 								</ul>
 								</aside>        <div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Sets the x alignment of the Component.</p>
+									<p>Sets the x alignment of the Component. This will be used if the
+									Component is given more space than it needs.</p>
 								</div>
+								<p>For example, you may want to make a Legend postition itself it the top
+									right, so you would call <code>legend.xAlign(&quot;right&quot;)</code> and
+								<code>legend.yAlign(&quot;top&quot;)</code>.</p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>alignment:         <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>The x alignment of the Component (one of LEFT/CENTER/RIGHT).</p>
+										<p>The x alignment of the Component (one of [&quot;left&quot;, &quot;center&quot;, &quot;right&quot;]).</p>
 									</div>
 								</li>
 							</ul>
@@ -811,11 +807,12 @@
 								<p>Inherited from         <a href="plottable.abstract.component.html">Component</a>.<a href="plottable.abstract.component.html#xoffset">xOffset</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:727</li>
+									<li>Defined in plottable.d.ts:1514</li>
 								</ul>
 								</aside>        <div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Sets the x offset of the Component.</p>
+									<p>Sets the x offset of the Component. This will be used if the Component
+									is given more space than it needs.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -823,7 +820,8 @@
 								<li>
 									<h5>offset:         <span class="tsd-signature-type">number</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>The desired x offset, in pixels.</p>
+										<p>The desired x offset, in pixels, from the left
+										side of the container.</p>
 									</div>
 								</li>
 							</ul>
@@ -843,19 +841,23 @@
 								<p>Inherited from         <a href="plottable.abstract.component.html">Component</a>.<a href="plottable.abstract.component.html#yalign">yAlign</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:720</li>
+									<li>Defined in plottable.d.ts:1505</li>
 								</ul>
 								</aside>        <div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Sets the y alignment of the Component.</p>
+									<p>Sets the y alignment of the Component. This will be used if the
+									Component is given more space than it needs.</p>
 								</div>
+								<p>For example, you may want to make a Legend postition itself it the top
+									right, so you would call <code>legend.xAlign(&quot;right&quot;)</code> and
+								<code>legend.yAlign(&quot;top&quot;)</code>.</p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>alignment:         <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>The y alignment of the Component (one of TOP/CENTER/BOTTOM).</p>
+										<p>The x alignment of the Component (one of [&quot;top&quot;, &quot;center&quot;, &quot;bottom&quot;]).</p>
 									</div>
 								</li>
 							</ul>
@@ -875,11 +877,12 @@
 								<p>Inherited from         <a href="plottable.abstract.component.html">Component</a>.<a href="plottable.abstract.component.html#yoffset">yOffset</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:734</li>
+									<li>Defined in plottable.d.ts:1523</li>
 								</ul>
 								</aside>        <div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Sets the y offset of the Component.</p>
+									<p>Sets the y offset of the Component. This will be used if the Component
+									is given more space than it needs.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -887,7 +890,8 @@
 								<li>
 									<h5>offset:         <span class="tsd-signature-type">number</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>The desired y offset, in pixels.</p>
+										<p>The desired y offset, in pixels, from the top
+										side of the container.</p>
 									</div>
 								</li>
 							</ul>
@@ -926,7 +930,10 @@
 								<a href="../modules/plottable.core.html">Core</a>
 							</li>
 							<li class=" tsd-kind-container tsd-parent-kind-container">
-								<a href="../modules/plottable.formatter.html">Formatter</a>
+								<a href="../modules/plottable.dispatcher.html">Dispatcher</a>
+							</li>
+							<li class=" tsd-kind-container tsd-parent-kind-container">
+								<a href="../modules/plottable.formatters.html">Formatters</a>
 							</li>
 							<li class=" tsd-kind-container tsd-parent-kind-container">
 								<a href="../modules/plottable.interaction.html">Interaction</a>
@@ -938,10 +945,10 @@
 								<a href="../modules/plottable.scale.html">Scale</a>
 							</li>
 							<li class=" tsd-kind-container tsd-parent-kind-container">
-								<a href="../modules/plottable.template.html">Template</a>
+								<a href="../modules/plottable._drawer.html">_<wbr>Drawer</a>
 							</li>
 							<li class=" tsd-kind-container tsd-parent-kind-container">
-								<a href="../modules/plottable.util.html">Util</a>
+								<a href="../modules/plottable._util.html">_<wbr>Util</a>
 							</li>
 						</ul>
 					</li>
@@ -953,10 +960,10 @@
 						<a href="../interfaces/plottable.component.hovercallback.html" class="tsd-kind-icon">Hover<wbr>Callback</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-container">
-						<a href="../interfaces/plottable.component.iteratelayoutresult.html" class="tsd-kind-icon">Iterate<wbr>Layout<wbr>Result</a>
+						<a href="../interfaces/plottable.component.togglecallback.html" class="tsd-kind-icon">Toggle<wbr>Callback</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-container">
-						<a href="../interfaces/plottable.component.togglecallback.html" class="tsd-kind-icon">Toggle<wbr>Callback</a>
+						<a href="../interfaces/plottable.component._iteratelayoutresult.html" class="tsd-kind-icon">_<wbr>Iterate<wbr>Layout<wbr>Result</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
 						<a href="plottable.component.axislabel.html" class="tsd-kind-icon">Axis<wbr>Label</a>
@@ -966,6 +973,9 @@
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
 						<a href="plottable.component.group.html" class="tsd-kind-icon">Group</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="plottable.component.horizontallegend.html" class="tsd-kind-icon">Horizontal<wbr>Legend</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
 						<a href="plottable.component.label.html" class="tsd-kind-icon">Label</a>
@@ -982,31 +992,7 @@
 								<a href="plottable.component.table.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="plottable.component.table.html#availableheight" class="tsd-kind-icon">available<wbr>Height</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="plottable.component.table.html#availablewidth" class="tsd-kind-icon">available<wbr>Width</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="plottable.component.table.html#backgroundcontainer" class="tsd-kind-icon">background<wbr>Container</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="plottable.component.table.html#clippathenabled" class="tsd-kind-icon">clip<wbr>Path<wbr>Enabled</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="plottable.component.table.html#content" class="tsd-kind-icon">content</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="plottable.component.table.html#element" class="tsd-kind-icon">element</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="plottable.component.table.html#foregroundcontainer" class="tsd-kind-icon">foreground<wbr>Container</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="plottable.component.table.html#xorigin" class="tsd-kind-icon">x<wbr>Origin</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="plottable.component.table.html#yorigin" class="tsd-kind-icon">y<wbr>Origin</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="plottable.component.table.html#addcomponent" class="tsd-kind-icon">add<wbr>Component</a>
@@ -1033,6 +1019,9 @@
 								<a href="plottable.component.table.html#empty" class="tsd-kind-icon">empty</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="plottable.component.table.html#height" class="tsd-kind-icon">height</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="plottable.component.table.html#merge" class="tsd-kind-icon">merge</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -1052,6 +1041,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="plottable.component.table.html#rowweight" class="tsd-kind-icon">row<wbr>Weight</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="plottable.component.table.html#width" class="tsd-kind-icon">width</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="plottable.component.table.html#xalign" class="tsd-kind-icon">x<wbr>Align</a>
