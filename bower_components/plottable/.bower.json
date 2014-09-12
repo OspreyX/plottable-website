@@ -49,7 +49,7 @@
   "_resolution": {
     "type": "version",
     "tag": "v0.29.0",
-    "commit": "e41309acf761d90828067d0092afa9d9d8f6e154"
+    "commit": "3038243c988c4c711ec3de2a7efed9a9997e675e"
   },
   "_source": "git://github.com/palantir/plottable.git",
   "_target": "0.29.0",

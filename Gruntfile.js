@@ -103,7 +103,7 @@ module.exports = function(grunt) {
 
     watch: {
       scripts: {
-        files: ['js/*.js', 'images/*'],
+        files: ['js/*.js', 'images/*', '*.html'],
         tasks: ['concat', 'uglify', 'newer:imagemin', 'newer:svgmin'],
         options: { spawn: false }
       },

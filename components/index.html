@@ -42,7 +42,6 @@ window.onload = function() {
         return; // unsupported for now
       }
       var component = axis(type, or);
-      new Plottable.Interaction.PanZoom(component, component._scale);
       innerTable.addComponent(x[index2] + index1 * 3, y[index2], component);
     })
   });
@@ -58,11 +57,6 @@ window.onload = function() {
         return; // zooming for category axes
       }
       var component = innerTable.rows[x[index2] + index1 * 3][y[index2]];
-      if (or == "bottom" || or == "top") {
-        new Plottable.Interaction.PanZoom(component, component._scale).registerWithComponent();
-      } else {
-        new Plottable.Interaction.PanZoom(component, null, component._scale).registerWithComponent();
-      }
     })
   });
 
@@ -91,7 +85,8 @@ window.onload = function() {
   table2.addComponent(1, 1, innerTable2);
   table2.renderTo("#table2");
 
-  new Plottable.Interaction.Click(table2).callback(function() {table2.renderTo("#table2")}).registerWithComponent();
+  var clickInteraction = new Plottable.Interaction.Click(table2).callback(function() {table2.renderTo("#table2")})
+  table2.registerInteraction(clickInteraction);
 
   // gridlines
   var innerTable3 = new Plottable.Component.Table();
@@ -104,13 +99,5 @@ window.onload = function() {
   var table3 = new Plottable.Component.Table();
   table3.addComponent(1, 1, innerTable3);
   table3.renderTo("#table3");
-
-  for (var i = 0; i < 3; i++) {
-    var comp = innerTable3.rows[0][i];
-    new Plottable.Interaction.PanZoom(comp.rows[0][1], showx[i] ? comp.rows[1][1]._scale : null,
-                                      showy[i] ? comp.rows[0][0]._scale : null).registerWithComponent();
-  }
-
-
 }
 </script>
