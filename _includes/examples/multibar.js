@@ -29,4 +29,4 @@ new Plottable.Component.Table([
   [yLabel1, yAxis1, plot1],
   [null,    null,   xAxis]
 ])
-.renderTo(d3.select('svg#example'));
+.renderTo("svg#example");

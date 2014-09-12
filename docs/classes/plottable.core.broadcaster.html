@@ -84,6 +84,17 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The Broadcaster class is owned by an IListenable. Third parties can register and deregister listeners
+							from the broadcaster. When the broadcaster.broadcast method is activated, all registered callbacks are
+							called. The registered callbacks are called with the registered Listenable that the broadcaster is attached
+						to, along with optional arguments passed to the <code>broadcast</code> method.</p>
+					</div>
+					<p>The listeners are called synchronously.</p>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -135,13 +146,24 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:591</li>
+									<li>Defined in plottable.d.ts:555</li>
 								</ul>
-							</aside>
+								</aside>        <div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Constructs a broadcaster, taking the Listenable that the broadcaster will be attached to.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>constructor</dt>
+									<dd></dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>listenable:         <a href="../interfaces/plottable.core.ilistenable.html" class="tsd-signature-type">IListenable</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The Listenable-object that this broadcaster is attached to.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns         <a href="plottable.core.broadcaster.html" class="tsd-signature-type">Broadcaster</a>
@@ -156,7 +178,7 @@
 					<div class="tsd-signature tsd-kind-icon">listenable<span class="tsd-signature-symbol">:</span>         <a href="../interfaces/plottable.core.ilistenable.html" class="tsd-signature-type">IListenable</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in plottable.d.ts:590</li>
+							<li>Defined in plottable.d.ts:548</li>
 						</ul>
 					</aside>
 				</section></section>        <section class="tsd-panel-group tsd-member-group ">
@@ -170,7 +192,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:610</li>
+									<li>Defined in plottable.d.ts:572</li>
 								</ul>
 								</aside>        <div class="tsd-comment tsd-typography">
 								<div class="lead">
@@ -197,7 +219,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:623</li>
+									<li>Defined in plottable.d.ts:585</li>
 								</ul>
 								</aside>        <div class="tsd-comment tsd-typography">
 								<div class="lead">
@@ -210,24 +232,24 @@
 					<a name="deregisterlistener" class="anchor"></a>
 					<h3>deregister<wbr>Listener</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">deregister<wbr>Listener<span class="tsd-signature-symbol">(</span>listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="plottable.core.broadcaster.html" class="tsd-signature-type">Broadcaster</a></li>
+						<li class="tsd-signature tsd-kind-icon">deregister<wbr>Listener<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="plottable.core.broadcaster.html" class="tsd-signature-type">Broadcaster</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:617</li>
+									<li>Defined in plottable.d.ts:579</li>
 								</ul>
 								</aside>        <div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Deregisters the callback associated with a listener.</p>
+									<p>Deregisters the callback associated with a key.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>listener:         <span class="tsd-signature-type">any</span></h5>
+									<h5>key:         <span class="tsd-signature-type">any</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>The listener to deregister.</p>
+										<p>The key to deregister.</p>
 									</div>
 								</li>
 							</ul>
@@ -240,27 +262,26 @@
 					<a name="registerlistener" class="anchor"></a>
 					<h3>register<wbr>Listener</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">register<wbr>Listener<span class="tsd-signature-symbol">(</span>listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, callback<span class="tsd-signature-symbol">: </span><a href="../interfaces/plottable.core.ibroadcastercallback.html" class="tsd-signature-type">IBroadcasterCallback</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="plottable.core.broadcaster.html" class="tsd-signature-type">Broadcaster</a></li>
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Listener<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, callback<span class="tsd-signature-symbol">: </span><a href="../interfaces/plottable.core.ibroadcastercallback.html" class="tsd-signature-type">IBroadcasterCallback</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="plottable.core.broadcaster.html" class="tsd-signature-type">Broadcaster</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:603</li>
+									<li>Defined in plottable.d.ts:565</li>
 								</ul>
 								</aside>        <div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Registers a callback to be called when the broadcast method is called. Also takes a listener which
-										is used to support deregistering the same callback later, by passing in the same listener.
-									If there is already a callback associated with that listener, then the callback will be replaced.</p>
+									<p>Registers a callback to be called when the broadcast method is called. Also takes a key which
+										is used to support deregistering the same callback later, by passing in the same key.
+									If there is already a callback associated with that key, then the callback will be replaced.</p>
 								</div>
-								<p>This should NOT be called directly by a Component; registerToBroadcaster should be used instead.</p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>listener:         <span class="tsd-signature-type">any</span></h5>
+									<h5>key:         <span class="tsd-signature-type">any</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>The listener associated with the callback.</p>
+										<p>The key associated with the callback. Key uniqueness is determined by deep equality.</p>
 									</div>
 								</li>
 								<li>
@@ -316,7 +337,10 @@
 								</ul>
 							</li>
 							<li class=" tsd-kind-container tsd-parent-kind-container">
-								<a href="../modules/plottable.formatter.html">Formatter</a>
+								<a href="../modules/plottable.dispatcher.html">Dispatcher</a>
+							</li>
+							<li class=" tsd-kind-container tsd-parent-kind-container">
+								<a href="../modules/plottable.formatters.html">Formatters</a>
 							</li>
 							<li class=" tsd-kind-container tsd-parent-kind-container">
 								<a href="../modules/plottable.interaction.html">Interaction</a>
@@ -328,10 +352,10 @@
 								<a href="../modules/plottable.scale.html">Scale</a>
 							</li>
 							<li class=" tsd-kind-container tsd-parent-kind-container">
-								<a href="../modules/plottable.template.html">Template</a>
+								<a href="../modules/plottable._drawer.html">_<wbr>Drawer</a>
 							</li>
 							<li class=" tsd-kind-container tsd-parent-kind-container">
-								<a href="../modules/plottable.util.html">Util</a>
+								<a href="../modules/plottable._util.html">_<wbr>Util</a>
 							</li>
 						</ul>
 					</li>
@@ -375,6 +399,9 @@
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="plottable.core.colors.html" class="tsd-kind-icon">Colors</a>
+					</li>
 				</ul>
 			</nav>
 		</div>

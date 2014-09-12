@@ -81,6 +81,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>A simple bounding box.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -104,7 +111,7 @@
 					<div class="tsd-signature tsd-kind-icon">x<wbr>Max<span class="tsd-signature-symbol">:</span>         <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in plottable.d.ts:1161</li>
+							<li>Defined in plottable.d.ts:816</li>
 						</ul>
 					</aside>
 					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -113,7 +120,7 @@
 					<div class="tsd-signature tsd-kind-icon">x<wbr>Min<span class="tsd-signature-symbol">:</span>         <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in plottable.d.ts:1160</li>
+							<li>Defined in plottable.d.ts:815</li>
 						</ul>
 					</aside>
 					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -122,7 +129,7 @@
 					<div class="tsd-signature tsd-kind-icon">y<wbr>Max<span class="tsd-signature-symbol">:</span>         <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in plottable.d.ts:1163</li>
+							<li>Defined in plottable.d.ts:818</li>
 						</ul>
 					</aside>
 					</section>            <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -131,7 +138,7 @@
 					<div class="tsd-signature tsd-kind-icon">y<wbr>Min<span class="tsd-signature-symbol">:</span>         <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in plottable.d.ts:1162</li>
+							<li>Defined in plottable.d.ts:817</li>
 						</ul>
 					</aside>
 			</section></section>
@@ -164,7 +171,10 @@
 								<a href="../modules/plottable.core.html">Core</a>
 							</li>
 							<li class=" tsd-kind-container tsd-parent-kind-container">
-								<a href="../modules/plottable.formatter.html">Formatter</a>
+								<a href="../modules/plottable.dispatcher.html">Dispatcher</a>
+							</li>
+							<li class=" tsd-kind-container tsd-parent-kind-container">
+								<a href="../modules/plottable.formatters.html">Formatters</a>
 							</li>
 							<li class=" tsd-kind-container tsd-parent-kind-container">
 								<a href="../modules/plottable.interaction.html">Interaction</a>
@@ -176,10 +186,10 @@
 								<a href="../modules/plottable.scale.html">Scale</a>
 							</li>
 							<li class=" tsd-kind-container tsd-parent-kind-container">
-								<a href="../modules/plottable.template.html">Template</a>
+								<a href="../modules/plottable._drawer.html">_<wbr>Drawer</a>
 							</li>
 							<li class=" tsd-kind-container tsd-parent-kind-container">
-								<a href="../modules/plottable.util.html">Util</a>
+								<a href="../modules/plottable._util.html">_<wbr>Util</a>
 							</li>
 						</ul>
 					</li>
@@ -188,16 +198,16 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-container">
-						<a href="plottable.filterformat.html" class="tsd-kind-icon">Filter<wbr>Format</a>
+						<a href="plottable.datasetdrawerkey.html" class="tsd-kind-icon">Dataset<wbr>Drawer<wbr>Key</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-container">
-						<a href="plottable.fullselectionarea.html" class="tsd-kind-icon">Full<wbr>Selection<wbr>Area</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-container">
-						<a href="plottable.iaccessor.html" class="tsd-kind-icon">IAccessor</a>
+						<a href="plottable.formatter.html" class="tsd-kind-icon">Formatter</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-container">
 						<a href="plottable.iappliedaccessor.html" class="tsd-kind-icon">IApplied<wbr>Accessor</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-container">
+						<a href="plottable.iattributetoprojector.html" class="tsd-kind-icon">IAttribute<wbr>ToProjector</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-container">
 						<a href="plottable.idataset.html" class="tsd-kind-icon">IDataset</a>
@@ -209,10 +219,7 @@
 						<a href="plottable.imetadata.html" class="tsd-kind-icon">IMetadata</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-container">
-						<a href="plottable.ipixelarea.html" class="tsd-kind-icon">IPixel<wbr>Area</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-container">
-						<a href="plottable.ispacerequest.html" class="tsd-kind-icon">ISpace<wbr>Request</a>
+						<a href="plottable.point.html" class="tsd-kind-icon">Point</a>
 					</li>
 				</ul>
 				<ul class="current">
@@ -235,11 +242,26 @@
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-container">
+						<a href="plottable._iaccessor.html" class="tsd-kind-icon">_IAccessor</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-container">
+						<a href="plottable._ipixelarea.html" class="tsd-kind-icon">_IPixel<wbr>Area</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-container">
+						<a href="plottable._iprojector.html" class="tsd-kind-icon">_IProjector</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-container">
+						<a href="plottable._ispacerequest.html" class="tsd-kind-icon">_ISpace<wbr>Request</a>
+					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
-						<a href="../classes/plottable.datasource.html" class="tsd-kind-icon">Data<wbr>Source</a>
+						<a href="../classes/plottable.dataset.html" class="tsd-kind-icon">Dataset</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
 						<a href="../classes/plottable.domainer.html" class="tsd-kind-icon">Domainer</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-container">
+						<a href="../modules/plottable.html#milliseconds_in_one_day" class="tsd-kind-icon">MILLISECONDS_<wbr>IN_<wbr>ONE_<wbr>DAY</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-container">
 						<a href="../modules/plottable.html#version" class="tsd-kind-icon">version</a>

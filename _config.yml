@@ -6,6 +6,7 @@ company           : 'Palantir'
 title             : 'Palantir'
 google_analytics  : ''
 baseurl           :
-plottable_version : 0.27.1
+plottable_version : 0.29.0
+minifiedSuffix    : '.min'
 exclude           :
 - _typedoc

@@ -110,12 +110,12 @@
 					<a name="animate" class="anchor"></a>
 					<h3>animate</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">animate<span class="tsd-signature-symbol">(</span>selection<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, attrToProjector<span class="tsd-signature-symbol">: </span><a href="../interfaces/plottable.abstract.iattributetoprojector.html" class="tsd-signature-type">IAttributeToProjector</a>, plot<span class="tsd-signature-symbol">: </span><a href="plottable.abstract.plot.html" class="tsd-signature-type">Plot</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">animate<span class="tsd-signature-symbol">(</span>selection<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, attrToProjector<span class="tsd-signature-symbol">: </span><a href="../interfaces/plottable.iattributetoprojector.html" class="tsd-signature-type">IAttributeToProjector</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/d3.selection.html" class="tsd-signature-type">Selection</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:2185</li>
+									<li>Defined in plottable.d.ts:2660</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -124,13 +124,10 @@
 									<h5>selection:         <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
-									<h5>attrToProjector:         <a href="../interfaces/plottable.abstract.iattributetoprojector.html" class="tsd-signature-type">IAttributeToProjector</a></h5>
-								</li>
-								<li>
-									<h5>plot:         <a href="plottable.abstract.plot.html" class="tsd-signature-type">Plot</a></h5>
+									<h5>attrToProjector:         <a href="../interfaces/plottable.iattributetoprojector.html" class="tsd-signature-type">IAttributeToProjector</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns         <span class="tsd-signature-type">any</span>
+							<h4 class="tsd-returns-title">Returns         <a href="../interfaces/d3.selection.html" class="tsd-signature-type">Selection</a>
 							</h4>
 						</li>
 					</ul>
@@ -164,7 +161,10 @@
 								<a href="../modules/plottable.core.html">Core</a>
 							</li>
 							<li class=" tsd-kind-container tsd-parent-kind-container">
-								<a href="../modules/plottable.formatter.html">Formatter</a>
+								<a href="../modules/plottable.dispatcher.html">Dispatcher</a>
+							</li>
+							<li class=" tsd-kind-container tsd-parent-kind-container">
+								<a href="../modules/plottable.formatters.html">Formatters</a>
 							</li>
 							<li class=" tsd-kind-container tsd-parent-kind-container">
 								<a href="../modules/plottable.interaction.html">Interaction</a>
@@ -176,10 +176,10 @@
 								<a href="../modules/plottable.scale.html">Scale</a>
 							</li>
 							<li class=" tsd-kind-container tsd-parent-kind-container">
-								<a href="../modules/plottable.template.html">Template</a>
+								<a href="../modules/plottable._drawer.html">_<wbr>Drawer</a>
 							</li>
 							<li class=" tsd-kind-container tsd-parent-kind-container">
-								<a href="../modules/plottable.util.html">Util</a>
+								<a href="../modules/plottable._util.html">_<wbr>Util</a>
 							</li>
 						</ul>
 					</li>
@@ -194,7 +194,7 @@
 						<a href="../interfaces/plottable.animator.iplotanimatormap.html" class="tsd-kind-icon">IPlot<wbr>Animator<wbr>Map</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
-						<a href="plottable.animator.default.html" class="tsd-kind-icon">Default</a>
+						<a href="plottable.animator.base.html" class="tsd-kind-icon">Base</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
 						<a href="plottable.animator.iterativedelay.html" class="tsd-kind-icon">Iterative<wbr>Delay</a>
@@ -211,6 +211,9 @@
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="plottable.animator.rect.html" class="tsd-kind-icon">Rect</a>
+					</li>
 				</ul>
 			</nav>
 		</div>

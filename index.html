@@ -84,7 +84,12 @@ page_id: page-overview
               <span class="badge">Example</span><br>
               Plottable Commits Over Time
             </h3>
-            <p>This Plottable chart displays large commits to Plottable over time, with the y-axis showing time of day and the x-axis showing date. The commits are color-coded based on contributor. Try scrolling to zoom in and out of it!</p>
+            <p>
+              This Plottable chart displays large commits to Plottable over
+              time, with the y-axis showing time of day and the x-axis showing
+              date. The commits are color-coded based on contributor. Try
+              scrolling to zoom in and out of it!
+            </p>
             <p><a id="button-show-source-example-1-source" href="#example-1-source" class="button button-small">Show Source</a></p>
           </div>
 
@@ -101,62 +106,12 @@ page_id: page-overview
         <div class="container">
           <div class="row">
             <div id="example-chart-1-source" class="col-sm-10 col-md-offset-1">
-{% highlight javascript %}
-function commitScatterPlot(commitData) {
-  // Define the scales that will map data to visual properties
-  var xScale = new Plottable.Scale.Time();
-  var yScale = new Plottable.Scale.Linear();
-  var colorScale = new Plottable.Scale.Color("10");
-
-  // Create the components we use: axes, gridlines, and a legend
-  var xAxis = new Plottable.Axis.Time(xScale, "bottom");
-  var yAxis = new Plottable.Axis.Numeric(yScale, "left", hourFormatter);
-  var gridlines = new Plottable.Component.Gridlines(xScale, yScale);
-  var legend = new Plottable.Component.Legend(colorScale);
-
-  // Create the scatter plot - this where most of the action happens; it grabs keyed values out of the data store
-  // and then projects it through our scales. In the case of yAxis, it uses custom logic (the hourAccessor) to compute
-  // what hour the commit was given the date object attached.
-  // We project through the colorScale to have fills that synchronize with the legend, and then project constant
-  // values for radius and opacity, although we could have used a scale to have these be data-dependent as well.
-  var scatter = new Plottable.Plot.Scatter(commitData, xScale, yScale)
-                        .project("x", "parsedDate", xScale)
-                        .project("y", hourAccessor, yScale)
-                        .project("fill", "authorName", colorScale)
-                        .project("r", 5)
-                        .project("opacity", 0.4 );
-
-  // finally, merge the pieces together into a StandardChart, render it, and attach an interaction.
-  var center = gridlines.merge(scatter).merge(legend);
-  new Plottable.Template.StandardChart().center(center).xAxis(xAxis).yAxis(yAxis).renderTo("svg");
-  new Plottable.Interaction.PanZoom(scatter, xScale, new Plottable.Scale.Linear()).registerWithComponent();
-}
-
-function hourAccessor(d) {
-  var date = d.parsedDate;
-  var hour =  date.getHours() + date.getMinutes() / 60;
-  hour = hour < 5 ? hour + 24 : hour;
-  return hour;
-}
-
-function hourFormatter(hour) {
-  if (hour < 12) {
-    return hour + "AM";
-  } else if (hour === 12) {
-    return "12PM";
-  } else if (hour < 24) {
-    return (hour - 12) + "PM";
-  } else if (hour == 24) {
-    return "12AM";
-  } else {
-    return (hour - 24) + "AM";
-  }
-}
-
-{% endhighlight %}
-            </div> <!-- example1 -->
-          </div> <!-- row1 -->
-        </div><!-- container -->
+              {% highlight javascript %}
+              {% include commitScatterPlot.js %}
+              {% endhighlight %}
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -204,10 +159,11 @@ function hourFormatter(hour) {
   {% endif %}
 
   <script src="{{ site.baseurl }}/build/js/compiled.min.js"></script>
-  <script src="{{ site.baseurl }}/examples/commitScatterPlot.js"></script>
   <script src="{{ site.baseurl }}/components/component_example_list.js"></script>
   <script id="example-1-source">
+
       window.onload = function() {
+          {% include commitScatterPlot.js %}
           d3.json("examples/data/src-aggregated-commits.json", function(data) {
               var authors = ["Daniel Mane", "Justin Lan", "Ashwin Ramaswamy", "Bill Dwyer", "crmorford", "Brian Malehorn", "lewin"];
               data.forEach(function(d) {
@@ -278,8 +234,9 @@ function hourFormatter(hour) {
         var table = new Plottable.Component.Table();
         table.addComponent(0, 0, innerTable);
         table.renderTo("#preview-plot");
+        var clickInteraction = new Plottable.Interaction.Click(table).callback(function() {table.renderTo("#preview-plot")});
+        table.registerInteraction(clickInteraction);
 
-        new Plottable.Interaction.Click(table).callback(function() {table.renderTo("#preview-plot")}).registerWithComponent();
       }); // ready
     })(window, window.document);
   </script>

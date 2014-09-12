@@ -117,16 +117,20 @@
 					<a name="clearresizing" class="anchor"></a>
 					<h3>clear<wbr>Resizing</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-container">
-						<li class="tsd-signature tsd-kind-icon">clear<wbr>Resizing<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">clear<wbr>Resizing<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:1098</li>
+									<li>Defined in plottable.d.ts:750</li>
 								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns         <span class="tsd-signature-type">any</span>
-							</h4>
+								</aside>        <div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets that it is not resizing anymore. Good if it stubbornly thinks
+										it is still resizing, or for cancelling the effects of resizing
+									prematurely.</p>
+								</div>
+							</div>
 						</li>
 					</ul>
 					</section>            <section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-container">
@@ -138,7 +142,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:1116</li>
+									<li>Defined in plottable.d.ts:768</li>
 								</ul>
 								</aside>        <div class="tsd-comment tsd-typography">
 								<div class="lead">
@@ -163,13 +167,13 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:1108</li>
+									<li>Defined in plottable.d.ts:760</li>
 								</ul>
 								</aside>        <div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Registers a component.</p>
 								</div>
-								<p>When the window is resized, we invoke ._invalidateLayout() on the
+								<p>When the window is resized, ._invalidateLayout() is invoked on the
 									component, which will enqueue the component for layout and rendering
 								with the RenderController.</p>
 							</div>
@@ -190,16 +194,18 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:1097</li>
+									<li>Defined in plottable.d.ts:744</li>
 								</ul>
 								</aside>        <div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Returns true if the window has been resized and the RenderController
+									<p>Checks if the window has been resized and the RenderController
 									has not yet been flushed.</p>
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns         <span class="tsd-signature-type">boolean</span>
 							</h4>
+							<p>If the window has been resized/RenderController
+							has not yet been flushed.</p>
 						</li>
 					</ul>
 			</section></section>
@@ -243,7 +249,10 @@
 								</ul>
 							</li>
 							<li class=" tsd-kind-container tsd-parent-kind-container">
-								<a href="plottable.formatter.html">Formatter</a>
+								<a href="plottable.dispatcher.html">Dispatcher</a>
+							</li>
+							<li class=" tsd-kind-container tsd-parent-kind-container">
+								<a href="plottable.formatters.html">Formatters</a>
 							</li>
 							<li class=" tsd-kind-container tsd-parent-kind-container">
 								<a href="plottable.interaction.html">Interaction</a>
@@ -255,10 +264,10 @@
 								<a href="plottable.scale.html">Scale</a>
 							</li>
 							<li class=" tsd-kind-container tsd-parent-kind-container">
-								<a href="plottable.template.html">Template</a>
+								<a href="plottable._drawer.html">_<wbr>Drawer</a>
 							</li>
 							<li class=" tsd-kind-container tsd-parent-kind-container">
-								<a href="plottable.util.html">Util</a>
+								<a href="plottable._util.html">_<wbr>Util</a>
 							</li>
 						</ul>
 					</li>

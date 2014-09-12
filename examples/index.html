@@ -87,6 +87,13 @@ page_id : page-examples
           </a>
         </div>
 
+        <div class="col-md-3">
+          <a class="example-block" href="{{ site.baseurl }}/examples/tooltips/" title="Tooltips">
+            <svg id="example-tooltips" height="150"></svg>
+            Tooltips
+          </a>
+        </div>
+
       </div>
     </div>
 
@@ -136,6 +143,10 @@ page_id : page-examples
     new Plottable.Component.Table()
       .addComponent(0, 0, makeXYPlotMulti('scatter'))
       .renderTo('#example-spaceships');
+
+    new Plottable.Component.Table()
+      .addComponent(0, 0, verticalBarPlot(ordinalData2))
+      .renderTo('#example-tooltips');
 
   });
 </script>

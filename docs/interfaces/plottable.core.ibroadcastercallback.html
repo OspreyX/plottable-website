@@ -84,6 +84,17 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>This interface represents the callback that should be passed to the Broadcaster on a Listenable.</p>
+					</div>
+					<p>The callback will be called with the attached Listenable as the first object, and optional arguments
+					as the subsequent arguments.</p>
+					<p>The Listenable is passed as the first argument so that it is easy for the callback to reference the
+					current state of the Listenable in the resolution logic.</p>
+				</div>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -91,7 +102,7 @@
 						<section class="tsd-index-section ">
 							<h3>Call signatures</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-call-signature tsd-parent-kind-interface"><a href="plottable.core.ibroadcastercallback.html#symbol-6092" class="tsd-kind-icon"><em>Call signature</em></a></li>
+								<li class="tsd-kind-call-signature tsd-parent-kind-interface"><a href="plottable.core.ibroadcastercallback.html#symbol-5411" class="tsd-kind-icon"><em>Call signature</em></a></li>
 							</ul>
 						</section>
 					</div>
@@ -99,14 +110,14 @@
 				</section>            <section class="tsd-panel-group tsd-member-group ">
 				<h2>Call signatures</h2>
 				<section class="tsd-panel tsd-member tsd-kind-call-signature tsd-parent-kind-interface">
-					<a name="symbol-6092" class="anchor"></a>
+					<a name="symbol-5411" class="anchor"></a>
 					<ul class="tsd-signatures tsd-kind-call-signature tsd-parent-kind-interface">
 						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>listenable<span class="tsd-signature-symbol">: </span><a href="plottable.core.ilistenable.html" class="tsd-signature-type">IListenable</a>, args<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Array&lt;any&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:587</li>
+									<li>Defined in plottable.d.ts:537</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -163,7 +174,10 @@
 								</ul>
 							</li>
 							<li class=" tsd-kind-container tsd-parent-kind-container">
-								<a href="../modules/plottable.formatter.html">Formatter</a>
+								<a href="../modules/plottable.dispatcher.html">Dispatcher</a>
+							</li>
+							<li class=" tsd-kind-container tsd-parent-kind-container">
+								<a href="../modules/plottable.formatters.html">Formatters</a>
 							</li>
 							<li class=" tsd-kind-container tsd-parent-kind-container">
 								<a href="../modules/plottable.interaction.html">Interaction</a>
@@ -175,10 +189,10 @@
 								<a href="../modules/plottable.scale.html">Scale</a>
 							</li>
 							<li class=" tsd-kind-container tsd-parent-kind-container">
-								<a href="../modules/plottable.template.html">Template</a>
+								<a href="../modules/plottable._drawer.html">_<wbr>Drawer</a>
 							</li>
 							<li class=" tsd-kind-container tsd-parent-kind-container">
-								<a href="../modules/plottable.util.html">Util</a>
+								<a href="../modules/plottable._util.html">_<wbr>Util</a>
 							</li>
 						</ul>
 					</li>
@@ -192,7 +206,7 @@
 						<a href="plottable.core.ibroadcastercallback.html" class="tsd-kind-icon">IBroadcaster<wbr>Callback</a>
 						<ul>
 							<li class=" tsd-kind-call-signature tsd-parent-kind-interface">
-								<a href="plottable.core.ibroadcastercallback.html#symbol-6092" class="tsd-kind-icon"><em><wbr>Call signature</em></a>
+								<a href="plottable.core.ibroadcastercallback.html#symbol-5411" class="tsd-kind-icon"><em><wbr>Call signature</em></a>
 							</li>
 						</ul>
 					</li>
@@ -206,6 +220,9 @@
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
 						<a href="../classes/plottable.core.broadcaster.html" class="tsd-kind-icon">Broadcaster</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="../classes/plottable.core.colors.html" class="tsd-kind-icon">Colors</a>
 					</li>
 				</ul>
 			</nav>

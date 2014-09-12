@@ -42,5 +42,5 @@ d3.tsv("data.tsv", function(error, data) {
     [null,    null,   xAxis,  null,   null],
     [null,    null,   xLabel, null,   null]
   ])
-  .renderTo(d3.select('svg#example'));
+  .renderTo("svg#example");
 });

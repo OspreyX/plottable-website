@@ -33,4 +33,4 @@ new Plottable.Component.Table([
   [yLabel, yAxis, lines.merge(plot)],
   [null,    null, xAxis]
 ])
-.renderTo(d3.select('svg#example'));
+.renderTo("svg#example");
