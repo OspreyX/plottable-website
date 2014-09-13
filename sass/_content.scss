@@ -469,6 +469,15 @@ footer {
     .svg & { background-image: url(../images/palantir-logo.svg); }
   }
 
+  div#bottom-download-container {
+    font-size: 25px;
+    p {
+      a.button {
+        color: white;
+      }
+    }
+  }
+
   a {
     color: $COLOR_WHITE1;
 
