@@ -1,7 +1,7 @@
 $.when(
-  $.getJSON("ships.json").then(_.identity),
-  $.getJSON("raceSchema.json").then(_.identity),
-  $.getJSON("hullSchema.json").then(_.identity)
+  $.getJSON("ships.txt").then(_.identity),
+  $.getJSON("raceSchema.txt").then(_.identity),
+  $.getJSON("hullSchema.txt").then(_.identity)
 ).then(function(ships, raceSchema, hullSchema){
 
   // Returns the race for a given datum
