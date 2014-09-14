@@ -38,14 +38,16 @@ page_id: page-overview
       {% include nav.html %}
       <h1 id="masthead">
         Plottable
-        <small>Flexible, interactive, performant charts<br>for the web made easy</small>
+        <small>Flexible, interactive charts<br>for the web.</small>
       </h1>
       <div id="download-container">
         <p>
           <a href="https://github.com/palantir/plottable/archive/master.zip" class="button icon-download no-arrow">Download <span id="version-tag">({{ site.plottable_version }})</span></a>
+          &nbsp;
+          <a href="/examples" class="button"><span>Examples</span></a>
         </p>
         <p>
-          Follow our development on <a href="https://github.com/palantir/plottable" title="Plottable on Github.">Github</a>
+          <a href="https://github.com/palantir/plottable" title="Plottable on Github.">Want the source? Here's our Github</a>
         </p>
       </div>
     </div>
@@ -68,62 +70,17 @@ page_id: page-overview
     <nav class="navbar-page">
       <ul class="nav" role="tablist">
         <li><a href="#section-overview" data-toggle="tooltip" data-placement="left" title="Overview">Overview</a></li>
-        <li><a href="#section-example" data-toggle="tooltip" data-placement="left" title="Example">Example</a></li>
         <li><a href="#section-easier-more-usable" data-toggle="tooltip" data-placement="left" title="Easier, More Usable">Easier, More Usable</a></li>
       </ul>
     </nav>
   </div>
-
-  <div id="section-example">
-    <div class="content">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-md-3">
-            <h3>
-              <span class="badge">Example</span><br>
-              Plottable Commits Over Time
-            </h3>
-            <p>
-              This Plottable chart displays large commits to Plottable over
-              time, with the y-axis showing time of day and the x-axis showing
-              date. The commits are color-coded based on contributor. Try
-              scrolling to zoom in and out of it!
-            </p>
-            <p><a id="button-show-source-example-1-source" href="#example-1-source" class="button button-small">Show Source</a></p>
-          </div>
-
-          <div id="example-chart-1-container" class="col-md-8 col-md-offset-1">
-            <svg id="example-chart-1" class="example-svg"></svg>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div id="example-chart-1-source-wrapper" class="source-code" style="display: none;">
-      <div class="content">
-        <div class="container">
-          <div class="row">
-            <div id="example-chart-1-source" class="col-sm-10 col-md-offset-1">
-              {% highlight javascript %}
-              {% include commitScatterPlot.js %}
-              {% endhighlight %}
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-  </div><!-- /#section-example -->
 
   <section id="section-easier-more-usable">
     <div class="content">
       <div class="container">
         <div class="row">
           <div class="col-sm-offset-1 col-sm-10">
-            <h2>Easier, More Usable</h2>
+            <h2>The power and flexibility of D3, but easier</h2>
             <div id="plots">
               <svg id="preview-plot"></svg>
             </div>
@@ -131,18 +88,34 @@ page_id: page-overview
         </div>
         <div class="row">
           <div class="col-sm-6">
-            <p>Because Plottable handles layout, sizing, and positioning, Plottable charts are easier to create and more reusable than charts built only with D3. And, since Plottable Components are powered by D3, the full flexibility of D3 is still available.</p>
+            <p>Because Plottable handles layout, sizing, and positioning, Plottable charts are easier to create and more reusable than charts built only with D3. And, since Plottable Components are powered by D3, the flexibility of D3 is still available. All Plottable components are usable on their own, so you can take small pieces to add to existing charts, or create charts entirely with Plottable.</p>
           </div>
           <div class="col-sm-6">
-            <p>Plottable currently includes components like <strong>LinePlots</strong>, <strong>AreaPlots</strong>, <strong>BarPlots</strong>, <strong>CategoryAxes</strong> (with automatic word-wrapping), <strong>interactive Legends</strong>, and <strong>Labels</strong>. Plottable is open-sourced under the MIT license, and is under active development by <strong>Palantir Technologies</strong>.</p>
+            <p>Plottable currently includes components like
+            <strong>LinePlots</strong>,
+            <strong>AreaPlots</strong>,
+            <strong>Clustered/Stacked BarPlots</strong>,
+            <strong>CategoryAxes</strong> (with automatic word-wrapping),
+            <strong>interactive Legends</strong>, and
+            <strong>Labels</strong>. If you don't find the component you need, you can write it as a plugin using D3 - then please contribute it back!</p>
+
+            <p>Plottable is open-sourced under the MIT license, and is under active development by a team at <a href="https://palantir.com/" title="Palantir Technologies"><strong style="color: white;">Palantir Technologies</strong></a>.</p>
           </div>
         </div>
-      </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer role="contentinfo">
+
+    <div id="bottom-download-container" class="text-center">
+    <p>
+      <a href="https://github.com/palantir/plottable/archive/master.zip" class="button icon-download no-arrow">Download <span id="version-tag">({{ site.plottable_version }})</span></a>
+      &nbsp;
+      <a href="/examples" class="button"><span>Examples</span></a>
+    </p>
+  </div>
+
     © 2014 <a href="https://palantir.com/" title="Palantir Technologies">Palantir Technologies</a>. <a href="https://github.com/palantir/plottable" title="Plottable on Github.">Plottable.js</a> is released under the <a href="https://github.com/palantir/plottable/blob/master/LICENSE">MIT license</a>.
   </footer><!-- /footer -->
 
@@ -160,23 +133,7 @@ page_id: page-overview
 
   <script src="{{ site.baseurl }}/build/js/compiled.min.js"></script>
   <script src="{{ site.baseurl }}/components/component_example_list.js"></script>
-  <script id="example-1-source">
 
-      window.onload = function() {
-          {% include commitScatterPlot.js %}
-          d3.json("examples/data/src-aggregated-commits.json", function(data) {
-              var authors = ["Daniel Mane", "Justin Lan", "Ashwin Ramaswamy", "Bill Dwyer", "crmorford", "Brian Malehorn", "lewin"];
-              data.forEach(function(d) {
-                d.parsedDate = new Date(d.authorDate.seconds * 1000);
-                a = d.authorName;
-                d.authorName = authors.indexOf(a) !== -1 ? a : "other";
-              });
-              data = data.filter(function(d) {return d.additions > 20});
-              var svg = d3.select("#example-chart-1 svg");
-              commitScatterPlot(data);
-          });
-      }
-  </script>
   <script>
     (function() {
       var $window = $(window),

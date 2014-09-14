@@ -35,6 +35,7 @@ $.when(
   var yLabel = new Plottable.Component.Label("Armor", "left");
   var legend = new Plottable.Component.HorizontalLegend(raceScale);
   var lines  = new Plottable.Component.Gridlines(xScale, yScale);
+  var title  = new Plottable.Component.TitleLabel("EVE Online Ships by Armor and Shield");
   var plot   = new Plottable.Plot.Scatter(ships, xScale, yScale)
       .project("x", "A", xScale)
       .project("y", "SH", yScale)
@@ -42,14 +43,38 @@ $.when(
       .project("stroke", "Tech", techScale)
       .project("stroke-width", 2)
       .project("opacity", 1)
-      .project("fill", getRace, raceScale);
+      .project("fill", getRace, raceScale)
+      .project("title", function(d){
+        return "<strong class=\"tooltip-title\">" + d.Name + "</strong><br>" +
+           d.Race + " " + d.Class + "<br>" +
+          "Armor: " + d.A + ", Shields: " + d.SH;
+      })
+      .classed("tooltipped", true);
+  var center = lines.merge(plot);
 
   // Layout and render
   var table  = new Plottable.Component.Table([
-    [null,  null,   legend],
-    [yLabel, yAxis, lines.merge(plot)],
-    [null,  null,   xAxis],
-    [null,  null,   xLabel],
+    [null,   null,  title ],
+    [null,   null,  legend],
+    [yLabel, yAxis, center],
+    [null,   null,  xAxis ],
+    [null,   null,  xLabel],
   ]).renderTo("svg#example-scatter-pg-cpu");
+  var interaction = new Plottable.Interaction.PanZoom(xScale, yScale);
+  lines.registerInteraction(interaction);
+
+  // Make sure everything is ready in the SVG
+Plottable.Core.RenderController.flush();
+
+// Attach tooltips with qTip2 (which uses the "title" attribute by default)
+$("svg .tooltipped circle").qtip({
+  position : {
+    my : "bottom middle",
+    at : "top middle"
+  },
+  style : {
+    classes : "qtip-dark"
+  }
+});
 
 });

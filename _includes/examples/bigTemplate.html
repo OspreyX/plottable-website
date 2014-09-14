@@ -1,0 +1,23 @@
+<section id="section-example">
+  <div class="container">
+    <div id="row">
+      <div class="col-md-12">
+        <div class="svg-demo">
+          <svg width="100%" height="700" id="example{{include.idSuffix}}"></svg>
+        </div>
+
+        <div>
+          {% highlight javascript %}
+          {% include {{include.script}} %}
+          {% endhighlight %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  $(document).ready(function(){
+    {% include {{include.script}} %}
+  });
+</script>

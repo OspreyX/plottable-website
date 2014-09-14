@@ -28,8 +28,8 @@ header {
 
   .navbar .nav,
   .navbar .nav > li {
-    @include rem(font-size, 13px);
-    @include relative-line-height(14px, 13px);
+    @include rem(font-size, 25px);
+    @include relative-line-height(26px, 25px);
 
     @media (min-width: $screen-md-min) {
       @include rem(font-size, 16px);
@@ -44,6 +44,7 @@ header {
       @include opacity(1);
       color: $COLOR_ORANGE1;
       padding: 0;
+      font-size: 18px;
 
       @media (min-width: $screen-md-min) {
         padding: 4px 0;
@@ -467,6 +468,15 @@ footer {
     text-align: right;
     .no-svg & { background-image: url(../images/palantir-logo.png); }
     .svg & { background-image: url(../images/palantir-logo.svg); }
+  }
+
+  div#bottom-download-container {
+    font-size: 25px;
+    p {
+      a.button {
+        color: white;
+      }
+    }
   }
 
   a {
