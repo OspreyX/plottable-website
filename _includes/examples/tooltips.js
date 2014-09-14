@@ -8,7 +8,7 @@ var species = [
 var data = species.map(function (otter){
   return {
     x : otter,
-    y : Math.random() * (this.x === "Giant Otter" ? 400 : 100),
+    y : Math.random() * (otter === "Giant Otter" ? 400 : 100),
   };
 });
 
