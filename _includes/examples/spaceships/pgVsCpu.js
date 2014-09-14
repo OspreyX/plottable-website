@@ -31,8 +31,8 @@ $.when(
   // Initialize Components
   var xAxis  = new Plottable.Axis.Numeric(xScale, "bottom");
   var yAxis  = new Plottable.Axis.Numeric(yScale, "left");
-  var xLabel = new Plottable.Component.Label("Shields");
-  var yLabel = new Plottable.Component.Label("Armor", "left");
+  var xLabel = new Plottable.Component.AxisLabel("Shields");
+  var yLabel = new Plottable.Component.AxisLabel("Armor", "left");
   var legend = new Plottable.Component.HorizontalLegend(raceScale);
   var lines  = new Plottable.Component.Gridlines(xScale, yScale);
   var title  = new Plottable.Component.TitleLabel("EVE Online Ships by Armor and Shield");
