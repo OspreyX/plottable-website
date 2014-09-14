@@ -25,21 +25,22 @@ $.when(
     .domain(_.keys(raceSchema))
     .range(_.map(raceSchema, "color"));
   var techScale = new Plottable.Scale.Color()
-    .domain(["1", "F", "2"])
-    .range(["black", "green", "orange"]);
+    .domain(["Tech 1", "Faction", "Tech 2"])
+    .range(["lawngreen", "cyan", "DeepPink"]);
 
   // Initialize Components
-  var xAxis  = new Plottable.Axis.Numeric(xScale, "bottom");
-  var yAxis  = new Plottable.Axis.Numeric(yScale, "left");
-  var xLabel = new Plottable.Component.AxisLabel("Shields");
-  var yLabel = new Plottable.Component.AxisLabel("Armor", "left");
-  var legend = new Plottable.Component.HorizontalLegend(raceScale);
-  var lines  = new Plottable.Component.Gridlines(xScale, yScale);
-  var title  = new Plottable.Component.TitleLabel("EVE Online Ships by Armor and Shield");
-  var plot   = new Plottable.Plot.Scatter(ships, xScale, yScale)
+  var xAxis         = new Plottable.Axis.Numeric(xScale, "bottom");
+  var yAxis         = new Plottable.Axis.Numeric(yScale, "left");
+  var xLabel        = new Plottable.Component.AxisLabel("Shields");
+  var yLabel        = new Plottable.Component.AxisLabel("Armor", "left");
+  var factionLegend = new Plottable.Component.HorizontalLegend(raceScale);
+  var techLegend    = new Plottable.Component.HorizontalLegend(techScale);
+  var lines         = new Plottable.Component.Gridlines(xScale, yScale);
+  var title         = new Plottable.Component.TitleLabel("EVE Online Ships by Armor and Shield");
+  var plot          = new Plottable.Plot.Scatter(ships, xScale, yScale)
       .project("x", "A", xScale)
       .project("y", "SH", yScale)
-      .project("r", getHullSize)
+      .project("r", function(d) {return getHullSize(d) + 2; })
       .project("stroke", "Tech", techScale)
       .project("stroke-width", 2)
       .project("opacity", 1)
@@ -55,7 +56,8 @@ $.when(
   // Layout and render
   var table  = new Plottable.Component.Table([
     [null,   null,  title ],
-    [null,   null,  legend],
+    [null,   null,  factionLegend],
+    [null,   null,  techLegend],
     [yLabel, yAxis, center],
     [null,   null,  xAxis ],
     [null,   null,  xLabel],
