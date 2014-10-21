@@ -1,8 +1,8 @@
 d3.csv("ships.csv", function(error, data) {
 
   // Compute the clusters of data for each ship class
-  shipClasses = ["Frigate", "Cruiser", "Battleship", "Battlecruiser"];
-  histograms  = _(data)
+  var shipClasses = ["Frigate", "Cruiser", "Battleship", "Battlecruiser"];
+  var histograms  = _(data)
     .filter(function(ship){
       return shipClasses.indexOf(ship["Ship class"]) !== -1;
     })
@@ -36,9 +36,9 @@ d3.csv("ships.csv", function(error, data) {
   var yAxis  = new Plottable.Axis.Category(yScale, "left");
   var lines  = new Plottable.Component.Gridlines(xScale, null);
   var plot   = new Plottable.Plot.ClusteredBar(xScale, yScale, false)
-    .project("x", "count", xScale)
-    .project("y", "race",  yScale)
-    .project("fill", "shipClass", colorScale)
+    .attr("x", "count", xScale)
+    .attr("y", "race",  yScale)
+    .attr("fill", "shipClass", colorScale)
     .animate(true);
 
   // Add our histograms to the plot
@@ -53,5 +53,5 @@ d3.csv("ships.csv", function(error, data) {
     [yAxis, lines.merge(plot)],
     [null,  xAxis]
   ])
-  .renderTo(d3.select('svg#example-race-histogram'));
+  .renderTo("svg#example-race-histogram");
 });

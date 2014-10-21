@@ -14,8 +14,8 @@
     "tests"
   ],
   "dependencies": {
-    "plottable": "0.29.0",
-    "chartographer": "0.0.4",
+    "plottable": "0.33.1",
+    "chartographer": "0.0.5",
     "lodash": "~2.4.1",
     "qtip2": "~2.2.1"
   }

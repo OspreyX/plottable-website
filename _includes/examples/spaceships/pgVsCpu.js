@@ -37,15 +37,16 @@ $.when(
   var techLegend    = new Plottable.Component.HorizontalLegend(techScale);
   var lines         = new Plottable.Component.Gridlines(xScale, yScale);
   var title         = new Plottable.Component.TitleLabel("EVE Online Ships by Armor and Shield");
-  var plot          = new Plottable.Plot.Scatter(ships, xScale, yScale)
-      .project("x", "A", xScale)
-      .project("y", "SH", yScale)
-      .project("r", function(d) {return getHullSize(d) + 2; })
-      .project("stroke", "Tech", techScale)
-      .project("stroke-width", 2)
-      .project("opacity", 1)
-      .project("fill", getRace, raceScale)
-      .project("title", function(d){
+  var plot          = new Plottable.Plot.Scatter(xScale, yScale)
+      .addDataset(ships)
+      .attr("x", "A", xScale)
+      .attr("y", "SH", yScale)
+      .attr("r", function(d) {return getHullSize(d) + 2; })
+      .attr("stroke", "Tech", techScale)
+      .attr("stroke-width", 2)
+      .attr("opacity", 1)
+      .attr("fill", getRace, raceScale)
+      .attr("title", function(d){
         return "<strong class=\"tooltip-title\">" + d.Name + "</strong><br>" +
            d.Race + " " + d.Class + "<br>" +
           "Armor: " + d.A + ", Shields: " + d.SH;

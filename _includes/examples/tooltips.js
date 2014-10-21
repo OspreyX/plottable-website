@@ -21,9 +21,10 @@ var title = new Plottable.Component.TitleLabel("Otter Species");
 var xAxis = new Plottable.Axis.Category(xScale, "bottom");
 var yAxis = new Plottable.Axis.Numeric(yScale, "left");
 var lines = new Plottable.Component.Gridlines(null, yScale);
-var plot  = new Plottable.Plot.VerticalBar(data, xScale, yScale)
+var plot  = new Plottable.Plot.VerticalBar(xScale, yScale)
+  .addDataset(data)
   // Store the tooltip content in the "title" attribute
-  .project("title", function(d){
+  .attr("title", function(d){
     return "<strong class=\"tooltip-title\">" + d.x + "</strong><br>" +
       "<span class=\"tooltip-value\">" + d3.format("0,.2f")(d.y) + "</span>";
   })

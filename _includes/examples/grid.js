@@ -21,7 +21,7 @@ var xLabel = new Plottable.Component.Label("Species");
 var yLabel = new Plottable.Component.Label("Skill", "left");
 var xAxis  = new Plottable.Axis.Category(xScale, "bottom");
 var yAxis  = new Plottable.Axis.Category(yScale, "left");
-var plot   = new Plottable.Plot.Grid(data, xScale, yScale, colorScale);
+var plot   = new Plottable.Plot.Grid(xScale, yScale, colorScale).addDataset(data);
 
 // Layout and render
 new Plottable.Component.Table([

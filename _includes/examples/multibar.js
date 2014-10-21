@@ -14,12 +14,14 @@ var yLabel1 = new Plottable.Component.Label("Amount", "left");
 var yAxis0  = new Plottable.Axis.Numeric(yScale, "left");
 var yAxis1  = new Plottable.Axis.Numeric(yScale, "left");
 var xAxis   = new Plottable.Axis.Category(xScale, "bottom");
-var plot0   = new Plottable.Plot.VerticalBar(data0, xScale, yScale)
+var plot0   = new Plottable.Plot.VerticalBar(xScale, yScale)
+  .addDataset(data0)
   .animate(true)
-  .project("fill", function(){return "Top";}, colorScale);
-var plot1   = new Plottable.Plot.VerticalBar(data1, xScale, yScale)
+  .attr("fill", function(){return "Top";}, colorScale);
+var plot1   = new Plottable.Plot.VerticalBar(xScale, yScale)
+  .addDataset(data1)
   .animate(true)
-  .project("fill", function(){return "Bottom";}, colorScale);
+  .attr("fill", function(){return "Bottom";}, colorScale);
 
 // Layout and render
 new Plottable.Component.Table([
