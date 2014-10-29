@@ -1,4 +1,4 @@
-d3.json("absolute_electricity.json", function(error, data) {
+d3.json("data/world_stacked_area.json", function(error, data) {
   var xScale = new Plottable.Scale.Time();
   var yScale = new Plottable.Scale.Linear();
   var colorScale = new Plottable.Scale.Color();
@@ -31,5 +31,5 @@ d3.json("absolute_electricity.json", function(error, data) {
       [yAxis, plot],
       [null,  xAxis]
       ]);
-  table.renderTo("svg#example-electricity-absolute");
+  table.renderTo("svg#example-electricity-stacked-area");
 });
