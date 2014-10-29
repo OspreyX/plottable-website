@@ -1,0 +1,1604 @@
+{
+  "nuclear": [
+    {
+      "type": "nuclear",
+      "value": 2924000000,
+      "year": 1960
+    },
+    {
+      "type": "nuclear",
+      "value": 4670000000,
+      "year": 1961
+    },
+    {
+      "type": "nuclear",
+      "value": 6726000000,
+      "year": 1962
+    },
+    {
+      "type": "nuclear",
+      "value": 10787000000,
+      "year": 1963
+    },
+    {
+      "type": "nuclear",
+      "value": 15101000000,
+      "year": 1964
+    },
+    {
+      "type": "nuclear",
+      "value": 23874000000,
+      "year": 1965
+    },
+    {
+      "type": "nuclear",
+      "value": 32681000000,
+      "year": 1966
+    },
+    {
+      "type": "nuclear",
+      "value": 39118000000,
+      "year": 1967
+    },
+    {
+      "type": "nuclear",
+      "value": 49589000000,
+      "year": 1968
+    },
+    {
+      "type": "nuclear",
+      "value": 58991000000,
+      "year": 1969
+    },
+    {
+      "type": "nuclear",
+      "value": 73524000000,
+      "year": 1970
+    },
+    {
+      "type": "nuclear",
+      "value": 104987000000,
+      "year": 1971
+    },
+    {
+      "type": "nuclear",
+      "value": 143275000000,
+      "year": 1972
+    },
+    {
+      "type": "nuclear",
+      "value": 191196000000,
+      "year": 1973
+    },
+    {
+      "type": "nuclear",
+      "value": 246711000000,
+      "year": 1974
+    },
+    {
+      "type": "nuclear",
+      "value": 343613000000,
+      "year": 1975
+    },
+    {
+      "type": "nuclear",
+      "value": 396598000000,
+      "year": 1976
+    },
+    {
+      "type": "nuclear",
+      "value": 489942000000,
+      "year": 1977
+    },
+    {
+      "type": "nuclear",
+      "value": 575992000000,
+      "year": 1978
+    },
+    {
+      "type": "nuclear",
+      "value": 593753000000,
+      "year": 1979
+    },
+    {
+      "type": "nuclear",
+      "value": 640375000000,
+      "year": 1980
+    },
+    {
+      "type": "nuclear",
+      "value": 756019000000,
+      "year": 1981
+    },
+    {
+      "type": "nuclear",
+      "value": 811435000000,
+      "year": 1982
+    },
+    {
+      "type": "nuclear",
+      "value": 921213000000,
+      "year": 1983
+    },
+    {
+      "type": "nuclear",
+      "value": 1108924000000,
+      "year": 1984
+    },
+    {
+      "type": "nuclear",
+      "value": 1321045000000,
+      "year": 1985
+    },
+    {
+      "type": "nuclear",
+      "value": 1436312000000,
+      "year": 1986
+    },
+    {
+      "type": "nuclear",
+      "value": 1544310000000,
+      "year": 1987
+    },
+    {
+      "type": "nuclear",
+      "value": 1671414000000,
+      "year": 1988
+    },
+    {
+      "type": "nuclear",
+      "value": 1721801000000,
+      "year": 1989
+    },
+    {
+      "type": "nuclear",
+      "value": 2012902000000,
+      "year": 1990
+    },
+    {
+      "type": "nuclear",
+      "value": 2105787000000,
+      "year": 1991
+    },
+    {
+      "type": "nuclear",
+      "value": 2123688000000,
+      "year": 1992
+    },
+    {
+      "type": "nuclear",
+      "value": 2190502000000,
+      "year": 1993
+    },
+    {
+      "type": "nuclear",
+      "value": 2242298000000,
+      "year": 1994
+    },
+    {
+      "type": "nuclear",
+      "value": 2331951000000,
+      "year": 1995
+    },
+    {
+      "type": "nuclear",
+      "value": 2417193000000,
+      "year": 1996
+    },
+    {
+      "type": "nuclear",
+      "value": 2393101000000,
+      "year": 1997
+    },
+    {
+      "type": "nuclear",
+      "value": 2445210000000,
+      "year": 1998
+    },
+    {
+      "type": "nuclear",
+      "value": 2531148000000,
+      "year": 1999
+    },
+    {
+      "type": "nuclear",
+      "value": 2590623000000,
+      "year": 2000
+    },
+    {
+      "type": "nuclear",
+      "value": 2637685000000,
+      "year": 2001
+    },
+    {
+      "type": "nuclear",
+      "value": 2660778000000,
+      "year": 2002
+    },
+    {
+      "type": "nuclear",
+      "value": 2635349000000,
+      "year": 2003
+    },
+    {
+      "type": "nuclear",
+      "value": 2738012000000,
+      "year": 2004
+    },
+    {
+      "type": "nuclear",
+      "value": 2767952000000,
+      "year": 2005
+    },
+    {
+      "type": "nuclear",
+      "value": 2791471000000,
+      "year": 2006
+    },
+    {
+      "type": "nuclear",
+      "value": 2719239000000,
+      "year": 2007
+    },
+    {
+      "type": "nuclear",
+      "value": 2731016000000,
+      "year": 2008
+    },
+    {
+      "type": "nuclear",
+      "value": 2696162000000,
+      "year": 2009
+    },
+    {
+      "type": "nuclear",
+      "value": 2756288000000,
+      "year": 2010
+    },
+    {
+      "type": "nuclear",
+      "value": 2583679000000,
+      "year": 2011
+    },
+    {
+      "type": "nuclear",
+      "value": "",
+      "year": 2012
+    }
+  ],
+  "gas": [
+    {
+      "type": "gas",
+      "value": 180983000000,
+      "year": 1960
+    },
+    {
+      "type": "gas",
+      "value": 194878000000,
+      "year": 1961
+    },
+    {
+      "type": "gas",
+      "value": 212561000000,
+      "year": 1962
+    },
+    {
+      "type": "gas",
+      "value": 232074000000,
+      "year": 1963
+    },
+    {
+      "type": "gas",
+      "value": 251411000000,
+      "year": 1964
+    },
+    {
+      "type": "gas",
+      "value": 255202000000,
+      "year": 1965
+    },
+    {
+      "type": "gas",
+      "value": 291114000000,
+      "year": 1966
+    },
+    {
+      "type": "gas",
+      "value": 309714000000,
+      "year": 1967
+    },
+    {
+      "type": "gas",
+      "value": 362346000000,
+      "year": 1968
+    },
+    {
+      "type": "gas",
+      "value": 404648000000,
+      "year": 1969
+    },
+    {
+      "type": "gas",
+      "value": 469081000000,
+      "year": 1970
+    },
+    {
+      "type": "gas",
+      "value": 543742000000,
+      "year": 1971
+    },
+    {
+      "type": "gas",
+      "value": 574114000000,
+      "year": 1972
+    },
+    {
+      "type": "gas",
+      "value": 574722000000,
+      "year": 1973
+    },
+    {
+      "type": "gas",
+      "value": 588842000000,
+      "year": 1974
+    },
+    {
+      "type": "gas",
+      "value": 588770000000,
+      "year": 1975
+    },
+    {
+      "type": "gas",
+      "value": 596787000000,
+      "year": 1976
+    },
+    {
+      "type": "gas",
+      "value": 619255000000,
+      "year": 1977
+    },
+    {
+      "type": "gas",
+      "value": 637616000000,
+      "year": 1978
+    },
+    {
+      "type": "gas",
+      "value": 700296000000,
+      "year": 1979
+    },
+    {
+      "type": "gas",
+      "value": 731564000000,
+      "year": 1980
+    },
+    {
+      "type": "gas",
+      "value": 727449000000,
+      "year": 1981
+    },
+    {
+      "type": "gas",
+      "value": 705398000000,
+      "year": 1982
+    },
+    {
+      "type": "gas",
+      "value": 696854000000,
+      "year": 1983
+    },
+    {
+      "type": "gas",
+      "value": 780614000000,
+      "year": 1984
+    },
+    {
+      "type": "gas",
+      "value": 779777000000,
+      "year": 1985
+    },
+    {
+      "type": "gas",
+      "value": 752448000000,
+      "year": 1986
+    },
+    {
+      "type": "gas",
+      "value": 827798000000,
+      "year": 1987
+    },
+    {
+      "type": "gas",
+      "value": 842809000000,
+      "year": 1988
+    },
+    {
+      "type": "gas",
+      "value": 1008635000000,
+      "year": 1989
+    },
+    {
+      "type": "gas",
+      "value": 1730349000000,
+      "year": 1990
+    },
+    {
+      "type": "gas",
+      "value": 1759153000000,
+      "year": 1991
+    },
+    {
+      "type": "gas",
+      "value": 1777300000000,
+      "year": 1992
+    },
+    {
+      "type": "gas",
+      "value": 1831774000000,
+      "year": 1993
+    },
+    {
+      "type": "gas",
+      "value": 1907673000000,
+      "year": 1994
+    },
+    {
+      "type": "gas",
+      "value": 2009589000000,
+      "year": 1995
+    },
+    {
+      "type": "gas",
+      "value": 2079811000000,
+      "year": 1996
+    },
+    {
+      "type": "gas",
+      "value": 2232011000000,
+      "year": 1997
+    },
+    {
+      "type": "gas",
+      "value": 2367692000000,
+      "year": 1998
+    },
+    {
+      "type": "gas",
+      "value": 2570000000000,
+      "year": 1999
+    },
+    {
+      "type": "gas",
+      "value": 2738331000000,
+      "year": 2000
+    },
+    {
+      "type": "gas",
+      "value": 2890038000000,
+      "year": 2001
+    },
+    {
+      "type": "gas",
+      "value": 3088412000000,
+      "year": 2002
+    },
+    {
+      "type": "gas",
+      "value": 3245282000000,
+      "year": 2003
+    },
+    {
+      "type": "gas",
+      "value": 3489483000000,
+      "year": 2004
+    },
+    {
+      "type": "gas",
+      "value": 3664786000000,
+      "year": 2005
+    },
+    {
+      "type": "gas",
+      "value": 3846816000000,
+      "year": 2006
+    },
+    {
+      "type": "gas",
+      "value": 4171826000000,
+      "year": 2007
+    },
+    {
+      "type": "gas",
+      "value": 4333245000000,
+      "year": 2008
+    },
+    {
+      "type": "gas",
+      "value": 4373880000000,
+      "year": 2009
+    },
+    {
+      "type": "gas",
+      "value": 4776593000000,
+      "year": 2010
+    },
+    {
+      "type": "gas",
+      "value": 4847730000000,
+      "year": 2011
+    },
+    {
+      "type": "gas",
+      "value": "",
+      "year": 2012
+    }
+  ],
+  "hydroelectric": [
+    {
+      "type": "hydroelectric",
+      "value": 546164000000,
+      "year": 1960
+    },
+    {
+      "type": "hydroelectric",
+      "value": 567793000000,
+      "year": 1961
+    },
+    {
+      "type": "hydroelectric",
+      "value": 583156000000,
+      "year": 1962
+    },
+    {
+      "type": "hydroelectric",
+      "value": 609335000000,
+      "year": 1963
+    },
+    {
+      "type": "hydroelectric",
+      "value": 625556000000,
+      "year": 1964
+    },
+    {
+      "type": "hydroelectric",
+      "value": 690232000000,
+      "year": 1965
+    },
+    {
+      "type": "hydroelectric",
+      "value": 728361000000,
+      "year": 1966
+    },
+    {
+      "type": "hydroelectric",
+      "value": 748227000000,
+      "year": 1967
+    },
+    {
+      "type": "hydroelectric",
+      "value": 767848000000,
+      "year": 1968
+    },
+    {
+      "type": "hydroelectric",
+      "value": 804130000000,
+      "year": 1969
+    },
+    {
+      "type": "hydroelectric",
+      "value": 827257000000,
+      "year": 1970
+    },
+    {
+      "type": "hydroelectric",
+      "value": 1058880000000,
+      "year": 1971
+    },
+    {
+      "type": "hydroelectric",
+      "value": 1122101000000,
+      "year": 1972
+    },
+    {
+      "type": "hydroelectric",
+      "value": 1139612000000,
+      "year": 1973
+    },
+    {
+      "type": "hydroelectric",
+      "value": 1264918000000,
+      "year": 1974
+    },
+    {
+      "type": "hydroelectric",
+      "value": 1290026000000,
+      "year": 1975
+    },
+    {
+      "type": "hydroelectric",
+      "value": 1272382000000,
+      "year": 1976
+    },
+    {
+      "type": "hydroelectric",
+      "value": 1305233000000,
+      "year": 1977
+    },
+    {
+      "type": "hydroelectric",
+      "value": 1401331000000,
+      "year": 1978
+    },
+    {
+      "type": "hydroelectric",
+      "value": 1481176000000,
+      "year": 1979
+    },
+    {
+      "type": "hydroelectric",
+      "value": 1498123000000,
+      "year": 1980
+    },
+    {
+      "type": "hydroelectric",
+      "value": 1539890000000,
+      "year": 1981
+    },
+    {
+      "type": "hydroelectric",
+      "value": 1593510000000,
+      "year": 1982
+    },
+    {
+      "type": "hydroelectric",
+      "value": 1670891000000,
+      "year": 1983
+    },
+    {
+      "type": "hydroelectric",
+      "value": 1706141000000,
+      "year": 1984
+    },
+    {
+      "type": "hydroelectric",
+      "value": 1727157000000,
+      "year": 1985
+    },
+    {
+      "type": "hydroelectric",
+      "value": 1757679000000,
+      "year": 1986
+    },
+    {
+      "type": "hydroelectric",
+      "value": 1760840000000,
+      "year": 1987
+    },
+    {
+      "type": "hydroelectric",
+      "value": 1817633000000,
+      "year": 1988
+    },
+    {
+      "type": "hydroelectric",
+      "value": 1814925000000,
+      "year": 1989
+    },
+    {
+      "type": "hydroelectric",
+      "value": 2134784000000,
+      "year": 1990
+    },
+    {
+      "type": "hydroelectric",
+      "value": 2202088000000,
+      "year": 1991
+    },
+    {
+      "type": "hydroelectric",
+      "value": 2201315000000,
+      "year": 1992
+    },
+    {
+      "type": "hydroelectric",
+      "value": 2330444000000,
+      "year": 1993
+    },
+    {
+      "type": "hydroelectric",
+      "value": 2349991000000,
+      "year": 1994
+    },
+    {
+      "type": "hydroelectric",
+      "value": 2469626000000,
+      "year": 1995
+    },
+    {
+      "type": "hydroelectric",
+      "value": 2502619000000,
+      "year": 1996
+    },
+    {
+      "type": "hydroelectric",
+      "value": 2533130000000,
+      "year": 1997
+    },
+    {
+      "type": "hydroelectric",
+      "value": 2544071000000,
+      "year": 1998
+    },
+    {
+      "type": "hydroelectric",
+      "value": 2549601000000,
+      "year": 1999
+    },
+    {
+      "type": "hydroelectric",
+      "value": 2605973000000,
+      "year": 2000
+    },
+    {
+      "type": "hydroelectric",
+      "value": 2547769000000,
+      "year": 2001
+    },
+    {
+      "type": "hydroelectric",
+      "value": 2609895000000,
+      "year": 2002
+    },
+    {
+      "type": "hydroelectric",
+      "value": 2621372000000,
+      "year": 2003
+    },
+    {
+      "type": "hydroelectric",
+      "value": 2792947000000,
+      "year": 2004
+    },
+    {
+      "type": "hydroelectric",
+      "value": 2912917000000,
+      "year": 2005
+    },
+    {
+      "type": "hydroelectric",
+      "value": 3018058000000,
+      "year": 2006
+    },
+    {
+      "type": "hydroelectric",
+      "value": 3054673000000,
+      "year": 2007
+    },
+    {
+      "type": "hydroelectric",
+      "value": 3179039000000,
+      "year": 2008
+    },
+    {
+      "type": "hydroelectric",
+      "value": 3233670000000,
+      "year": 2009
+    },
+    {
+      "type": "hydroelectric",
+      "value": 3419657000000,
+      "year": 2010
+    },
+    {
+      "type": "hydroelectric",
+      "value": 3467117000000,
+      "year": 2011
+    },
+    {
+      "type": "hydroelectric",
+      "value": "",
+      "year": 2012
+    }
+  ],
+  "other_renewable": [
+    {
+      "type": "other_renewable",
+      "value": 3040000000,
+      "year": 1960
+    },
+    {
+      "type": "other_renewable",
+      "value": 3428000000,
+      "year": 1961
+    },
+    {
+      "type": "other_renewable",
+      "value": 3797000000,
+      "year": 1962
+    },
+    {
+      "type": "other_renewable",
+      "value": 4362000000,
+      "year": 1963
+    },
+    {
+      "type": "other_renewable",
+      "value": 4653000000,
+      "year": 1964
+    },
+    {
+      "type": "other_renewable",
+      "value": 4998000000,
+      "year": 1965
+    },
+    {
+      "type": "other_renewable",
+      "value": 6127000000,
+      "year": 1966
+    },
+    {
+      "type": "other_renewable",
+      "value": 6387000000,
+      "year": 1967
+    },
+    {
+      "type": "other_renewable",
+      "value": 7203000000,
+      "year": 1968
+    },
+    {
+      "type": "other_renewable",
+      "value": 7830000000,
+      "year": 1969
+    },
+    {
+      "type": "other_renewable",
+      "value": 10627000000,
+      "year": 1970
+    },
+    {
+      "type": "other_renewable",
+      "value": 13177000000,
+      "year": 1971
+    },
+    {
+      "type": "other_renewable",
+      "value": 14034000000,
+      "year": 1972
+    },
+    {
+      "type": "other_renewable",
+      "value": 16132000000,
+      "year": 1973
+    },
+    {
+      "type": "other_renewable",
+      "value": 15358000000,
+      "year": 1974
+    },
+    {
+      "type": "other_renewable",
+      "value": 17321000000,
+      "year": 1975
+    },
+    {
+      "type": "other_renewable",
+      "value": 19094000000,
+      "year": 1976
+    },
+    {
+      "type": "other_renewable",
+      "value": 20353000000,
+      "year": 1977
+    },
+    {
+      "type": "other_renewable",
+      "value": 20882000000,
+      "year": 1978
+    },
+    {
+      "type": "other_renewable",
+      "value": 24075000000,
+      "year": 1979
+    },
+    {
+      "type": "other_renewable",
+      "value": 28623000000,
+      "year": 1980
+    },
+    {
+      "type": "other_renewable",
+      "value": 31804000000,
+      "year": 1981
+    },
+    {
+      "type": "other_renewable",
+      "value": 40545000000,
+      "year": 1982
+    },
+    {
+      "type": "other_renewable",
+      "value": 45407000000,
+      "year": 1983
+    },
+    {
+      "type": "other_renewable",
+      "value": 49675000000,
+      "year": 1984
+    },
+    {
+      "type": "other_renewable",
+      "value": 54190000000,
+      "year": 1985
+    },
+    {
+      "type": "other_renewable",
+      "value": 59620000000,
+      "year": 1986
+    },
+    {
+      "type": "other_renewable",
+      "value": 62964000000,
+      "year": 1987
+    },
+    {
+      "type": "other_renewable",
+      "value": 65916000000,
+      "year": 1988
+    },
+    {
+      "type": "other_renewable",
+      "value": 128137000000,
+      "year": 1989
+    },
+    {
+      "type": "other_renewable",
+      "value": 155974000000,
+      "year": 1990
+    },
+    {
+      "type": "other_renewable",
+      "value": 125276000000,
+      "year": 1991
+    },
+    {
+      "type": "other_renewable",
+      "value": 138806000000,
+      "year": 1992
+    },
+    {
+      "type": "other_renewable",
+      "value": 144001000000,
+      "year": 1993
+    },
+    {
+      "type": "other_renewable",
+      "value": 151662000000,
+      "year": 1994
+    },
+    {
+      "type": "other_renewable",
+      "value": 157727000000,
+      "year": 1995
+    },
+    {
+      "type": "other_renewable",
+      "value": 162529000000,
+      "year": 1996
+    },
+    {
+      "type": "other_renewable",
+      "value": 172934000000,
+      "year": 1997
+    },
+    {
+      "type": "other_renewable",
+      "value": 182436000000,
+      "year": 1998
+    },
+    {
+      "type": "other_renewable",
+      "value": 198551000000,
+      "year": 1999
+    },
+    {
+      "type": "other_renewable",
+      "value": 219511000000,
+      "year": 2000
+    },
+    {
+      "type": "other_renewable",
+      "value": 227146000000,
+      "year": 2001
+    },
+    {
+      "type": "other_renewable",
+      "value": 255732000000,
+      "year": 2002
+    },
+    {
+      "type": "other_renewable",
+      "value": 280082000000,
+      "year": 2003
+    },
+    {
+      "type": "other_renewable",
+      "value": 316982000000,
+      "year": 2004
+    },
+    {
+      "type": "other_renewable",
+      "value": 362400000000,
+      "year": 2005
+    },
+    {
+      "type": "other_renewable",
+      "value": 407815000000,
+      "year": 2006
+    },
+    {
+      "type": "other_renewable",
+      "value": 481223000000,
+      "year": 2007
+    },
+    {
+      "type": "other_renewable",
+      "value": 554338000000,
+      "year": 2008
+    },
+    {
+      "type": "other_renewable",
+      "value": 648990000000,
+      "year": 2009
+    },
+    {
+      "type": "other_renewable",
+      "value": 777568000000,
+      "year": 2010
+    },
+    {
+      "type": "other_renewable",
+      "value": 930540000000,
+      "year": 2011
+    },
+    {
+      "type": "other_renewable",
+      "value": "",
+      "year": 2012
+    }
+  ],
+  "coal": [
+    {
+      "type": "coal",
+      "value": 803767000000,
+      "year": 1960
+    },
+    {
+      "type": "coal",
+      "value": 850449000000,
+      "year": 1961
+    },
+    {
+      "type": "coal",
+      "value": 928976000000,
+      "year": 1962
+    },
+    {
+      "type": "coal",
+      "value": 1003902000000,
+      "year": 1963
+    },
+    {
+      "type": "coal",
+      "value": 1074839000000,
+      "year": 1964
+    },
+    {
+      "type": "coal",
+      "value": 1140330000000,
+      "year": 1965
+    },
+    {
+      "type": "coal",
+      "value": 1200428000000,
+      "year": 1966
+    },
+    {
+      "type": "coal",
+      "value": 1268808000000,
+      "year": 1967
+    },
+    {
+      "type": "coal",
+      "value": 1366964000000,
+      "year": 1968
+    },
+    {
+      "type": "coal",
+      "value": 1413490000000,
+      "year": 1969
+    },
+    {
+      "type": "coal",
+      "value": 1461335000000,
+      "year": 1970
+    },
+    {
+      "type": "coal",
+      "value": 1738588000000,
+      "year": 1971
+    },
+    {
+      "type": "coal",
+      "value": 1800857000000,
+      "year": 1972
+    },
+    {
+      "type": "coal",
+      "value": 1933312000000,
+      "year": 1973
+    },
+    {
+      "type": "coal",
+      "value": 1887198000000,
+      "year": 1974
+    },
+    {
+      "type": "coal",
+      "value": 1963213000000,
+      "year": 1975
+    },
+    {
+      "type": "coal",
+      "value": 2160318000000,
+      "year": 1976
+    },
+    {
+      "type": "coal",
+      "value": 2255265000000,
+      "year": 1977
+    },
+    {
+      "type": "coal",
+      "value": 2326821000000,
+      "year": 1978
+    },
+    {
+      "type": "coal",
+      "value": 2500211000000,
+      "year": 1979
+    },
+    {
+      "type": "coal",
+      "value": 2701684000000,
+      "year": 1980
+    },
+    {
+      "type": "coal",
+      "value": 2770441000000,
+      "year": 1981
+    },
+    {
+      "type": "coal",
+      "value": 2840965000000,
+      "year": 1982
+    },
+    {
+      "type": "coal",
+      "value": 2995730000000,
+      "year": 1983
+    },
+    {
+      "type": "coal",
+      "value": 3139095000000,
+      "year": 1984
+    },
+    {
+      "type": "coal",
+      "value": 3363213000000,
+      "year": 1985
+    },
+    {
+      "type": "coal",
+      "value": 3441274000000,
+      "year": 1986
+    },
+    {
+      "type": "coal",
+      "value": 3649518000000,
+      "year": 1987
+    },
+    {
+      "type": "coal",
+      "value": 3793903000000,
+      "year": 1988
+    },
+    {
+      "type": "coal",
+      "value": 3949813000000,
+      "year": 1989
+    },
+    {
+      "type": "coal",
+      "value": 4417921000000,
+      "year": 1990
+    },
+    {
+      "type": "coal",
+      "value": 4524737000000,
+      "year": 1991
+    },
+    {
+      "type": "coal",
+      "value": 4605970000000,
+      "year": 1992
+    },
+    {
+      "type": "coal",
+      "value": 4708607000000,
+      "year": 1993
+    },
+    {
+      "type": "coal",
+      "value": 4842916000000,
+      "year": 1994
+    },
+    {
+      "type": "coal",
+      "value": 4984294000000,
+      "year": 1995
+    },
+    {
+      "type": "coal",
+      "value": 5221420000000,
+      "year": 1996
+    },
+    {
+      "type": "coal",
+      "value": 5341040000000,
+      "year": 1997
+    },
+    {
+      "type": "coal",
+      "value": 5449815000000,
+      "year": 1998
+    },
+    {
+      "type": "coal",
+      "value": 5576428000000,
+      "year": 1999
+    },
+    {
+      "type": "coal",
+      "value": 5992920000000,
+      "year": 2000
+    },
+    {
+      "type": "coal",
+      "value": 6007964000000,
+      "year": 2001
+    },
+    {
+      "type": "coal",
+      "value": 6292592000000,
+      "year": 2002
+    },
+    {
+      "type": "coal",
+      "value": 6709914000000,
+      "year": 2003
+    },
+    {
+      "type": "coal",
+      "value": 6925460000000,
+      "year": 2004
+    },
+    {
+      "type": "coal",
+      "value": 7323747000000,
+      "year": 2005
+    },
+    {
+      "type": "coal",
+      "value": 7739359000000,
+      "year": 2006
+    },
+    {
+      "type": "coal",
+      "value": 8205413000000,
+      "year": 2007
+    },
+    {
+      "type": "coal",
+      "value": 8277345000000,
+      "year": 2008
+    },
+    {
+      "type": "coal",
+      "value": 8116546000000,
+      "year": 2009
+    },
+    {
+      "type": "coal",
+      "value": 8640324000000,
+      "year": 2010
+    },
+    {
+      "type": "coal",
+      "value": 9130624000000,
+      "year": 2011
+    },
+    {
+      "type": "coal",
+      "value": "",
+      "year": 2012
+    }
+  ],
+  "total": [
+    {
+      "type": "total",
+      "value": "",
+      "year": 1960
+    },
+    {
+      "type": "total",
+      "value": "",
+      "year": 1961
+    },
+    {
+      "type": "total",
+      "value": "",
+      "year": 1962
+    },
+    {
+      "type": "total",
+      "value": "",
+      "year": 1963
+    },
+    {
+      "type": "total",
+      "value": "",
+      "year": 1964
+    },
+    {
+      "type": "total",
+      "value": "",
+      "year": 1965
+    },
+    {
+      "type": "total",
+      "value": "",
+      "year": 1966
+    },
+    {
+      "type": "total",
+      "value": "",
+      "year": 1967
+    },
+    {
+      "type": "total",
+      "value": "",
+      "year": 1968
+    },
+    {
+      "type": "total",
+      "value": "",
+      "year": 1969
+    },
+    {
+      "type": "total",
+      "value": "",
+      "year": 1970
+    },
+    {
+      "type": "total",
+      "value": 5239652743504.79,
+      "year": 1971
+    },
+    {
+      "type": "total",
+      "value": 5687977223891.22,
+      "year": 1972
+    },
+    {
+      "type": "total",
+      "value": 6128361065749.5,
+      "year": 1973
+    },
+    {
+      "type": "total",
+      "value": 6235248602867.02,
+      "year": 1974
+    },
+    {
+      "type": "total",
+      "value": 6434255232787.81,
+      "year": 1975
+    },
+    {
+      "type": "total",
+      "value": 6889583895297.75,
+      "year": 1976
+    },
+    {
+      "type": "total",
+      "value": 7222999775218.92,
+      "year": 1977
+    },
+    {
+      "type": "total",
+      "value": 7621211580399.45,
+      "year": 1978
+    },
+    {
+      "type": "total",
+      "value": 7965948111323.72,
+      "year": 1979
+    },
+    {
+      "type": "total",
+      "value": 8200110344076,
+      "year": 1980
+    },
+    {
+      "type": "total",
+      "value": 8364365595208.67,
+      "year": 1981
+    },
+    {
+      "type": "total",
+      "value": 8417200785743.43,
+      "year": 1982
+    },
+    {
+      "type": "total",
+      "value": 8778268993150.07,
+      "year": 1983
+    },
+    {
+      "type": "total",
+      "value": 9267131218019.27,
+      "year": 1984
+    },
+    {
+      "type": "total",
+      "value": 9669546017244.81,
+      "year": 1985
+    },
+    {
+      "type": "total",
+      "value": 9951214177580.12,
+      "year": 1986
+    },
+    {
+      "type": "total",
+      "value": 10425788544695.1,
+      "year": 1987
+    },
+    {
+      "type": "total",
+      "value": 10923914087244.7,
+      "year": 1988
+    },
+    {
+      "type": "total",
+      "value": 11547188375187.4,
+      "year": 1989
+    },
+    {
+      "type": "total",
+      "value": 11846562104339,
+      "year": 1990
+    },
+    {
+      "type": "total",
+      "value": 12116467755419.5,
+      "year": 1991
+    },
+    {
+      "type": "total",
+      "value": 12224077688187.6,
+      "year": 1992
+    },
+    {
+      "type": "total",
+      "value": 12513503039297.8,
+      "year": 1993
+    },
+    {
+      "type": "total",
+      "value": 12816787977847.4,
+      "year": 1994
+    },
+    {
+      "type": "total",
+      "value": 13257488267273.2,
+      "year": 1995
+    },
+    {
+      "type": "total",
+      "value": 13685777577721.1,
+      "year": 1996
+    },
+    {
+      "type": "total",
+      "value": 13975624931943.6,
+      "year": 1997
+    },
+    {
+      "type": "total",
+      "value": 14333710347405.4,
+      "year": 1998
+    },
+    {
+      "type": "total",
+      "value": 14736945584383,
+      "year": 1999
+    },
+    {
+      "type": "total",
+      "value": 15433253952902.6,
+      "year": 2000
+    },
+    {
+      "type": "total",
+      "value": 15550307610417.6,
+      "year": 2001
+    },
+    {
+      "type": "total",
+      "value": 16153889314739.7,
+      "year": 2002
+    },
+    {
+      "type": "total",
+      "value": 16723169555184,
+      "year": 2003
+    },
+    {
+      "type": "total",
+      "value": 17514916187705.1,
+      "year": 2004
+    },
+    {
+      "type": "total",
+      "value": 18274580159091.1,
+      "year": 2005
+    },
+    {
+      "type": "total",
+      "value": 18971117170112,
+      "year": 2006
+    },
+    {
+      "type": "total",
+      "value": 19829728924268.3,
+      "year": 2007
+    },
+    {
+      "type": "total",
+      "value": 20231467982153,
+      "year": 2008
+    },
+    {
+      "type": "total",
+      "value": 20163776511456.1,
+      "year": 2009
+    },
+    {
+      "type": "total",
+      "value": 21469909684050.1,
+      "year": 2010
+    },
+    {
+      "type": "total",
+      "value": 22158522786314.2,
+      "year": 2011
+    },
+    {
+      "type": "total",
+      "value": "",
+      "year": 2012
+    }
+  ]
+}
