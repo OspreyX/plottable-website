@@ -112,6 +112,10 @@ module.exports = function(grunt) {
         tasks: ['compass'],
         options: { spawn: false }
       }
+    },
+
+    bom: {
+      src: ['docs/**/*.html']
     }
 
   });
@@ -123,6 +127,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-newer');
+  grunt.loadNpmTasks('grunt-bom-removal');
 
   grunt.registerTask('default', ['concat', 'uglify', 'newer:imagemin', 'newer:svgmin', 'compass']);
 }

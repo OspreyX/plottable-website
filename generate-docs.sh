@@ -20,7 +20,10 @@ cd ..
 
 grunt
 
-./node_modules/typedoc/bin/typedoc --includeDeclarations typings/d3/d3.d.ts plottable.d.ts --theme _typedoc/themes/plottable --out docs/
+./node_modules/typedoc/bin/typedoc --readme none --name Plottable --includeDeclarations typings/d3/d3.d.ts plottable.d.ts --theme _typedoc/themes/plottable --exclude plottable-website --out docs/
+
+# remove BOM, since node adds it and Jekyll hates it
+grunt bom
 
 rm -rf _plottable
 rm -r typings

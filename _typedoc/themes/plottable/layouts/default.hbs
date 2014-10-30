@@ -1,3 +1,6 @@
+---
+model_name: {{model.name}}
+---
 <!doctype html>
 <html class="default no-js">
 <head>
@@ -12,10 +15,15 @@
     <script src="{{relativeURL "assets/js/modernizr.js"}}"></script>
 </head>
 <body>
-
 {{> header}}
 
 <div class="container container-main">
+{% if site.readmes[page.model_name] %}
+{% assign readme_file = site.readmes[page.model_name] %}
+{% markdown %}
+{% include \{{readme_file}} %}
+{% endmarkdown %}
+{% endif %}
     <div class="row">
         <div class="col-8 col-content">
             {{{contents}}}
