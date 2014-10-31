@@ -1,8 +1,9 @@
 d3.json("data/2012_stacked_bar.json", function(error, data) {
   var xScale = new Plottable.Scale.Ordinal();
   var yScale = new Plottable.Scale.Linear();
-  var colorScale = new Plottable.Scale.Color();
-
+  var colorScale = new Plottable.Scale.Color()
+                      .domain(["coal", "hydroelectric", "gas", "nuclear", "oil", "other_renewable"])
+                      .range(["black", "dodgerblue", "lightcoral", "darkorange", "saddlebrown", "mediumseagreen"]);
   var xAxis = new Plottable.Axis.Category(xScale, "bottom");
   var yAxis = new Plottable.Axis.Numeric(yScale, "left");
 
@@ -20,11 +21,15 @@ d3.json("data/2012_stacked_bar.json", function(error, data) {
                       .addDataset(data.oil)
                       .addDataset(data.other_renewable)
                       .attr("fill", "type", colorScale)
+                      .animate(true);
 
+  var title = new Plottable.Component.TitleLabel("Production of electricity by country (TWh / year)");
+  var axisLabel = new Plottable.Component.AxisLabel("Terawatt Hours per Year", "left");
   var table = new Plottable.Component.Table([
-      [null,  legend],
-      [yAxis, plot],
-      [null,  xAxis]
+      [null     , null , title ],
+      [null     , null , legend],
+      [axisLabel, yAxis, plot  ],
+      [null     , null , xAxis ]
       ]);
   table.renderTo("svg#example-electricity-stacked-bar");
 });

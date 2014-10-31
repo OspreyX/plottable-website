@@ -1,8 +1,9 @@
 d3.json("data/world_stacked_area.json", function(error, data) {
   var xScale = new Plottable.Scale.Time();
   var yScale = new Plottable.Scale.Linear();
-  var colorScale = new Plottable.Scale.Color();
-
+  var colorScale = new Plottable.Scale.Color()
+                      .domain(["coal", "hydroelectric", "gas", "nuclear", "oil", "other_renewable"])
+                      .range(["black", "dodgerblue", "lightcoral", "darkorange", "saddlebrown", "mediumseagreen"]);
   var xAxis = new Plottable.Axis.Time(xScale, "bottom");
   var yAxis = new Plottable.Axis.Numeric(yScale, "left");
 
@@ -26,12 +27,15 @@ d3.json("data/world_stacked_area.json", function(error, data) {
                       .addDataset(data.other_renewable)
                       .attr("fill", "type", colorScale);
 
-  plot.registerInteraction(new Plottable.Interaction.PanZoom(xScale, yScale))
 
+  var title = new Plottable.Component.TitleLabel("Worldwide Electricity Production over Time");
+  var axisLabel = new Plottable.Component.Label("Tera-watt hours per year", "left")
   var table = new Plottable.Component.Table([
-      [null,  legend],
-      [yAxis, plot],
-      [null,  xAxis]
+      [null     , null ,  title ],
+      [null     , null ,  legend],
+      [axisLabel, yAxis,  plot  ],
+      [null     , null ,  xAxis ]
       ]);
   table.renderTo("svg#example-electricity-stacked-area");
+  plot.registerInteraction(new Plottable.Interaction.PanZoom(xScale, null));
 });

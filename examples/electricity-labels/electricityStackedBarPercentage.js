@@ -1,7 +1,12 @@
+var countries = ["United States", "China", "European Union", "India", "Japan", "Russian Federation"];
+var typeKeys = ["coal", "hydroelectric", "gas", "nuclear", "oil", "other_renewable"];
+
 d3.json("data/2012_stacked_bar.json", function(error, data) {
   var xScale = new Plottable.Scale.Ordinal();
   var yScale = new Plottable.Scale.Linear();
-  var colorScale = new Plottable.Scale.Color();
+  var colorScale = new Plottable.Scale.Color()
+                      .domain(typeKeys)
+                      .range(["black", "dodgerblue", "lightcoral", "darkorange", "saddlebrown", "mediumseagreen"]);
 
   var formatter = Plottable.Formatters.percentage(0, false);
 
@@ -12,8 +17,6 @@ d3.json("data/2012_stacked_bar.json", function(error, data) {
 
   var legend = new Plottable.Component.HorizontalLegend(colorScale);
 
-  var countries = ["United States", "China", "European Union", "India", "Japan", "Russian Federation"];
-  var typeKeys = ["coal", "hydroelectric", "gas", "nuclear", "oil", "other_renewable"]
   var percentageAccessor = function(x) {
     var countryIndex = countries.indexOf(x.country);
     var val = x.value;
@@ -34,7 +37,10 @@ d3.json("data/2012_stacked_bar.json", function(error, data) {
                       .barLabelsEnabled(true)
                       .barLabelFormatter(formatter);
 
+  var title = new Plottable.Component.TitleLabel("Relative Electricity Production by Country");
+
   var table = new Plottable.Component.Table([
+      [null,  title],
       [null,  legend],
       [yAxis, plot],
       [null,  xAxis]
