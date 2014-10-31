@@ -12,21 +12,26 @@ name_to_conciseName = {
   "EG.ELC.NUCL.KH": "nuclear",
   "EG.ELC.RNWX.KH": "other_renewable"
 }
-countries = ["World", "United States", "China", "European Union", "India", "Japan", "Russia"]
 
-worldData = fullData["World"]
+conciseNames = ["total", "coal", "hydroelectric", "gas", "nuclear", "other_renewable"]
+
+countries = ["United States", "China", "European Union", "India", "Japan", "Russian Federation"]
+
+# desired format: [country: [{value, type, country}]] - grouped by country
 
 outData = {}
+
 for k in name_to_conciseName:
-  data = worldData[k]["data"]
+  data = []
   shortName = name_to_conciseName[k]
-  for datum in data:
-    datum["type"] = shortName # hackhack
   outData[shortName] = data
+  for c in countries:
+    datum = fullData[c][k]["data"][-1]
+    datum["type"] = shortName # hackhack
+    datum["country"] = c
+    data.append(datum)
 
 
-
-
-with open("world_stacked_area.json", "w") as f:
+with open("2012_stacked_bar.json", "w") as f:
   json.dump(outData, f)
 
