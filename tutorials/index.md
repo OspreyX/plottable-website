@@ -8,7 +8,7 @@ Plottable Tutorials
 ===================
 
 Get started with the Plottable Tutorial: Download the packaged tutorial
-files at <https://palantir.github.io/plottable/tutorials.zip>; extract
+files at <http://plottablejs.org/tutorials.zip>; extract
 it, and each subdirectory corresponds to a different tutorial. You can
 open the \`.html\` files directly in the browser, and modify the
 associated \`.js\` files with your favorite text editor. Alternatively,
