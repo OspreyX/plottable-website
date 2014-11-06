@@ -1,1 +1,0 @@
-/Users/dmane/Github/plottable-website/examples/electricity-labels/electricityStackedBarAbsolute.js
