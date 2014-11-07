@@ -101,14 +101,6 @@ module.exports = function(grunt) {
       }
     },
 
-    copy: {
-      examples: {
-        src: ['examples/**/*', '!**/_*/**'],
-        dest: '_includes/',
-        filter: 'isFile'
-      }
-    },
-
     watch: {
       scripts: {
         files: ['_js/*.js', '_images/*', '*.html'],
@@ -118,11 +110,6 @@ module.exports = function(grunt) {
       css: {
         files: ['sass/**/*.scss', '_typedoc/themes/plottable/assets/css/theme.scss'],
         tasks: ['compass'],
-        options: { spawn: false }
-      },
-      examples: {
-        files: ['examples/**/*'],
-        tasks: ['copy:examples'],
         options: { spawn: false }
       }
     }
@@ -134,9 +121,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-svgmin');
   grunt.loadNpmTasks('grunt-contrib-compass');
-  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-newer');
 
-  grunt.registerTask('default', ['concat', 'uglify', 'newer:imagemin', 'newer:svgmin', 'compass', 'copy']);
+  grunt.registerTask('default', ['concat', 'uglify', 'newer:imagemin', 'newer:svgmin', 'compass']);
 }

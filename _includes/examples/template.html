@@ -8,7 +8,7 @@
 
         <div>
           {% highlight javascript %}
-          {% include {{include.script}} %}
+          {% include_relative {{include.script}} %}
           {% endhighlight %}
         </div>
       </div>
@@ -18,6 +18,6 @@
 
 <script>
   $(document).ready(function(){
-    {% include {{include.script}} %}
+    {% include_relative {{include.script}} %}
   });
 </script>
