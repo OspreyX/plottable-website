@@ -79,7 +79,6 @@ module.exports = function(grunt) {
       dist: {
         options: {
           specify     : ['sass/style.scss', 'sass/ie.scss'],
-          banner      : _banner,
           sassDir     : 'sass',
           cssDir      : 'build/css',
           fontsDir    : 'fonts',
@@ -91,7 +90,6 @@ module.exports = function(grunt) {
       theme: {
         options: {
           specify     : ['_typedoc/themes/plottable/assets/css/theme.scss'],
-          banner      : _banner,
           sassDir     : '_typedoc/themes/plottable/assets/css',
           cssDir      : '_typedoc/themes/plottable/assets/css',
           fontsDir    : 'fonts',
