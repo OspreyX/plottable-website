@@ -1,0 +1,9 @@
+<svg id="example-linechart" height="150"></svg>
+Line Plot
+<script>
+  $(function() {
+    new Plottable.Component.Table()
+      .addComponent(0, 0, makeXYPlotMulti('line'))
+      .renderTo('#example-linechart');
+  });
+</script>

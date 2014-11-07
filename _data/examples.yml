@@ -1,0 +1,38 @@
+- category: Chart Examples
+  examples:
+  - name: Bar Plot
+    path: bar
+
+  - name: Multi Bar
+    path: multibar
+
+  - name: Clustered Bar
+    path: clusteredbar
+
+  - name: Stacked Bar
+    path: stackedbar
+
+  - name: Grid Plot
+    path: grid
+
+  - name: Multiple Axes
+    path: linechartaxes
+
+  - name: Spaceships!
+    path: spaceships-single
+
+- category: Compare D3 and Plottable
+  examples:
+  - name: Line Plot
+    path: linechart
+
+  - name: Scatter Plot
+    path: scatterplot
+
+- category: Extended Examples
+  examples:
+  - name: Space Ships
+    path: spaceships
+
+  - name: Tooltips
+    path: tooltips

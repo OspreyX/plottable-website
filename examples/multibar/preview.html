@@ -1,0 +1,10 @@
+<svg id="example-multibar" height="150"></svg>
+Multi Bar
+<script>
+  $(function() {
+    new Plottable.Component.Table()
+      .addComponent(0, 0, verticalBarPlot(ordinalData2).project('fill', function(){return colors[0];}))
+      .addComponent(1, 0, verticalBarPlot(ordinalData3).project('fill', function(){return colors[1];}))
+      .renderTo('#example-multibar');
+  });
+</script>

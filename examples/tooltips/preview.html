@@ -1,0 +1,9 @@
+<svg id="example-tooltips" height="150"></svg>
+Tooltips
+<script>
+  $(function() {
+    new Plottable.Component.Table()
+      .addComponent(0, 0, verticalBarPlot(ordinalData2))
+      .renderTo('#example-tooltips');
+  });
+</script>

@@ -1,0 +1,9 @@
+<svg id="example-clusteredbar" height="150"></svg>
+Clustered Bar
+<script>
+  $(function() {
+    new Plottable.Component.Table()
+      .addComponent(0, 0, clusteredBarPlot([ordinalData2, ordinalData3]))
+      .renderTo('#example-clusteredbar');
+  });
+</script>

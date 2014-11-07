@@ -1,0 +1,9 @@
+<svg id="example-bar" height="150"></svg>
+Bar Plot
+<script>
+  $(function() {
+    new Plottable.Component.Table()
+      .addComponent(0, 0, verticalBarPlot(ordinalData2))
+      .renderTo('#example-bar');
+  });
+</script>

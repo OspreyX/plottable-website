@@ -1,0 +1,9 @@
+<svg id="example-scatterplot" height="150"></svg>
+Scatter Plot
+<script>
+  $(function() {
+    new Plottable.Component.Table()
+      .addComponent(0, 0, makeXYPlotMulti('scatter'))
+      .renderTo('#example-scatterplot');
+  });
+</script>

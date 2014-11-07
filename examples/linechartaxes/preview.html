@@ -1,0 +1,9 @@
+<svg id="example-linechartaxes" height="150"></svg>
+Multiple Axes
+<script>
+  $(function() {
+    new Plottable.Component.Table()
+      .addComponent(0, 0, makeXYPlotMulti('line'))
+      .renderTo('#example-linechartaxes');
+  });
+</script>

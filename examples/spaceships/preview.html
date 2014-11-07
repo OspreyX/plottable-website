@@ -1,0 +1,9 @@
+<svg id="example-spaceship" height="150"></svg>
+Space Ships
+<script>
+  $(function() {
+    new Plottable.Component.Table()
+      .addComponent(0, 0, makeXYPlotMulti('scatter'))
+      .renderTo('#example-spaceship');
+  });
+</script>

@@ -1,0 +1,9 @@
+<svg id="example-stackedbar" height="150"></svg>
+Stacked Bar
+<script>
+  $(function() {
+    new Plottable.Component.Table()
+      .addComponent(0, 0, stackedBarPlot([ordinalData2, ordinalData3]))
+      .renderTo('#example-stackedbar');
+  });
+</script>

@@ -68,8 +68,6 @@ Grunt will automatically compile (optimize/strip metadata) image files inside `/
 
     <img src="/build/images/global/foobar.png">
 
-_This is a good candidate to create a custom Liquid Filter._
-
 ## JavaScript / SASS
 
 The default Grunt task will compile and minify specific JavaScript/SASS files. You'll need to look at the `Gruntfile` to see the specifics. In order to include a new JS file, you'll need to add that file in `Gruntfile`. For the most part, you'll want to include your JS file to concatenate with `/build/js/application.js` however, you'll see that Modernizr and Respond.js are compiled separately. This is because Modernizr need to be included in `<head>` while Respond.js is included only for IE < 9. If for some reason you need to be specific about how to include your JS, you'll want to specify that in the `Gruntfile`.
