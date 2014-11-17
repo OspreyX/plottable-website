@@ -1,0 +1,74 @@
+---
+layout  : example
+page_id : page-example-spaceships
+---
+
+<script src="{{ site.baseurl }}/bower_components/lodash/dist/lodash{{ site.minifiedSuffix }}.js"></script>
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/bower_components/qtip2/jquery.qtip.css">
+<script src="{{ site.baseurl }}/bower_components/qtip2/jquery.qtip{{ site.minifiedSuffix }}.js"></script>
+<style type="text/css">
+  .tooltip-title{
+    font-size   : 1.2em;
+    line-height : 1.2em;
+  }
+  .tooltip-value{
+    font-size   : 1.5em;
+    line-height : 1.5em;
+  }
+</style>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h2>Let's Begin!</h2>
+    <p>
+      We've loaded in a data set of all the ships available in <strong><a
+      href="http://www.eveonline.com/">EVE Online</a></strong>, and we'd like
+      to explore it. First, to get a sense for what's in this high-dimensional
+      data, let's make a histogram of the types of ships.
+    </p>
+  </div>
+</div>
+
+{% include examples/template.html script="examples/spaceships/classHistogram.js" idSuffix="-class-histogram" %}
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h2>Break it down</h2>
+    <p>
+      Ships in EVE are associated with the different races in the game. Lets
+      see how the Frigates, Cruisers, Battleships, and Battlecruisers break
+      down by race.
+    </p>
+  </div>
+</div>
+
+{% include examples/template.html script="examples/spaceships/raceHistogram.js" idSuffix="-race-histogram" %}
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h2>More Dimensions</h2>
+    <p>
+      We've pretty much reached the limit of what bar charts can do for us.
+      Now we want to plot even more dimensions at once! To accomplish this, we
+      will add a number of styles to the scatter plot data-glyphs and leave
+      the axes open for analysis on other dimensions.
+    </p>
+    <p>
+      The glyph fill color represents its race, stroke is tech level, and
+      radius is hull size.
+     </p>
+  </div>
+</div>
+
+{% include examples/template.html script="examples/spaceships/scatterGlyphs.js" idSuffix="-scatter-glyphs" %}
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h2>Use those axes</h2>
+    <p>
+      Now that we have the axes free for exploration, let's see how the ships'
+      armor and shields compare across the race and hull types.
+    </p>
+  </div>
+</div>
+
+{% include examples/template.html script="examples/spaceships/pgVsCpu.js" idSuffix="-scatter-pg-cpu" %}

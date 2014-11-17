@@ -24,7 +24,7 @@ var plot   = new Plottable.Plot.StackedBar(xScale, yScale)
   .animate(true)
   .addDataset(data0)
   .addDataset(data1)
-  .project("fill", function(d){return "Series #" + d.i;}, colorScale);
+  .attr("fill", function(d){return "Series #" + d.i;}, colorScale);
 
 // Layout and render
 new Plottable.Component.Table([

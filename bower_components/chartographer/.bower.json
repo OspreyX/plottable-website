@@ -1,7 +1,7 @@
 {
   "name": "chartographer",
   "description": "A library of simple charts made with Plottable and D3",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "main": [
     "chartographer.js"
   ],
@@ -32,20 +32,20 @@
     "plots"
   ],
   "dependencies": {
-    "plottable": "0.28.0"
+    "plottable": "0.35.0"
   },
-  "homepage": "http://github.com/danmane/chartographer",
+  "homepage": "http://github.com/palantir/chartographer",
   "repository": {
     "type": "git",
-    "url": "git://github.com/danmane/chartographer.git"
+    "url": "git://github.com/palantir/chartographer.git"
   },
-  "_release": "0.0.4",
+  "_release": "0.1.0",
   "_resolution": {
     "type": "version",
-    "tag": "v0.0.4",
-    "commit": "d4c4e4ec2457f01aafedfa604cc1135fa0f3466d"
+    "tag": "v0.1.0",
+    "commit": "e9dccd9fdf3cf9fa2c361dd8a762a9fcc62c8d5f"
   },
   "_source": "git://github.com/palantir/chartographer.git",
-  "_target": "0.0.4",
+  "_target": "0.1.0",
   "_originalSource": "chartographer"
 }

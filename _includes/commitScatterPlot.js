@@ -20,12 +20,13 @@ function commitScatterPlot(commitData) {
   // We project through the colorScale to have fills that synchronize with the
   // legend, and then project constant values for radius and opacity, although we
   // could have used a scale to have these be data-dependent as well.
-  var scatter = new Plottable.Plot.Scatter(commitData, xScale, yScale)
-    .project("x", "parsedDate", xScale)
-    .project("y", hourAccessor, yScale)
-    .project("fill", "authorName", colorScale)
-    .project("r", 5)
-    .project("opacity", 0.4 );
+  var scatter = new Plottable.Plot.Scatter(xScale, yScale)
+    .addDataset(commitData)
+    .attr("x", "parsedDate", xScale)
+    .attr("y", hourAccessor, yScale)
+    .attr("fill", "authorName", colorScale)
+    .attr("r", 5)
+    .attr("opacity", 0.4 );
 
   // Finally, merge the pieces together into a StandardChart, render it, and
   // attach an interaction.

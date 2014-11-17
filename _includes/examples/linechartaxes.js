@@ -25,14 +25,16 @@ d3.tsv("data.tsv", function(error, data) {
   var xAxis   = new Plottable.Axis.Time(xScale, "bottom");
   var yAxis0  = new Plottable.Axis.Numeric(yScale0, "left");
   var yAxis1  = new Plottable.Axis.Numeric(yScale1, "right");
-  var plot0   = new Plottable.Plot.Line(data, xScale, yScale0)
-    .project("x", "date", xScale)
-    .project("y", "cheese", yScale0)
-    .project("stroke", colorScale.scale(0));
-  var plot1   = new Plottable.Plot.Line(data, xScale, yScale1)
-    .project("x", "date", xScale)
-    .project("y", "degrees", yScale1)
-    .project("stroke", colorScale.scale(1));
+  var plot0   = new Plottable.Plot.Line(xScale, yScale0)
+    .addDataset(data)
+    .attr("x", "date", xScale)
+    .attr("y", "cheese", yScale0)
+    .attr("stroke", colorScale.scale(0));
+  var plot1   = new Plottable.Plot.Line(xScale, yScale1)
+    .addDataset(data)
+    .attr("x", "date", xScale)
+    .attr("y", "degrees", yScale1)
+    .attr("stroke", colorScale.scale(1));
   var plots = new Plottable.Component.Group([plot0, plot1]);
 
   // Layout and render

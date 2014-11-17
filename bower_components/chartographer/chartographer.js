@@ -1,5 +1,5 @@
 /*!
-Chartographer 0.0.4 (https://github.com/danmane/chartogrpaher)
+Chartographer 0.1.0 (https://github.com/danmane/chartogrpaher)
 Copyright 2014 Palantir Technologies
 Licensed under MIT (https://github.com/danmane/chartographer/blob/master/LICENSE)
 
@@ -80,7 +80,7 @@ var Chartographer;
                 this.datasets.forEach(function (d) { return _this.plot.addDataset(d.metadata()[nameKey], d); });
             }
             else {
-                this.plots = this.datasets.map(function (d) { return new Plottable.Plot[_this.plotType](d, x, y); });
+                this.plots = this.datasets.map(function (d) { return new Plottable.Plot[_this.plotType](x, y).addDataset(d); });
             }
         };
         Chart.prototype.setType = function (t, isX) {
@@ -123,7 +123,9 @@ var Chartographer;
             var colorScale = new Plottable.Scale.Color();
             if (this.colorRange)
                 colorScale.range(this.colorRange);
-            var gridlines = new Plottable.Component.Gridlines(xScale, yScale);
+            var xScaleForGridlines = this._xType === "ordinal" ? null : xScale;
+            var yScaleForGridlines = this._yType === "ordinal" ? null : yScale;
+            var gridlines = new Plottable.Component.Gridlines(xScaleForGridlines, yScaleForGridlines);
             var legend = colorScale.domain().length > 1 ? new Plottable.Component.HorizontalLegend(colorScale) : null;
             this._generatePlots(xScale, yScale);
             this._project("x", this._xAccessor, xScale);

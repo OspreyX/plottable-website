@@ -35,7 +35,8 @@ function verticalBarPlot(plotData) {
     var xScale = new Plottable.Scale.Ordinal();
     var yScale = new Plottable.Scale.Linear();
     var ds     = new Plottable.Dataset(data);
-    var plot   = new Plottable.Plot.VerticalBar(ds, xScale, yScale);
+    var plot   = new Plottable.Plot.VerticalBar(xScale, yScale);
+    plot.addDataset(ds);
     plot.project('fill', function(d){return colors[0];});
     plot.animate(true);
     return plot;
@@ -73,9 +74,10 @@ function horizontalBarPlot() {
     var ds     = new Plottable.Dataset(ordinalData);
 
     // need to reverse the x/y data
-    var plot = new Plottable.Plot.HorizontalBar(ds, xScale, yScale)
+    var plot = new Plottable.Plot.HorizontalBar(xScale, yScale)
         .project("x", "y", xScale)
         .project("y", "x", yScale);
+    plot.addDataset(ds);
     plot.animate(true);
     plot.project('fill', function(d){return colors[0];});
     return plot;
@@ -94,7 +96,7 @@ function gridPlot() {
         { x: "b", y: "d", value: 1 }, { x: "b", y: "e", value: 6 }, { x: "b", y: "f", value: 8 },
         { x: "c", y: "d", value: 9 }, { x: "c", y: "e", value: 2 }, { x: "c", y: "f", value: 5 }];
 
-    var plot = new Plottable.Plot.Grid(data, xScale, yScale, colorScale);
+    var plot = new Plottable.Plot.Grid(xScale, yScale, colorScale).addDataset(data);
     return plot;
 }
 
@@ -106,17 +108,18 @@ function getXYPlot(type, data) {
     var plot;
     switch (type) {
         case "area":
-            plot = new Plottable.Plot.Area(ds, xScale, yScale);
+            plot = new Plottable.Plot.Area(xScale, yScale);
             break;
         case "line":
-            plot = new Plottable.Plot.Line(ds, xScale, yScale);
+            plot = new Plottable.Plot.Line(xScale, yScale);
             break;
         case "scatter":
-            plot = new Plottable.Plot.Scatter(ds, xScale, yScale);
+            plot = new Plottable.Plot.Scatter(xScale, yScale);
             plot.project("r", 7);
             break;
     }
     plot.animate(true);
+    plot.addDataset(ds);
     return plot;
 }
 
@@ -143,7 +146,7 @@ function makeAreaStroke() {
     var yScale = new Plottable.Scale.Linear();
     var ds = new Plottable.Dataset(quantitativeData);
 
-    var plot = new Plottable.Plot.Area(ds, xScale, yScale);
+    var plot = new Plottable.Plot.Area(xScale, yScale).addDataset(ds);
     plot.project("stroke", colors[0]);
     plot.project("fill", colors[0]);
     return plot;
@@ -185,8 +188,8 @@ function animate1() {
     var yAxis = new Plottable.Axis.Numeric(yScale, "left");
 
     var gridlines = new Plottable.Component.Gridlines(xScale, yScale);
-    var plot1 = new Plottable.Plot.Line(quantitativeData, xScale, yScale).animate(true);
-    var plot2 = new Plottable.Plot.Line(quantitativeData2, xScale, yScale).animate(true);
+    var plot1 = new Plottable.Plot.Line(xScale, yScale).animate(true).addDataset(quantitativeData);
+    var plot2 = new Plottable.Plot.Line(xScale, yScale).animate(true).addDataset(quantitativeData2);
 
     plot1.project("stroke", colors[0]);
     plot2.project("stroke", colors[1]);
@@ -204,8 +207,8 @@ function animate2() {
     var yAxis = new Plottable.Axis.Numeric(yScale, "left");
 
     var gridlines = new Plottable.Component.Gridlines(xScale, yScale);
-    var plot1 = new Plottable.Plot.Area(quantitativeData, xScale, yScale).animate(true);
-    var plot2 = new Plottable.Plot.Area(quantitativeData2, xScale, yScale).animate(true);
+    var plot1 = new Plottable.Plot.Area(xScale, yScale).animate(true).addDataset(quantitativeData);
+    var plot2 = new Plottable.Plot.Area(xScale, yScale).animate(true).addDataset(quantitativeData2);
 
     plot1.project("fill", colors[0]);
     plot2.project("fill", colors[1]);
@@ -222,7 +225,7 @@ function animate3() {
     var xAxis = new Plottable.Axis.Category(xScale, "bottom");
     var yAxis = new Plottable.Axis.Numeric(yScale, "left");
 
-    var plot1 = new Plottable.Plot.VerticalBar(ordinalData, xScale, yScale).animate(true);
+    var plot1 = new Plottable.Plot.VerticalBar(xScale, yScale).animate(true).addDataset(ordinalData);
 
     var table = new Plottable.Component.Table([[yAxis, plot1], [null, xAxis]]);
     return table;

@@ -9,7 +9,8 @@ d3.tsv("data.tsv", function(error, data) {
   var xLabel = new Plottable.Component.Label("Sepal Width (cm)");
   var yLabel = new Plottable.Component.Label("Sepal Length (cm)", "left");
 
-  var plot = new Plottable.Plot.Scatter(data, xScale, yScale)
+  var plot = new Plottable.Plot.Scatter(xScale, yScale)
+                      .addDataset(data)
                       .attr("x", "sepalWidth", xScale)
                       .attr("y", "sepalLength", yScale)
                       .attr("r", 3.5)
@@ -22,6 +23,6 @@ d3.tsv("data.tsv", function(error, data) {
                 [yLabel, yAxis, center],
                 [null  , null , xAxis ],
                 [null  , null , xLabel]]
-    ).renderTo(d3.select("#scatterplot-plottable-demo"));
+    ).renderTo("#scatterplot-plottable-demo");
 });
 

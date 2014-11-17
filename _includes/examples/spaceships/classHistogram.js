@@ -1,6 +1,6 @@
 d3.csv("ships.csv", function(error, data) {
-  keys = _.keys(data[0]);
-  histogram = _(data)
+  var keys = _.keys(data[0]);
+  var histogram = _(data)
     .groupBy("Ship class") // Create histogram
     .map(function (values, key){
       return {
@@ -20,9 +20,10 @@ d3.csv("ships.csv", function(error, data) {
   var xAxis  = new Plottable.Axis.Numeric(xScale, "bottom");
   var yAxis  = new Plottable.Axis.Category(yScale, "left");
   var lines  = new Plottable.Component.Gridlines(xScale, null);
-  var plot   = new Plottable.Plot.HorizontalBar(histogram, xScale, yScale)
-    .project("x", "count", xScale)
-    .project("y", "shipClass", yScale)
+  var plot   = new Plottable.Plot.HorizontalBar(xScale, yScale)
+    .addDataset(histogram)
+    .attr("x", "count", xScale)
+    .attr("y", "shipClass", yScale)
     .animate(true);
 
   // Layout and render
@@ -31,5 +32,5 @@ d3.csv("ships.csv", function(error, data) {
     [yAxis, lines.merge(plot)],
     [null,  xAxis]
   ])
-  .renderTo(d3.select('svg#example-class-histogram'));
+  .renderTo("svg#example-class-histogram");
 });
