@@ -23,7 +23,7 @@ var lines  = new Plottable.Component.Gridlines(null, yScale);
 var plot   = new Plottable.Plot.ClusteredBar(xScale, yScale)
   .addDataset(data0)
   .addDataset(data1)
-  .project("fill", function(d){return "Series #" + d.i;}, colorScale);
+  .attr("fill", function(d){return "Series #" + d.i;}, colorScale);
 
 // Layout and render
 new Plottable.Component.Table([

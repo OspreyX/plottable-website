@@ -43,14 +43,15 @@ $.when(
   // Plot Components
   var title      = new Plottable.Component.TitleLabel("Ships");
   var raceLegend = new Plottable.Component.HorizontalLegend(raceScale);
-  var plot       = new Plottable.Plot.Scatter(ships, xScale, yScale)
-    .project("x", "shipKey", xScale)
-    .project("y", "raceKey", yScale)
-    .project("r", getHullSize)
-    .project("stroke", "Tech", techScale)
-    .project("stroke-width", 2)
-    .project("opacity", 1)
-    .project("fill", getRace, raceScale);
+  var plot       = new Plottable.Plot.Scatter(xScale, yScale)
+    .addDataset(ships)
+    .attr("x", "shipKey", xScale)
+    .attr("y", "raceKey", yScale)
+    .attr("r", getHullSize)
+    .attr("stroke", "Tech", techScale)
+    .attr("stroke-width", 2)
+    .attr("opacity", 1)
+    .attr("fill", getRace, raceScale);
 
   // Layout and render
   new Plottable.Component.Table([
@@ -58,5 +59,5 @@ $.when(
     [raceLegend],
     [plot]
   ])
-  .renderTo(d3.select('svg#example-scatter-glyphs'));
+  .renderTo("svg#example-scatter-glyphs");
 });

@@ -17,7 +17,8 @@ d3.tsv("data.tsv", function(error, data) {
   var legend = new Plottable.Component.Legend(colorScale);
 
   var plots = cities.map(function(city) {
-    return new Plottable.Plot.Line(city, xScale, yScale)
+    return new Plottable.Plot.Line(xScale, yScale)
+                      .addDataset(city)
                       .project("x", "date", xScale)
                       .project("y", "temperature", yScale)
                       .project("stroke", colorScale.scale(city[0].name))
@@ -27,5 +28,6 @@ d3.tsv("data.tsv", function(error, data) {
   var gridlines = new Plottable.Component.Gridlines(xScale, yScale);
   var center    = new Plottable.Component.Group(plots).merge(gridlines).merge(legend);
   var table     = new Plottable.Component.Table([[yLabel, yAxis, center], [null, null, xAxis]]).renderTo(d3.select("svg#linechart-plottable-demo"));
-  new Plottable.Interaction.PanZoom(center, xScale, new Plottable.Scale.Linear()).registerWithComponent();
+  var panZoom   = new Plottable.Interaction.PanZoom(xScale, null);
+  center.registerInteraction(panZoom);
 });

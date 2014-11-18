@@ -153,7 +153,7 @@ function makeBasicChart() {
 **Step 3**
 Next we need to create the plot. In this case we want a line chart
 so we'll need the Line class. Line requires the following
-parameters: the dataset to plot, an x scale and a y scale.
+parameters: an x scale and a y scale.
 
 {% highlight javascript %}
 function makeBasicChart() {
@@ -163,12 +163,29 @@ function makeBasicChart() {
   var xAxis = new Plottable.Axis.Numeric(xScale, "bottom");
   var yAxis = new Plottable.Axis.Numeric(yScale, "left");
 
-  var plot = new Plottable.Plot.Line(xyData, xScale, yScale);
+  var plot = new Plottable.Plot.Line(xScale, yScale);
+}
+{% endhighlight %}
+
+**Step 4**
+We also need to tell the plot what data we want it to show. We do this using
+the `addDataset` method.
+
+{% highlight javascript %}
+function makeBasicChart() {
+  var xScale = new Plottable.Scale.Linear();
+  var yScale = new Plottable.Scale.Linear();
+
+  var xAxis = new Plottable.Axis.Numeric(xScale, "bottom");
+  var yAxis = new Plottable.Axis.Numeric(yScale, "left");
+
+  var plot = new Plottable.Plot.Line(xScale, yScale);
+  plot.addDataset(xyData);
 }
 {% endhighlight %}
 
 
-**Step 4**
+**Step 5**
 Finally, we need to put all the pieces together to create a chart.
 To do this we will create a Table. (Check out [Concept of
 Tables](#Plottable-ConceptofTables) to learn more about tables.) We
@@ -190,7 +207,8 @@ function makeBasicChart() {
   var xAxis = new Plottable.Axis.Numeric(xScale, "bottom");
   var yAxis = new Plottable.Axis.Numeric(yScale, "left");
 
-  var plot = new Plottable.Plot.Line(xyData, xScale, yScale);
+  var plot = new Plottable.Plot.Line(xScale, yScale);
+  plot.addDataset(xyData);
 
   var chart = new Plottable.Component.Table([
                     [yAxis, plot],
@@ -200,7 +218,7 @@ function makeBasicChart() {
 {% endhighlight %}
 
 
-**Step 5**
+**Step 6**
 We now have a table graphing our chart. The final step is drawing
 that chart on your screen. To do this we use the line
 `chart.renderTo("#basicChart")`. "\#basicChart" says to look for the
@@ -209,7 +227,7 @@ svg. If you look back at our original html code, you see that our
 svg has the ID "basicChart".
 
 
-**Step 6**
+**Step 7**
 The final code:
 
 {% highlight javascript %}
@@ -220,7 +238,8 @@ function makeBasicChart() {
   var xAxis = new Plottable.Axis.Numeric(xScale, "bottom");
   var yAxis = new Plottable.Axis.Numeric(yScale, "left");
 
-  var plot = new Plottable.Plot.Line(xyData, xScale, yScale);
+  var plot = new Plottable.Plot.Line(xScale, yScale);
+  plot.addDataset(xyData);
 
   var chart = new Plottable.Component.Table([
                     [yAxis, plot],
@@ -232,7 +251,7 @@ function makeBasicChart() {
 {% endhighlight %}
 
 
-**Step 7**
+**Step 8**
 You can now load the basicChart tutorial and see your chart.
 
 ![]({{ site.baseurl }}/build/images/tutorials/basicChart.png)
@@ -243,9 +262,9 @@ can swap out the Line plot for a Scatter plot just by changing one line
 of code:
 
 Instead of the line
-`var plot = new Plottable.Plot.Line(xyData, xScale, yScale);` which
+`var plot = new Plottable.Plot.Line(xScale, yScale);` which
 specifies a Line plot, we can use
-`var plot = new Plottable.Plot.Scatter(xyData, xScale, yScale);` to
+`var plot = new Plottable.Plot.Scatter(xScale, yScale);` to
 create a Scatterplot. If you save the code and refresh your page, the
 chart will now display the data in circles rather than as a line.
 
@@ -386,8 +405,7 @@ function makeCustomProjectorChart() {
 
 **Step 3**
 We now have enough information to evoke the Line class. Recall that
-the Line plot requires the following parameters: the dataset, an x
-scale and a y scale.
+the Line plot requires an x scale and a y scale, as well as some data.
 
 {% highlight javascript %}
 function makeCustomProjectorChart() {
@@ -396,7 +414,8 @@ function makeCustomProjectorChart() {
 
   var xAxis = new Plottable.Axis.Numeric(xScale, "bottom");
   var yAxis = new Plottable.Axis.Numeric(yScale, "left");
-  var plot = new Plottable.Plot.Line(gitData, xScale, yScale);
+  var plot = new Plottable.Plot.Line(xScale, yScale);
+  plot.addDataset(gitData);
 }
 {% endhighlight %}
 
@@ -470,7 +489,8 @@ function makeCustomProjectorChart() {
 
   var xAxis = new Plottable.Axis.Numeric(xScale, "bottom");
   var yAxis = new Plottable.Axis.Numeric(yScale, "left");
-  var plot = new Plottable.Plot.Line(gitData, xScale, yScale);
+  var plot = new Plottable.Plot.Line(xScale, yScale);
+  plot.addDataset(gitData);
 
   function getXDataValue(d) {
     return d.day;
@@ -491,7 +511,7 @@ function makeCustomProjectorChart() {
 }
 {% endhighlight %}
 
-![]({{ site.baseurl }}/build/images/tutorials/customProj.png)
+![]({{ site.baseurl }}/build/images/tutorials/customProjectors.png)
 
 
 Tutorial 3 - Flexible Layout
@@ -544,7 +564,7 @@ function makeChartWithSubplots() {
 **Step 3**
 Since we want two subplots, we need two y-axes and two y scales. The
 first subplot uses a Line plot and the second a Scatterplot. Notice
-that the same data and the same xScale are passed to each plot.
+that the same xScale and the same data are passed to each plot.
 
 {% highlight javascript %}
 function makeChartWithSubplots() {
@@ -553,11 +573,13 @@ function makeChartWithSubplots() {
 
   var lineYScale = new Plottable.Scale.Linear();
   var lineYAxis = new Plottable.Axis.Numeric(lineYScale, "left");
-  var linePlot = new Plottable.Plot.Line(gitData, xScale, lineYScale);
+  var linePlot = new Plottable.Plot.Line(xScale, lineYScale);
+  linePlot.addDataset(gitData);
 
   var circleYScale = new Plottable.Scale.Linear();
   var circleYAxis = new Plottable.Axis.Numeric(circleYScale, "left");
-  var circlePlot = new Plottable.Plot.Scatter(gitData, xScale, circleYScale);
+  var circlePlot = new Plottable.Plot.Scatter(xScale, circleYScale);
+  circlePlot.addDataset(gitData);
 {% endhighlight %}
 
 **Step 4**
@@ -629,11 +651,13 @@ function makeChartWithSubplots() {
 
   var lineYScale = new Plottable.Scale.Linear();
   var lineYAxis = new Plottable.Axis.Numeric(lineYScale, "left");
-  var linePlot = new Plottable.Plot.Line(gitData, xScale, lineYScale);
+  var linePlot = new Plottable.Plot.Line(xScale, lineYScale);
+  linePlot.addDataset(gitData);
 
   var circleYScale = new Plottable.Scale.Linear();
   var circleYAxis = new Plottable.Axis.Numeric(circleYScale, "left");
-  var circlePlot = new Plottable.Plot.Scatter(gitData, xScale, circleYScale);
+  var circlePlot = new Plottable.Plot.Scatter(xScale, circleYScale);
+  circlePlot.addDataset(gitData);
 
   function getDayValue(d) {
     return d.day;
@@ -661,7 +685,7 @@ function makeChartWithSubplots() {
 }
 {% endhighlight %}
 
-![]({{ site.baseurl }}/build/images/tutorials/subplot.png)
+![]({{ site.baseurl }}/build/images/tutorials/subplots.png)
 
 
 Tutorial 4 - Labels and Nested Tables
@@ -698,7 +722,7 @@ tutorials. We create axes, scales, plots, and projectors before putting
 everything into a table to create the chart. The new piece for this
 example are nested tables, and use of the Label class.
 
-The Label constructor requires a string for the title, and offers an optional parameter for the title's orientation. Options for orientation include horizontal, vertical-left, which indicates that the title is rotated counterclockwise 90 degrees, and vertical-right, which indicates the word is rotated clockwise 90 degrees.
+The Label constructor requires a string for the title, and offers an optional parameter for the title's orientation. Options for orientation include `horizontal`, `vertical-left`, which indicates that the title is rotated counterclockwise 90 degrees, and `vertical-right`, which indicates the word is rotated clockwise 90 degrees.
 
 For this tutorial we will create a title, centered over the chart.
 
@@ -714,7 +738,8 @@ function makeNestedTables() {
   var yScale = new Plottable.Scale.Linear();
   var yAxis = new Plottable.Axis.Numeric(yScale, "left");
 
-  var linePlot = new Plottable.Plot.Line(gitData, xScale, yScale);
+  var linePlot = new Plottable.Plot.Line(xScale, yScale);
+  linePlot.addDataset(gitData);
 {% endhighlight %}
 
 **Step 2**
@@ -801,8 +826,8 @@ function makeNestedTables() {
   var yScale = new Plottable.Scale.Linear();
   var yAxis = new Plottable.Axis.Numeric(yScale, "left");
 
-  var linePlot = new Plottable.Plot.Line(gitData, xScale, yScale);
-
+  var linePlot = new Plottable.Plot.Line(xScale, yScale);
+  linePlot.addDataset(gitData);
 
   function getDayValue(d) {
     return d.day;
@@ -835,7 +860,7 @@ function makeNestedTables() {
 }
 {% endhighlight %}
 
-![]({{ site.baseurl }}/build/images/tutorials/nestedTitle.png)
+![]({{ site.baseurl }}/build/images/tutorials/labels.png)
 
 
 Tutorial 5 - Bars
@@ -874,7 +899,7 @@ charts:
 
 {% highlight javascript %}
 //population, in millions
-wordWrapData = [
+barData = [
   {
     y: "China",
     x: 1365
@@ -909,8 +934,8 @@ As always, we start with the html code:
 
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script src="../plottable.js"></script>
-    <script src="wordWrapData.js"></script>
-    <script src="wordWrap.js"></script>
+    <script src="barData.js"></script>
+    <script src="barChart.js"></script>
   </head>
   <body>
     <svg id="chart" width="640" height="480"/>
@@ -919,7 +944,7 @@ As always, we start with the html code:
 </html>
 {% endhighlight %}
 
-The majority of the code in `makeBarChart.js` follows what we did in
+The majority of the code in `barChart.js` follows what we did in
 previous tutorials. We create axes, scales, plots, and projectors before
 putting everything into a table to create the chart. The new classes used in
 this example are Ordinal scales and HorizontalBar.
@@ -943,11 +968,12 @@ var yAxis = new Plottable.Axis.Category(yScale, "left");
 {% endhighlight %}
 
 Now we need to create the actual bar plot. As with previous plots, we
-need to specify the data to use, and the scales. The only difference is
+need to specify the scales and the data to use. The only difference is
 that now are going to make a HorizontalBar plot.
 
 {% highlight javascript %}
-var barPlot = new Plottable.Plot.HorizontalBar(wordWrapData, xScale, yScale);
+var barPlot = new Plottable.Plot.HorizontalBar(xScale, yScale);
+barPlot.addDataset(barData);
 {% endhighlight %}
 
 Finally, we put everything in a table to create the chart. This looks
@@ -956,22 +982,14 @@ like the following:
 
 {% highlight javascript %}
 function makeBarChart() {
-
   var xScale = new Plottable.Scale.Linear();
   var xAxis = new Plottable.Axis.Numeric(xScale, "bottom");
   var yScale = new Plottable.Scale.Ordinal();
   var yAxis = new Plottable.Axis.Category(yScale, "left");
-  var barPlot = new Plottable.Plot.HorizontalBar(wordWrapData, xScale, yScale);
+  var barPlot = new Plottable.Plot.HorizontalBar(xScale, yScale);
+  barPlot.addDataset(barData);
 
-
-  var title = new Plottable.Component.TitleLabel("Population of Countries");
-  var subtitle = new Plottable.Component.Label(" (in millions)");
-  subtitle.yAlign("bottom");
-
-  var titleTable = new Plottable.Component.Table([
-                    [title, subtitle],
-                  ]);
-  titleTable.xAlign("center");
+  var title = new Plottable.Component.TitleLabel("Population of Countries (millions)");
 
   var dataTable = new Plottable.Component.Table([
                     [yAxis, barPlot],
@@ -979,7 +997,7 @@ function makeBarChart() {
                   ]);
 
   var chart = new Plottable.Component.Table([
-                    [titleTable],
+                    [title],
                     [dataTable]
                   ]);
 
@@ -987,4 +1005,4 @@ function makeBarChart() {
 }
 {% endhighlight %}
 
-![]({{ site.baseurl }}/build/images/tutorials/wordWrap.png)
+![]({{ site.baseurl }}/build/images/tutorials/barChart.png)

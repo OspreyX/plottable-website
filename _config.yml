@@ -13,7 +13,6 @@ exclude               :
   - 'Procfile'
   - '/*.ts'
   - '/*.sh'
-  - '/*.json'
   - '_typedoc'
 markdown              : kramdown
 company               : 'Palantir'
