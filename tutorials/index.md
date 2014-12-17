@@ -181,8 +181,20 @@ function makeBasicChart() {
 
   var plot = new Plottable.Plot.Line(xScale, yScale);
   plot.addDataset(xyData);
+
+  function getXDataValue(d) {
+    return d.x;
+  }
+  plot.project("x", getXDataValue, xScale);
+  function getYDataValue(d) {
+    return d.y;
+  }
+  plot.project("y", getYDataValue, yScale);
 }
 {% endhighlight %}
+The two calls to the `project()` method tell Plottable how to access the data
+we want to plot. We'll learn more about `project()` in
+[the next tutorial](#tutorial-2---customization-with-projectors).
 
 
 **Step 5**
@@ -209,6 +221,15 @@ function makeBasicChart() {
 
   var plot = new Plottable.Plot.Line(xScale, yScale);
   plot.addDataset(xyData);
+
+  function getXDataValue(d) {
+    return d.x;
+  }
+  plot.project("x", getXDataValue, xScale);
+  function getYDataValue(d) {
+    return d.y;
+  }
+  plot.project("y", getYDataValue, yScale);
 
   var chart = new Plottable.Component.Table([
                     [yAxis, plot],
@@ -240,6 +261,15 @@ function makeBasicChart() {
 
   var plot = new Plottable.Plot.Line(xScale, yScale);
   plot.addDataset(xyData);
+
+  function getXDataValue(d) {
+    return d.x;
+  }
+  plot.project("x", getXDataValue, xScale);
+  function getYDataValue(d) {
+    return d.y;
+  }
+  plot.project("y", getYDataValue, yScale);
 
   var chart = new Plottable.Component.Table([
                     [yAxis, plot],
