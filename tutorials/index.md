@@ -931,24 +931,24 @@ charts:
 //population, in millions
 barData = [
   {
-    y: "China",
-    x: 1365
+    country: "China",
+    population: 1365
   },
   {
-    y: "The Republic of India",
-    x: 1237
+    country: "The Republic of India",
+    population: 1237
   },
   {
-    y: "United States of America",
-    x: 313
+    country: "United States of America",
+    population: 313
   },
   {
-    y: "Indonesia",
-    x: 247
+    country: "Indonesia",
+    population: 247
   },
   {
-    y: "Brazil",
-    x: 199
+    country: "Brazil",
+    population: 199
   }
 ];
 {% endhighlight %}
@@ -999,12 +999,16 @@ var yAxis = new Plottable.Axis.Category(yScale, "left");
 
 Now we need to create the actual bar plot. As with previous plots, we
 need to specify the scales and the data to use. The only difference is
-that now are going to make a HorizontalBar plot.
+that now are going to make a Bar plot.
 
 {% highlight javascript %}
-var barPlot = new Plottable.Plot.HorizontalBar(xScale, yScale);
+var barPlot = new Plottable.Plot.Bar(xScale, yScale, false);
 barPlot.addDataset(barData);
+barPlot.project("y", "country", yScale);
+barPlot.project("x", "population", xScale);
 {% endhighlight %}
+The `false` parameter passed to the Bar plot constructor indicates that the Bar plot
+should be horizontal.
 
 Finally, we put everything in a table to create the chart. This looks
 exactly the same as in previous examples. Your final code should look
@@ -1016,8 +1020,10 @@ function makeBarChart() {
   var xAxis = new Plottable.Axis.Numeric(xScale, "bottom");
   var yScale = new Plottable.Scale.Ordinal();
   var yAxis = new Plottable.Axis.Category(yScale, "left");
-  var barPlot = new Plottable.Plot.HorizontalBar(xScale, yScale);
+  var barPlot = new Plottable.Plot.Bar(xScale, yScale, false);
   barPlot.addDataset(barData);
+  barPlot.project("y", "country", yScale);
+  barPlot.project("x", "population", xScale);
 
   var title = new Plottable.Component.TitleLabel("Population of Countries (millions)");
 
