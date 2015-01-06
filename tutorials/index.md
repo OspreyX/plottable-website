@@ -80,14 +80,14 @@ The following is the html that you'll need to run Plottable.
   <head>
     <title>Plottable Tutorial 1: A Basic Chart</title>
 
-    <!-- use the Plottable css -->
-    <link rel="stylesheet" type="text/css" href="http://palantir.github.io/plottable/plottable.css" />
+    <!-- use the Plottable css (located one level up) -->
+    <link rel="stylesheet" type="text/css" href="../plottable.css" />
 
     <!-- import D3 -->
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 
-    <!-- import Plottable-->
-    <script src="http://palantir.github.io/plottable/plottable.js"></script>
+    <!-- import Plottable (located one level up) -->
+    <script src="../plottable.js"></script>
 
     <!-- import the data file -->
     <script src="xyData.js"></script>
@@ -401,10 +401,10 @@ to this example.
   <head>
     <title>Plottable Tutorial 2: Projectors</title>
 
-    <link rel="stylesheet" type="text/css" href="http://palantir.github.io/plottable/plottable.css" />
+    <link rel="stylesheet" type="text/css" href="../plottable.css" />
 
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script src="http://palantir.github.io/plottable/plottable.js"></script>
+    <script src="../plottable.js"></script>
     <script src="gitData.js"></script>
     <script src="customProjectors.js"></script>
   </head>
@@ -565,10 +565,10 @@ used in the previous tutorial.
   <head>
     <title>Plottable Tutorial 3: Layout</title>
 
-    <link rel="stylesheet" type="text/css" href="http://palantir.github.io/plottable/plottable.css" />
+    <link rel="stylesheet" type="text/css" href="../plottable.css" />
 
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script src="http://palantir.github.io/plottable/plottable.js"></script>
+    <script src="../plottable.js"></script>
     <script src="gitData.js"></script>
     <script src="subplots.js"></script>
   </head>
@@ -733,10 +733,10 @@ As in the previous tutorials, we start with html code:
   <head>
     <title>Plottable Tutorial 4: Advanced Layout and Labels</title>
 
-    <link rel="stylesheet" type="text/css" href="http://palantir.github.io/plottable/plottable.css" />
+    <link rel="stylesheet" type="text/css" href="../plottable.css" />
 
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script src="http://palantir.github.io/plottable/plottable.js"></script>
+    <script src="../plottable.js"></script>
     <script src="gitData.js"></script>
     <script src="labels.js"></script>
   </head>
