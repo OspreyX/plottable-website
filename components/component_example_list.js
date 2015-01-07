@@ -253,7 +253,7 @@ function animate3() {
     var xAxis = new Plottable.Axis.Category(xScale, "bottom");
     var yAxis = new Plottable.Axis.Numeric(yScale, "left");
 
-    var plot1 = new Plottable.Plot.VerticalBar(xScale, yScale)
+    var plot1 = new Plottable.Plot.Bar(xScale, yScale)
                                   .addDataset(ordinalData)
                                   .project("x", "x", xScale)
                                   .project("y", "y", yScale)
