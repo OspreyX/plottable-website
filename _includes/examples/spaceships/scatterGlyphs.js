@@ -4,7 +4,6 @@ $.when(
   $.getJSON("hullSchema.json").then(_.identity)
 ).then(function(ships, raceSchema, hullSchema){
 
-
   // Returns the race for a given datum
   function getRace(d) {
     var race = d.Race.trim();
@@ -42,16 +41,17 @@ $.when(
 
   // Plot Components
   var title      = new Plottable.Component.TitleLabel("Ships");
-  var raceLegend = new Plottable.Component.HorizontalLegend(raceScale);
+  var raceLegend = new Plottable.Component.Legend(raceScale)
+                                          .maxEntriesPerRow(Infinity);
   var plot       = new Plottable.Plot.Scatter(xScale, yScale)
     .addDataset(ships)
-    .attr("x", "shipKey", xScale)
-    .attr("y", "raceKey", yScale)
-    .attr("r", getHullSize)
-    .attr("stroke", "Tech", techScale)
-    .attr("stroke-width", 2)
-    .attr("opacity", 1)
-    .attr("fill", getRace, raceScale);
+    .project("x", "shipKey", xScale)
+    .project("y", "raceKey", yScale)
+    .project("r", getHullSize)
+    .project("stroke", "Tech", techScale)
+    .project("stroke-width", 2)
+    .project("opacity", 1)
+    .project("fill", getRace, raceScale);
 
   // Layout and render
   new Plottable.Component.Table([

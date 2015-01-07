@@ -15,7 +15,7 @@ d3.tsv("data.tsv", function(error, data) {
   var xScale     = new Plottable.Scale.Time();
   var yScale0    = new Plottable.Scale.Linear();
   var yScale1    = new Plottable.Scale.Linear();
-  var colorScale = new Plottable.Scale.Color("Category10");
+  var colorScale = new Plottable.Scale.Color();
 
   // Plot Components
   var title   = new Plottable.Component.TitleLabel("Spurious Correlation");
@@ -27,14 +27,14 @@ d3.tsv("data.tsv", function(error, data) {
   var yAxis1  = new Plottable.Axis.Numeric(yScale1, "right");
   var plot0   = new Plottable.Plot.Line(xScale, yScale0)
     .addDataset(data)
-    .attr("x", "date", xScale)
-    .attr("y", "cheese", yScale0)
-    .attr("stroke", colorScale.scale(0));
+    .project("x", "date", xScale)
+    .project("y", "cheese", yScale0)
+    .project("stroke", colorScale.scale(0));
   var plot1   = new Plottable.Plot.Line(xScale, yScale1)
     .addDataset(data)
-    .attr("x", "date", xScale)
-    .attr("y", "degrees", yScale1)
-    .attr("stroke", colorScale.scale(1));
+    .project("x", "date", xScale)
+    .project("y", "degrees", yScale1)
+    .project("stroke", colorScale.scale(1));
   var plots = new Plottable.Component.Group([plot0, plot1]);
 
   // Layout and render
