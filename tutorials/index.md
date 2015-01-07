@@ -11,9 +11,7 @@ Get started with the Plottable Tutorial: Download the packaged tutorial
 files at <http://plottablejs.org/tutorials.zip>; extract
 it, and each subdirectory corresponds to a different tutorial. You can
 open the \`.html\` files directly in the browser, and modify the
-associated \`.js\` files with your favorite text editor. Alternatively,
-you can clone the entire repository from
-<https://github.com/palantir/plottable>.
+associated \`.js\` files with your favorite text editor.
 
 <nav markdown="1">
 - [Plottable Concepts](#plottable-concepts)
@@ -977,38 +975,38 @@ As always, we start with the html code:
 The majority of the code in `barChart.js` follows what we did in
 previous tutorials. We create axes, scales, plots, and projectors before
 putting everything into a table to create the chart. The new classes used in
-this example are Ordinal scales and HorizontalBar.
+this example are the Ordinal scale and the Bar plot.
 
 As always, we start by defining our scales. Here, since this is a
-horizontal bar chart, we want the y scale to be ordinal, the x scale can
+bar chart, we want the x scale to be ordinal, and the y scale can
 remain linear.
 
 {% highlight javascript %}
-var xScale = new Plottable.Scale.Linear();
-var yScale = new Plottable.Scale.Ordinal();
+var xScale = new Plottable.Scale.Ordinal();
+var yScale = new Plottable.Scale.Linear();
 {% endhighlight %}
 
 Next we create the axes, which are very similar to the other axes we
 have seen. However, this time, since we want to use Strings instead of
-Numbers for the y-axis, we use Category, instead of Numeric.
+Numbers for the x-axis, we use Category, instead of Numeric.
 
 {% highlight javascript %}
-var xAxis = new Plottable.Axis.Numeric(xScale, "bottom");
-var yAxis = new Plottable.Axis.Category(yScale, "left");
+var xAxis = new Plottable.Axis.Category(xScale, "bottom");
+var yAxis = new Plottable.Axis.Numeric(yScale, "left");
 {% endhighlight %}
 
 Now we need to create the actual bar plot. As with previous plots, we
-need to specify the scales and the data to use. The only difference is
+need to specify the scales, data, and projectors to use. The only difference is
 that now are going to make a Bar plot.
 
 {% highlight javascript %}
-var barPlot = new Plottable.Plot.Bar(xScale, yScale, false);
+var barPlot = new Plottable.Plot.Bar(xScale, yScale, true);
 barPlot.addDataset(barData);
-barPlot.project("y", "country", yScale);
-barPlot.project("x", "population", xScale);
+barPlot.project("x", "country", xScale);
+barPlot.project("y", "population", yScale);
 {% endhighlight %}
-The `false` parameter passed to the Bar plot constructor indicates that the Bar plot
-should be horizontal.
+The `true` parameter passed to the Bar plot constructor indicates that the
+Bar plot should be vertical.
 
 Finally, we put everything in a table to create the chart. This looks
 exactly the same as in previous examples. Your final code should look
@@ -1016,14 +1014,14 @@ like the following:
 
 {% highlight javascript %}
 function makeBarChart() {
-  var xScale = new Plottable.Scale.Linear();
-  var xAxis = new Plottable.Axis.Numeric(xScale, "bottom");
-  var yScale = new Plottable.Scale.Ordinal();
-  var yAxis = new Plottable.Axis.Category(yScale, "left");
-  var barPlot = new Plottable.Plot.Bar(xScale, yScale, false);
+  var xScale = new Plottable.Scale.Ordinal();
+  var yScale = new Plottable.Scale.Linear();
+  var xAxis = new Plottable.Axis.Category(xScale, "bottom");
+  var yAxis = new Plottable.Axis.Numeric(yScale, "left");
+  var barPlot = new Plottable.Plot.Bar(xScale, yScale, true);
   barPlot.addDataset(barData);
-  barPlot.project("y", "country", yScale);
-  barPlot.project("x", "population", xScale);
+  barPlot.project("x", "country", xScale);
+  barPlot.project("y", "population", yScale);
 
   var title = new Plottable.Component.TitleLabel("Population of Countries (millions)");
 
@@ -1042,3 +1040,23 @@ function makeBarChart() {
 {% endhighlight %}
 
 ![]({{ site.baseurl }}/build/images/tutorials/barChart.png)
+
+If we want to make a horizontal Bar plot, we can pass `false` as the third
+parameter to the constructor. We also need to change the Y scale to Ordinal
+and the X scale to Linear, and swap the axes and projectors as well:
+
+{% highlight javascript %}
+var xScale = new Plottable.Scale.Linear();
+var yScale = new Plottable.Scale.Ordinal();
+var xAxis = new Plottable.Axis.Numeric(xScale, "bottom");
+var yAxis = new Plottable.Axis.Category(yScale, "left");
+var barPlot = new Plottable.Plot.Bar(xScale, yScale, false);
+barPlot.addDataset(barData);
+barPlot.project("y", "country", yScale);
+barPlot.project("x", "population", xScale);
+}
+{% endhighlight %}
+
+The chart will then be horizontal:
+
+![]({{ site.baseurl }}/build/images/tutorials/horizontalBarChart.png)
