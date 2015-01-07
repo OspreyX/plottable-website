@@ -89,7 +89,7 @@ page_id : page-examples
 
         <div class="col-md-3">
           <a class="example-block" href="{{ site.baseurl }}/examples/spaceships/" title="Space Ships">
-            <svg id="example-spaceships" height="150"></svg>
+            <svg id="example-extended-spaceships" height="150"></svg>
             Space Ships
           </a>
         </div>
@@ -136,6 +136,10 @@ page_id : page-examples
       .addComponent(0, 0, stackedBarPlot([ordinalData2, ordinalData3]))
       .renderTo('#example-stackedbar');
 
+    new Plottable.Component.Table()
+      .addComponent(0, 0, makeXYPlotMulti('scatter'))
+      .renderTo('#example-spaceships');
+
     // Compare D3
     new Plottable.Component.Table()
       .addComponent(0, 0, makeXYPlotMulti('line'))
@@ -145,10 +149,10 @@ page_id : page-examples
       .addComponent(0, 0, makeXYPlotMulti('scatter'))
       .renderTo('#example-scatterplot');
 
-    // Extented
+    // Extended
     new Plottable.Component.Table()
       .addComponent(0, 0, makeXYPlotMulti('scatter'))
-      .renderTo('#example-spaceships');
+      .renderTo('#example-extended-spaceships');
 
     new Plottable.Component.Table()
       .addComponent(0, 0, verticalBarPlot(ordinalData2))
