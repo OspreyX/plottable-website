@@ -22,7 +22,7 @@ function axis(type, orientation) {
         axis = new Plottable.Axis.Category(oscale, orientation);
     } else if (type === "time") {
         var tscale = new Plottable.Scale.Time();
-        tscale.domain([new Date(2014, 0, 0), new Date(2015, 0, 0)]);
+        tscale.domain([new Date(2015, 0, 0), new Date(2016, 0, 0)]);
         axis = new Plottable.Axis.Time(tscale, orientation);
     } else {
         throw new Error("unrecognized type: " + type);
