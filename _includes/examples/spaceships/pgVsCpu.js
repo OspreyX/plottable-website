@@ -1,7 +1,7 @@
 $.when(
-  $.getJSON("ships.txt").then(_.identity),
-  $.getJSON("raceSchema.txt").then(_.identity),
-  $.getJSON("hullSchema.txt").then(_.identity)
+  $.getJSON("ships.json").then(_.identity),
+  $.getJSON("raceSchema.json").then(_.identity),
+  $.getJSON("hullSchema.json").then(_.identity)
 ).then(function(ships, raceSchema, hullSchema){
 
   // Returns the race for a given datum
@@ -26,27 +26,30 @@ $.when(
     .range(_.map(raceSchema, "color"));
   var techScale = new Plottable.Scale.Color()
     .domain(["Tech 1", "Faction", "Tech 2"])
-    .range(["lawngreen", "cyan", "DeepPink"]);
-
+    .range(["#7cfc00", "#00ffff", "#FF0080"]);
   // Initialize Components
   var xAxis         = new Plottable.Axis.Numeric(xScale, "bottom");
   var yAxis         = new Plottable.Axis.Numeric(yScale, "left");
   var xLabel        = new Plottable.Component.AxisLabel("Shields");
   var yLabel        = new Plottable.Component.AxisLabel("Armor", "left");
-  var factionLegend = new Plottable.Component.HorizontalLegend(raceScale);
-  var techLegend    = new Plottable.Component.HorizontalLegend(techScale);
+  var factionLegend = new Plottable.Component.Legend(raceScale)
+                                             .maxEntriesPerRow(Infinity)
+                                             .xAlign("left");
+  var techLegend    = new Plottable.Component.Legend(techScale)
+                                             .maxEntriesPerRow(Infinity)
+                                             .xAlign("left");
   var lines         = new Plottable.Component.Gridlines(xScale, yScale);
   var title         = new Plottable.Component.TitleLabel("EVE Online Ships by Armor and Shield");
   var plot          = new Plottable.Plot.Scatter(xScale, yScale)
       .addDataset(ships)
-      .attr("x", "A", xScale)
-      .attr("y", "SH", yScale)
-      .attr("r", function(d) {return getHullSize(d) + 2; })
-      .attr("stroke", "Tech", techScale)
-      .attr("stroke-width", 2)
-      .attr("opacity", 1)
-      .attr("fill", getRace, raceScale)
-      .attr("title", function(d){
+      .project("x", "A", xScale)
+      .project("y", "SH", yScale)
+      .project("r", function(d) {return getHullSize(d) + 2; })
+      .project("stroke", "Tech", techScale)
+      .project("stroke-width", 2)
+      .project("opacity", 1)
+      .project("fill", getRace, raceScale)
+      .project("title", function(d){
         return "<strong class=\"tooltip-title\">" + d.Name + "</strong><br>" +
            d.Race + " " + d.Class + "<br>" +
           "Armor: " + d.A + ", Shields: " + d.SH;

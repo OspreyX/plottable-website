@@ -7,7 +7,7 @@ var species = [
 ];
 var data = species.map(function (otter){
   return {
-    x : otter,
+    species : otter,
     y : Math.random() * (otter === "Giant Otter" ? 400 : 100),
   };
 });
@@ -21,10 +21,12 @@ var title = new Plottable.Component.TitleLabel("Otter Species");
 var xAxis = new Plottable.Axis.Category(xScale, "bottom");
 var yAxis = new Plottable.Axis.Numeric(yScale, "left");
 var lines = new Plottable.Component.Gridlines(null, yScale);
-var plot  = new Plottable.Plot.VerticalBar(xScale, yScale)
+var plot  = new Plottable.Plot.Bar(xScale, yScale)
   .addDataset(data)
+  .project("x", "species", xScale)
+  .project("y", "y", yScale)
   // Store the tooltip content in the "title" attribute
-  .attr("title", function(d){
+  .project("title", function(d){
     return "<strong class=\"tooltip-title\">" + d.x + "</strong><br>" +
       "<span class=\"tooltip-value\">" + d3.format("0,.2f")(d.y) + "</span>";
   })

@@ -455,7 +455,7 @@ attribute. In other words, we need an accessor.
 {% highlight javascript %}
 function getXDataValue(d) {
     return d.day;
-  }
+}
 {% endhighlight %}
 
 The above function says that for every data point d, return the
@@ -608,6 +608,7 @@ function makeChartWithSubplots() {
   var circleYAxis = new Plottable.Axis.Numeric(circleYScale, "left");
   var circlePlot = new Plottable.Plot.Scatter(xScale, circleYScale);
   circlePlot.addDataset(gitData);
+}
 {% endhighlight %}
 
 **Step 4**
@@ -768,6 +769,7 @@ function makeNestedTables() {
 
   var linePlot = new Plottable.Plot.Line(xScale, yScale);
   linePlot.addDataset(gitData);
+...
 {% endhighlight %}
 
 **Step 2**
@@ -1046,14 +1048,16 @@ parameter to the constructor. We also need to change the Y scale to Ordinal
 and the X scale to Linear, and swap the axes and projectors as well:
 
 {% highlight javascript %}
-var xScale = new Plottable.Scale.Linear();
-var yScale = new Plottable.Scale.Ordinal();
-var xAxis = new Plottable.Axis.Numeric(xScale, "bottom");
-var yAxis = new Plottable.Axis.Category(yScale, "left");
-var barPlot = new Plottable.Plot.Bar(xScale, yScale, false);
-barPlot.addDataset(barData);
-barPlot.project("y", "country", yScale);
-barPlot.project("x", "population", xScale);
+function makeHorizontalBarChart() {
+  var xScale = new Plottable.Scale.Linear();
+  var yScale = new Plottable.Scale.Ordinal();
+  var xAxis = new Plottable.Axis.Numeric(xScale, "bottom");
+  var yAxis = new Plottable.Axis.Category(yScale, "left");
+  var barPlot = new Plottable.Plot.Bar(xScale, yScale, false);
+  barPlot.addDataset(barData);
+  barPlot.project("y", "country", yScale);
+  barPlot.project("x", "population", xScale);
+  ... // Finishes the same way as makeBarChart()
 }
 {% endhighlight %}
 

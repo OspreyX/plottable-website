@@ -48,18 +48,6 @@ window.onload = function() {
   table.addComponent(1, 0, innerTable);
   table.renderTo("#table1");
 
-  axisTypes.forEach(function(type, index1) {
-    orient.forEach(function(or, index2) {
-      if (type === "time" && (or === "left" || or === "right" || or === "top")) {
-        return; // unsupported for now
-      }
-      if (type == "category") {
-        return; // zooming for category axes
-      }
-      var component = innerTable.rows[x[index2] + index1 * 3][y[index2]];
-    })
-  });
-
   // plots
   var innerTable2 = new Plottable.Component.Table();
   innerTable2.addComponent(0, 1, verticalBarPlot());
