@@ -11,10 +11,10 @@ d3.tsv("data.tsv", function(error, data) {
 
   var plot = new Plottable.Plot.Scatter(xScale, yScale)
                       .addDataset(data)
-                      .attr("x", "sepalWidth", xScale)
-                      .attr("y", "sepalLength", yScale)
-                      .attr("r", 3.5)
-                      .attr("fill", "species", colorScale);
+                      .project("x", "sepalWidth", xScale)
+                      .project("y", "sepalLength", yScale)
+                      .project("r", 3.5)
+                      .project("fill", "species", colorScale);
 
   var legend = new Plottable.Component.Legend(colorScale);
 

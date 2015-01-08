@@ -20,10 +20,10 @@ d3.csv("ships.csv", function(error, data) {
   var xAxis  = new Plottable.Axis.Numeric(xScale, "bottom");
   var yAxis  = new Plottable.Axis.Category(yScale, "left");
   var lines  = new Plottable.Component.Gridlines(xScale, null);
-  var plot   = new Plottable.Plot.HorizontalBar(xScale, yScale)
+  var plot   = new Plottable.Plot.Bar(xScale, yScale, false)
     .addDataset(histogram)
-    .attr("x", "count", xScale)
-    .attr("y", "shipClass", yScale)
+    .project("x", "count", xScale)
+    .project("y", "shipClass", yScale)
     .animate(true);
 
   // Layout and render

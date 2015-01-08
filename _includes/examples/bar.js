@@ -1,13 +1,13 @@
 // Source: http://www.star941fm.com/photos/main/celebrity-heights-from-small-to-tall-363472/21379533/#/0/21379533
 var data   = [
-  {x: "Verne Troyer",      y: 81},
-  {x: "Olson Twins",       y: 152},
-  {x: "Miley Cyrus",       y: 165},
-  {x: "Tom Cruise",        y: 170},
-  {x: "Leonardo DiCaprio", y: 183},
-  {x: "Conan O'Brien",     y: 193},
-  {x: "Liam Neeson",       y: 198},
-  {x: "Sultan Kösen",      y: 246}
+  {name: "Verne Troyer",      height: 81},
+  {name: "Olson Twins",       height: 152},
+  {name: "Miley Cyrus",       height: 165},
+  {name: "Tom Cruise",        height: 170},
+  {name: "Leonardo DiCaprio", height: 183},
+  {name: "Conan O'Brien",     height: 193},
+  {name: "Liam Neeson",       height: 198},
+  {name: "Sultan Kösen",      height: 246}
 ];
 
 // Scales
@@ -22,6 +22,8 @@ var yAxis  = new Plottable.Axis.Numeric(yScale, "left");
 var lines  = new Plottable.Component.Gridlines(null, yScale);
 var plot   = new Plottable.Plot.VerticalBar(xScale, yScale)
   .addDataset(data)
+  .project("x", "name", xScale)
+  .project("y", "height", yScale)
   .animate(true);
 
 // Layout and render
