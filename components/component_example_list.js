@@ -177,7 +177,6 @@ function legend() {
     var colorScale = new Plottable.Scale.Color();
     var legend = new Plottable.Component.Legend(colorScale);
     legend.scale().domain(ordinalDomain);
-    legend.maxEntriesPerRow(1);
     legend.xAlign("center");
     return legend;
 }
