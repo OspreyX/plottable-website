@@ -309,7 +309,7 @@ do to draw that piece of data. Each type of plot has a specific set of
 visual properties, or **attributes**. For example, a Scatterplot has
 attributes, x, y, fill, and radius. A Line plot has x, y, and stroke, which determines the color.
 
-However, the actual data used for a doesn't necessarily feature these properties:
+However, the actual data used doesn't necessarily feature these properties:
 
 {% highlight javascript %}
 gitData = [
