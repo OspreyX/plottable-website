@@ -308,30 +308,7 @@ Plots work by taking each point of data and determining what it needs to
 do to draw that piece of data. Each type of plot has a specific set of
 visual properties, or **attributes**. For example, a Scatterplot has
 attributes, x, y, fill, and radius. A Line plot has x, y, and stroke, which determines the color.
-
-However, the actual data used doesn't necessarily feature these properties:
-
-{% highlight javascript %}
-gitData = [
-  {
-    "committer": "derek",
-    "day": 0,
-    "total_commits": 0,
-    "additions": 204,
-    "deletions": 0
-  },
-  {
-    "committer": "dan",
-    "day": 0.11865740740740742,
-    "total_commits": 1,
-    "additions": 824,
-    "deletions": 0
-  },
-...
-]
-{% endhighlight %}
-
-We thus need a way to select which pieces of the data we want to use for
+Therefore, we need a way to select which features of our data we want to use for
 each attribute.
 
 An **accessor** is a function that defines how to assign a piece of the
