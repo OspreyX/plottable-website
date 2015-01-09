@@ -169,16 +169,16 @@ function label(text, orientation) {
     return new Plottable.Component.Label(text, orientation);
 }
 
+function titleLabel(text, orientation) {
+    return new Plottable.Component.TitleLabel(text, orientation);
+}
+
 function legend() {
-    var colorScale = new Plottable.Scale.Color("category10");
+    var colorScale = new Plottable.Scale.Color();
     var legend = new Plottable.Component.Legend(colorScale);
-    legend.toggleCallback(function () {
-        return;
-    }); // empty function, just to turn toggling on
-    legend.hoverCallback(function () {
-        return;
-    });
     legend.scale().domain(ordinalDomain);
+    legend.maxEntriesPerRow(1);
+    legend.xAlign("center");
     return legend;
 }
 
@@ -187,10 +187,7 @@ function gridline(showVertical, showHorizontal) {
     var yScale = new Plottable.Scale.Linear();
 
     var gridlines = new Plottable.Component.Gridlines(showVertical ? xScale : null, showHorizontal ? yScale : null);
-    var xAxis = new Plottable.Axis.Numeric(xScale, "bottom");
-    var yAxis = new Plottable.Axis.Numeric(yScale, "left");
-    var table = new Plottable.Component.Table([[yAxis, gridlines], [null, xAxis]]);
-    return table;
+    return gridlines;
 }
 
 function animate1() {

@@ -3,24 +3,57 @@ layout  : subpage
 page_id : page-components
 ---
 <div class="container">
-  <div class="row component-group">
-    <div class="col-md-12">
-      <h2>Axes</h2>
-      <svg id="table1" height="500"></svg>
-    </div>
-  </div>
+  <h2>The Component List</h2>
+The best way to think about Plottable that you will not be rendering plots, but you will be rendering components or tables of components.  Even a plot is considered a component!<br><br>
+By thinking in this manner, one can imagine that any component can be dropped into any cell of a table, meaning you have flexibility on where components go in relation to other components.<br><br>
+
+Below are a variety of components you can choose from to place onto your Plottable table.
+</div>
+
+
+<div class="container">
 
   <div class="row component-group">
     <div class="col-md-12">
       <h2>Plots</h2>
-      <svg id="table2" height="1500"></svg>
+      <h3>Bar Plot</h3>
+      <div border="2px solid"><svg id="barPlot" height="250"></svg></div>
+
+      <h3>Line Plot</h3>
+      <svg id="linePlot" height="250"></svg>
+      <h3>Area Plot</h3>
+      <svg id="areaPlot" height="250"></svg>
+      <h3>Scatter</h3>
+      <svg id="scatterPlot" height="250"></svg>
     </div>
   </div>
 
   <div class="row component-group">
     <div class="col-md-12">
-      <h2>Gridlines</h2>
-      <svg id="table3" height="300"></svg>
+      <h2>Axes</h2>
+      <h3>Numeric Axis</h3>
+      <svg id="numericAxis" height="50"></svg>
+      <h3>Category Axis</h3>
+      <svg id="categoryAxis" height="50"></svg>
+      <h3>Time Axis</h3>
+      <svg id="timeAxis" height="50"></svg>
+    </div>
+  </div>
+
+  <div class="row component-group">
+    <div class="col-md-12">
+      <h2>Labels</h2>
+      <h3>Regular Label</h3>
+      <svg id="label" height="50"></svg>
+      <h3>Title Label</h3>
+      <svg id="titleLabel" height="50"></svg>
+    </div>
+  </div>
+
+  <div class="row component-group">
+    <div class="col-md-12">
+      <h2>Legends</h2>
+      <svg id="legend" height="50"></svg>
     </div>
   </div>
 </div>
@@ -28,64 +61,21 @@ page_id : page-components
 <script src="component_example_list.js"></script>
 <script>
 window.onload = function() {
-  // axis
-  var axisTypes = ["numeric", "time", "category"];
-  var orient = ["top", "left", "bottom", "right"];
-  var x = [0, 1, 2, 1];
-  var y = [1, 0, 1, 2];
 
-  var table = new Plottable.Component.Table();
-  var innerTable = new Plottable.Component.Table();
-  axisTypes.forEach(function(type, index1) {
-    orient.forEach(function(or, index2) {
-      if (type === "time" && (or === "left" || or === "right" || or === "top")) {
-        return; // unsupported for now
-      }
-      var component = axis(type, or);
-      innerTable.addComponent(x[index2] + index1 * 3, y[index2], component);
-    })
-  });
-  table.addComponent(1, 0, innerTable);
-  table.renderTo("#table1");
+  // axis
+  axis("numeric", "bottom").renderTo("#numericAxis");
+  axis("category", "bottom").renderTo("#categoryAxis");
+  axis("time", "bottom").renderTo("#timeAxis");
 
   // plots
-  var innerTable2 = new Plottable.Component.Table();
-  innerTable2.addComponent(0, 1, verticalBarPlot());
-  innerTable2.addComponent(0, 2, horizontalBarPlot());
+  verticalBarPlot().renderTo("#barPlot");
+  makeXYPlot("line").renderTo("#linePlot");
+  makeXYPlot("area").renderTo("#areaPlot");
+  makeXYPlot("scatter").renderTo("#scatterPlot");
 
-  var xyPlotTypes = ["area", "line", "scatter"];
-  xyPlotTypes.forEach(function(type, index) {
-    innerTable2.addComponent(index + 1, 1, makeXYPlot(type));
-  });
+  label("Hello world!", "horizontal").renderTo("#label");
+  titleLabel("Hello world!", "horizontal").renderTo("#titleLabel");
 
-  xyPlotTypes.forEach(function(type, index) {
-    innerTable2.addComponent(index + 1, 2, makeXYPlotMulti(type));
-  });
-
-  innerTable2.addComponent(4, 1, gridPlot());
-  innerTable2.addComponent(0, 0, makeTitle("bar"));
-  innerTable2.addComponent(1, 0, makeTitle("area"));
-  innerTable2.addComponent(2, 0, makeTitle("line"));
-  innerTable2.addComponent(3, 0, makeTitle("scatter"));
-  innerTable2.addComponent(4, 0, makeTitle("grid"));
-
-  var table2 = new Plottable.Component.Table();
-  table2.addComponent(1, 1, innerTable2);
-  table2.renderTo("#table2");
-
-  var clickInteraction = new Plottable.Interaction.Click(table2).callback(function() {table2.renderTo("#table2")})
-  table2.registerInteraction(clickInteraction);
-
-  // gridlines
-  var innerTable3 = new Plottable.Component.Table();
-  var showx = [true, false, true];
-  var showy = [false, true, true];
-  for (var i = 0; i < 3; i++) {
-    innerTable3.addComponent(0, i, gridline(showx[i], showy[i]));
-  }
-
-  var table3 = new Plottable.Component.Table();
-  table3.addComponent(1, 1, innerTable3);
-  table3.renderTo("#table3");
+  legend().renderTo("#legend");
 }
 </script>
