@@ -309,32 +309,7 @@ do to draw that piece of data. Each type of plot has a specific set of
 visual properties, or **attributes**. For example, a Scatterplot has
 attributes, x, y, fill, and radius. A Line plot has x, y, and stroke, which determines the color.
 
-If your JavaScript data object already has the correct property names,
-then you do not need to specify the data; Plottable picks it up
-automatically. For instance, the basicChart example above had data that
-was an array of {x,y} pairs:
-
-{% highlight javascript %}
-var xyData = [
-  {"x": 0, "y": 1},
-  {"x": 0.11865740740740742, "y": 2},
-  {"x": 0.11887731481481482, "y": 3},
-  {"x": 1.1845949074074074, "y": 4},
-  {"x": 1.2361342592592592, "y": 5},
-  {"x": 1.2718402777777778, "y": 6},
-  {"x": 4.949074074074074, "y": 7},
-...
-]
-{% endhighlight %}
-
-The name of the property is already `x`, which directly maps to the x
-values of a Line Plot and the same is true of the y values.
-
-However, data is not usually that neatly formatted. For example, if your
-data is an object with the properties `{committer, days, total_commits,
-additions, deletions}`, Plottable cannot automatically determine the
-property for `x` and `y`.
-
+However, the actual data used for a doesn't necessarily feature these properties:
 
 {% highlight javascript %}
 gitData = [
@@ -350,13 +325,6 @@ gitData = [
     "day": 0.11865740740740742,
     "total_commits": 1,
     "additions": 824,
-    "deletions": 0
-  },
-  {
-    "committer": "dan",
-    "day": 0.11887731481481482,
-    "total_commits": 2,
-    "additions": 3,
     "deletions": 0
   },
 ...
