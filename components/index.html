@@ -67,6 +67,15 @@ Below are a variety of components you can choose from to place onto your Plottab
   </div>
 </div>
 
+<div class="container">
+  <h2>Placing Components Into the Plottable Table</h2>
+  With the components above, you should be able to lay out the components you want into whatever table layout you may wish.<br><br>
+  Below is a pretty complex layout which uses a 5x5 table with each cell containing either a component (if it contains a component) or null.<br>
+  Due to the nature of treating every object as a component, even complex layouts like the one below are not terribly difficult.
+  All you need to do is grab each component and then lay them out onto a 5x5 array.
+  <svg id="plot-table" height="300"></svg>
+</div>
+
 <script src="component_example_list.js"></script>
 <script>
 window.onload = function() {
@@ -89,6 +98,94 @@ window.onload = function() {
 
   //Attach tooltips with qTip2 (which uses the "title" attribute by default)
   $("svg").qtip({
+    position : {
+      my : "bottom middle",
+      at : "top middle"
+    },
+    style : {
+      classes : "qtip-dark"
+    }
+  });
+
+  var data0 = [{x: "A", y: 5}, {x: "B", y: 10}, {x: "C", y: 14}];
+  var data1 = [{x: "A", y: 2}, {x: "B", y: 13}, {x: "C", y: 12}];
+  var xScale = new Plottable.Scale.Ordinal();
+  var yScale0 = new Plottable.Scale.Linear();
+  var yScale1 = new Plottable.Scale.Linear();
+  var xAxis = new Plottable.Axis.Category(xScale, "bottom");
+  var yAxis0 = new Plottable.Axis.Numeric(yScale0, "right");
+  var yAxis1 = new Plottable.Axis.Numeric(yScale1, "left");
+  var barPlot0 = new Plottable.Plot.Bar(xScale, yScale0)
+                                   .addDataset(data0)
+                                   .project("x", "x", xScale)
+                                   .project("y", "y", yScale0);
+  var barPlot1 = new Plottable.Plot.Bar(xScale, yScale1)
+                                   .addDataset(data1)
+                                   .project("x", "x", xScale)
+                                   .project("y", "y", yScale1);
+  var yLabel0 = new Plottable.Component.Label("Top", "right");
+  var yLabel1 = new Plottable.Component.Label("Bottom", "left");
+  var xLabel = new Plottable.Component.Label("Categories");
+  var masterLabel = new Plottable.Component.TitleLabel("The Master Plot");
+  var table = new Plottable.Component.Table([[null, null, masterLabel, null, null],
+                                             [null, null, barPlot0, yAxis0, yLabel0],
+                                             [yLabel1, yAxis1, barPlot1, null, null],
+                                             [null, null, xAxis, null, null],
+                                             [null, null, xLabel, null, null]]);
+  table.renderTo("#plot-table");
+
+  var horizLineLength = d3.select("#plot-table").attr("width");
+  var vertLineLength = d3.select("#plot-table").attr("height");
+  window.test1 = horizLineLength;
+  window.test2 = vertLineLength;
+
+  d3.select("#plot-table").append("line").attr({x1: 0, x2: 0, y1: 0, y2: vertLineLength, stroke: "black"});
+  d3.select("#plot-table").append("line").attr({x1: yAxis1._xOrigin, x2: yAxis1._xOrigin, y1: 0, y2: vertLineLength, stroke: "black"});
+  d3.select("#plot-table").append("line").attr({x1: barPlot0._xOrigin, x2: barPlot0._xOrigin, y1: 0, y2: vertLineLength, stroke: "black"});
+  d3.select("#plot-table").append("line").attr({x1: yAxis0._xOrigin, x2: yAxis0._xOrigin, y1: 0, y2: vertLineLength, stroke: "black"});
+  d3.select("#plot-table").append("line").attr({x1: yLabel0._xOrigin, x2: yLabel0._xOrigin, y1: 0, y2: vertLineLength, stroke: "black"});
+  d3.select("#plot-table").append("line").attr({x1: horizLineLength, x2: horizLineLength, y1: 0, y2: vertLineLength, stroke: "black"});
+  d3.select("#plot-table").append("line").attr({x1: 0, x2: horizLineLength, y1: 0, y2: 0, stroke: "black"});
+  d3.select("#plot-table").append("line").attr({x1: 0, x2: horizLineLength, y1: barPlot0._yOrigin, y2: barPlot0._yOrigin, stroke: "black"});
+  d3.select("#plot-table").append("line").attr({x1: 0, x2: horizLineLength, y1: barPlot1._yOrigin, y2: barPlot1._yOrigin, stroke: "black"});
+  d3.select("#plot-table").append("line").attr({x1: 0, x2: horizLineLength, y1: xAxis._yOrigin, y2: xAxis._yOrigin, stroke: "black"});
+  d3.select("#plot-table").append("line").attr({x1: 0, x2: horizLineLength, y1: xLabel._yOrigin, y2: xLabel._yOrigin, stroke: "black"});
+  d3.select("#plot-table").append("line").attr({x1: 0, x2: horizLineLength, y1: vertLineLength, y2: vertLineLength, stroke: "black"});
+
+  var colorScale = new Plottable.Scale.Color();
+  var opacity = "0.3";
+  xAxis.foreground().append("rect")
+                    .attr({stroke: "black", fill: colorScale.range()[0], width: xAxis.width(), height: xAxis.height(), opacity: opacity, id: "tableXAxis"});
+  $("#tableXAxis").qtip({content: "new Plottable.Axis.Linear(xScale, \"bottom\")", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
+  yAxis0.foreground().append("rect")
+                     .attr({fill: colorScale.range()[1], width: yAxis0.width(), height: yAxis0.height(), opacity: opacity, id: "tableYAxis0"});
+  $("#tableYAxis0").qtip({content: "new Plottable.Axis.Linear(yScale0, \"right\")", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
+  yAxis1.foreground().append("rect")
+                     .attr({fill: colorScale.range()[2], width: yAxis1.width(), height: yAxis1.height(), opacity: opacity, id: "tableYAxis1"});
+  $("#tableYAxis1").qtip({content: "new Plottable.Axis.Linear(yScale1, \"left\")", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
+  barPlot0.foreground().append("rect")
+                       .attr({fill: colorScale.range()[3], width: barPlot0.width(), height: barPlot0.height(), opacity: opacity, id: "tableBarPlot0"});
+  $("#tableBarPlot0").qtip({content: "new Plottable.Plot.Bar(xScale, yScale0)", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
+  barPlot1.foreground().append("rect")
+                       .attr({fill: colorScale.range()[4], width: barPlot1.width(), height: barPlot1.height(), opacity: opacity, id: "tableBarPlot1"});
+  $("#tableBarPlot1").qtip({content: "new Plottable.Plot.Bar(xScale, yScale1)", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
+
+  // Labels don't take up their entire cell
+  d3.select("#plot-table").append("rect")
+                          .attr({x: yLabel0._xOrigin, y: yAxis0._yOrigin, width: yLabel0.width(), height: yAxis0.height(), fill: colorScale.range()[5], opacity: opacity, id: "tableYLabel0"});
+  $("#tableYLabel0").qtip({content: "new Plottable.Component.Label(\"Top\", \"right\")", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
+  d3.select("#plot-table").append("rect")
+                          .attr({x: yLabel1._xOrigin, y: yAxis1._yOrigin, width: yLabel1.width(), height: yAxis1.height(), fill: colorScale.range()[6], opacity: opacity, id: "tableYLabel1"});
+  $("#tableYLabel1").qtip({content: "new Plottable.Component.Label(\"Bottom\", \"left\")", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
+  d3.select("#plot-table").append("rect")
+                          .attr({x: xAxis._xOrigin, y: xLabel._yOrigin, width: xAxis.width(), height: xLabel.height(), fill: colorScale.range()[7], opacity: opacity, id: "tableXLabel"});
+  $("#tableXLabel").qtip({content: "new Plottable.Component.Label(\"Categories\")", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
+  d3.select("#plot-table").append("rect")
+                          .attr({x: xAxis._xOrigin, y: masterLabel._yOrigin, width: xAxis.width(), height: masterLabel.height(), fill: colorScale.range()[8], opacity: opacity, id: "tableTitleLabel"});
+  $("#tableTitleLabel").qtip({content: "new Plottable.Component.TitleLabel(\"MasterLabel\")", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
+
+//Attach tooltips with qTip2 (which uses the "title" attribute by default)
+  $("#plot-table").qtip({
     position : {
       my : "bottom middle",
       at : "top middle"
