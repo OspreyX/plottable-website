@@ -134,65 +134,45 @@ window.onload = function() {
                                              [null, null, xLabel, null, null]]);
   table.renderTo("#plot-table");
 
-  var horizLineLength = d3.select("#plot-table").attr("width");
-  var vertLineLength = d3.select("#plot-table").attr("height");
-  window.test1 = horizLineLength;
-  window.test2 = vertLineLength;
-
-  d3.select("#plot-table").append("line").attr({x1: 0, x2: 0, y1: 0, y2: vertLineLength, stroke: "black"});
-  d3.select("#plot-table").append("line").attr({x1: yAxis1._xOrigin, x2: yAxis1._xOrigin, y1: 0, y2: vertLineLength, stroke: "black"});
-  d3.select("#plot-table").append("line").attr({x1: barPlot0._xOrigin, x2: barPlot0._xOrigin, y1: 0, y2: vertLineLength, stroke: "black"});
-  d3.select("#plot-table").append("line").attr({x1: yAxis0._xOrigin, x2: yAxis0._xOrigin, y1: 0, y2: vertLineLength, stroke: "black"});
-  d3.select("#plot-table").append("line").attr({x1: yLabel0._xOrigin, x2: yLabel0._xOrigin, y1: 0, y2: vertLineLength, stroke: "black"});
-  d3.select("#plot-table").append("line").attr({x1: horizLineLength, x2: horizLineLength, y1: 0, y2: vertLineLength, stroke: "black"});
-  d3.select("#plot-table").append("line").attr({x1: 0, x2: horizLineLength, y1: 0, y2: 0, stroke: "black"});
-  d3.select("#plot-table").append("line").attr({x1: 0, x2: horizLineLength, y1: barPlot0._yOrigin, y2: barPlot0._yOrigin, stroke: "black"});
-  d3.select("#plot-table").append("line").attr({x1: 0, x2: horizLineLength, y1: barPlot1._yOrigin, y2: barPlot1._yOrigin, stroke: "black"});
-  d3.select("#plot-table").append("line").attr({x1: 0, x2: horizLineLength, y1: xAxis._yOrigin, y2: xAxis._yOrigin, stroke: "black"});
-  d3.select("#plot-table").append("line").attr({x1: 0, x2: horizLineLength, y1: xLabel._yOrigin, y2: xLabel._yOrigin, stroke: "black"});
-  d3.select("#plot-table").append("line").attr({x1: 0, x2: horizLineLength, y1: vertLineLength, y2: vertLineLength, stroke: "black"});
-
+  var widths = [yLabel1.width(), yAxis1.width(), xAxis.width(), yAxis0.width(), yLabel0.width()];
+  var heights = [masterLabel.height(), yAxis0.height(), yAxis1.height(), xAxis.height(), xLabel.height()];
+  var combos = [];
+  for (var i = 0; i < 5; i++) {
+	for (var j = 0; j < 5; j++) {
+      combos.push([widths[j], heights[i]]);
+	}
+  }
+  var cells = d3.select("#plot-table").selectAll(".website-table-cells").data(combos);
+  cells.enter().append("rect").classed("website-table-cells", true);
+  cells.exit().remove();
+  cells.attr("stroke", "black")
+       .attr("opacity", "0.3")
+       .attr("width", function(d) { return d[0];})
+       .attr("height", function(d) { return d[1];})
+       .attr("x", function(d, i) { return Math.max(0, d3.sum(widths.slice(0, i % 5)));})
+       .attr("y", function(d, i) { return Math.max(0, d3.sum(heights.slice(0, Math.floor(i / 5))));})
+       .attr("id", function(d, i) { return "websiteTableCell-" + i % 5 + "-" + Math.floor(i / 5); })
+       .each(function(d) { $(this).qtip({content: "null", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});; });
   var colorScale = new Plottable.Scale.Color();
-  var opacity = "0.3";
-  xAxis.foreground().append("rect")
-                    .attr({stroke: "black", fill: colorScale.range()[0], width: xAxis.width(), height: xAxis.height(), opacity: opacity, id: "tableXAxis"});
-  $("#tableXAxis").qtip({content: "new Plottable.Axis.Linear(xScale, \"bottom\")", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
-  yAxis0.foreground().append("rect")
-                     .attr({fill: colorScale.range()[1], width: yAxis0.width(), height: yAxis0.height(), opacity: opacity, id: "tableYAxis0"});
-  $("#tableYAxis0").qtip({content: "new Plottable.Axis.Linear(yScale0, \"right\")", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
-  yAxis1.foreground().append("rect")
-                     .attr({fill: colorScale.range()[2], width: yAxis1.width(), height: yAxis1.height(), opacity: opacity, id: "tableYAxis1"});
-  $("#tableYAxis1").qtip({content: "new Plottable.Axis.Linear(yScale1, \"left\")", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
-  barPlot0.foreground().append("rect")
-                       .attr({fill: colorScale.range()[3], width: barPlot0.width(), height: barPlot0.height(), opacity: opacity, id: "tableBarPlot0"});
-  $("#tableBarPlot0").qtip({content: "new Plottable.Plot.Bar(xScale, yScale0)", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
-  barPlot1.foreground().append("rect")
-                       .attr({fill: colorScale.range()[4], width: barPlot1.width(), height: barPlot1.height(), opacity: opacity, id: "tableBarPlot1"});
-  $("#tableBarPlot1").qtip({content: "new Plottable.Plot.Bar(xScale, yScale1)", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
 
-  // Labels don't take up their entire cell
-  d3.select("#plot-table").append("rect")
-                          .attr({x: yLabel0._xOrigin, y: yAxis0._yOrigin, width: yLabel0.width(), height: yAxis0.height(), fill: colorScale.range()[5], opacity: opacity, id: "tableYLabel0"});
-  $("#tableYLabel0").qtip({content: "new Plottable.Component.Label(\"Top\", \"right\")", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
-  d3.select("#plot-table").append("rect")
-                          .attr({x: yLabel1._xOrigin, y: yAxis1._yOrigin, width: yLabel1.width(), height: yAxis1.height(), fill: colorScale.range()[6], opacity: opacity, id: "tableYLabel1"});
-  $("#tableYLabel1").qtip({content: "new Plottable.Component.Label(\"Bottom\", \"left\")", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
-  d3.select("#plot-table").append("rect")
-                          .attr({x: xAxis._xOrigin, y: xLabel._yOrigin, width: xAxis.width(), height: xLabel.height(), fill: colorScale.range()[7], opacity: opacity, id: "tableXLabel"});
-  $("#tableXLabel").qtip({content: "new Plottable.Component.Label(\"Categories\")", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
-  d3.select("#plot-table").append("rect")
-                          .attr({x: xAxis._xOrigin, y: masterLabel._yOrigin, width: xAxis.width(), height: masterLabel.height(), fill: colorScale.range()[8], opacity: opacity, id: "tableTitleLabel"});
-  $("#tableTitleLabel").qtip({content: "new Plottable.Component.TitleLabel(\"MasterLabel\")", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
+  $("#websiteTableCell-2-0").attr("fill", colorScale.range()[0])
+                             .qtip({content: "new Plottable.Component.TitleLabel(\"The Master Plot\")", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
+  $("#websiteTableCell-2-1").attr("fill", colorScale.range()[1])
+                             .qtip({content: "new Plottable.Plot.Bar(xScale, yScale0)", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
+  $("#websiteTableCell-3-1").attr("fill", colorScale.range()[2])
+                             .qtip({content: "new Plottable.Axis.Linear(yScale0, \"right\")", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
+  $("#websiteTableCell-4-1").attr("fill", colorScale.range()[3])
+                             .qtip({content: "new Plottable.Component.Label(\"Top\", \"right\")", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
+  $("#websiteTableCell-0-2").attr("fill", colorScale.range()[4])
+                             .qtip({content: "new Plottable.Component.Label(\"Bottom\", \"left\")", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
+  $("#websiteTableCell-1-2").attr("fill", colorScale.range()[5])
+                             .qtip({content: "new Plottable.Axis.Linear(yScale1, \"left\")", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
+  $("#websiteTableCell-2-2").attr("fill", colorScale.range()[6])
+                             .qtip({content: "new Plottable.Plot.Bar(xScale, yScale1)", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
+  $("#websiteTableCell-2-3").attr("fill", colorScale.range()[7])
+                             .qtip({content: "new Plottable.Axis.Linear(xScale, \"bottom\")", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
+  $("#websiteTableCell-2-4").attr("fill", colorScale.range()[8])
+                             .qtip({content: "new Plottable.Component.Label(\"Categories\")", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
 
-//Attach tooltips with qTip2 (which uses the "title" attribute by default)
-  $("#plot-table").qtip({
-    position : {
-      my : "bottom middle",
-      at : "top middle"
-    },
-    style : {
-      classes : "qtip-dark"
-    }
-  });
 }
 </script>
