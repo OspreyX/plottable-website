@@ -70,10 +70,24 @@ Below are a variety of components you can choose from to place onto your Plottab
 <div class="container">
   <h2>Placing Components Into the Plottable Table</h2>
   With the components above, you should be able to lay out the components you want into whatever table layout you may wish.<br><br>
-  Below is a pretty complex layout which uses a 5x5 table with each cell containing either a component (if it contains a component) or null.<br>
-  Due to the nature of treating every object as a component, even complex layouts like the one below are not terribly difficult.
-  All you need to do is grab each component and then lay them out onto a 5x5 array.
-  <svg id="plot-table" height="300"></svg>
+  Let's assume that you want a really simply chart, one that has an axis for the y dimenstion, one for the x dimension, and a bar plot to visualize the data you have.<br>
+  Looking at the component list above, you can find that each axis can be just considered as a componant, and the bar plot as well is just a component.
+  Thus, below shows a table that can achieve this layout.<br>
+  <svg id="simple-plot-table" height="300"></svg><br><br>
+  However, let's say that the chart you want is a lot more complex.<br><br>
+  Let's say that you want to place a title at the top of the chart.<br>
+  Also, let's say that instead of a single plot, you want two, where one is laid above the other.<br>
+  In accordance, maybe you want two axes for the y dimension, one for each plot, but you want the axis for the top plot to be to the right of the plot and the bottom plot's axis to be to the left.<br>
+  Maybe it would be nice to also add labels for the axes as well...<br><br>
+  Well that got complex real fast!<br><br>
+  Luckily, if you again think of each item as a component and think about how this layout would look in a table, it is not difficult to achieve the above goal.<br><br>
+  Instead of having one bar plot component, you will need two.<br>
+  Also, instead of having two axes components, you will need to add another one for the additional axis on the y dimension.<br><br>
+  Now, the only thing we need left is to add labels for the axes and the chart itself.<br>
+  However, if you sift through the above, you can find that there is a Label component for the axes and a TitleLabel component for the entire chart.<br>
+  Thus, you just need two of the Label components and a single TitleLabel component.<br><br>
+  Now that you have all of our components, all you need to do now is lay them out.  The below 5x5 layout achieves the above goal.
+  <svg id="complex-plot-table" height="300"></svg>
 </div>
 
 <script src="component_example_list.js"></script>
@@ -107,6 +121,46 @@ window.onload = function() {
     }
   });
 
+  var simpleData = [{x: "First", y: 5}, {x: "Second", y: 10}, {x: "Third", y: 14}];
+  var simpleXScale = new Plottable.Scale.Ordinal();
+  var simpleYScale = new Plottable.Scale.Linear();
+  var simpleXAxis = new Plottable.Axis.Category(simpleXScale, "bottom");
+  var simpleYAxis = new Plottable.Axis.Numeric(simpleYScale, "left");
+  var simpleBarPlot = new Plottable.Plot.Bar(simpleXScale, simpleYScale)
+                                        .addDataset(simpleData)
+                                        .project("x", "x", simpleXScale)
+                                        .project("y", "y", simpleYScale);
+  var simpleChartTable = new Plottable.Component.Table([[simpleYAxis, simpleBarPlot],
+                                                  [null, simpleXAxis]]);
+  simpleChartTable.renderTo("#simple-plot-table");
+
+  var simpleWidths = [simpleYAxis.width(), simpleXAxis.width()];
+  var simpleHeights = [simpleYAxis.height(), simpleXAxis.height()];
+  var combos = [];
+  for (var i = 0; i < 2; i++) {
+    for (var j = 0; j < 2; j++) {
+      combos.push([simpleWidths[j], simpleHeights[i]]);
+    }
+  }
+  var cells = d3.select("#simple-plot-table").selectAll(".website-table-cells").data(combos);
+  cells.enter().append("rect").classed("website-table-cells", true);
+  cells.exit().remove();
+  cells.attr("stroke", "black")
+       .attr("opacity", "0.3")
+       .attr("width", function(d) { return d[0];})
+       .attr("height", function(d) { return d[1];})
+       .attr("x", function(d, i) { return Math.max(0, d3.sum(simpleWidths.slice(0, i % 2)));})
+       .attr("y", function(d, i) { return Math.max(0, d3.sum(simpleHeights.slice(0, Math.floor(i / 2))));})
+       .attr("id", function(d, i) { return "simpleTableCell-" + i % 2 + "-" + Math.floor(i / 2); })
+       .each(function(d) { $(this).qtip({content: "null", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});; });
+  var colorScale = new Plottable.Scale.Color();
+  $("#simpleTableCell-0-0").attr("fill", colorScale.range()[0])
+                            .qtip({content: "new Plottable.Axis.Numeric(yScale, \"left\")", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
+  $("#simpleTableCell-1-0").attr("fill", colorScale.range()[1])
+                            .qtip({content: "new Plottable.Plot.Bar(xScale, yScale)", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
+  $("#simpleTableCell-1-1").attr("fill", colorScale.range()[2])
+                            .qtip({content: "new Plottable.Axis.Category(xScale, \"bottom\")", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
+
   var data0 = [{x: "A", y: 5}, {x: "B", y: 10}, {x: "C", y: 14}];
   var data1 = [{x: "A", y: 2}, {x: "B", y: 13}, {x: "C", y: 12}];
   var xScale = new Plottable.Scale.Ordinal();
@@ -132,7 +186,7 @@ window.onload = function() {
                                              [yLabel1, yAxis1, barPlot1, null, null],
                                              [null, null, xAxis, null, null],
                                              [null, null, xLabel, null, null]]);
-  table.renderTo("#plot-table");
+  table.renderTo("#complex-plot-table");
 
   var widths = [yLabel1.width(), yAxis1.width(), xAxis.width(), yAxis0.width(), yLabel0.width()];
   var heights = [masterLabel.height(), yAxis0.height(), yAxis1.height(), xAxis.height(), xLabel.height()];
@@ -142,7 +196,7 @@ window.onload = function() {
       combos.push([widths[j], heights[i]]);
 	}
   }
-  var cells = d3.select("#plot-table").selectAll(".website-table-cells").data(combos);
+  var cells = d3.select("#complex-plot-table").selectAll(".website-table-cells").data(combos);
   cells.enter().append("rect").classed("website-table-cells", true);
   cells.exit().remove();
   cells.attr("stroke", "black")
@@ -151,27 +205,27 @@ window.onload = function() {
        .attr("height", function(d) { return d[1];})
        .attr("x", function(d, i) { return Math.max(0, d3.sum(widths.slice(0, i % 5)));})
        .attr("y", function(d, i) { return Math.max(0, d3.sum(heights.slice(0, Math.floor(i / 5))));})
-       .attr("id", function(d, i) { return "websiteTableCell-" + i % 5 + "-" + Math.floor(i / 5); })
+       .attr("id", function(d, i) { return "complexTableCell-" + i % 5 + "-" + Math.floor(i / 5); })
        .each(function(d) { $(this).qtip({content: "null", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});; });
   var colorScale = new Plottable.Scale.Color();
 
-  $("#websiteTableCell-2-0").attr("fill", colorScale.range()[0])
+  $("#complexTableCell-2-0").attr("fill", colorScale.range()[0])
                              .qtip({content: "new Plottable.Component.TitleLabel(\"The Master Plot\")", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
-  $("#websiteTableCell-2-1").attr("fill", colorScale.range()[1])
+  $("#complexTableCell-2-1").attr("fill", colorScale.range()[1])
                              .qtip({content: "new Plottable.Plot.Bar(xScale, yScale0)", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
-  $("#websiteTableCell-3-1").attr("fill", colorScale.range()[2])
+  $("#complexTableCell-3-1").attr("fill", colorScale.range()[2])
                              .qtip({content: "new Plottable.Axis.Linear(yScale0, \"right\")", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
-  $("#websiteTableCell-4-1").attr("fill", colorScale.range()[3])
+  $("#complexTableCell-4-1").attr("fill", colorScale.range()[3])
                              .qtip({content: "new Plottable.Component.Label(\"Top\", \"right\")", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
-  $("#websiteTableCell-0-2").attr("fill", colorScale.range()[4])
+  $("#complexTableCell-0-2").attr("fill", colorScale.range()[4])
                              .qtip({content: "new Plottable.Component.Label(\"Bottom\", \"left\")", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
-  $("#websiteTableCell-1-2").attr("fill", colorScale.range()[5])
+  $("#complexTableCell-1-2").attr("fill", colorScale.range()[5])
                              .qtip({content: "new Plottable.Axis.Linear(yScale1, \"left\")", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
-  $("#websiteTableCell-2-2").attr("fill", colorScale.range()[6])
+  $("#complexTableCell-2-2").attr("fill", colorScale.range()[6])
                              .qtip({content: "new Plottable.Plot.Bar(xScale, yScale1)", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
-  $("#websiteTableCell-2-3").attr("fill", colorScale.range()[7])
+  $("#complexTableCell-2-3").attr("fill", colorScale.range()[7])
                              .qtip({content: "new Plottable.Axis.Linear(xScale, \"bottom\")", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
-  $("#websiteTableCell-2-4").attr("fill", colorScale.range()[8])
+  $("#complexTableCell-2-4").attr("fill", colorScale.range()[8])
                              .qtip({content: "new Plottable.Component.Label(\"Categories\")", position: { my: "bottom middle", at: "top middle" }, style: {classes: "qtip-dark"}});
 
 }
