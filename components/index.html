@@ -13,11 +13,43 @@ page_id : page-components
 </style>
 
 <div class="container">
-  <h2>The Component List</h2>
-The best way to think about Plottable that you will not be rendering plots, but you will be rendering components or tables of components.  Even a plot is considered a component!<br><br>
-By thinking in this manner, one can imagine that any component can be dropped into any cell of a table, meaning you have flexibility on where components go in relation to other components.<br><br>
+  <h1>Plottable Components</h1>
+  <nav>
+    <ul>
+      <li>
+        <a href="#plottable-components-tables">Components and Tables</a>
+      </li>
+      <li>
+        <a href="#plottable-available-components">Available Components</a>
+      </li>
+    </ul>
+  </nav>
+</div>
 
-Below are a variety of components you can choose from to place onto your Plottable table.
+
+<div class="container" id="plottable-components-tables">
+  <h2 >Components and Tables</h2>
+  Charts in Plottable are tables, where each cell of the table contains a Component.<br><br>
+  Plottable Components include axes, labels, plotted points, bars, lines, and more.
+  When working in Plottable, it is helpful to visualize charts as tables full of Components, as this way of thinking allows you to take advantage of Plottable's flexibility.<br><br>
+  Suppose you want a simple bar chart.
+  It will have an X-axis, a Y-axis, and some bars plotted on those axes.
+  In Plottable this chart can be built with three Components: two Axes, and a Bar Plot.
+  A 2x2 table allows you to arrange these three Components in a quick and obvious way, resulting in a classic bar chart, like this:<br><br>
+  <svg id="simple-plot-table" height="300"></svg><br><br>
+  This simple way of building charts can be extended to create very complex charts.<br><br>
+  Suppose you want to add more Components to your bar chart.
+  You want a second plot of bars on the same X-axis, but stacked on top of the previous plot.
+  You decide that you also want the second plot to have its own Y-axis on the right side of the chart.
+  In addition, you want to add labels to all three axes, and a top label for the entire chart.
+  This complex chart is still easy to build in Plottable if you think about arranging the needed Components in a table.<br><br>
+  For this chart you need: one Axis for the X dimension, two Axes for the Y dimension, two Bar Plots, three Labels, and one Title Label.
+  With a little thought, these nine Components can be neatly arranged in a 5x5 table to achieve the exact effect you desired:<br><br>
+  <svg id="complex-plot-table" height="300"></svg>
+</div>
+
+<div class="container" id="plottable-available-components">
+  <h2>Available Components</h2>
 </div>
 
 
@@ -65,29 +97,6 @@ Below are a variety of components you can choose from to place onto your Plottab
       <svg id="legend" height="50" title='new Plottable.Component.Legend(colorScale)'></svg>
     </div>
   </div>
-</div>
-
-<div class="container">
-  <h2>Placing Components Into the Plottable Table</h2>
-  With the components above, you should be able to lay out the components you want into whatever table layout you may wish.<br><br>
-  Let's assume that you want a really simple chart, one that has an axis for the y dimenstion, one for the x dimension, and a bar plot to visualize the data you have.<br>
-  Looking at the component list above, you can find that each axis can be just considered as a component, and the bar plot as well is just a component.
-  Thus, below shows a table that can achieve this layout.<br>
-  <svg id="simple-plot-table" height="300"></svg><br><br>
-  However, let's say that the chart you want is a lot more complex.<br><br>
-  Let's say that you want to place a title at the top of the chart.<br>
-  Also, let's say that instead of a single plot, you want two, where one is laid above the other.<br>
-  In accordance, maybe you want two axes for the y dimension, one for each plot, but you want the axis for the top plot to be to the right of the plot and the bottom plot's axis to be to the left.<br>
-  Maybe it would be nice to also add labels for the axes as well...<br><br>
-  Well that got complex real fast!<br><br>
-  Luckily, if you again think of each item as a component and think about how this layout would look in a table, it is not difficult to achieve the above goal.<br><br>
-  Instead of having one bar plot component, you will need two.<br>
-  Also, instead of having two axes components, you will need to add another one for the additional axis on the y dimension.<br><br>
-  Now, the only thing we need left is to add labels for the axes and the chart itself.<br>
-  However, if you sift through the above, you can find that there is a Label component for the axes and a TitleLabel component for the entire chart.<br>
-  Thus, you just need two of the Label components and a single TitleLabel component.<br><br>
-  Now that you have all of our components, all you need to do now is lay them out.  The below 5x5 layout achieves the above goal.
-  <svg id="complex-plot-table" height="300"></svg>
 </div>
 
 <script src="component_example_list.js"></script>
