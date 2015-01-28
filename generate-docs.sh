@@ -20,7 +20,7 @@ cd ..
 
 grunt
 
-./node_modules/typedoc/bin/typedoc --includeDeclarations typings/d3/d3.d.ts plottable.d.ts --theme _typedoc/themes/plottable --out docs/
+./node_modules/typedoc/bin/typedoc --mode file --includeDeclarations typings/d3/d3.d.ts plottable.d.ts --theme _typedoc/themes/plottable --out docs/
 
 rm -rf _plottable
 rm -r typings
