@@ -47,7 +47,7 @@
 					<div id="tsd-filter">
 						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
 						<div class="tsd-filter-group">
-							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<input type="checkbox" id="tsd-filter-inherited" />
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
 							<input type="checkbox" id="tsd-filter-private" checked />
 							<label class="tsd-widget" for="tsd-filter-private">Private</label>
@@ -85,6 +85,14 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">Geom</span>
+					</li>
+				</ul>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -96,25 +104,28 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="d3.geom.geom.html#hull" class="tsd-kind-icon">hull</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="d3.geom.geom.html#polygon" class="tsd-kind-icon">polygon</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="d3.geom.geom.html#quadtree" class="tsd-kind-icon">quadtree</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="d3.geom.geom.html#voronoi" class="tsd-kind-icon">voronoi</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter"><a href="d3.geom.geom.html#voronoi" class="tsd-kind-icon">voronoi</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
-				</section>            <section class="tsd-panel-group tsd-member-group ">
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="delaunay" class="anchor"></a>
+					<a name="delaunay" class="tsd-anchor"></a>
 					<h3>delaunay</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
 						<li class="tsd-signature tsd-kind-icon">delaunay<span class="tsd-signature-symbol">(</span>vertices<span class="tsd-signature-symbol">?: </span><a href="d3.geom.vertice.html" class="tsd-signature-type">Vertice</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="d3.geom.polygon.html" class="tsd-signature-type">Polygon</a><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
-						<li class="tsd-description"><aside class="tsd-sources">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in typings/d3/d3.d.ts:3191</li>
+									<li>Defined in d3.d.ts:3209</li>
 								</ul>
-								</aside>        <div class="tsd-comment tsd-typography">
+							</aside>
+							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>compute the Delaunay triangulation for the specified points.</p>
 								</div>
@@ -122,60 +133,70 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>vertices?:         <a href="d3.geom.vertice.html" class="tsd-signature-type">Vertice</a><span class="tsd-signature-symbol">[]</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> vertices: <a href="d3.geom.vertice.html" class="tsd-signature-type">Vertice</a><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns         <a href="d3.geom.polygon.html" class="tsd-signature-type">Polygon</a><span class="tsd-signature-symbol">[]</span>
+							<h4 class="tsd-returns-title">Returns 
+								<a href="d3.geom.polygon.html" class="tsd-signature-type">Polygon</a><span class="tsd-signature-symbol">[]</span>
 							</h4>
 						</li>
 					</ul>
-					</section>            <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="hull" class="anchor"></a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="hull" class="tsd-anchor"></a>
 					<h3>hull</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
 						<li class="tsd-signature tsd-kind-icon">hull<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="d3.geom.hull.html" class="tsd-signature-type">Hull</a></li>
 						<li class="tsd-signature tsd-kind-icon">hull<span class="tsd-signature-symbol">(</span>vertices<span class="tsd-signature-symbol">: </span><a href="d3.geom.vertice.html" class="tsd-signature-type">Vertice</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="d3.geom.vertice.html" class="tsd-signature-type">Vertice</a><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
-						<li class="tsd-description"><aside class="tsd-sources">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in typings/d3/d3.d.ts:3211</li>
+									<li>Defined in d3.d.ts:3229</li>
 								</ul>
-								</aside>        <div class="tsd-comment tsd-typography">
+							</aside>
+							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>creates a new hull layout with the default settings.</p>
 								</div>
 							</div>
-							<h4 class="tsd-returns-title">Returns         <a href="d3.geom.hull.html" class="tsd-signature-type">Hull</a>
+							<h4 class="tsd-returns-title">Returns 
+								<a href="d3.geom.hull.html" class="tsd-signature-type">Hull</a>
 							</h4>
 						</li>
-						<li class="tsd-description"><aside class="tsd-sources">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in typings/d3/d3.d.ts:3213</li>
+									<li>Defined in d3.d.ts:3231</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>vertices:         <a href="d3.geom.vertice.html" class="tsd-signature-type">Vertice</a><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>vertices: <a href="d3.geom.vertice.html" class="tsd-signature-type">Vertice</a><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns         <a href="d3.geom.vertice.html" class="tsd-signature-type">Vertice</a><span class="tsd-signature-symbol">[]</span>
+							<h4 class="tsd-returns-title">Returns 
+								<a href="d3.geom.vertice.html" class="tsd-signature-type">Vertice</a><span class="tsd-signature-symbol">[]</span>
 							</h4>
 						</li>
 					</ul>
-					</section>            <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="polygon" class="anchor"></a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="polygon" class="tsd-anchor"></a>
 					<h3>polygon</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
 						<li class="tsd-signature tsd-kind-icon">polygon<span class="tsd-signature-symbol">(</span>vertices<span class="tsd-signature-symbol">: </span><a href="d3.geom.vertice.html" class="tsd-signature-type">Vertice</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="d3.geom.polygon.html" class="tsd-signature-type">Polygon</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
-						<li class="tsd-description"><aside class="tsd-sources">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in typings/d3/d3.d.ts:3207</li>
+									<li>Defined in d3.d.ts:3225</li>
 								</ul>
-								</aside>        <div class="tsd-comment tsd-typography">
+							</aside>
+							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Returns the input array of vertices with additional methods attached</p>
 								</div>
@@ -183,15 +204,17 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>vertices:         <a href="d3.geom.vertice.html" class="tsd-signature-type">Vertice</a><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>vertices: <a href="d3.geom.vertice.html" class="tsd-signature-type">Vertice</a><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns         <a href="d3.geom.polygon.html" class="tsd-signature-type">Polygon</a>
+							<h4 class="tsd-returns-title">Returns 
+								<a href="d3.geom.polygon.html" class="tsd-signature-type">Polygon</a>
 							</h4>
 						</li>
 					</ul>
-					</section>            <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="quadtree" class="anchor"></a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="quadtree" class="tsd-anchor"></a>
 					<h3>quadtree</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
 						<li class="tsd-signature tsd-kind-icon">quadtree<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="d3.geom.quadtreefactory.html" class="tsd-signature-type">QuadtreeFactory</a></li>
@@ -199,23 +222,28 @@
 						<li class="tsd-signature tsd-kind-icon">quadtree<span class="tsd-signature-symbol">(</span>points<span class="tsd-signature-symbol">: </span><a href="d3.geom.point.html" class="tsd-signature-type">Point</a><span class="tsd-signature-symbol">[]</span>, width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="d3.geom.quadtree.html" class="tsd-signature-type">Quadtree</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
-						<li class="tsd-description"><aside class="tsd-sources">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in typings/d3/d3.d.ts:3195</li>
+									<li>Defined in d3.d.ts:3213</li>
 								</ul>
-								</aside>        <div class="tsd-comment tsd-typography">
+							</aside>
+							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>constructs a quadtree for an array of points.</p>
 								</div>
 							</div>
-							<h4 class="tsd-returns-title">Returns         <a href="d3.geom.quadtreefactory.html" class="tsd-signature-type">QuadtreeFactory</a>
+							<h4 class="tsd-returns-title">Returns 
+								<a href="d3.geom.quadtreefactory.html" class="tsd-signature-type">QuadtreeFactory</a>
 							</h4>
 						</li>
-						<li class="tsd-description"><aside class="tsd-sources">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in typings/d3/d3.d.ts:3199</li>
+									<li>Defined in d3.d.ts:3217</li>
 								</ul>
-								</aside>        <div class="tsd-comment tsd-typography">
+							</aside>
+							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Constructs a new quadtree for the specified array of points.</p>
 								</div>
@@ -223,29 +251,32 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>points:         <a href="d3.geom.point.html" class="tsd-signature-type">Point</a><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>points: <a href="d3.geom.point.html" class="tsd-signature-type">Point</a><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 								<li>
-									<h5>x1:         <span class="tsd-signature-type">number</span></h5>
+									<h5>x1: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>y1:         <span class="tsd-signature-type">number</span></h5>
+									<h5>y1: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>x2:         <span class="tsd-signature-type">number</span></h5>
+									<h5>x2: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>y2:         <span class="tsd-signature-type">number</span></h5>
+									<h5>y2: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns         <a href="d3.geom.quadtree.html" class="tsd-signature-type">Quadtree</a>
+							<h4 class="tsd-returns-title">Returns 
+								<a href="d3.geom.quadtree.html" class="tsd-signature-type">Quadtree</a>
 							</h4>
 						</li>
-						<li class="tsd-description"><aside class="tsd-sources">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in typings/d3/d3.d.ts:3203</li>
+									<li>Defined in d3.d.ts:3221</li>
 								</ul>
-								</aside>        <div class="tsd-comment tsd-typography">
+							</aside>
+							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Constructs a new quadtree for the specified array of points.</p>
 								</div>
@@ -253,40 +284,52 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>points:         <a href="d3.geom.point.html" class="tsd-signature-type">Point</a><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>points: <a href="d3.geom.point.html" class="tsd-signature-type">Point</a><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 								<li>
-									<h5>width:         <span class="tsd-signature-type">number</span></h5>
+									<h5>width: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>height:         <span class="tsd-signature-type">number</span></h5>
+									<h5>height: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns         <a href="d3.geom.quadtree.html" class="tsd-signature-type">Quadtree</a>
+							<h4 class="tsd-returns-title">Returns 
+								<a href="d3.geom.quadtree.html" class="tsd-signature-type">Quadtree</a>
 							</h4>
 						</li>
 					</ul>
-					</section>            <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="voronoi" class="anchor"></a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter">
+					<a name="voronoi" class="tsd-anchor"></a>
 					<h3>voronoi</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">voronoi<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="d3.geom.voronoi.html" class="tsd-signature-type">Voronoi</a></li>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">voronoi&lt;T&gt;<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="d3.geom.voronoi.html" class="tsd-signature-type">Voronoi</a></li>
 						<li class="tsd-signature tsd-kind-icon">voronoi<span class="tsd-signature-symbol">(</span>vertices<span class="tsd-signature-symbol">: </span><a href="d3.geom.vertice.html" class="tsd-signature-type">Vertice</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="d3.geom.polygon.html" class="tsd-signature-type">Polygon</a><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
-						<li class="tsd-description"><aside class="tsd-sources">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in typings/d3/d3.d.ts:3183</li>
+									<li>Defined in d3.d.ts:3201</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns         <a href="d3.geom.voronoi.html" class="tsd-signature-type">Voronoi</a>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns 
+								<a href="d3.geom.voronoi.html" class="tsd-signature-type">Voronoi</a>
 							</h4>
 						</li>
-						<li class="tsd-description"><aside class="tsd-sources">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in typings/d3/d3.d.ts:3187</li>
+									<li>Defined in d3.d.ts:3205</li>
 								</ul>
-								</aside>        <div class="tsd-comment tsd-typography">
+							</aside>
+							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>compute the Voronoi diagram for the specified points.</p>
 								</div>
@@ -294,14 +337,16 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>vertices:         <a href="d3.geom.vertice.html" class="tsd-signature-type">Vertice</a><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>vertices: <a href="d3.geom.vertice.html" class="tsd-signature-type">Vertice</a><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns         <a href="d3.geom.polygon.html" class="tsd-signature-type">Polygon</a><span class="tsd-signature-symbol">[]</span>
+							<h4 class="tsd-returns-title">Returns 
+								<a href="d3.geom.polygon.html" class="tsd-signature-type">Polygon</a><span class="tsd-signature-symbol">[]</span>
 							</h4>
 						</li>
 					</ul>
-			</section></section>
+				</section>
+			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
@@ -309,39 +354,42 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class="current tsd-kind-container">
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="../modules/_d3_.html">"d3"</a>
+					</li>
+					<li class="current tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/d3.html">D3</a>
 						<ul>
-							<li class=" tsd-kind-container tsd-parent-kind-container">
+							<li class=" tsd-kind-module tsd-parent-kind-module">
 								<a href="../modules/d3.behavior.html">Behavior</a>
 							</li>
-							<li class=" tsd-kind-container tsd-parent-kind-container">
+							<li class=" tsd-kind-module tsd-parent-kind-module">
 								<a href="../modules/d3.color.html">Color</a>
 							</li>
-							<li class=" tsd-kind-container tsd-parent-kind-container">
+							<li class=" tsd-kind-module tsd-parent-kind-module">
 								<a href="../modules/d3.geo.html">Geo</a>
 							</li>
-							<li class="current tsd-kind-container tsd-parent-kind-container">
+							<li class="current tsd-kind-module tsd-parent-kind-module">
 								<a href="../modules/d3.geom.html">Geom</a>
 							</li>
-							<li class=" tsd-kind-container tsd-parent-kind-container">
+							<li class=" tsd-kind-module tsd-parent-kind-module">
 								<a href="../modules/d3.layout.html">Layout</a>
 							</li>
-							<li class=" tsd-kind-container tsd-parent-kind-container">
+							<li class=" tsd-kind-module tsd-parent-kind-module">
 								<a href="../modules/d3.scale.html">Scale</a>
 							</li>
-							<li class=" tsd-kind-container tsd-parent-kind-container">
+							<li class=" tsd-kind-module tsd-parent-kind-module">
 								<a href="../modules/d3.svg.html">Svg</a>
 							</li>
-							<li class=" tsd-kind-container tsd-parent-kind-container">
+							<li class=" tsd-kind-module tsd-parent-kind-module">
 								<a href="../modules/d3.time.html">Time</a>
 							</li>
-							<li class=" tsd-kind-container tsd-parent-kind-container">
+							<li class=" tsd-kind-module tsd-parent-kind-module">
 								<a href="../modules/d3.transition.html">Transition</a>
 							</li>
 						</ul>
 					</li>
-					<li class=" tsd-kind-container">
+					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/plottable.html">Plottable</a>
 					</li>
 				</ul>
@@ -350,7 +398,7 @@
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-container">
+					<li class="current tsd-kind-interface tsd-parent-kind-module">
 						<a href="d3.geom.geom.html" class="tsd-kind-icon">Geom</a>
 						<ul>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
@@ -365,32 +413,32 @@
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="d3.geom.geom.html#quadtree" class="tsd-kind-icon">quadtree</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter">
 								<a href="d3.geom.geom.html#voronoi" class="tsd-kind-icon">voronoi</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-container">
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="d3.geom.hull.html" class="tsd-kind-icon">Hull</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-container">
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="d3.geom.point.html" class="tsd-kind-icon">Point</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-container">
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="d3.geom.polygon.html" class="tsd-kind-icon">Polygon</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-container">
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="d3.geom.quadtree.html" class="tsd-kind-icon">Quadtree</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-container">
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="d3.geom.quadtreefactory.html" class="tsd-kind-icon">Quadtree<wbr>Factory</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-container">
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="d3.geom.vertice.html" class="tsd-kind-icon">Vertice</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-container">
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
 						<a href="d3.geom.voronoi.html" class="tsd-kind-icon">Voronoi</a>
 					</li>
 				</ul>
@@ -403,50 +451,55 @@
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
-				<li class="tsd-kind-container"><span class="tsd-kind-icon">Container, dynamic module</span></li>
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
 				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
-				<li class="tsd-kind-construct-signature"><span class="tsd-kind-icon">Constructor</span></li>
-				<li class="tsd-kind-property"><span class="tsd-kind-icon">Variable</span></li>
-				<li class="tsd-kind-call-signature"><span class="tsd-kind-icon">Function, call signature, accessor</span></li>
-				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
-				<li class="tsd-kind-construct-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
 				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-call-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Member, accessor</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
 				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
-				<li class="tsd-kind-construct-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
 				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-call-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Member, accessor</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
 				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li>&nbsp;</li>
-				<li class="tsd-kind-construct-signature tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
 				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
-				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited member</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li>&nbsp;</li>
-				<li class="tsd-kind-construct-signature tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
-				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private member</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li>&nbsp;</li>
-				<li>&nbsp;</li>
 				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
-				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static member</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
 			</ul>
 		</div>
 	</div>
