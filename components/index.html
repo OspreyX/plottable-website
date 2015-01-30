@@ -228,8 +228,8 @@ window.onload = function() {
   $("#complexTableCell-2-3").qtip({content: "new Plottable.Axis.Linear(xScale, \"bottom\")", position: tooltipPositionParams, style: {classes: "qtip-dark"}});
   $("#complexTableCell-2-4").qtip({content: "new Plottable.Component.Label(\"Categories\")", position: tooltipPositionParams, style: {classes: "qtip-dark"}});
 
-  var colorScale = new Plottable.Scale.Color();
-  $(".website-table-cells").hover(function() { $(this).attr("fill", colorScale.range()[0]); },
+  var highlightColor = new Plottable.Scale.Color().range()[0];
+  $(".website-table-cells").hover(function() { $(this).attr("fill", highlightColor); },
                                   function() { $(this).attr("fill", "black"); });
 }
 </script>
