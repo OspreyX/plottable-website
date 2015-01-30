@@ -14,7 +14,7 @@
     "tests"
   ],
   "dependencies": {
-    "plottable": "0.41.1",
+    "plottable": "0.42.0",
     "lodash": "~2.4.1",
     "qtip2": "~2.2.1"
   }
