@@ -1,5 +1,5 @@
 /*!
-Plottable 0.40.0 (https://github.com/palantir/plottable)
+Plottable 0.41.1 (https://github.com/palantir/plottable)
 Copyright 2014 Palantir Technologies
 Licensed under MIT (https://github.com/palantir/plottable/blob/master/LICENSE)
 */
@@ -293,21 +293,9 @@ var Plottable;
                 return hexCode;
             }
             Methods.colorTest = colorTest;
-            // Code adapted from https://stackoverflow.com/questions/5560248/programmatically-lighten-or-darken-a-hex-color-or-rgb-and-blend-colors
-            function lightenColor(color, factor, lightenAmount) {
-                var r = parseInt(color.substring(1, 3), 16);
-                var g = parseInt(color.substring(3, 5), 16);
-                var b = parseInt(color.substring(5, 7), 16);
-                var hsl = _Util.Color.rgbToHsl(r, g, b);
-                var newL = Math.min(hsl[2] + lightenAmount * factor, 1);
-                var newRgb = _Util.Color.hslToRgb(hsl[0], hsl[1], newL);
-                var rHex = newRgb[0].toString(16);
-                var gHex = newRgb[1].toString(16);
-                var bHex = newRgb[2].toString(16);
-                rHex = rHex.length < 2 ? "0" + rHex : rHex;
-                gHex = gHex.length < 2 ? "0" + gHex : gHex;
-                bHex = bHex.length < 2 ? "0" + bHex : bHex;
-                return "#" + rHex + gHex + bHex;
+            function lightenColor(color, factor) {
+                var hsl = d3.hsl(color).brighter(factor);
+                return hsl.rgb().toString();
             }
             Methods.lightenColor = lightenColor;
             // Code adapted from https://stackoverflow.com/questions/5560248/programmatically-lighten-or-darken-a-hex-color-or-rgb-and-blend-colors
@@ -986,7 +974,7 @@ var Plottable;
 ///<reference path="../reference.ts" />
 var Plottable;
 (function (Plottable) {
-    Plottable.version = "0.40.0";
+    Plottable.version = "0.41.1";
 })(Plottable || (Plottable = {}));
 
 ///<reference path="../reference.ts" />
@@ -2391,7 +2379,6 @@ var Plottable;
                         throw new Error("Unsupported ColorScale type");
                 }
                 _super.call(this, scale);
-                this._lightenAmount = 0.16;
             }
             // Duplicated from OrdinalScale._getExtent - should be removed in #388
             Color.prototype._getExtent = function () {
@@ -2419,10 +2406,12 @@ var Plottable;
             Color.prototype.scale = function (value) {
                 var color = _super.prototype.scale.call(this, value);
                 var index = this.domain().indexOf(value);
-                var modifyFactor = Math.floor(index / this.range().length);
-                return Plottable._Util.Methods.lightenColor(color, modifyFactor, this._lightenAmount);
+                var numLooped = Math.floor(index / this.range().length);
+                var modifyFactor = Math.log(numLooped * Color.LOOP_LIGHTEN_FACTOR + 1);
+                return Plottable._Util.Methods.lightenColor(color, modifyFactor);
             };
             Color.HEX_SCALE_FACTOR = 20;
+            Color.LOOP_LIGHTEN_FACTOR = 1.6;
             return Color;
         })(Scale.AbstractScale);
         Scale.Color = Color;
@@ -7133,101 +7122,6 @@ var Plottable;
 (function (Plottable) {
     var Plot;
     (function (Plot) {
-        /**
-         * A VerticalBarPlot draws bars vertically.
-         * Key projected attributes:
-         *  - "width" - the horizontal width of a bar.
-         *      - if an ordinal scale is attached, this defaults to ordinalScale.rangeBand()
-         *      - if a quantitative scale is attached, this defaults to 10
-         *  - "x" - the horizontal position of a bar
-         *  - "y" - the vertical height of a bar
-         */
-        var VerticalBar = (function (_super) {
-            __extends(VerticalBar, _super);
-            /**
-             * Constructs a VerticalBarPlot.
-             *
-             * @constructor
-             * @param {Scale} xScale The x scale to use.
-             * @param {QuantitativeScale} yScale The y scale to use.
-             */
-            function VerticalBar(xScale, yScale) {
-                this._isVertical = true;
-                _super.call(this, xScale, yScale, true);
-                if (!VerticalBar.WARNED) {
-                    VerticalBar.WARNED = true;
-                    Plottable._Util.Methods.warn("Plottable.Plot.VerticalBar is deprecated. Please use Plottable.Plot.Bar with isVertical = true.");
-                }
-            }
-            VerticalBar.prototype._updateYDomainer = function () {
-                this._updateDomainer(this._yScale);
-            };
-            VerticalBar._BarAlignmentToFactor = { "left": 0, "center": 0.5, "right": 1 };
-            VerticalBar.WARNED = false;
-            return VerticalBar;
-        })(Plot.Bar);
-        Plot.VerticalBar = VerticalBar;
-    })(Plot = Plottable.Plot || (Plottable.Plot = {}));
-})(Plottable || (Plottable = {}));
-
-///<reference path="../../reference.ts" />
-var __extends = this.__extends || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    __.prototype = b.prototype;
-    d.prototype = new __();
-};
-var Plottable;
-(function (Plottable) {
-    var Plot;
-    (function (Plot) {
-        /**
-         * A HorizontalBarPlot draws bars horizontally.
-         * Key projected attributes:
-         *  - "width" - the vertical height of a bar (since the bar is rotated horizontally)
-         *      - if an ordinal scale is attached, this defaults to ordinalScale.rangeBand()
-         *      - if a quantitative scale is attached, this defaults to 10
-         *  - "x" - the horizontal length of a bar
-         *  - "y" - the vertical position of a bar
-         */
-        var HorizontalBar = (function (_super) {
-            __extends(HorizontalBar, _super);
-            /**
-             * Constructs a HorizontalBarPlot.
-             *
-             * @constructor
-             * @param {QuantitativeScale} xScale The x scale to use.
-             * @param {Scale} yScale The y scale to use.
-             */
-            function HorizontalBar(xScale, yScale) {
-                _super.call(this, xScale, yScale, false);
-                if (!HorizontalBar.WARNED) {
-                    HorizontalBar.WARNED = true;
-                    Plottable._Util.Methods.warn("Plottable.Plot.HorizontalBar is deprecated. Please use Plottable.Plot.Bar with isVertical = false.");
-                }
-            }
-            HorizontalBar.prototype._updateXDomainer = function () {
-                this._updateDomainer(this._xScale);
-            };
-            HorizontalBar._BarAlignmentToFactor = { "top": 0, "center": 0.5, "bottom": 1 };
-            HorizontalBar.WARNED = false;
-            return HorizontalBar;
-        })(Plot.Bar);
-        Plot.HorizontalBar = HorizontalBar;
-    })(Plot = Plottable.Plot || (Plottable.Plot = {}));
-})(Plottable || (Plottable = {}));
-
-///<reference path="../../reference.ts" />
-var __extends = this.__extends || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    __.prototype = b.prototype;
-    d.prototype = new __();
-};
-var Plottable;
-(function (Plottable) {
-    var Plot;
-    (function (Plot) {
         var Line = (function (_super) {
             __extends(Line, _super);
             /**
@@ -7568,11 +7462,10 @@ var Plottable;
                 return this;
             };
             AbstractStacked.prototype._onDatasetUpdate = function () {
-                _super.prototype._onDatasetUpdate.call(this);
-                // HACKHACK Caused since onDataSource is called before projectors are set up.  Should be fixed by #803
-                if (this._datasetKeysInOrder && this._projections["x"] && this._projections["y"]) {
+                if (this._projectorsReady()) {
                     this._updateStackOffsets();
                 }
+                _super.prototype._onDatasetUpdate.call(this);
             };
             AbstractStacked.prototype._updateStackOffsets = function () {
                 var dataMapArray = this._generateDefaultMapArray();
@@ -8590,18 +8483,16 @@ var Plottable;
             function PanZoom(xScale, yScale) {
                 var _this = this;
                 _super.call(this);
-                if (xScale == null) {
-                    xScale = new Plottable.Scale.Linear();
+                if (xScale) {
+                    this._xScale = xScale;
+                    // HACKHACK #1388: self-register for resetZoom()
+                    this._xScale.broadcaster.registerListener("pziX" + this.getID(), function () { return _this.resetZoom(); });
                 }
-                if (yScale == null) {
-                    yScale = new Plottable.Scale.Linear();
+                if (yScale) {
+                    this._yScale = yScale;
+                    // HACKHACK #1388: self-register for resetZoom()
+                    this._yScale.broadcaster.registerListener("pziY" + this.getID(), function () { return _this.resetZoom(); });
                 }
-                this._xScale = xScale;
-                this._yScale = yScale;
-                this._zoom = d3.behavior.zoom();
-                this._zoom.x(this._xScale._d3Scale);
-                this._zoom.y(this._yScale._d3Scale);
-                this._zoom.on("zoom", function () { return _this._rerenderZoomed(); });
             }
             /**
              * Sets the scales back to their original domains.
@@ -8610,22 +8501,30 @@ var Plottable;
                 var _this = this;
                 // HACKHACK #254
                 this._zoom = d3.behavior.zoom();
-                this._zoom.x(this._xScale._d3Scale);
-                this._zoom.y(this._yScale._d3Scale);
+                if (this._xScale) {
+                    this._zoom.x(this._xScale._d3Scale);
+                }
+                if (this._yScale) {
+                    this._zoom.y(this._yScale._d3Scale);
+                }
                 this._zoom.on("zoom", function () { return _this._rerenderZoomed(); });
                 this._zoom(this._hitBox);
             };
             PanZoom.prototype._anchor = function (component, hitBox) {
                 _super.prototype._anchor.call(this, component, hitBox);
-                this._zoom(hitBox);
+                this.resetZoom();
             };
             PanZoom.prototype._rerenderZoomed = function () {
                 // HACKHACK since the d3.zoom.x modifies d3 scales and not our TS scales, and the TS scales have the
                 // event listener machinery, let's grab the domain out of the d3 scale and pipe it back into the TS scale
-                var xDomain = this._xScale._d3Scale.domain();
-                var yDomain = this._yScale._d3Scale.domain();
-                this._xScale.domain(xDomain);
-                this._yScale.domain(yDomain);
+                if (this._xScale) {
+                    var xDomain = this._xScale._d3Scale.domain();
+                    this._xScale.domain(xDomain);
+                }
+                if (this._yScale) {
+                    var yDomain = this._yScale._d3Scale.domain();
+                    this._yScale.domain(yDomain);
+                }
             };
             return PanZoom;
         })(Interaction.AbstractInteraction);
