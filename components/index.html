@@ -38,6 +38,15 @@ page_id : page-components
   In Plottable this chart can be built with three Components: two Axes, and a Bar Plot.
   A 2x2 table allows you to arrange these three Components in a quick and obvious way, resulting in a classic bar chart, like this:<br><br>
   <svg id="simple-plot-table" height="300"></svg><br><br>
+  The codified version of the above table would look like this:
+  {% highlight javascript %}
+  Instantiate and setup the necessary components...
+  var table = new Plottable.Component.Table([
+                                             [yAxis, barPlot],
+                                             [null,  xAxis  ]
+                                                              ]);
+  table.renderTo(svg);
+  {% endhighlight %}
   This simple way of building charts can be extended to create very complex charts.<br><br>
   Suppose you want to add more Components to your bar chart.
   You want a second plot of bars on the same X-axis, but stacked on top of the previous plot.
@@ -47,6 +56,18 @@ page_id : page-components
   For this chart you need: one Axis for the X dimension, two Axes for the Y dimension, two Bar Plots, three Labels, and one Title Label.
   With a little thought, these nine Components can be neatly arranged in a 5x5 table to achieve the exact effect you desired:<br><br>
   <svg id="complex-plot-table" height="300"></svg>
+  The codified version of the above table would look like this:
+  {% highlight javascript %}
+  Instantiate and setup the necessary components...
+  var table = new Plottable.Component.Table([
+                                             [null,        null,   titleLabel, null,   null       ],
+                                             [null,        null,   barPlot0,   yAxis0, yAxisLabel0],
+                                             [yAxisLabel1, yAxis1, barPlot1,   null,   null       ],
+                                             [null,        null,   xAxis,      null,   null       ],
+                                             [null,        null,   xAxisLabel, null,   null       ]
+                                                                                                    ]);
+  table.renderTo(svg);
+  {% endhighlight %}
 </div>
 
 <div class="container" id="plottable-available-components">
