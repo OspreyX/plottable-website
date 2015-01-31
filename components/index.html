@@ -5,6 +5,7 @@ page_id : page-components
 
 <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/bower_components/qtip2/jquery.qtip.css">
 <script src="{{ site.baseurl }}/bower_components/qtip2/jquery.qtip{{ site.minifiedSuffix }}.js"></script>
+<script src="{{ site.baseurl }}/bower_components/zeroclipboard/dist/ZeroClipboard.js"></script>
 <style>
 .qtip-dark {
   font-size: 20px;
@@ -58,13 +59,13 @@ page_id : page-components
   <div class="row component-group">
     <div class="col-md-12">
       <h2>Plots</h2>
-      <h3>Bar Plot</h3>
+      <h3>Bar Plot<span class="glyphicon glyphicon-save" id="barPlotClipButton" data-clipboard-text="new Plottable.Plot.Bar(xScale, yScale, true)"></span></h3>
       <svg id="barPlot" height="250" title='new Plottable.Plot.Bar(xScale, yScale, true)'></svg>
-      <h3>Line Plot</h3>
+      <h3>Line Plot<span class="glyphicon glyphicon-save" id="linePlotClipButton" data-clipboard-text="new Plottable.Plot.Line(xScale, yScale)"></span></h3>
       <svg id="linePlot" height="250" title='new Plottable.Plot.Line(xScale, yScale)'></svg>
-      <h3>Area Plot</h3>
+      <h3>Area Plot<span class="glyphicon glyphicon-save" id="areaPlotClipButton" data-clipboard-text="new Plottable.Plot.Area(xScale, yScale)"></span></h3>
       <svg id="areaPlot" height="250" title='new Plottable.Plot.Area(xScale, yScale)'></svg>
-      <h3>Scatter Plot</h3>
+      <h3>Scatter Plot<span class="glyphicon glyphicon-save" id="scatterPlotClipButton" data-clipboard-text="new Plottable.Plot.Scatter(xScale, yScale)"></span></h3>
       <svg id="scatterPlot" height="250" title='new Plottable.Plot.Scatter(xScale, yScale)'></svg>
     </div>
   </div>
@@ -72,11 +73,11 @@ page_id : page-components
   <div class="row component-group">
     <div class="col-md-12">
       <h2>Axes</h2>
-      <h3>Numeric Axis</h3>
+      <h3>Numeric Axis<span class="glyphicon glyphicon-save" id="numericAxisClipButton" data-clipboard-text='new Plottable.Axis.Numeric(xScale, "bottom")'></span></h3>
       <svg id="numericAxis" height="50" title='new Plottable.Axis.Numeric(xScale, "bottom")'></svg>
-      <h3>Category Axis</h3>
+      <h3>Category Axis<span class="glyphicon glyphicon-save" id="categoryAxisClipButton" data-clipboard-text='new Plottable.Axis.Category(xScale, "bottom")'></span></h3>
       <svg id="categoryAxis" height="50" title='new Plottable.Axis.Category(xScale, "bottom")'></svg>
-      <h3>Time Axis</h3>
+      <h3>Time Axis<span class="glyphicon glyphicon-save" id="timeAxisClipButton" data-clipboard-text='new Plottable.Axis.Time(xScale, "bottom")'></span></h3>
       <svg id="timeAxis" height="50" title='new Plottable.Axis.Time(xScale, "bottom")'></svg>
     </div>
   </div>
@@ -84,9 +85,9 @@ page_id : page-components
   <div class="row component-group">
     <div class="col-md-12">
       <h2>Labels</h2>
-      <h3>Regular Label</h3>
+      <h3>Regular Label<span class="glyphicon glyphicon-save" id="labelClipButton" data-clipboard-text='new Plottable.Component.Label("Hello world!")'></span></h3>
       <svg id="label" height="50" title='new Plottable.Component.Label("Hello world!")'></svg>
-      <h3>Title Label</h3>
+      <h3>Title Label<span class="glyphicon glyphicon-save" id="labelClipButton" data-clipboard-text='new Plottable.Component.TitleLabel("Hello world!")'></span></h3>
       <svg id="titleLabel" height="50" title='new Plottable.Component.TitleLabel("Hello world!")'></svg>
     </div>
   </div>
@@ -94,6 +95,7 @@ page_id : page-components
   <div class="row component-group">
     <div class="col-md-12">
       <h2>Legends</h2>
+      <h3>Regular Legend<span class="glyphicon glyphicon-save" id="legendClipButton" data-clipboard-text='new Plottable.Component.Legend(colorScale)'></span></h3>
       <svg id="legend" height="50" title='new Plottable.Component.Legend(colorScale)'></svg>
     </div>
   </div>
@@ -102,7 +104,7 @@ page_id : page-components
 <script src="component_example_list.js"></script>
 <script>
 window.onload = function() {
-
+  ZeroClipboard.config( { swfPath: "{{ site.baseurl }}/bower_components/zeroclipboard/dist/ZeroClipboard.swf" } );
   // axis
   axis("numeric", "bottom").renderTo("#numericAxis");
   axis("category", "bottom").renderTo("#categoryAxis");
@@ -231,5 +233,19 @@ window.onload = function() {
   var highlightColor = new Plottable.Scale.Color().range()[0];
   $(".website-table-cells").hover(function() { $(this).attr("fill", highlightColor); },
                                   function() { $(this).attr("fill", "black"); });
+
+  new ZeroClipboard( $("#barPlotClipButton") );
+  new ZeroClipboard( $("#linePlotClipButton") );
+  new ZeroClipboard( $("#areaPlotClipButton") );
+  new ZeroClipboard( $("#scatterPlotClipButton") );
+
+  new ZeroClipboard( $("#numericAxisClipButton") );
+  new ZeroClipboard( $("#categoryAxisClipButton") );
+  new ZeroClipboard( $("#timeAxisClipButton") );
+
+  new ZeroClipboard( $("#labelClipButton") );
+  new ZeroClipboard( $("#titleLabelAxisClipButton") );
+
+  new ZeroClipboard( $("#legendClipButton") );
 }
 </script>
