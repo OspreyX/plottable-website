@@ -16,9 +16,9 @@ page_id : page-components
   display: none;
 }
 
-.glyphicon-save {
-  font-size: 13px;
-  margin-left: 5px;
+.glyphicon-copy {
+  font-size: 15px;
+  margin-left: 2px;
   cursor: pointer;
 }
 </style>
@@ -92,25 +92,25 @@ page_id : page-components
       <h2>Plots</h2>
       <h3>
         Bar Plot
-        <span class="glyphicon glyphicon-save" id="barPlotClipButton" data-clipboard-text="new Plottable.Plot.Bar(xScale, yScale, true)"></span>
+        <span class="glyphicon glyphicon-copy" id="barPlotClipButton" data-clipboard-text="new Plottable.Plot.Bar(xScale, yScale, true)"></span>
         <span class="copied-notification" id="barPlotCopied">Copied!</span>
       </h3>
       <svg id="barPlot" height="250" title='new Plottable.Plot.Bar(xScale, yScale, true)'></svg>
       <h3>
         Line Plot
-        <span class="glyphicon glyphicon-save" id="linePlotClipButton" data-clipboard-text="new Plottable.Plot.Line(xScale, yScale)"></span>
+        <span class="glyphicon glyphicon-copy" id="linePlotClipButton" data-clipboard-text="new Plottable.Plot.Line(xScale, yScale)"></span>
         <span class="copied-notification" id="linePlotCopied">Copied!</span>
       </h3>
       <svg id="linePlot" height="250" title='new Plottable.Plot.Line(xScale, yScale)'></svg>
       <h3>
         Area Plot
-        <span class="glyphicon glyphicon-save" id="areaPlotClipButton" data-clipboard-text="new Plottable.Plot.Area(xScale, yScale)"></span>
+        <span class="glyphicon glyphicon-copy" id="areaPlotClipButton" data-clipboard-text="new Plottable.Plot.Area(xScale, yScale)"></span>
         <span class="copied-notification" id="areaPlotCopied">Copied!</span>
       </h3>
       <svg id="areaPlot" height="250" title='new Plottable.Plot.Area(xScale, yScale)'></svg>
       <h3>
         Scatter Plot
-        <span class="glyphicon glyphicon-save" id="scatterPlotClipButton" data-clipboard-text="new Plottable.Plot.Scatter(xScale, yScale)"></span>
+        <span class="glyphicon glyphicon-copy" id="scatterPlotClipButton" data-clipboard-text="new Plottable.Plot.Scatter(xScale, yScale)"></span>
         <span class="copied-notification" id="scatterPlotCopied">Copied!</span>
       </h3>
       <svg id="scatterPlot" height="250" title='new Plottable.Plot.Scatter(xScale, yScale)'></svg>
@@ -122,19 +122,19 @@ page_id : page-components
       <h2>Axes</h2>
       <h3>
         Numeric Axis
-        <span class="glyphicon glyphicon-save" id="numericAxisClipButton" data-clipboard-text='new Plottable.Axis.Numeric(xScale, "bottom")'></span>
+        <span class="glyphicon glyphicon-copy" id="numericAxisClipButton" data-clipboard-text='new Plottable.Axis.Numeric(xScale, "bottom")'></span>
         <span class="copied-notification" id="numericAxisCopied">Copied!</span>
       </h3>
       <svg id="numericAxis" height="50" title='new Plottable.Axis.Numeric(xScale, "bottom")'></svg>
       <h3>
         Category Axis
-        <span class="glyphicon glyphicon-save" id="categoryAxisClipButton" data-clipboard-text='new Plottable.Axis.Category(xScale, "bottom")'></span>
+        <span class="glyphicon glyphicon-copy" id="categoryAxisClipButton" data-clipboard-text='new Plottable.Axis.Category(xScale, "bottom")'></span>
         <span class="copied-notification" id="categoryAxisCopied">Copied!</span>
       </h3>
       <svg id="categoryAxis" height="50" title='new Plottable.Axis.Category(xScale, "bottom")'></svg>
       <h3>
         Time Axis
-        <span class="glyphicon glyphicon-save" id="timeAxisClipButton" data-clipboard-text='new Plottable.Axis.Time(xScale, "bottom")'></span>
+        <span class="glyphicon glyphicon-copy" id="timeAxisClipButton" data-clipboard-text='new Plottable.Axis.Time(xScale, "bottom")'></span>
         <span class="copied-notification" id="timeAxisCopied">Copied!</span>
       </h3>
       <svg id="timeAxis" height="50" title='new Plottable.Axis.Time(xScale, "bottom")'></svg>
@@ -146,13 +146,13 @@ page_id : page-components
       <h2>Labels</h2>
       <h3>
         Regular Label
-        <span class="glyphicon glyphicon-save" id="labelClipButton" data-clipboard-text='new Plottable.Component.Label("Hello world!")'></span>
+        <span class="glyphicon glyphicon-copy" id="labelClipButton" data-clipboard-text='new Plottable.Component.Label("Hello world!")'></span>
         <span class="copied-notification" id="labelCopied">Copied!</span>
       </h3>
       <svg id="label" height="50" title='new Plottable.Component.Label("Hello world!")'></svg>
       <h3>
         Title Label
-        <span class="glyphicon glyphicon-save" id="titleLabelClipButton" data-clipboard-text='new Plottable.Component.TitleLabel("Hello world!")'></span>
+        <span class="glyphicon glyphicon-copy" id="titleLabelClipButton" data-clipboard-text='new Plottable.Component.TitleLabel("Hello world!")'></span>
         <span class="copied-notification" id="titleLabelCopied">Copied!</span>
       </h3>
       <svg id="titleLabel" height="50" title='new Plottable.Component.TitleLabel("Hello world!")'></svg>
@@ -164,13 +164,13 @@ page_id : page-components
       <h2>Legends</h2>
       <h3>
         Regular Legend
-        <span class="glyphicon glyphicon-save" id="legendClipButton" data-clipboard-text='new Plottable.Component.Legend(colorScale)'></span>
+        <span class="glyphicon glyphicon-copy" id="legendClipButton" data-clipboard-text='new Plottable.Component.Legend(colorScale)'></span>
         <span class="copied-notification" id="legendCopied">Copied!</span>
       </h3>
       <svg id="legend" height="50" title='new Plottable.Component.Legend(colorScale)'></svg>
       <h3>
         Interpolated Color Legend
-        <span class="glyphicon glyphicon-save" id="interpolatedColorLegendClipButton" data-clipboard-text='new Plottable.Component.InterpolatedColorLegend(interpolatedColorScale)'></span>
+        <span class="glyphicon glyphicon-copy" id="interpolatedColorLegendClipButton" data-clipboard-text='new Plottable.Component.InterpolatedColorLegend(interpolatedColorScale)'></span>
         <span class="copied-notification" id="interpolatedColorLegendCopied">Copied!</span>
       </h3>
       <svg id="interpolatedColorLegend" height="50" title='new Plottable.Component.InterpolatedColorLegend(interpolatedColorScale)'></svg>
@@ -309,6 +309,7 @@ window.onload = function() {
   $("#complexTableCell-2-4").qtip({content: "new Plottable.Component.Label(\"Categories\")", position: tooltipPositionParams, style: {classes: "qtip-dark"}});
 
   var highlightColor = new Plottable.Scale.Color().range()[0];
+  var color = "rgb(251, 222, 184)";
   $(".website-table-cells").hover(function() { $(this).attr("fill", highlightColor).attr("opacity", 0.25); },
                                   function() { $(this).attr("fill", "transparent").attr("opacity", 1); });
 
