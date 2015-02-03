@@ -80,7 +80,11 @@ page_id : page-components
   <div class="row component-group">
     <div class="col-md-12">
       <h2>Plots</h2>
-      <h3>Bar Plot<span class="glyphicon glyphicon-save" id="barPlotClipButton" data-clipboard-text="new Plottable.Plot.Bar(xScale, yScale, true)"></span></h3>
+      <h3>
+        Bar Plot
+        <span class="glyphicon glyphicon-save" id="barPlotClipButton" data-clipboard-text="new Plottable.Plot.Bar(xScale, yScale, true)"></span>
+        <span style="display: none"  id="barPlotCopied">Copied!</span>
+      </h3>
       <svg id="barPlot" height="250" title='new Plottable.Plot.Bar(xScale, yScale, true)'></svg>
       <h3>Line Plot<span class="glyphicon glyphicon-save" id="linePlotClipButton" data-clipboard-text="new Plottable.Plot.Line(xScale, yScale)"></span></h3>
       <svg id="linePlot" height="250" title='new Plottable.Plot.Line(xScale, yScale)'></svg>
@@ -255,18 +259,19 @@ window.onload = function() {
   $(".website-table-cells").hover(function() { $(this).attr("fill", highlightColor); },
                                   function() { $(this).attr("fill", "black"); });
 
-  new ZeroClipboard( $("#barPlotClipButton") );
-  new ZeroClipboard( $("#linePlotClipButton") );
-  new ZeroClipboard( $("#areaPlotClipButton") );
-  new ZeroClipboard( $("#scatterPlotClipButton") );
+  var componentSelectors = ["barPlot", "linePlot", "areaPlot", "scatterPlot",
+                            "numericAxis", "categoryAxis", "timeAxis",
+                            "label", "titleLabel",
+                            "legend"];
 
-  new ZeroClipboard( $("#numericAxisClipButton") );
-  new ZeroClipboard( $("#categoryAxisClipButton") );
-  new ZeroClipboard( $("#timeAxisClipButton") );
-
-  new ZeroClipboard( $("#labelClipButton") );
-  new ZeroClipboard( $("#titleLabelAxisClipButton") );
-
-  new ZeroClipboard( $("#legendClipButton") );
+  componentSelectors.forEach(function(componentSelector) {
+    var clipButton = $("#" + componentSelector + "ClipButton");
+    var clipButtonClient = new ZeroClipboard(clipButton);
+    clipButtonClient.on( "ready", function( readyEvent ) {
+      clipButtonClient.on( "aftercopy", function( event ) {
+        $("#" + componentSelector + "Copied").show().hide(2000);
+      });
+    });
+  });
 }
 </script>
