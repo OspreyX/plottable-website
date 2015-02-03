@@ -181,6 +181,14 @@ function legend() {
     return legend;
 }
 
+function interpolatedColorLegend() {
+    var interpolatedColorScale = new Plottable.Scale.InterpolatedColor(["#009CDE", "#F99D42"]);
+    var interpolatedColorLegend = new Plottable.Component.InterpolatedColorLegend(interpolatedColorScale);
+    interpolatedColorScale.domain([0, 100]);
+    interpolatedColorLegend.xAlign("center");
+    return interpolatedColorLegend;
+}
+
 function gridline(showVertical, showHorizontal) {
     var xScale = new Plottable.Scale.Linear();
     var yScale = new Plottable.Scale.Linear();

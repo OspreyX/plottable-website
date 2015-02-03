@@ -168,6 +168,12 @@ page_id : page-components
         <span class="copied-notification" id="legendCopied">Copied!</span>
       </h3>
       <svg id="legend" height="50" title='new Plottable.Component.Legend(colorScale)'></svg>
+      <h3>
+        Interpolated Color Legend
+        <span class="glyphicon glyphicon-save" id="interpolatedColorLegendClipButton" data-clipboard-text='new Plottable.Component.InterpolatedColorLegend(interpolatedColorScale)'></span>
+        <span class="copied-notification" id="interpolatedColorLegendCopied">Copied!</span>
+      </h3>
+      <svg id="interpolatedColorLegend" height="50" title='new Plottable.Component.InterpolatedColorLegend(interpolatedColorScale)'></svg>
     </div>
   </div>
 </div>
@@ -191,6 +197,7 @@ window.onload = function() {
   titleLabel("Hello world!", "horizontal").renderTo("#titleLabel");
 
   legend().renderTo("#legend");
+  interpolatedColorLegend().renderTo("#interpolatedColorLegend");
 
   //Attach tooltips with qTip2 (which uses the "title" attribute by default)
   $("svg").qtip({
@@ -308,7 +315,7 @@ window.onload = function() {
   var componentSelectors = ["barPlot", "linePlot", "areaPlot", "scatterPlot",
                             "numericAxis", "categoryAxis", "timeAxis",
                             "label", "titleLabel",
-                            "legend"];
+                            "legend", "interpolatedColorLegend"];
 
   componentSelectors.forEach(function(componentSelector) {
     var clipButton = $("#" + componentSelector + "ClipButton");
