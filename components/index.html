@@ -17,6 +17,8 @@ page_id : page-components
 }
 
 .glyphicon-save {
+  font-size: 13px;
+  margin-left: 5px;
   cursor: pointer;
 }
 </style>
@@ -255,7 +257,7 @@ window.onload = function() {
   cells.enter().append("rect").classed("website-table-cells", true);
   cells.exit().remove();
   cells.attr("stroke", "black")
-       .attr("opacity", "0.25")
+       .attr("fill", "transparent")
        .attr("width", function(d) { return d[0];})
        .attr("height", function(d) { return d[1];})
        .attr("x", function(d, i) { return Math.max(0, d3.sum(simpleWidths.slice(0, i % 2)));})
@@ -280,7 +282,7 @@ window.onload = function() {
   complexCells.enter().append("rect").classed("website-table-cells", true);
   complexCells.exit().remove();
   complexCells.attr("stroke", "black")
-              .attr("opacity", "0.25")
+              .attr("fill", "transparent")
               .attr("width", function(d) { return d[0];})
               .attr("height", function(d) { return d[1];})
               .attr("x", function(d, i) { return Math.max(0, d3.sum(widths.slice(0, i % 5)));})
@@ -300,8 +302,8 @@ window.onload = function() {
   $("#complexTableCell-2-4").qtip({content: "new Plottable.Component.Label(\"Categories\")", position: tooltipPositionParams, style: {classes: "qtip-dark"}});
 
   var highlightColor = new Plottable.Scale.Color().range()[0];
-  $(".website-table-cells").hover(function() { $(this).attr("fill", highlightColor); },
-                                  function() { $(this).attr("fill", "black"); });
+  $(".website-table-cells").hover(function() { $(this).attr("fill", highlightColor).attr("opacity", 0.25); },
+                                  function() { $(this).attr("fill", "transparent").attr("opacity", 1); });
 
   var componentSelectors = ["barPlot", "linePlot", "areaPlot", "scatterPlot",
                             "numericAxis", "categoryAxis", "timeAxis",
