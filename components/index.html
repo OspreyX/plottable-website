@@ -308,8 +308,7 @@ window.onload = function() {
   $("#complexTableCell-2-3").qtip({content: "new Plottable.Axis.Linear(xScale, \"bottom\")", position: tooltipPositionParams, style: {classes: "qtip-dark"}});
   $("#complexTableCell-2-4").qtip({content: "new Plottable.Component.Label(\"Categories\")", position: tooltipPositionParams, style: {classes: "qtip-dark"}});
 
-  var highlightColor = new Plottable.Scale.Color().range()[0];
-  var color = "rgb(251, 222, 184)";
+  var highlightColor = "#cdecf8";
   $(".website-table-cells").hover(function() { $(this).attr("fill", highlightColor).attr("opacity", 0.25); },
                                   function() { $(this).attr("fill", "transparent").attr("opacity", 1); });
 
