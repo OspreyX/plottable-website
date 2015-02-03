@@ -22,7 +22,7 @@ function axis(type, orientation) {
         axis = new Plottable.Axis.Category(oscale, orientation);
     } else if (type === "time") {
         var tscale = new Plottable.Scale.Time();
-        tscale.domain([new Date(2015, 0, 0), new Date(2016, 0, 0)]);
+        tscale.domain([new Date(2015, 0, 1), new Date(2015, 11, 31)]);
         axis = new Plottable.Axis.Time(tscale, orientation);
     } else {
         throw new Error("unrecognized type: " + type);
@@ -169,17 +169,24 @@ function label(text, orientation) {
     return new Plottable.Component.Label(text, orientation);
 }
 
+function titleLabel(text, orientation) {
+    return new Plottable.Component.TitleLabel(text, orientation);
+}
+
 function legend() {
-    var colorScale = new Plottable.Scale.Color("category10");
+    var colorScale = new Plottable.Scale.Color();
     var legend = new Plottable.Component.Legend(colorScale);
-    legend.toggleCallback(function () {
-        return;
-    }); // empty function, just to turn toggling on
-    legend.hoverCallback(function () {
-        return;
-    });
     legend.scale().domain(ordinalDomain);
+    legend.xAlign("center");
     return legend;
+}
+
+function interpolatedColorLegend() {
+    var interpolatedColorScale = new Plottable.Scale.InterpolatedColor(["#009CDE", "#F99D42"]);
+    var interpolatedColorLegend = new Plottable.Component.InterpolatedColorLegend(interpolatedColorScale);
+    interpolatedColorScale.domain([0, 100]);
+    interpolatedColorLegend.xAlign("center");
+    return interpolatedColorLegend;
 }
 
 function gridline(showVertical, showHorizontal) {
@@ -187,10 +194,7 @@ function gridline(showVertical, showHorizontal) {
     var yScale = new Plottable.Scale.Linear();
 
     var gridlines = new Plottable.Component.Gridlines(showVertical ? xScale : null, showHorizontal ? yScale : null);
-    var xAxis = new Plottable.Axis.Numeric(xScale, "bottom");
-    var yAxis = new Plottable.Axis.Numeric(yScale, "left");
-    var table = new Plottable.Component.Table([[yAxis, gridlines], [null, xAxis]]);
-    return table;
+    return gridlines;
 }
 
 function animate1() {
