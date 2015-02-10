@@ -128,13 +128,13 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported"><a href="plottable.scale.ordinal.html#autodomain" class="tsd-kind-icon">auto<wbr>Domain</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-not-exported"><a href="plottable.scale.ordinal.html#copy" class="tsd-kind-icon">copy</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-not-exported"><a href="plottable.scale.ordinal.html#domain" class="tsd-kind-icon">domain</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="plottable.scale.ordinal.html#fullbandstartandwidth" class="tsd-kind-icon">full<wbr>Band<wbr>Start<wbr>And<wbr>Width</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported"><a href="plottable.scale.ordinal.html#getid" class="tsd-kind-icon">getID</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="plottable.scale.ordinal.html#innerpadding" class="tsd-kind-icon">inner<wbr>Padding</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="plottable.scale.ordinal.html#outerpadding" class="tsd-kind-icon">outer<wbr>Padding</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-not-exported"><a href="plottable.scale.ordinal.html#range" class="tsd-kind-icon">range</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="plottable.scale.ordinal.html#rangeband" class="tsd-kind-icon">range<wbr>Band</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="plottable.scale.ordinal.html#rangetype" class="tsd-kind-icon">range<wbr>Type</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported"><a href="plottable.scale.ordinal.html#scale" class="tsd-kind-icon">scale</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-not-exported"><a href="plottable.scale.ordinal.html#scale" class="tsd-kind-icon">scale</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="plottable.scale.ordinal.html#stepwidth" class="tsd-kind-icon">step<wbr>Width</a></li>
 							</ul>
 						</section>
 					</div>
@@ -492,7 +492,7 @@
 									<a href="plottable.scale.abstractscale.html">AbstractScale</a>.<a href="plottable.scale.abstractscale.html#copy">copy</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1298</li>
+									<li>Defined in plottable.d.ts:1322</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns 
@@ -543,31 +543,6 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-					<a name="fullbandstartandwidth" class="tsd-anchor"></a>
-					<h3>full<wbr>Band<wbr>Start<wbr>And<wbr>Width</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">full<wbr>Band<wbr>Start<wbr>And<wbr>Width<span class="tsd-signature-symbol">(</span>v<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number[]</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in plottable.d.ts:1278</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>v: <span class="tsd-signature-type">string</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns 
-								<span class="tsd-signature-type">number[]</span>
-							</h4>
-						</li>
-					</ul>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported">
 					<a name="getid" class="tsd-anchor"></a>
 					<h3>getID</h3>
@@ -595,17 +570,102 @@
 					<h3>inner<wbr>Padding</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
 						<li class="tsd-signature tsd-kind-icon">inner<wbr>Padding<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">inner<wbr>Padding<span class="tsd-signature-symbol">(</span>innerPadding<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="plottable.scale.ordinal.html" class="tsd-signature-type">Ordinal</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:1277</li>
+									<li>Defined in plottable.d.ts:1294</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the inner padding of the scale.</p>
+								</div>
+								<p>The inner padding is defined as the padding in between bands on the scale.
+								Units are a proportion of the band width (value returned by rangeBand()).</p>
+							</div>
 							<h4 class="tsd-returns-title">Returns 
 								<span class="tsd-signature-type">number</span>
 							</h4>
+							<p>The inner padding of the scale</p>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in plottable.d.ts:1303</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the inner padding of the scale.</p>
+								</div>
+								<p>The inner padding of the scale is defined as the padding in between bands on the scale.
+								Units are a proportion of the band width (value returned by rangeBand()).</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>innerPadding: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns 
+								<a href="plottable.scale.ordinal.html" class="tsd-signature-type">Ordinal</a>
+							</h4>
+							<p>The calling Scale.Ordinal</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="outerpadding" class="tsd-anchor"></a>
+					<h3>outer<wbr>Padding</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">outer<wbr>Padding<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">outer<wbr>Padding<span class="tsd-signature-symbol">(</span>outerPadding<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="plottable.scale.ordinal.html" class="tsd-signature-type">Ordinal</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in plottable.d.ts:1312</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the outer padding of the scale.</p>
+								</div>
+								<p>The outer padding is defined as the padding in between the outer bands and the edges on the scale.
+								Units are a proportion of the band width (value returned by rangeBand()).</p>
+							</div>
+							<h4 class="tsd-returns-title">Returns 
+								<span class="tsd-signature-type">number</span>
+							</h4>
+							<p>The outer padding of the scale</p>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in plottable.d.ts:1321</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the outer padding of the scale.</p>
+								</div>
+								<p>The inner padding of the scale is defined as the padding in between bands on the scale.
+								Units are a proportion of the band width (value returned by rangeBand()).</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>outerPadding: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns 
+								<a href="plottable.scale.ordinal.html" class="tsd-signature-type">Ordinal</a>
+							</h4>
+							<p>The calling Scale.Ordinal</p>
 						</li>
 					</ul>
 				</section>
@@ -666,109 +726,68 @@
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Returns the width of the range band. Only valid when rangeType is set to &quot;bands&quot;.</p>
+									<p>Returns the width of the range band.</p>
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns 
 								<span class="tsd-signature-type">number</span>
 							</h4>
-							<p>The range band width or 0 if rangeType isn&#39;t &quot;bands&quot;.</p>
+							<p>The range band width</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-not-exported">
+					<a name="scale" class="tsd-anchor"></a>
+					<h3>scale</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">scale<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overwrites 
+									<a href="plottable.scale.abstractscale.html">AbstractScale</a>.<a href="plottable.scale.abstractscale.html#scale">scale</a>
+								</p>
+								<ul>
+									<li>Defined in plottable.d.ts:1323</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns 
+								<span class="tsd-signature-type">number</span>
+							</h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-					<a name="rangetype" class="tsd-anchor"></a>
-					<h3>range<wbr>Type</h3>
+					<a name="stepwidth" class="tsd-anchor"></a>
+					<h3>step<wbr>Width</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">range<wbr>Type<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
-						<li class="tsd-signature tsd-kind-icon">range<wbr>Type<span class="tsd-signature-symbol">(</span>rangeType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, outerPadding<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, innerPadding<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="plottable.scale.ordinal.html" class="tsd-signature-type">Ordinal</a></li>
+						<li class="tsd-signature tsd-kind-icon">step<wbr>Width<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:1284</li>
+									<li>Defined in plottable.d.ts:1285</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Get the range type.</p>
+									<p>Returns the step width of the scale.</p>
 								</div>
+								<p>The step width is defined as the entire space for a band to occupy,
+								including the padding in between the bands.</p>
 							</div>
-							<h4 class="tsd-returns-title">Returns 
-								<span class="tsd-signature-type">string</span>
-							</h4>
-							<p>The current range type.</p>
-						</li>
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in plottable.d.ts:1297</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Set the range type.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>rangeType: <span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>If provided, either &quot;points&quot; or &quot;bands&quot; indicating the
-										d3 method used to generate range bounds.</p>
-									</div>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> outerPadding: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> innerPadding: <span class="tsd-signature-type">number</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns 
-								<a href="plottable.scale.ordinal.html" class="tsd-signature-type">Ordinal</a>
-							</h4>
-							<p>The calling Ordinal.</p>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported">
-					<a name="scale" class="tsd-anchor"></a>
-					<h3>scale</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">scale<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Inherited from 
-									<a href="plottable.scale.abstractscale.html">AbstractScale</a>.<a href="plottable.scale.abstractscale.html#scale">scale</a>
-								</p>
-								<ul>
-									<li>Defined in plottable.d.ts:948</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Computes the range value corresponding to a given domain value. In other
-									words, apply the function to value.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>value: <span class="tsd-signature-type">string[]</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>A domain value to be scaled.</p>
-									</div>
-								</li>
-							</ul>
 							<h4 class="tsd-returns-title">Returns 
 								<span class="tsd-signature-type">number</span>
 							</h4>
-							<p>The range value corresponding to the supplied domain value.</p>
+							<p>the full band width of the scale</p>
 						</li>
 					</ul>
 				</section>
@@ -904,14 +923,14 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-not-exported">
 								<a href="plottable.scale.ordinal.html#domain" class="tsd-kind-icon">domain</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-								<a href="plottable.scale.ordinal.html#fullbandstartandwidth" class="tsd-kind-icon">full<wbr>Band<wbr>Start<wbr>And<wbr>Width</a>
-							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported">
 								<a href="plottable.scale.ordinal.html#getid" class="tsd-kind-icon">getID</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
 								<a href="plottable.scale.ordinal.html#innerpadding" class="tsd-kind-icon">inner<wbr>Padding</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="plottable.scale.ordinal.html#outerpadding" class="tsd-kind-icon">outer<wbr>Padding</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-not-exported">
 								<a href="plottable.scale.ordinal.html#range" class="tsd-kind-icon">range</a>
@@ -919,11 +938,11 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
 								<a href="plottable.scale.ordinal.html#rangeband" class="tsd-kind-icon">range<wbr>Band</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-								<a href="plottable.scale.ordinal.html#rangetype" class="tsd-kind-icon">range<wbr>Type</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-not-exported">
 								<a href="plottable.scale.ordinal.html#scale" class="tsd-kind-icon">scale</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="plottable.scale.ordinal.html#stepwidth" class="tsd-kind-icon">step<wbr>Width</a>
 							</li>
 						</ul>
 					</li>
