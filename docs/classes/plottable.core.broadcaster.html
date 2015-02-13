@@ -87,13 +87,22 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>The Broadcaster class is owned by an Listenable. Third parties can register and deregister listeners
-							from the broadcaster. When the broadcaster.broadcast method is activated, all registered callbacks are
-							called. The registered callbacks are called with the registered Listenable that the broadcaster is attached
-						to, along with optional arguments passed to the <code>broadcast</code> method.</p>
+						<p>The Broadcaster holds a reference to a &quot;listenable&quot; object.
+							Third parties can register and deregister listeners from the Broadcaster.
+							When the broadcaster.broadcast() method is called, all registered callbacks
+							are called with the Broadcaster&#39;s &quot;listenable&quot;, along with optional
+						arguments passed to the <code>broadcast</code> method.</p>
 					</div>
 					<p>The listeners are called synchronously.</p>
 				</div>
+			</section>
+			<section class="tsd-panel tsd-type-parameters">
+				<h3>Type parameters</h3>
+				<ul class="tsd-type-parameters">
+					<li>
+						<h4>L</h4>
+					</li>
+				</ul>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
@@ -119,12 +128,6 @@
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-not-exported">
-							<h3>Properties</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-not-exported"><a href="plottable.core.broadcaster.html#listenable" class="tsd-kind-icon">listenable</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="plottable.core.broadcaster.html#broadcast" class="tsd-kind-icon">broadcast</a></li>
@@ -143,18 +146,18 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Broadcaster<span class="tsd-signature-symbol">(</span>listenable<span class="tsd-signature-symbol">: </span><a href="../interfaces/plottable.core.listenable.html" class="tsd-signature-type">Listenable</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="plottable.core.broadcaster.html" class="tsd-signature-type">Broadcaster</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Broadcaster<span class="tsd-signature-symbol">(</span>listenable<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">L</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="plottable.core.broadcaster.html" class="tsd-signature-type">Broadcaster</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:498</li>
+									<li>Defined in plottable.d.ts:479</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Constructs a broadcaster, taking the Listenable that the broadcaster will be attached to.</p>
+									<p>Constructs a broadcaster, taking a &quot;listenable&quot; object to broadcast about.</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>constructor</dt>
@@ -164,10 +167,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>listenable: <a href="../interfaces/plottable.core.listenable.html" class="tsd-signature-type">Listenable</a></h5>
+									<h5>listenable: <span class="tsd-signature-type">L</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
-											<p>The Listenable-object that this broadcaster is attached to.</p>
+											<p>The listenable object to broadcast.</p>
 										</div>
 									</div>
 								</li>
@@ -177,19 +180,6 @@
 							</h4>
 						</li>
 					</ul>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
-					<a name="listenable" class="tsd-anchor"></a>
-					<h3>listenable</h3>
-					<div class="tsd-signature tsd-kind-icon">listenable<span class="tsd-signature-symbol">:</span> <a href="../interfaces/plottable.core.listenable.html" class="tsd-signature-type">Listenable</a></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in plottable.d.ts:498</li>
-						</ul>
-					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
@@ -204,7 +194,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:522</li>
+									<li>Defined in plottable.d.ts:503</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -221,7 +211,7 @@
 							<h4 class="tsd-returns-title">Returns 
 								<a href="plottable.core.broadcaster.html" class="tsd-signature-type">Broadcaster</a>
 							</h4>
-							<p>this object</p>
+							<p>The calling Broadcaster</p>
 						</li>
 					</ul>
 				</section>
@@ -235,7 +225,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:535</li>
+									<li>Defined in plottable.d.ts:516</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -246,7 +236,7 @@
 							<h4 class="tsd-returns-title">Returns 
 								<span class="tsd-signature-type">void</span>
 							</h4>
-							<p>this object</p>
+							<p>The calling Broadcaster</p>
 						</li>
 					</ul>
 				</section>
@@ -260,7 +250,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:529</li>
+									<li>Defined in plottable.d.ts:510</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -280,7 +270,7 @@
 							<h4 class="tsd-returns-title">Returns 
 								<a href="plottable.core.broadcaster.html" class="tsd-signature-type">Broadcaster</a>
 							</h4>
-							<p>this object</p>
+							<p>The calling Broadcaster</p>
 						</li>
 					</ul>
 				</section>
@@ -297,7 +287,7 @@
 									<a href="plottable.core.plottableobject.html">PlottableObject</a>.<a href="plottable.core.plottableobject.html#getid">getID</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:457</li>
+									<li>Defined in plottable.d.ts:454</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns 
@@ -316,7 +306,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:515</li>
+									<li>Defined in plottable.d.ts:496</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -337,14 +327,14 @@
 								<li>
 									<h5>callback: <a href="../interfaces/plottable.core.broadcastercallback.html" class="tsd-signature-type">BroadcasterCallback</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>A callback to be called when the Scale&#39;s domain changes.</p>
+										<p>A callback to be called.</p>
 									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns 
 								<a href="plottable.core.broadcaster.html" class="tsd-signature-type">Broadcaster</a>
 							</h4>
-							<p>this object</p>
+							<p>The calling Broadcaster</p>
 						</li>
 					</ul>
 				</section>
@@ -417,14 +407,11 @@
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class tsd-parent-kind-module tsd-is-not-exported">
+					<li class="current tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported">
 						<a href="plottable.core.broadcaster.html" class="tsd-kind-icon">Broadcaster</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-not-exported">
 								<a href="plottable.core.broadcaster.html#constructor" class="tsd-kind-icon">constructor</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
-								<a href="plottable.core.broadcaster.html#listenable" class="tsd-kind-icon">listenable</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
 								<a href="plottable.core.broadcaster.html#broadcast" class="tsd-kind-icon">broadcast</a>
@@ -451,11 +438,8 @@
 					<li class=" tsd-kind-class tsd-parent-kind-module tsd-is-not-exported">
 						<a href="plottable.core.plottableobject.html" class="tsd-kind-icon">Plottable<wbr>Object</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported">
 						<a href="../interfaces/plottable.core.broadcastercallback.html" class="tsd-kind-icon">Broadcaster<wbr>Callback</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../interfaces/plottable.core.listenable.html" class="tsd-kind-icon">Listenable</a>
 					</li>
 				</ul>
 			</nav>
