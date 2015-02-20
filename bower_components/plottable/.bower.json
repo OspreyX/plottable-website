@@ -1,7 +1,7 @@
 {
   "name": "plottable",
   "description": "A library for creating charts out of D3",
-  "version": "0.44.0",
+  "version": "0.45.0",
   "main": [
     "plottable.js",
     "plottable.css"
@@ -45,13 +45,13 @@
     "jQuery": "2.1.0",
     "jquery.simulate": "1.2.0"
   },
-  "_release": "0.44.0",
+  "_release": "0.45.0",
   "_resolution": {
     "type": "version",
-    "tag": "v0.44.0",
-    "commit": "f1613ae590e06d639ce8a7a9234cc78d4e3def3e"
+    "tag": "v0.45.0",
+    "commit": "4e216baf557b5cb905d1fdd7b6a6bf15d5b86f42"
   },
   "_source": "git://github.com/palantir/plottable.git",
-  "_target": "0.44.0",
+  "_target": "0.45.0",
   "_originalSource": "plottable"
 }

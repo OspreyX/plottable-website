@@ -97,7 +97,7 @@
 										<a href="plottable.dispatcher.mouse.html" class="tsd-signature-type">Mouse</a>
 									</li>
 									<li>
-										<a href="plottable.dispatcher.keypress.html" class="tsd-signature-type">Keypress</a>
+										<a href="plottable.dispatcher.key.html" class="tsd-signature-type">Key</a>
 									</li>
 								</ul>
 							</li>
@@ -110,77 +110,42 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section tsd-is-not-exported">
-							<h3>Constructors</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-not-exported"><a href="plottable.dispatcher.abstractdispatcher.html#constructor" class="tsd-kind-icon">constructor</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-not-exported"><a href="plottable.dispatcher.abstractdispatcher.html#_broadcasters" class="tsd-kind-icon">_broadcasters</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-not-exported"><a href="plottable.dispatcher.abstractdispatcher.html#_event2callback" class="tsd-kind-icon">_event2<wbr>Callback</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-not-exported"><a href="plottable.dispatcher.abstractdispatcher.html#_target" class="tsd-kind-icon">_target</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected tsd-is-not-exported"><a href="plottable.dispatcher.abstractdispatcher.html#_geteventstring" class="tsd-kind-icon">_get<wbr>Event<wbr>String</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="plottable.dispatcher.abstractdispatcher.html#connect" class="tsd-kind-icon">connect</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="plottable.dispatcher.abstractdispatcher.html#disconnect" class="tsd-kind-icon">disconnect</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected tsd-is-not-exported"><a href="plottable.dispatcher.abstractdispatcher.html#_getwrappedcallback" class="tsd-kind-icon">_get<wbr>Wrapped<wbr>Callback</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected tsd-is-not-exported"><a href="plottable.dispatcher.abstractdispatcher.html#_setcallback" class="tsd-kind-icon">_set<wbr>Callback</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported"><a href="plottable.dispatcher.abstractdispatcher.html#getid" class="tsd-kind-icon">getID</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="plottable.dispatcher.abstractdispatcher.html#target" class="tsd-kind-icon">target</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
-				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-not-exported">
-					<a name="constructor" class="tsd-anchor"></a>
-					<h3>constructor</h3>
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Abstract<wbr>Dispatcher<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">?: </span><a href="../interfaces/d3.selection.html" class="tsd-signature-type">Selection</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="plottable.dispatcher.abstractdispatcher.html" class="tsd-signature-type">AbstractDispatcher</a></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in plottable.d.ts:3397</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Constructs a Dispatcher with the specified target.</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>constructor</dt>
-									<dd></dd>
-								</dl>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> target: <a href="../interfaces/d3.selection.html" class="tsd-signature-type">Selection</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns 
-								<a href="plottable.dispatcher.abstractdispatcher.html" class="tsd-signature-type">AbstractDispatcher</a>
-							</h4>
-						</li>
-					</ul>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-not-exported">
+					<a name="_broadcasters" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _broadcasters</h3>
+					<div class="tsd-signature tsd-kind-icon">_broadcasters<span class="tsd-signature-symbol">:</span> <a href="plottable.core.broadcaster.html" class="tsd-signature-type">Broadcaster</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in plottable.d.ts:3362</li>
+						</ul>
+					</aside>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-not-exported">
 					<a name="_event2callback" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _event2<wbr>Callback</h3>
 					<div class="tsd-signature tsd-kind-icon">_event2<wbr>Callback<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in plottable.d.ts:3395</li>
+							<li>Defined in plottable.d.ts:3359</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -191,10 +156,16 @@
 								<ul class="tsd-parameters">
 									<li class="tsd-parameter-siganture">
 										<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-											<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+											<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 										</ul>
 										<ul class="tsd-descriptions">
 											<li class="tsd-description">
+												<h4 class="tsd-parameters-title">Parameters</h4>
+												<ul class="tsd-parameters">
+													<li>
+														<h5>e: <span class="tsd-signature-type">Event</span></h5>
+													</li>
+												</ul>
 												<h4 class="tsd-returns-title">Returns 
 													<span class="tsd-signature-type">any</span>
 												</h4>
@@ -206,96 +177,67 @@
 						</ul>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-not-exported">
-					<a name="_target" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _target</h3>
-					<div class="tsd-signature tsd-kind-icon">_target<span class="tsd-signature-symbol">:</span> <a href="../interfaces/d3.selection.html" class="tsd-signature-type">Selection</a></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in plottable.d.ts:3394</li>
-						</ul>
-					</aside>
-				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected tsd-is-not-exported">
-					<a name="_geteventstring" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _get<wbr>Event<wbr>String</h3>
+					<a name="_getwrappedcallback" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _get<wbr>Wrapped<wbr>Callback</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">_get<wbr>Event<wbr>String<span class="tsd-signature-symbol">(</span>eventName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">_get<wbr>Wrapped<wbr>Callback<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/plottable.core.broadcastercallback.html" class="tsd-signature-type">BroadcasterCallback</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:3421</li>
+									<li>Defined in plottable.d.ts:3366</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Gets a namespaced version of the event name.</p>
+									<p>Creates a wrapped version of the callback that can be registered to a Broadcaster</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>eventName: <span class="tsd-signature-type">string</span></h5>
+									<h5>callback: <span class="tsd-signature-type">Function</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns 
-								<span class="tsd-signature-type">string</span>
+								<a href="../interfaces/plottable.core.broadcastercallback.html" class="tsd-signature-type">BroadcasterCallback</a>
 							</h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-					<a name="connect" class="tsd-anchor"></a>
-					<h3>connect</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">connect<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="plottable.dispatcher.abstractdispatcher.html" class="tsd-signature-type">AbstractDispatcher</a></li>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected tsd-is-not-exported">
+					<a name="_setcallback" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _set<wbr>Callback</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">_set<wbr>Callback<span class="tsd-signature-symbol">(</span>b<span class="tsd-signature-symbol">: </span><a href="plottable.core.broadcaster.html" class="tsd-signature-type">Broadcaster</a>, key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:3427</li>
+									<li>Defined in plottable.d.ts:3367</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Attaches the Dispatcher&#39;s listeners to the Dispatcher&#39;s target element.</p>
-								</div>
-							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>b: <a href="plottable.core.broadcaster.html" class="tsd-signature-type">Broadcaster</a></h5>
+								</li>
+								<li>
+									<h5>key: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>callback: <span class="tsd-signature-type">Function</span></h5>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns 
-								<a href="plottable.dispatcher.abstractdispatcher.html" class="tsd-signature-type">AbstractDispatcher</a>
+								<span class="tsd-signature-type">void</span>
 							</h4>
-							<p>The calling Dispatcher.</p>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-					<a name="disconnect" class="tsd-anchor"></a>
-					<h3>disconnect</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">disconnect<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="plottable.dispatcher.abstractdispatcher.html" class="tsd-signature-type">AbstractDispatcher</a></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in plottable.d.ts:3433</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Detaches the Dispatcher&#39;s listeners from the Dispatchers&#39; target element.</p>
-								</div>
-							</div>
-							<h4 class="tsd-returns-title">Returns 
-								<a href="plottable.dispatcher.abstractdispatcher.html" class="tsd-signature-type">AbstractDispatcher</a>
-							</h4>
-							<p>The calling Dispatcher.</p>
 						</li>
 					</ul>
 				</section>
@@ -312,60 +254,12 @@
 									<a href="plottable.core.plottableobject.html">PlottableObject</a>.<a href="plottable.core.plottableobject.html#getid">getID</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:454</li>
+									<li>Defined in plottable.d.ts:455</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns 
 								<span class="tsd-signature-type">number</span>
 							</h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-					<a name="target" class="tsd-anchor"></a>
-					<h3>target</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">target<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/d3.selection.html" class="tsd-signature-type">Selection</a></li>
-						<li class="tsd-signature tsd-kind-icon">target<span class="tsd-signature-symbol">(</span>targetElement<span class="tsd-signature-symbol">: </span><a href="../interfaces/d3.selection.html" class="tsd-signature-type">Selection</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="plottable.dispatcher.abstractdispatcher.html" class="tsd-signature-type">AbstractDispatcher</a></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in plottable.d.ts:3410</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Gets the target of the Dispatcher.</p>
-								</div>
-							</div>
-							<h4 class="tsd-returns-title">Returns 
-								<a href="../interfaces/d3.selection.html" class="tsd-signature-type">Selection</a>
-							</h4>
-							<p>The Dispatcher&#39;s current target.</p>
-						</li>
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in plottable.d.ts:3417</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Sets the target of the Dispatcher.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>targetElement: <a href="../interfaces/d3.selection.html" class="tsd-signature-type">Selection</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns 
-								<a href="plottable.dispatcher.abstractdispatcher.html" class="tsd-signature-type">AbstractDispatcher</a>
-							</h4>
-							<p>The calling Dispatcher.</p>
 						</li>
 					</ul>
 				</section>
@@ -433,39 +327,33 @@
 					<li class="current tsd-kind-class tsd-parent-kind-module tsd-is-not-exported">
 						<a href="plottable.dispatcher.abstractdispatcher.html" class="tsd-kind-icon">Abstract<wbr>Dispatcher</a>
 						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-not-exported">
-								<a href="plottable.dispatcher.abstractdispatcher.html#constructor" class="tsd-kind-icon">constructor</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-not-exported">
+								<a href="plottable.dispatcher.abstractdispatcher.html#_broadcasters" class="tsd-kind-icon">_broadcasters</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-not-exported">
 								<a href="plottable.dispatcher.abstractdispatcher.html#_event2callback" class="tsd-kind-icon">_event2<wbr>Callback</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-not-exported">
-								<a href="plottable.dispatcher.abstractdispatcher.html#_target" class="tsd-kind-icon">_target</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected tsd-is-not-exported">
+								<a href="plottable.dispatcher.abstractdispatcher.html#_getwrappedcallback" class="tsd-kind-icon">_get<wbr>Wrapped<wbr>Callback</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected tsd-is-not-exported">
-								<a href="plottable.dispatcher.abstractdispatcher.html#_geteventstring" class="tsd-kind-icon">_get<wbr>Event<wbr>String</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-								<a href="plottable.dispatcher.abstractdispatcher.html#connect" class="tsd-kind-icon">connect</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-								<a href="plottable.dispatcher.abstractdispatcher.html#disconnect" class="tsd-kind-icon">disconnect</a>
+								<a href="plottable.dispatcher.abstractdispatcher.html#_setcallback" class="tsd-kind-icon">_set<wbr>Callback</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported">
 								<a href="plottable.dispatcher.abstractdispatcher.html#getid" class="tsd-kind-icon">getID</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-								<a href="plottable.dispatcher.abstractdispatcher.html#target" class="tsd-kind-icon">target</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-class tsd-parent-kind-module tsd-is-not-exported">
-						<a href="plottable.dispatcher.keypress.html" class="tsd-kind-icon">Keypress</a>
+						<a href="plottable.dispatcher.key.html" class="tsd-kind-icon">Key</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-module tsd-is-not-exported">
 						<a href="plottable.dispatcher.mouse.html" class="tsd-kind-icon">Mouse</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../modules/plottable.dispatcher.html#keycallback" class="tsd-kind-icon">Key<wbr>Callback</a>
 					</li>
 				</ul>
 			</nav>
