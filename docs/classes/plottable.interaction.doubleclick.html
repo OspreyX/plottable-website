@@ -112,7 +112,9 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="plottable.interaction.doubleclick.html#_anchor" class="tsd-kind-icon">_anchor</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-not-exported"><a href="plottable.interaction.doubleclick.html#_isinsidecomponent" class="tsd-kind-icon">_is<wbr>Inside<wbr>Component</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected tsd-is-not-exported"><a href="plottable.interaction.doubleclick.html#_listento" class="tsd-kind-icon">_listen<wbr>To</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-not-exported"><a href="plottable.interaction.doubleclick.html#_translatetocomponentspace" class="tsd-kind-icon">_translate<wbr>ToComponent<wbr>Space</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported"><a href="plottable.interaction.doubleclick.html#callback" class="tsd-kind-icon">callback</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported"><a href="plottable.interaction.doubleclick.html#getid" class="tsd-kind-icon">getID</a></li>
 							</ul>
@@ -131,7 +133,7 @@
 							<a href="plottable.interaction.abstractinteraction.html">AbstractInteraction</a>.<a href="plottable.interaction.abstractinteraction.html#_componenttolistento">_componentToListenTo</a>
 						</p>
 						<ul>
-							<li>Defined in plottable.d.ts:3536</li>
+							<li>Defined in plottable.d.ts:3463</li>
 						</ul>
 					</aside>
 				</section>
@@ -144,7 +146,7 @@
 							<a href="plottable.interaction.abstractinteraction.html">AbstractInteraction</a>.<a href="plottable.interaction.abstractinteraction.html#_hitbox">_hitBox</a>
 						</p>
 						<ul>
-							<li>Defined in plottable.d.ts:3535</li>
+							<li>Defined in plottable.d.ts:3462</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -176,7 +178,7 @@
 									<a href="plottable.interaction.abstractinteraction.html">AbstractInteraction</a>.<a href="plottable.interaction.abstractinteraction.html#_anchor">_anchor</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:3546</li>
+									<li>Defined in plottable.d.ts:3489</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -194,6 +196,43 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-not-exported">
+					<a name="_isinsidecomponent" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _is<wbr>Inside<wbr>Component</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">_is<wbr>Inside<wbr>Component<span class="tsd-signature-symbol">(</span>p<span class="tsd-signature-symbol">: </span><a href="../interfaces/d3.geom.point.html" class="tsd-signature-type">Point</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from 
+									<a href="plottable.interaction.abstractinteraction.html">AbstractInteraction</a>.<a href="plottable.interaction.abstractinteraction.html#_isinsidecomponent">_isInsideComponent</a>
+								</p>
+								<ul>
+									<li>Defined in plottable.d.ts:3480</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Checks whether a Component-coordinate-space Point is inside the Component.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>p: <a href="../interfaces/d3.geom.point.html" class="tsd-signature-type">Point</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A Point in Coordinate-space coordinates.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns 
+								<span class="tsd-signature-type">boolean</span>
+							</h4>
+							<p>Whether or not the point is inside the Component.</p>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected tsd-is-not-exported">
 					<a name="_listento" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _listen<wbr>To</h3>
@@ -207,12 +246,49 @@
 									<a href="plottable.interaction.click.html">Click</a>.<a href="plottable.interaction.click.html#_listento">_listenTo</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:3556</li>
+									<li>Defined in plottable.d.ts:3499</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns 
 								<span class="tsd-signature-type">string</span>
 							</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-not-exported">
+					<a name="_translatetocomponentspace" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _translate<wbr>ToComponent<wbr>Space</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">_translate<wbr>ToComponent<wbr>Space<span class="tsd-signature-symbol">(</span>p<span class="tsd-signature-symbol">: </span><a href="../interfaces/d3.geom.point.html" class="tsd-signature-type">Point</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/d3.geom.point.html" class="tsd-signature-type">Point</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from 
+									<a href="plottable.interaction.abstractinteraction.html">AbstractInteraction</a>.<a href="plottable.interaction.abstractinteraction.html#_translatetocomponentspace">_translateToComponentSpace</a>
+								</p>
+								<ul>
+									<li>Defined in plottable.d.ts:3472</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Translates an <svg>-coordinate-space point to Component-space coordinates.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>p: <a href="../interfaces/d3.geom.point.html" class="tsd-signature-type">Point</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A Point in <svg>-space coordinates.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns 
+								<a href="../interfaces/d3.geom.point.html" class="tsd-signature-type">Point</a>
+							</h4>
+							<p>The same location in Component-space coordinates.</p>
 						</li>
 					</ul>
 				</section>
@@ -229,7 +305,7 @@
 									<a href="plottable.interaction.click.html">Click</a>.<a href="plottable.interaction.click.html#callback">callback</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:3553</li>
+									<li>Defined in plottable.d.ts:3496</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -285,7 +361,7 @@
 									<a href="plottable.core.plottableobject.html">PlottableObject</a>.<a href="plottable.core.plottableobject.html#getid">getID</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:454</li>
+									<li>Defined in plottable.d.ts:455</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns 
@@ -373,8 +449,14 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
 								<a href="plottable.interaction.doubleclick.html#_anchor" class="tsd-kind-icon">_anchor</a>
 							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-not-exported">
+								<a href="plottable.interaction.doubleclick.html#_isinsidecomponent" class="tsd-kind-icon">_is<wbr>Inside<wbr>Component</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected tsd-is-not-exported">
 								<a href="plottable.interaction.doubleclick.html#_listento" class="tsd-kind-icon">_listen<wbr>To</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-not-exported">
+								<a href="plottable.interaction.doubleclick.html#_translatetocomponentspace" class="tsd-kind-icon">_translate<wbr>ToComponent<wbr>Space</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported">
 								<a href="plottable.interaction.doubleclick.html#callback" class="tsd-kind-icon">callback</a>

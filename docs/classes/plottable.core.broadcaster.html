@@ -134,6 +134,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="plottable.core.broadcaster.html#deregisteralllisteners" class="tsd-kind-icon">deregister<wbr>All<wbr>Listeners</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="plottable.core.broadcaster.html#deregisterlistener" class="tsd-kind-icon">deregister<wbr>Listener</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported"><a href="plottable.core.broadcaster.html#getid" class="tsd-kind-icon">getID</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="plottable.core.broadcaster.html#getlistenerkeys" class="tsd-kind-icon">get<wbr>Listener<wbr>Keys</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="plottable.core.broadcaster.html#registerlistener" class="tsd-kind-icon">register<wbr>Listener</a></li>
 							</ul>
 						</section>
@@ -152,7 +153,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:479</li>
+									<li>Defined in plottable.d.ts:480</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -194,7 +195,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:503</li>
+									<li>Defined in plottable.d.ts:505</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -225,12 +226,12 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:516</li>
+									<li>Defined in plottable.d.ts:524</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Deregisters all listeners and callbacks associated with the broadcaster.</p>
+									<p>Deregisters all listeners and callbacks associated with the Broadcaster.</p>
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns 
@@ -250,7 +251,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:510</li>
+									<li>Defined in plottable.d.ts:512</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -287,12 +288,37 @@
 									<a href="plottable.core.plottableobject.html">PlottableObject</a>.<a href="plottable.core.plottableobject.html#getid">getID</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:454</li>
+									<li>Defined in plottable.d.ts:455</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns 
 								<span class="tsd-signature-type">number</span>
 							</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="getlistenerkeys" class="tsd-anchor"></a>
+					<h3>get<wbr>Listener<wbr>Keys</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Listener<wbr>Keys<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in plottable.d.ts:518</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets the keys for all listeners attached to the Broadcaster.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns 
+								<span class="tsd-signature-type">any[]</span>
+							</h4>
+							<p>An array of the keys.</p>
 						</li>
 					</ul>
 				</section>
@@ -306,14 +332,15 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:496</li>
+									<li>Defined in plottable.d.ts:498</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Registers a callback to be called when the broadcast method is called. Also takes a key which
 										is used to support deregistering the same callback later, by passing in the same key.
-									If there is already a callback associated with that key, then the callback will be replaced.</p>
+										If there is already a callback associated with that key, then the callback will be replaced.
+									The callback will be passed the Broadcaster&#39;s &quot;listenable&quot; as the <code>this</code> context.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -373,9 +400,6 @@
 									<li class=" tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
 										<a href="../modules/plottable.core.rendercontroller.html">Render<wbr>Controller</a>
 									</li>
-									<li class=" tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
-										<a href="../modules/plottable.core.resizebroadcaster.html">Resize<wbr>Broadcaster</a>
-									</li>
 								</ul>
 							</li>
 							<li class=" tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
@@ -424,6 +448,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported">
 								<a href="plottable.core.broadcaster.html#getid" class="tsd-kind-icon">getID</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="plottable.core.broadcaster.html#getlistenerkeys" class="tsd-kind-icon">get<wbr>Listener<wbr>Keys</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
 								<a href="plottable.core.broadcaster.html#registerlistener" class="tsd-kind-icon">register<wbr>Listener</a>
