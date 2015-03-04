@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="shortcut icon" href="/favicon.ico" sizes="16x16 32x32" type="image/x-icon">
-	<title>Null | Plottable</title>
+	<title>ClientToSVGTranslator | Plottable</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -71,32 +71,24 @@
 					<a href="../modules/plottable.html">Plottable</a>
 				</li>
 				<li>
-					<a href="../modules/plottable.animator.html">Animator</a>
+					<a href="../modules/plottable._util.html">_Util</a>
 				</li>
 				<li>
-					<a href="plottable.animator.null.html">Null</a>
+					<a href="plottable._util.clienttosvgtranslator.html">ClientToSVGTranslator</a>
 				</li>
 			</ul>
-			<h1>Class Null</h1>
+			<h1>Class ClientToSVGTranslator</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>An animator implementation with no animation. The attributes are
-						immediately set on the selection.</p>
-					</div>
-				</div>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Null</span>
+						<span class="target">ClientToSVGTranslator</span>
 					</li>
 				</ul>
 			</section>
@@ -105,66 +97,105 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section tsd-is-not-exported">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-not-exported"><a href="plottable._util.clienttosvgtranslator.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="plottable.animator.null.html#animate" class="tsd-kind-icon">animate</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="plottable.animator.null.html#gettiming" class="tsd-kind-icon">get<wbr>Timing</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="plottable._util.clienttosvgtranslator.html#computeposition" class="tsd-kind-icon">compute<wbr>Position</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-not-exported"><a href="plottable._util.clienttosvgtranslator.html#gettranslator" class="tsd-kind-icon">get<wbr>Translator</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
-				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-					<a name="animate" class="tsd-anchor"></a>
-					<h3>animate</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">animate<span class="tsd-signature-symbol">(</span>selection<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, attrToProjector<span class="tsd-signature-symbol">: </span><a href="../modules/plottable.html#attributetoprojector" class="tsd-signature-type">AttributeToProjector</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/d3.selection.html" class="tsd-signature-type">Selection</a></li>
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-not-exported">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Client<wbr>ToSVGTranslator<span class="tsd-signature-symbol">(</span>svg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">SVGElement</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="plottable._util.clienttosvgtranslator.html" class="tsd-signature-type">ClientToSVGTranslator</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:3218</li>
+									<li>Defined in plottable.d.ts:414</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>selection: <span class="tsd-signature-type">any</span></h5>
-								</li>
-								<li>
-									<h5>attrToProjector: <a href="../modules/plottable.html#attributetoprojector" class="tsd-signature-type">AttributeToProjector</a></h5>
+									<h5>svg: <span class="tsd-signature-type">SVGElement</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns 
-								<a href="../interfaces/d3.selection.html" class="tsd-signature-type">Selection</a>
+								<a href="plottable._util.clienttosvgtranslator.html" class="tsd-signature-type">ClientToSVGTranslator</a>
 							</h4>
 						</li>
 					</ul>
 				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-					<a name="gettiming" class="tsd-anchor"></a>
-					<h3>get<wbr>Timing</h3>
+					<a name="computeposition" class="tsd-anchor"></a>
+					<h3>compute<wbr>Position</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Timing<span class="tsd-signature-symbol">(</span>selection<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">compute<wbr>Position<span class="tsd-signature-symbol">(</span>clientX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, clientY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/d3.geom.point.html" class="tsd-signature-type">Point</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:3217</li>
+									<li>Defined in plottable.d.ts:419</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Computes the position relative to the <svg> in svg-coordinate-space.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>clientX: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>clientY: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns 
+								<a href="../interfaces/d3.geom.point.html" class="tsd-signature-type">Point</a>
+							</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-not-exported">
+					<a name="gettranslator" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> get<wbr>Translator</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Translator<span class="tsd-signature-symbol">(</span>elem<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">SVGElement</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="plottable._util.clienttosvgtranslator.html" class="tsd-signature-type">ClientToSVGTranslator</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in plottable.d.ts:414</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>selection: <span class="tsd-signature-type">any</span></h5>
+									<h5>elem: <span class="tsd-signature-type">SVGElement</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns 
-								<span class="tsd-signature-type">number</span>
+								<a href="plottable._util.clienttosvgtranslator.html" class="tsd-signature-type">ClientToSVGTranslator</a>
 							</h4>
 						</li>
 					</ul>
@@ -186,7 +217,7 @@
 					<li class="current tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/plottable.html">Plottable</a>
 						<ul>
-							<li class="current tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
+							<li class=" tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
 								<a href="../modules/plottable.animator.html">Animator</a>
 							</li>
 							<li class=" tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
@@ -219,8 +250,22 @@
 							<li class=" tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
 								<a href="../modules/plottable._drawer.html">_<wbr>Drawer</a>
 							</li>
-							<li class=" tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
+							<li class="current tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
 								<a href="../modules/plottable._util.html">_<wbr>Util</a>
+								<ul>
+									<li class=" tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
+										<a href="../modules/plottable._util.color.html">Color</a>
+									</li>
+									<li class=" tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
+										<a href="../modules/plottable._util.dom.html">DOM</a>
+									</li>
+									<li class=" tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
+										<a href="../modules/plottable._util.methods.html">Methods</a>
+									</li>
+									<li class=" tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
+										<a href="../modules/plottable._util.opensource.html">Open<wbr>Source</a>
+									</li>
+								</ul>
 							</li>
 						</ul>
 					</li>
@@ -228,35 +273,32 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class tsd-parent-kind-module tsd-is-not-exported">
-						<a href="plottable.animator.base.html" class="tsd-kind-icon">Base</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module tsd-is-not-exported">
-						<a href="plottable.animator.movingrect.html" class="tsd-kind-icon">Moving<wbr>Rect</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-module tsd-is-not-exported">
-						<a href="plottable.animator.null.html" class="tsd-kind-icon">Null</a>
+						<a href="plottable._util.clienttosvgtranslator.html" class="tsd-kind-icon">Client<wbr>ToSVGTranslator</a>
 						<ul>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-								<a href="plottable.animator.null.html#animate" class="tsd-kind-icon">animate</a>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-not-exported">
+								<a href="plottable._util.clienttosvgtranslator.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-								<a href="plottable.animator.null.html#gettiming" class="tsd-kind-icon">get<wbr>Timing</a>
+								<a href="plottable._util.clienttosvgtranslator.html#computeposition" class="tsd-kind-icon">compute<wbr>Position</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-not-exported">
+								<a href="plottable._util.clienttosvgtranslator.html#gettranslator" class="tsd-kind-icon">get<wbr>Translator</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-class tsd-parent-kind-module tsd-is-not-exported">
-						<a href="plottable.animator.rect.html" class="tsd-kind-icon">Rect</a>
+						<a href="plottable._util.idcounter.html" class="tsd-kind-icon">IDCounter</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../interfaces/plottable.animator.plotanimator.html" class="tsd-kind-icon">Plot<wbr>Animator</a>
+					<li class=" tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported">
+						<a href="plottable._util.scaledomaincoordinator.html" class="tsd-kind-icon">Scale<wbr>Domain<wbr>Coordinator</a>
 					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../modules/plottable.animator.html#plotanimatormap" class="tsd-kind-icon">Plot<wbr>Animator<wbr>Map</a>
+					<li class=" tsd-kind-class tsd-parent-kind-module tsd-is-not-exported">
+						<a href="plottable._util.strictequalityassociativearray.html" class="tsd-kind-icon">Strict<wbr>Equality<wbr>Associative<wbr>Array</a>
 					</li>
 				</ul>
 			</nav>

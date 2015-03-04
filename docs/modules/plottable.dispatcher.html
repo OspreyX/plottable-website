@@ -91,6 +91,7 @@
 								<li class="tsd-kind-class tsd-parent-kind-module tsd-is-not-exported"><a href="../classes/plottable.dispatcher.abstractdispatcher.html" class="tsd-kind-icon">Abstract<wbr>Dispatcher</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-module tsd-is-not-exported"><a href="../classes/plottable.dispatcher.key.html" class="tsd-kind-icon">Key</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-module tsd-is-not-exported"><a href="../classes/plottable.dispatcher.mouse.html" class="tsd-kind-icon">Mouse</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module tsd-is-not-exported"><a href="../classes/plottable.dispatcher.touch.html" class="tsd-kind-icon">Touch</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-not-exported">
@@ -98,6 +99,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="plottable.dispatcher.html#keycallback" class="tsd-kind-icon">Key<wbr>Callback</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="plottable.dispatcher.html#mousecallback" class="tsd-kind-icon">Mouse<wbr>Callback</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="plottable.dispatcher.html#touchcallback" class="tsd-kind-icon">Touch<wbr>Callback</a></li>
 							</ul>
 						</section>
 					</div>
@@ -111,7 +113,7 @@
 					<div class="tsd-signature tsd-kind-icon">Key<wbr>Callback<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in plottable.d.ts:3453</li>
+							<li>Defined in plottable.d.ts:3537</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -119,7 +121,7 @@
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-siganture">
 								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>keyCode<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>keyCode<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, e<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">KeyboardEvent</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
@@ -127,6 +129,9 @@
 										<ul class="tsd-parameters">
 											<li>
 												<h5>keyCode: <span class="tsd-signature-type">number</span></h5>
+											</li>
+											<li>
+												<h5>e: <span class="tsd-signature-type">KeyboardEvent</span></h5>
 											</li>
 										</ul>
 										<h4 class="tsd-returns-title">Returns 
@@ -144,7 +149,7 @@
 					<div class="tsd-signature tsd-kind-icon">Mouse<wbr>Callback<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in plottable.d.ts:3383</li>
+							<li>Defined in plottable.d.ts:3397</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -152,7 +157,7 @@
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-siganture">
 								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>p<span class="tsd-signature-symbol">: </span><a href="../interfaces/d3.geom.point.html" class="tsd-signature-type">Point</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>p<span class="tsd-signature-symbol">: </span><a href="../interfaces/d3.geom.point.html" class="tsd-signature-type">Point</a>, e<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MouseEvent</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
@@ -160,6 +165,45 @@
 										<ul class="tsd-parameters">
 											<li>
 												<h5>p: <a href="../interfaces/d3.geom.point.html" class="tsd-signature-type">Point</a></h5>
+											</li>
+											<li>
+												<h5>e: <span class="tsd-signature-type">MouseEvent</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns 
+											<span class="tsd-signature-type">any</span>
+										</h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+					<a name="touchcallback" class="tsd-anchor"></a>
+					<h3>Touch<wbr>Callback</h3>
+					<div class="tsd-signature tsd-kind-icon">Touch<wbr>Callback<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in plottable.d.ts:3467</li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>p<span class="tsd-signature-symbol">: </span><a href="../interfaces/d3.geom.point.html" class="tsd-signature-type">Point</a>, e<span class="tsd-signature-symbol">: </span><a href="../interfaces/touchevent.html" class="tsd-signature-type">TouchEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>p: <a href="../interfaces/d3.geom.point.html" class="tsd-signature-type">Point</a></h5>
+											</li>
+											<li>
+												<h5>e: <a href="../interfaces/touchevent.html" class="tsd-signature-type">TouchEvent</a></h5>
 											</li>
 										</ul>
 										<h4 class="tsd-returns-title">Returns 
@@ -239,11 +283,17 @@
 					<li class=" tsd-kind-class tsd-parent-kind-module tsd-is-not-exported">
 						<a href="../classes/plottable.dispatcher.mouse.html" class="tsd-kind-icon">Mouse</a>
 					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../classes/plottable.dispatcher.touch.html" class="tsd-kind-icon">Touch</a>
+					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
 						<a href="plottable.dispatcher.html#keycallback" class="tsd-kind-icon">Key<wbr>Callback</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
 						<a href="plottable.dispatcher.html#mousecallback" class="tsd-kind-icon">Mouse<wbr>Callback</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+						<a href="plottable.dispatcher.html#touchcallback" class="tsd-kind-icon">Touch<wbr>Callback</a>
 					</li>
 				</ul>
 			</nav>
