@@ -14,13 +14,15 @@ git checkout "$version" -- plottable.d.ts typings/
 
 cp plottable.d.ts ../.
 mkdir -p ../typings/d3
+mkdir -p ../typings/touch-events
 cp typings/d3/d3.d.ts ../typings/d3/d3.d.ts
+cp typings/touch-events/touch-events.d.ts ../typings/touch-events/touch-events.d.ts
 
 cd ..
 
 grunt
 
-./node_modules/typedoc/bin/typedoc --mode file --includeDeclarations typings/d3/d3.d.ts plottable.d.ts --theme _typedoc/themes/plottable --out docs/
+./node_modules/typedoc/bin/typedoc --mode file --includeDeclarations typings/d3/d3.d.ts typings/touch-events/touch-events.d.ts plottable.d.ts --theme _typedoc/themes/plottable --out docs/
 
 rm -rf _plottable
 rm -r typings
