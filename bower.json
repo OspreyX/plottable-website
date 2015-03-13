@@ -14,7 +14,7 @@
     "tests"
   ],
   "dependencies": {
-    "plottable": "0.47.0",
+    "plottable": "0.48.0",
     "lodash": "~2.4.1",
     "qtip2": "~2.2.1",
     "zeroclipboard": "v2.2.0"
