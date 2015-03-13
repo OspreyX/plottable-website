@@ -95,6 +95,7 @@
 								<li class="tsd-kind-module tsd-parent-kind-module tsd-is-not-exported"><a href="plottable.interaction.html" class="tsd-kind-icon">Interaction</a></li>
 								<li class="tsd-kind-module tsd-parent-kind-module tsd-is-not-exported"><a href="plottable.plot.html" class="tsd-kind-icon">Plot</a></li>
 								<li class="tsd-kind-module tsd-parent-kind-module tsd-is-not-exported"><a href="plottable.scale.html" class="tsd-kind-icon">Scale</a></li>
+								<li class="tsd-kind-module tsd-parent-kind-module tsd-is-not-exported"><a href="plottable.symbolgenerators.html" class="tsd-kind-icon">Symbol<wbr>Generators</a></li>
 								<li class="tsd-kind-module tsd-parent-kind-module tsd-is-not-exported"><a href="plottable._drawer.html" class="tsd-kind-icon">_<wbr>Drawer</a></li>
 								<li class="tsd-kind-module tsd-parent-kind-module tsd-is-not-exported"><a href="plottable._util.html" class="tsd-kind-icon">_<wbr>Util</a></li>
 							</ul>
@@ -109,14 +110,15 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="plottable.html#appliedprojector" class="tsd-kind-icon">Applied<wbr>Projector</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="plottable.html#attributetoappliedprojector" class="tsd-kind-icon">Attribute<wbr>ToApplied<wbr>Projector</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="plottable.html#attributetoprojector" class="tsd-kind-icon">Attribute<wbr>ToProjector</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="plottable.html#extent" class="tsd-kind-icon">Extent</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="plottable.html#formatter" class="tsd-kind-icon">Formatter</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="plottable.html#point" class="tsd-kind-icon">Point</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="plottable.html#selectionarea" class="tsd-kind-icon">Selection<wbr>Area</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="plottable.html#symbolgenerator" class="tsd-kind-icon">Symbol<wbr>Generator</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="plottable.html#_accessor" class="tsd-kind-icon">_<wbr>Accessor</a></li>
-								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="plottable.html#_appliedprojector" class="tsd-kind-icon">_<wbr>Applied<wbr>Projector</a></li>
-								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="plottable.html#_attributetoappliedprojector" class="tsd-kind-icon">_<wbr>Attribute<wbr>ToApplied<wbr>Projector</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="plottable.html#_pixelarea" class="tsd-kind-icon">_<wbr>Pixel<wbr>Area</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="plottable.html#_projection" class="tsd-kind-icon">_<wbr>Projection</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="plottable.html#_projector" class="tsd-kind-icon">_<wbr>Projector</a></li>
@@ -136,12 +138,71 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Type aliases</h2>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+					<a name="appliedprojector" class="tsd-anchor"></a>
+					<h3>Applied<wbr>Projector</h3>
+					<div class="tsd-signature tsd-kind-icon">Applied<wbr>Projector<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in plottable.d.ts:719</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Projector with applied user and plot metadata</p>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>datum<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>datum: <span class="tsd-signature-type">any</span></h5>
+											</li>
+											<li>
+												<h5>index: <span class="tsd-signature-type">number</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns 
+											<span class="tsd-signature-type">any</span>
+										</h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+					<a name="attributetoappliedprojector" class="tsd-anchor"></a>
+					<h3>Attribute<wbr>ToApplied<wbr>Projector</h3>
+					<div class="tsd-signature tsd-kind-icon">Attribute<wbr>ToApplied<wbr>Projector<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in plottable.d.ts:739</li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-index-signature">
+								<h5><span class="tsd-signature-symbol">[</span>attrToSet: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><a href="plottable.html#appliedprojector" class="tsd-signature-type">AppliedProjector</a></h5>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
 					<a name="attributetoprojector" class="tsd-anchor"></a>
 					<h3>Attribute<wbr>ToProjector</h3>
 					<div class="tsd-signature tsd-kind-icon">Attribute<wbr>ToProjector<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in plottable.d.ts:706</li>
+							<li>Defined in plottable.d.ts:736</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -168,7 +229,7 @@ function(d) { return foo + bar; }</code>.</p>
 					<div class="tsd-signature tsd-kind-icon">Extent<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in plottable.d.ts:740</li>
+							<li>Defined in plottable.d.ts:770</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -230,7 +291,7 @@ max]</code> extents produced by d3.</p>
 					<div class="tsd-signature tsd-kind-icon">Point<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in plottable.d.ts:747</li>
+							<li>Defined in plottable.d.ts:777</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -256,7 +317,7 @@ max]</code> extents produced by d3.</p>
 					<div class="tsd-signature tsd-kind-icon">Selection<wbr>Area<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in plottable.d.ts:715</li>
+							<li>Defined in plottable.d.ts:745</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -283,12 +344,56 @@ max]</code> extents produced by d3.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+					<a name="symbolgenerator" class="tsd-anchor"></a>
+					<h3>Symbol<wbr>Generator</h3>
+					<div class="tsd-signature tsd-kind-icon">Symbol<wbr>Generator<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in plottable.d.ts:419</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A SymbolGenerator is a function that takes in a datum and the index of the datum to
+							produce an svg path string analogous to the datum/index pair.</p>
+						</div>
+						<p>Note that SymbolGenerators used in Plottable will be assumed to work within a 100x100 square
+						to be scaled appropriately for use within Plottable</p>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>datum<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>datum: <span class="tsd-signature-type">any</span></h5>
+											</li>
+											<li>
+												<h5>index: <span class="tsd-signature-type">number</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns 
+											<span class="tsd-signature-type">string</span>
+										</h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
 					<a name="_accessor" class="tsd-anchor"></a>
 					<h3>_<wbr>Accessor</h3>
 					<div class="tsd-signature tsd-kind-icon">_<wbr>Accessor<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in plottable.d.ts:681</li>
+							<li>Defined in plottable.d.ts:711</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -330,71 +435,12 @@ max]</code> extents produced by d3.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
-					<a name="_appliedprojector" class="tsd-anchor"></a>
-					<h3>_<wbr>Applied<wbr>Projector</h3>
-					<div class="tsd-signature tsd-kind-icon">_<wbr>Applied<wbr>Projector<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in plottable.d.ts:689</li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Projector with applied user and plot metadata</p>
-						</div>
-					</div>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-siganture">
-								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>datum<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5>datum: <span class="tsd-signature-type">any</span></h5>
-											</li>
-											<li>
-												<h5>index: <span class="tsd-signature-type">number</span></h5>
-											</li>
-										</ul>
-										<h4 class="tsd-returns-title">Returns 
-											<span class="tsd-signature-type">any</span>
-										</h4>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
-					<a name="_attributetoappliedprojector" class="tsd-anchor"></a>
-					<h3>_<wbr>Attribute<wbr>ToApplied<wbr>Projector</h3>
-					<div class="tsd-signature tsd-kind-icon">_<wbr>Attribute<wbr>ToApplied<wbr>Projector<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in plottable.d.ts:709</li>
-						</ul>
-					</aside>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-index-signature">
-								<h5><span class="tsd-signature-symbol">[</span>attrToSet: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><a href="plottable.html#_appliedprojector" class="tsd-signature-type">_AppliedProjector</a></h5>
-							</li>
-						</ul>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
 					<a name="_pixelarea" class="tsd-anchor"></a>
 					<h3>_<wbr>Pixel<wbr>Area</h3>
 					<div class="tsd-signature tsd-kind-icon">_<wbr>Pixel<wbr>Area<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in plottable.d.ts:727</li>
+							<li>Defined in plottable.d.ts:757</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -421,7 +467,7 @@ max]</code> extents produced by d3.</p>
 					<div class="tsd-signature tsd-kind-icon">_<wbr>Projection<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in plottable.d.ts:693</li>
+							<li>Defined in plottable.d.ts:723</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -450,7 +496,7 @@ max]</code> extents produced by d3.</p>
 					<div class="tsd-signature tsd-kind-icon">_<wbr>Projector<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in plottable.d.ts:685</li>
+							<li>Defined in plottable.d.ts:715</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -497,7 +543,7 @@ max]</code> extents produced by d3.</p>
 					<div class="tsd-signature tsd-kind-icon">_<wbr>Space<wbr>Request<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in plottable.d.ts:721</li>
+							<li>Defined in plottable.d.ts:751</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -537,7 +583,7 @@ max]</code> extents produced by d3.</p>
 					<div class="tsd-signature tsd-kind-icon">version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in plottable.d.ts:436</li>
+							<li>Defined in plottable.d.ts:466</li>
 						</ul>
 					</aside>
 				</section>
@@ -589,6 +635,9 @@ max]</code> extents produced by d3.</p>
 								<a href="plottable.scale.html">Scale</a>
 							</li>
 							<li class=" tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
+								<a href="plottable.symbolgenerators.html">Symbol<wbr>Generators</a>
+							</li>
+							<li class=" tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
 								<a href="plottable._drawer.html">_<wbr>Drawer</a>
 							</li>
 							<li class=" tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
@@ -607,6 +656,12 @@ max]</code> extents produced by d3.</p>
 						<a href="../classes/plottable.domainer.html" class="tsd-kind-icon">Domainer</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+						<a href="plottable.html#appliedprojector" class="tsd-kind-icon">Applied<wbr>Projector</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+						<a href="plottable.html#attributetoappliedprojector" class="tsd-kind-icon">Attribute<wbr>ToApplied<wbr>Projector</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
 						<a href="plottable.html#attributetoprojector" class="tsd-kind-icon">Attribute<wbr>ToProjector</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
@@ -622,13 +677,10 @@ max]</code> extents produced by d3.</p>
 						<a href="plottable.html#selectionarea" class="tsd-kind-icon">Selection<wbr>Area</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+						<a href="plottable.html#symbolgenerator" class="tsd-kind-icon">Symbol<wbr>Generator</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
 						<a href="plottable.html#_accessor" class="tsd-kind-icon">_<wbr>Accessor</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
-						<a href="plottable.html#_appliedprojector" class="tsd-kind-icon">_<wbr>Applied<wbr>Projector</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
-						<a href="plottable.html#_attributetoappliedprojector" class="tsd-kind-icon">_<wbr>Attribute<wbr>ToApplied<wbr>Projector</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
 						<a href="plottable.html#_pixelarea" class="tsd-kind-icon">_<wbr>Pixel<wbr>Area</a>

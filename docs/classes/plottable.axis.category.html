@@ -157,6 +157,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported"><a href="plottable.axis.category.html#_uselastcalculatedlayout" class="tsd-kind-icon">_use<wbr>Last<wbr>Calculated<wbr>Layout</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported"><a href="plottable.axis.category.html#background" class="tsd-kind-icon">background</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported"><a href="plottable.axis.category.html#classed" class="tsd-kind-icon">classed</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported"><a href="plottable.axis.category.html#content" class="tsd-kind-icon">content</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported"><a href="plottable.axis.category.html#detach" class="tsd-kind-icon">detach</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported"><a href="plottable.axis.category.html#endticklength" class="tsd-kind-icon">end<wbr>Tick<wbr>Length</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported"><a href="plottable.axis.category.html#foreground" class="tsd-kind-icon">foreground</a></li>
@@ -193,7 +194,7 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Category<span class="tsd-signature-symbol">(</span>scale<span class="tsd-signature-symbol">: </span><a href="plottable.scale.ordinal.html" class="tsd-signature-type">Ordinal</a>, orientation<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, formatter<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="plottable.axis.category.html" class="tsd-signature-type">Category</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Category<span class="tsd-signature-symbol">(</span>scale<span class="tsd-signature-symbol">: </span><a href="plottable.scale.category.html" class="tsd-signature-type">Category</a>, orientation<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, formatter<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="plottable.axis.category.html" class="tsd-signature-type">Category</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -202,14 +203,14 @@
 									<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#constructor">constructor</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:2156</li>
+									<li>Defined in plottable.d.ts:2197</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Constructs a CategoryAxis.</p>
 								</div>
-								<p>A CategoryAxis takes an OrdinalScale and includes word-wrapping
+								<p>A CategoryAxis takes a CategoryScale and includes word-wrapping
 									algorithms and advanced layout logic to try to display the scale as
 								efficiently as possible.</p>
 								<dl class="tsd-comment-tags">
@@ -220,7 +221,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>scale: <a href="plottable.scale.ordinal.html" class="tsd-signature-type">Ordinal</a></h5>
+									<h5>scale: <a href="plottable.scale.category.html" class="tsd-signature-type">Category</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
 											<p>The scale to base the Axis on.</p>
@@ -282,7 +283,7 @@
 							<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#_baseline">_baseline</a>
 						</p>
 						<ul>
-							<li>Defined in plottable.d.ts:1876</li>
+							<li>Defined in plottable.d.ts:1917</li>
 						</ul>
 					</aside>
 				</section>
@@ -295,7 +296,7 @@
 							<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#_boundingbox">_boundingBox</a>
 						</p>
 						<ul>
-							<li>Defined in plottable.d.ts:1593</li>
+							<li>Defined in plottable.d.ts:1625</li>
 						</ul>
 					</aside>
 				</section>
@@ -308,7 +309,7 @@
 							<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#_computedheight">_computedHeight</a>
 						</p>
 						<ul>
-							<li>Defined in plottable.d.ts:1879</li>
+							<li>Defined in plottable.d.ts:1920</li>
 						</ul>
 					</aside>
 				</section>
@@ -321,7 +322,7 @@
 							<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#_computedwidth">_computedWidth</a>
 						</p>
 						<ul>
-							<li>Defined in plottable.d.ts:1878</li>
+							<li>Defined in plottable.d.ts:1919</li>
 						</ul>
 					</aside>
 				</section>
@@ -334,7 +335,7 @@
 							<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#_content">_content</a>
 						</p>
 						<ul>
-							<li>Defined in plottable.d.ts:1592</li>
+							<li>Defined in plottable.d.ts:1624</li>
 						</ul>
 					</aside>
 				</section>
@@ -347,7 +348,7 @@
 							<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#_element">_element</a>
 						</p>
 						<ul>
-							<li>Defined in plottable.d.ts:1591</li>
+							<li>Defined in plottable.d.ts:1623</li>
 						</ul>
 					</aside>
 				</section>
@@ -360,7 +361,7 @@
 							<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#_fixedheightflag">_fixedHeightFlag</a>
 						</p>
 						<ul>
-							<li>Defined in plottable.d.ts:1596</li>
+							<li>Defined in plottable.d.ts:1628</li>
 						</ul>
 					</aside>
 				</section>
@@ -373,7 +374,7 @@
 							<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#_fixedwidthflag">_fixedWidthFlag</a>
 						</p>
 						<ul>
-							<li>Defined in plottable.d.ts:1597</li>
+							<li>Defined in plottable.d.ts:1629</li>
 						</ul>
 					</aside>
 				</section>
@@ -386,7 +387,7 @@
 							<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#_isanchored">_isAnchored</a>
 						</p>
 						<ul>
-							<li>Defined in plottable.d.ts:1599</li>
+							<li>Defined in plottable.d.ts:1631</li>
 						</ul>
 					</aside>
 				</section>
@@ -399,7 +400,7 @@
 							<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#_issetup">_isSetup</a>
 						</p>
 						<ul>
-							<li>Defined in plottable.d.ts:1598</li>
+							<li>Defined in plottable.d.ts:1630</li>
 						</ul>
 					</aside>
 				</section>
@@ -412,7 +413,7 @@
 							<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#_parent">_parent</a>
 						</p>
 						<ul>
-							<li>Defined in plottable.d.ts:1595</li>
+							<li>Defined in plottable.d.ts:1627</li>
 						</ul>
 					</aside>
 				</section>
@@ -425,7 +426,7 @@
 							<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#_scale">_scale</a>
 						</p>
 						<ul>
-							<li>Defined in plottable.d.ts:1877</li>
+							<li>Defined in plottable.d.ts:1918</li>
 						</ul>
 					</aside>
 				</section>
@@ -438,7 +439,7 @@
 							<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#_ticklabelcontainer">_tickLabelContainer</a>
 						</p>
 						<ul>
-							<li>Defined in plottable.d.ts:1875</li>
+							<li>Defined in plottable.d.ts:1916</li>
 						</ul>
 					</aside>
 				</section>
@@ -451,7 +452,7 @@
 							<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#_tickmarkcontainer">_tickMarkContainer</a>
 						</p>
 						<ul>
-							<li>Defined in plottable.d.ts:1874</li>
+							<li>Defined in plottable.d.ts:1915</li>
 						</ul>
 					</aside>
 				</section>
@@ -464,7 +465,7 @@
 							<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#clippathenabled">clipPathEnabled</a>
 						</p>
 						<ul>
-							<li>Defined in plottable.d.ts:1594</li>
+							<li>Defined in plottable.d.ts:1626</li>
 						</ul>
 					</aside>
 				</section>
@@ -477,7 +478,7 @@
 							<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#end_tick_mark_class">END_TICK_MARK_CLASS</a>
 						</p>
 						<ul>
-							<li>Defined in plottable.d.ts:1865</li>
+							<li>Defined in plottable.d.ts:1906</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -495,7 +496,7 @@
 							<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#tick_label_class">TICK_LABEL_CLASS</a>
 						</p>
 						<ul>
-							<li>Defined in plottable.d.ts:1873</li>
+							<li>Defined in plottable.d.ts:1914</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -513,7 +514,7 @@
 							<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#tick_mark_class">TICK_MARK_CLASS</a>
 						</p>
 						<ul>
-							<li>Defined in plottable.d.ts:1869</li>
+							<li>Defined in plottable.d.ts:1910</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -538,7 +539,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#_anchor">_anchor</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1605</li>
+									<li>Defined in plottable.d.ts:1637</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -574,7 +575,7 @@
 									<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#_computeheight">_computeHeight</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1895</li>
+									<li>Defined in plottable.d.ts:1936</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns 
@@ -596,7 +597,7 @@
 									<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#_computelayout">_computeLayout</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:2189</li>
+									<li>Defined in plottable.d.ts:2230</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -633,7 +634,7 @@
 									<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#_computewidth">_computeWidth</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1894</li>
+									<li>Defined in plottable.d.ts:1935</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns 
@@ -655,7 +656,7 @@
 									<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#_dorender">_doRender</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:2188</li>
+									<li>Defined in plottable.d.ts:2229</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns 
@@ -677,7 +678,7 @@
 									<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#_generatebaselineattrhash">_generateBaselineAttrHash</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1904</li>
+									<li>Defined in plottable.d.ts:1945</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns 
@@ -713,7 +714,7 @@
 									<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#_generatetickmarkattrhash">_generateTickMarkAttrHash</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1910</li>
+									<li>Defined in plottable.d.ts:1951</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -755,7 +756,7 @@
 									<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#_gettickvalues">_getTickValues</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:2173</li>
+									<li>Defined in plottable.d.ts:2214</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns 
@@ -777,7 +778,7 @@
 									<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#_hideendticklabels">_hideEndTickLabels</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:2022</li>
+									<li>Defined in plottable.d.ts:2063</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns 
@@ -799,7 +800,7 @@
 									<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#_hideoverflowingticklabels">_hideOverflowingTickLabels</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:2023</li>
+									<li>Defined in plottable.d.ts:2064</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns 
@@ -821,7 +822,7 @@
 									<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#_hideoverlappingticklabels">_hideOverlappingTickLabels</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:2024</li>
+									<li>Defined in plottable.d.ts:2065</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns 
@@ -846,7 +847,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#_invalidatelayout">_invalidateLayout</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1916</li>
+									<li>Defined in plottable.d.ts:1957</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns 
@@ -871,7 +872,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#_isfixedheight">_isFixedHeight</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1897</li>
+									<li>Defined in plottable.d.ts:1938</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns 
@@ -896,7 +897,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#_isfixedwidth">_isFixedWidth</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1898</li>
+									<li>Defined in plottable.d.ts:1939</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns 
@@ -918,7 +919,7 @@
 									<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#_ishorizontal">_isHorizontal</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1893</li>
+									<li>Defined in plottable.d.ts:1934</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns 
@@ -940,7 +941,7 @@
 									<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#_maxlabelticklength">_maxLabelTickLength</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1960</li>
+									<li>Defined in plottable.d.ts:2001</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns 
@@ -962,7 +963,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#_render">_render</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1624</li>
+									<li>Defined in plottable.d.ts:1656</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns 
@@ -984,7 +985,7 @@
 									<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#_requestedspace">_requestedSpace</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:2172</li>
+									<li>Defined in plottable.d.ts:2213</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1015,7 +1016,7 @@
 									<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#_rescale">_rescale</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:2171</li>
+									<li>Defined in plottable.d.ts:2212</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns 
@@ -1037,7 +1038,7 @@
 									<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#_setdefaultalignment">_setDefaultAlignment</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1917</li>
+									<li>Defined in plottable.d.ts:1958</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns 
@@ -1059,7 +1060,7 @@
 									<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#_setup">_setup</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:2170</li>
+									<li>Defined in plottable.d.ts:2211</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns 
@@ -1082,7 +1083,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#_uselastcalculatedlayout">_useLastCalculatedLayout</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1626</li>
+									<li>Defined in plottable.d.ts:1658</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns 
@@ -1095,7 +1096,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#_uselastcalculatedlayout">_useLastCalculatedLayout</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1627</li>
+									<li>Defined in plottable.d.ts:1659</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1123,20 +1124,20 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#background">background</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1786</li>
+									<li>Defined in plottable.d.ts:1827</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Returns the background selection for the component
-									(A selection appearing behind of the component)</p>
+									<p>Returns the background selection for the Component
+									(A selection appearing behind of the Component)</p>
 								</div>
-								<p>Will return undefined if the component has not been anchored</p>
+								<p>Will return undefined if the Component has not been anchored.</p>
 							</div>
 							<h4 class="tsd-returns-title">Returns 
 								<a href="../interfaces/d3.selection.html" class="tsd-signature-type">Selection</a>
 							</h4>
-							<p>background selection for the component</p>
+							<p>background selection for the Component</p>
 						</li>
 					</ul>
 				</section>
@@ -1154,7 +1155,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#classed">classed</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1701</li>
+									<li>Defined in plottable.d.ts:1733</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1182,7 +1183,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#classed">classed</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1702</li>
+									<li>Defined in plottable.d.ts:1734</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1201,6 +1202,36 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported">
+					<a name="content" class="tsd-anchor"></a>
+					<h3>content</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">content<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/d3.selection.html" class="tsd-signature-type">Selection</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from 
+									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#content">content</a>
+								</p>
+								<ul>
+									<li>Defined in plottable.d.ts:1818</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the content selection for the Component
+									(A selection containing the visual elements of the Component)</p>
+								</div>
+								<p>Will return undefined if the Component has not been anchored.</p>
+							</div>
+							<h4 class="tsd-returns-title">Returns 
+								<a href="../interfaces/d3.selection.html" class="tsd-signature-type">Selection</a>
+							</h4>
+							<p>content selection for the Component</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported">
 					<a name="detach" class="tsd-anchor"></a>
 					<h3>detach</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported">
@@ -1213,7 +1244,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#detach">detach</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1739</li>
+									<li>Defined in plottable.d.ts:1771</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1244,7 +1275,7 @@
 									<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#endticklength">endTickLength</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1952</li>
+									<li>Defined in plottable.d.ts:1993</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1263,7 +1294,7 @@
 									<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#endticklength">endTickLength</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1959</li>
+									<li>Defined in plottable.d.ts:2000</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1300,20 +1331,20 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#foreground">foreground</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1777</li>
+									<li>Defined in plottable.d.ts:1809</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Returns the foreground selection for the component
-									(A selection covering the front of the component)</p>
+									<p>Returns the foreground selection for the Component
+									(A selection covering the front of the Component)</p>
 								</div>
-								<p>Will return undefined if the component has not been anchored</p>
+								<p>Will return undefined if the Component has not been anchored.</p>
 							</div>
 							<h4 class="tsd-returns-title">Returns 
 								<a href="../interfaces/d3.selection.html" class="tsd-signature-type">Selection</a>
 							</h4>
-							<p>foreground selection for the component</p>
+							<p>foreground selection for the Component</p>
 						</li>
 					</ul>
 				</section>
@@ -1331,7 +1362,7 @@
 									<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#formatter">formatter</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1925</li>
+									<li>Defined in plottable.d.ts:1966</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1352,7 +1383,7 @@
 									<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#formatter">formatter</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1933</li>
+									<li>Defined in plottable.d.ts:1974</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1390,7 +1421,7 @@
 									<a href="plottable.core.plottableobject.html">PlottableObject</a>.<a href="plottable.core.plottableobject.html#getid">getID</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:469</li>
+									<li>Defined in plottable.d.ts:499</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns 
@@ -1413,7 +1444,7 @@
 									<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#gutter">gutter</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1982</li>
+									<li>Defined in plottable.d.ts:2023</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1434,7 +1465,7 @@
 									<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#gutter">gutter</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1990</li>
+									<li>Defined in plottable.d.ts:2031</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1472,7 +1503,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#height">height</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1756</li>
+									<li>Defined in plottable.d.ts:1788</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1500,7 +1531,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#hitbox">hitBox</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1795</li>
+									<li>Defined in plottable.d.ts:1836</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1530,7 +1561,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#merge">merge</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1730</li>
+									<li>Defined in plottable.d.ts:1762</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1574,7 +1605,7 @@
 									<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#orient">orient</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1996</li>
+									<li>Defined in plottable.d.ts:2037</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1593,7 +1624,7 @@
 									<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#orient">orient</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:2004</li>
+									<li>Defined in plottable.d.ts:2045</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1631,7 +1662,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#origin">origin</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1762</li>
+									<li>Defined in plottable.d.ts:1794</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1659,7 +1690,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#origintosvg">originToSVG</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1768</li>
+									<li>Defined in plottable.d.ts:1800</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1687,7 +1718,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#redraw">redraw</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1644</li>
+									<li>Defined in plottable.d.ts:1676</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1717,7 +1748,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#registerinteraction">registerInteraction</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1693</li>
+									<li>Defined in plottable.d.ts:1725</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1757,7 +1788,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#remove">remove</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1892</li>
+									<li>Defined in plottable.d.ts:1933</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns 
@@ -1779,7 +1810,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#renderto">renderTo</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1635</li>
+									<li>Defined in plottable.d.ts:1667</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1817,7 +1848,7 @@
 									<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#showendticklabels">showEndTickLabels</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:2012</li>
+									<li>Defined in plottable.d.ts:2053</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1838,7 +1869,7 @@
 									<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#showendticklabels">showEndTickLabels</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:2021</li>
+									<li>Defined in plottable.d.ts:2062</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1875,7 +1906,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:2182</li>
+									<li>Defined in plottable.d.ts:2223</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1902,7 +1933,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:2187</li>
+									<li>Defined in plottable.d.ts:2228</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1931,7 +1962,7 @@
 									<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#ticklabelpadding">tickLabelPadding</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1967</li>
+									<li>Defined in plottable.d.ts:2008</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1951,7 +1982,7 @@
 									<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#ticklabelpadding">tickLabelPadding</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1974</li>
+									<li>Defined in plottable.d.ts:2015</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1989,7 +2020,7 @@
 									<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#ticklength">tickLength</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1939</li>
+									<li>Defined in plottable.d.ts:1980</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2008,7 +2039,7 @@
 									<a href="plottable.axis.abstractaxis.html">AbstractAxis</a>.<a href="plottable.axis.abstractaxis.html#ticklength">tickLength</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1946</li>
+									<li>Defined in plottable.d.ts:1987</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2045,7 +2076,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#width">width</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1750</li>
+									<li>Defined in plottable.d.ts:1782</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2073,7 +2104,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#xalign">xAlign</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1656</li>
+									<li>Defined in plottable.d.ts:1688</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2114,7 +2145,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#xoffset">xOffset</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1677</li>
+									<li>Defined in plottable.d.ts:1709</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2153,7 +2184,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#yalign">yAlign</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1668</li>
+									<li>Defined in plottable.d.ts:1700</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2194,7 +2225,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#yoffset">yOffset</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1686</li>
+									<li>Defined in plottable.d.ts:1718</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2266,6 +2297,9 @@
 							</li>
 							<li class=" tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
 								<a href="../modules/plottable.scale.html">Scale</a>
+							</li>
+							<li class=" tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
+								<a href="../modules/plottable.symbolgenerators.html">Symbol<wbr>Generators</a>
 							</li>
 							<li class=" tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
 								<a href="../modules/plottable._drawer.html">_<wbr>Drawer</a>
@@ -2415,6 +2449,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported">
 								<a href="plottable.axis.category.html#classed" class="tsd-kind-icon">classed</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported">
+								<a href="plottable.axis.category.html#content" class="tsd-kind-icon">content</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported">
 								<a href="plottable.axis.category.html#detach" class="tsd-kind-icon">detach</a>
