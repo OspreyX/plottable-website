@@ -11,7 +11,7 @@ var data   = [
 ];
 
 // Scales
-var xScale = new Plottable.Scale.Ordinal();
+var xScale = new Plottable.Scale.Category();
 var yScale = new Plottable.Scale.Linear();
 
 // Plot Components

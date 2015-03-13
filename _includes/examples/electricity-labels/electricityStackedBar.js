@@ -1,5 +1,5 @@
 d3.json("data/2012_stacked_bar.json", function(error, data) {
-  var xScale = new Plottable.Scale.Ordinal();
+  var xScale = new Plottable.Scale.Category();
   var yScale = new Plottable.Scale.Linear();
   var colorScale = new Plottable.Scale.Color()
                       .domain(["coal", "hydroelectric", "gas", "nuclear", "oil", "other_renewable"])

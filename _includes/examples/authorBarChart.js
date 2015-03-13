@@ -1,5 +1,5 @@
 function makeBarChart(authorData) {
-  var xScale     = new Plottable.Scale.Ordinal();
+  var xScale     = new Plottable.Scale.Category();
   var yScale     = new Plottable.Scale.Linear().domain([0, 1000]);
   var colorScale = new Plottable.Scale.Color("20")
       .domain(["Daniel Mane", "Justin Lan", "Ashwin Ramaswamy", "Bill Dwyer", "crmorford", "Brian Malehorn", "lewin"  , "other"])

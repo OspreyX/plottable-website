@@ -10,8 +10,8 @@ var data = [
     { x: "Mink",  y: "Plotting", value: 2 }];
 
 // Scales
-var xScale     = new Plottable.Scale.Ordinal();
-var yScale     = new Plottable.Scale.Ordinal();
+var xScale     = new Plottable.Scale.Category();
+var yScale     = new Plottable.Scale.Category();
 var colorScale = new Plottable.Scale.InterpolatedColor();
 
 // Plot Components

@@ -929,7 +929,7 @@ bar chart, we want the x scale to be ordinal, and the y scale can
 remain linear.
 
 {% highlight javascript %}
-var xScale = new Plottable.Scale.Ordinal();
+var xScale = new Plottable.Scale.Category();
 var yScale = new Plottable.Scale.Linear();
 {% endhighlight %}
 
@@ -961,7 +961,7 @@ like the following:
 
 {% highlight javascript %}
 function makeBarChart() {
-  var xScale = new Plottable.Scale.Ordinal();
+  var xScale = new Plottable.Scale.Category();
   var yScale = new Plottable.Scale.Linear();
   var xAxis = new Plottable.Axis.Category(xScale, "bottom");
   var yAxis = new Plottable.Axis.Numeric(yScale, "left");
@@ -995,7 +995,7 @@ and the X scale to Linear, and swap the axes and projectors as well:
 {% highlight javascript %}
 function makeHorizontalBarChart() {
   var xScale = new Plottable.Scale.Linear();
-  var yScale = new Plottable.Scale.Ordinal();
+  var yScale = new Plottable.Scale.Category();
   var xAxis = new Plottable.Axis.Numeric(xScale, "bottom");
   var yAxis = new Plottable.Axis.Category(yScale, "left");
   var barPlot = new Plottable.Plot.Bar(xScale, yScale, false);

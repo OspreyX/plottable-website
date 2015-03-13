@@ -13,7 +13,7 @@ var data = species.map(function (otter){
 });
 
 // Scales
-var xScale = new Plottable.Scale.Ordinal();
+var xScale = new Plottable.Scale.Category();
 var yScale = new Plottable.Scale.Linear();
 
 // Plot Components
