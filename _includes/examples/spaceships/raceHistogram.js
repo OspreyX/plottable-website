@@ -25,7 +25,7 @@ d3.csv("ships.csv", function(error, data) {
 
   // Scales
   var xScale     = new Plottable.Scale.Linear();
-  var yScale     = new Plottable.Scale.Ordinal();
+  var yScale     = new Plottable.Scale.Category();
   var colorScale = new Plottable.Scale.Color();
 
   // Plot Components

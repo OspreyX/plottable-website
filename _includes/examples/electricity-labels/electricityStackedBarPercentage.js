@@ -2,7 +2,7 @@ var countries = ["United States", "China", "European Union", "India", "Japan", "
 var typeKeys = ["coal", "hydroelectric", "gas", "nuclear", "oil", "other_renewable"];
 
 d3.json("data/2012_stacked_bar.json", function(error, data) {
-  var xScale = new Plottable.Scale.Ordinal();
+  var xScale = new Plottable.Scale.Category();
   var yScale = new Plottable.Scale.Linear();
   var colorScale = new Plottable.Scale.Color()
                       .domain(typeKeys)

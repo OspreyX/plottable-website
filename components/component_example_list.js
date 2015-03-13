@@ -17,7 +17,7 @@ function axis(type, orientation) {
         var lscale = new Plottable.Scale.Linear();
         axis = new Plottable.Axis.Numeric(lscale, orientation);
     } else if (type === "category") {
-        var oscale = new Plottable.Scale.Ordinal();
+        var oscale = new Plottable.Scale.Category();
         oscale.domain(ordinalDomain);
         axis = new Plottable.Axis.Category(oscale, orientation);
     } else if (type === "time") {
@@ -32,7 +32,7 @@ function axis(type, orientation) {
 
 function verticalBarPlot(plotData) {
     var data   = plotData ? plotData : ordinalData;
-    var xScale = new Plottable.Scale.Ordinal();
+    var xScale = new Plottable.Scale.Category();
     var yScale = new Plottable.Scale.Linear();
     var ds     = new Plottable.Dataset(data);
     var plot   = new Plottable.Plot.Bar(xScale, yScale, true);
@@ -45,7 +45,7 @@ function verticalBarPlot(plotData) {
 }
 
 function clusteredBarPlot(plotData) {
-    var xScale = new Plottable.Scale.Ordinal();
+    var xScale = new Plottable.Scale.Category();
     var yScale = new Plottable.Scale.Linear();
     var plot   = new Plottable.Plot.ClusteredBar(xScale, yScale);
     plot.project("x", "x", xScale);
@@ -60,7 +60,7 @@ function clusteredBarPlot(plotData) {
 }
 
 function stackedBarPlot(plotData) {
-    var xScale = new Plottable.Scale.Ordinal();
+    var xScale = new Plottable.Scale.Category();
     var yScale = new Plottable.Scale.Linear();
     var plot   = new Plottable.Plot.StackedBar(xScale, yScale);
     plot.project("x", "x", xScale);
@@ -76,7 +76,7 @@ function stackedBarPlot(plotData) {
 
 function horizontalBarPlot() {
     var xScale = new Plottable.Scale.Linear();
-    var yScale = new Plottable.Scale.Ordinal();
+    var yScale = new Plottable.Scale.Category();
     var ds     = new Plottable.Dataset(ordinalData);
 
     // need to reverse the x/y data
@@ -90,8 +90,8 @@ function horizontalBarPlot() {
 }
 
 function gridPlot() {
-    var xScale     = new Plottable.Scale.Ordinal();
-    var yScale     = new Plottable.Scale.Ordinal();
+    var xScale     = new Plottable.Scale.Category();
+    var yScale     = new Plottable.Scale.Category();
     var colorScale = new Plottable.Scale.InterpolatedColor();
 
     xScale.domain(["a", "b", "c"]);
@@ -251,7 +251,7 @@ function animate2() {
 }
 
 function animate3() {
-    var xScale = new Plottable.Scale.Ordinal();
+    var xScale = new Plottable.Scale.Category();
     var yScale = new Plottable.Scale.Linear();
 
     var xAxis = new Plottable.Axis.Category(xScale, "bottom");

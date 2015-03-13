@@ -13,7 +13,7 @@ d3.csv("ships.csv", function(error, data) {
 
   // Scales
   var xScale = new Plottable.Scale.Linear();
-  var yScale = new Plottable.Scale.Ordinal();
+  var yScale = new Plottable.Scale.Category();
 
   // Plot Components
   var title  = new Plottable.Component.TitleLabel("Ship Class Histogram");

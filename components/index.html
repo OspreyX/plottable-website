@@ -211,7 +211,7 @@ window.onload = function() {
   });
 
   var simpleData = [{x: "First", y: 5}, {x: "Second", y: 10}, {x: "Third", y: 14}];
-  var simpleXScale = new Plottable.Scale.Ordinal();
+  var simpleXScale = new Plottable.Scale.Category();
   var simpleYScale = new Plottable.Scale.Linear();
   var simpleXAxis = new Plottable.Axis.Category(simpleXScale, "bottom");
   var simpleYAxis = new Plottable.Axis.Numeric(simpleYScale, "left");
@@ -225,7 +225,7 @@ window.onload = function() {
 
   var data0 = [{x: "A", y: 5}, {x: "B", y: 10}, {x: "C", y: 14}];
   var data1 = [{x: "A", y: 2}, {x: "B", y: 13}, {x: "C", y: 12}];
-  var xScale = new Plottable.Scale.Ordinal();
+  var xScale = new Plottable.Scale.Category();
   var yScale0 = new Plottable.Scale.Linear();
   var yScale1 = new Plottable.Scale.Linear();
   var xAxis = new Plottable.Axis.Category(xScale, "bottom");

@@ -2,7 +2,7 @@ var data0  = [{x : 'Left', y : 10}, {x : 'Right', y : 20}];
 var data1  = [{x : 'Left', y : 10}, {x : 'Right', y : 5}];
 
 // Scales
-var xScale     = new Plottable.Scale.Ordinal();
+var xScale     = new Plottable.Scale.Category();
 var yScale     = new Plottable.Scale.Linear();
 var colorScale = new Plottable.Scale.Color();
 

@@ -30,7 +30,7 @@ $.when(
 
   // Scales
   var xScale    = new Plottable.Scale.Linear();
-  var yScale    = new Plottable.Scale.Ordinal()
+  var yScale    = new Plottable.Scale.Category()
     .domain(_(raceSchema).keys().reverse().value());
   var raceScale = new Plottable.Scale.Color()
     .domain(_.keys(raceSchema))
