@@ -27,7 +27,7 @@ var plot  = new Plottable.Plot.Bar(xScale, yScale)
   .project("y", "y", yScale)
   // Store the tooltip content in the "title" attribute
   .project("title", function(d){
-    return "<strong class=\"tooltip-title\">" + d.x + "</strong><br>" +
+    return "<strong class=\"tooltip-title\">" + d.species + "</strong><br>" +
       "<span class=\"tooltip-value\">" + d3.format("0,.2f")(d.y) + "</span>";
   })
   .classed("tooltipped", true);
