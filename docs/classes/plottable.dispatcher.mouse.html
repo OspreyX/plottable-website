@@ -121,6 +121,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-not-exported"><a href="plottable.dispatcher.mouse.html#_setcallback" class="tsd-kind-icon">_set<wbr>Callback</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported"><a href="plottable.dispatcher.mouse.html#getid" class="tsd-kind-icon">getID</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="plottable.dispatcher.mouse.html#getlastmouseposition" class="tsd-kind-icon">get<wbr>Last<wbr>Mouse<wbr>Position</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="plottable.dispatcher.mouse.html#ondblclick" class="tsd-kind-icon">on<wbr>Dbl<wbr>Click</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="plottable.dispatcher.mouse.html#onmousedown" class="tsd-kind-icon">on<wbr>Mouse<wbr>Down</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="plottable.dispatcher.mouse.html#onmousemove" class="tsd-kind-icon">on<wbr>Mouse<wbr>Move</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="plottable.dispatcher.mouse.html#onmouseup" class="tsd-kind-icon">on<wbr>Mouse<wbr>Up</a></li>
@@ -143,7 +144,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:3538</li>
+									<li>Defined in plottable.d.ts:3556</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -181,7 +182,7 @@
 							<a href="plottable.dispatcher.abstractdispatcher.html">AbstractDispatcher</a>.<a href="plottable.dispatcher.abstractdispatcher.html#_broadcasters">_broadcasters</a>
 						</p>
 						<ul>
-							<li>Defined in plottable.d.ts:3516</li>
+							<li>Defined in plottable.d.ts:3534</li>
 						</ul>
 					</aside>
 				</section>
@@ -194,7 +195,7 @@
 							<a href="plottable.dispatcher.abstractdispatcher.html">AbstractDispatcher</a>.<a href="plottable.dispatcher.abstractdispatcher.html#_event2callback">_event2Callback</a>
 						</p>
 						<ul>
-							<li>Defined in plottable.d.ts:3513</li>
+							<li>Defined in plottable.d.ts:3531</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -242,7 +243,7 @@
 									<a href="plottable.dispatcher.abstractdispatcher.html">AbstractDispatcher</a>.<a href="plottable.dispatcher.abstractdispatcher.html#_getwrappedcallback">_getWrappedCallback</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:3546</li>
+									<li>Defined in plottable.d.ts:3564</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -270,7 +271,7 @@
 									<a href="plottable.dispatcher.abstractdispatcher.html">AbstractDispatcher</a>.<a href="plottable.dispatcher.abstractdispatcher.html#_setcallback">_setCallback</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:3521</li>
+									<li>Defined in plottable.d.ts:3539</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -304,7 +305,7 @@
 									<a href="plottable.core.plottableobject.html">PlottableObject</a>.<a href="plottable.core.plottableobject.html#getid">getID</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:500</li>
+									<li>Defined in plottable.d.ts:501</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns 
@@ -323,7 +324,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:3600</li>
+									<li>Defined in plottable.d.ts:3630</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -347,6 +348,50 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="ondblclick" class="tsd-anchor"></a>
+					<h3>on<wbr>Dbl<wbr>Click</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Dbl<wbr>Click<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MouseCallback</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="plottable.dispatcher.mouse.html" class="tsd-signature-type">Mouse</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in plottable.d.ts:3624</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Registers a callback to be called whenever a dblClick occurs,
+									or removes the callback if <code>null</code> is passed as the callback.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>key: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The key associated with the callback.
+										Key uniqueness is determined by deep equality.</p>
+									</div>
+								</li>
+								<li>
+									<h5>callback: <span class="tsd-signature-type">MouseCallback</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A callback that takes the pixel position
+											in svg-coordinate-space.
+										Pass <code>null</code> to remove a callback.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns 
+								<a href="plottable.dispatcher.mouse.html" class="tsd-signature-type">Mouse</a>
+							</h4>
+							<p>The calling Dispatcher.Mouse.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
 					<a name="onmousedown" class="tsd-anchor"></a>
 					<h3>on<wbr>Mouse<wbr>Down</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
@@ -356,7 +401,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:3570</li>
+									<li>Defined in plottable.d.ts:3588</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -400,7 +445,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:3558</li>
+									<li>Defined in plottable.d.ts:3576</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -444,7 +489,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:3582</li>
+									<li>Defined in plottable.d.ts:3600</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -488,7 +533,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:3594</li>
+									<li>Defined in plottable.d.ts:3612</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -532,7 +577,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:3538</li>
+									<li>Defined in plottable.d.ts:3556</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -650,6 +695,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
 								<a href="plottable.dispatcher.mouse.html#getlastmouseposition" class="tsd-kind-icon">get<wbr>Last<wbr>Mouse<wbr>Position</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="plottable.dispatcher.mouse.html#ondblclick" class="tsd-kind-icon">on<wbr>Dbl<wbr>Click</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
 								<a href="plottable.dispatcher.mouse.html#onmousedown" class="tsd-kind-icon">on<wbr>Mouse<wbr>Down</a>
