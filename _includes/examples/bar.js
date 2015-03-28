@@ -29,7 +29,7 @@ var plot   = new Plottable.Plot.Bar(xScale, yScale, true)
 // Layout and render
 new Plottable.Component.Table([
   [null,    null, title],
-  [yLabel, yAxis, lines.merge(plot)],
+  [yLabel, yAxis, lines.below(plot)],
   [null,    null, xAxis]
 ])
 .renderTo("svg#example");
