@@ -33,7 +33,7 @@ var plot   = new Plottable.Plot.StackedBar(xScale, yScale)
 new Plottable.Component.Table([
   [null,    null, title],
   [null,    null, legend],
-  [yLabel, yAxis, lines.merge(plot)],
+  [yLabel, yAxis, lines.below(plot)],
   [null,    null, xAxis]
 ])
 .renderTo("svg#example");

@@ -30,7 +30,7 @@ function commitScatterPlot(commitData) {
 
   // Finally, merge the pieces together into a StandardChart, render it, and
   // attach an interaction.
-  var center = gridlines.merge(scatter).merge(legend);
+  var center = gridlines.below(scatter).below(legend);
   var table = new Plottable.Component.Table([
     [yAxis, center],
     [null,  xAxis]

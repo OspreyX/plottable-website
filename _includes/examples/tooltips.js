@@ -20,7 +20,6 @@ var yScale = new Plottable.Scale.Linear();
 var title = new Plottable.Component.TitleLabel("Otter Species");
 var xAxis = new Plottable.Axis.Category(xScale, "bottom");
 var yAxis = new Plottable.Axis.Numeric(yScale, "left");
-var lines = new Plottable.Component.Gridlines(null, yScale);
 var plot  = new Plottable.Plot.Bar(xScale, yScale)
   .addDataset(data)
   .project("x", "species", xScale)
