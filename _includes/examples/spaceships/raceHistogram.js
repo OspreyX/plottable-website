@@ -50,7 +50,7 @@ d3.csv("ships.csv", function(error, data) {
   new Plottable.Component.Table([
     [null,  title],
     [null,  legend],
-    [yAxis, lines.merge(plot)],
+    [yAxis, lines.below(plot)],
     [null,  xAxis]
   ])
   .renderTo("svg#example-race-histogram");

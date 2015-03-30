@@ -18,7 +18,7 @@ d3.tsv("data.tsv", function(error, data) {
 
   var legend = new Plottable.Component.Legend(colorScale);
 
-  var center = plot.merge(legend);
+  var center = plot.below(legend);
   var table = new Plottable.Component.Table([
                 [yLabel, yAxis, center],
                 [null  , null , xAxis ],
