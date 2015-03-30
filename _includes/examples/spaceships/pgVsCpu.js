@@ -55,7 +55,7 @@ $.when(
           "Armor: " + d.A + ", Shields: " + d.SH;
       })
       .classed("tooltipped", true);
-  var center = lines.merge(plot);
+  var center = lines.below(plot);
 
   // Layout and render
   var table  = new Plottable.Component.Table([

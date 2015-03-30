@@ -26,7 +26,7 @@ d3.tsv("data.tsv", function(error, data) {
     });
 
   var gridlines = new Plottable.Component.Gridlines(xScale, yScale);
-  var center    = new Plottable.Component.Group(plots).merge(gridlines).merge(legend);
+  var center    = new Plottable.Component.Group(plots).above(gridlines).below(legend);
   var table     = new Plottable.Component.Table([[yLabel, yAxis, center], [null, null, xAxis]]).renderTo(d3.select("svg#linechart-plottable-demo"));
   var panZoom   = new Plottable.Interaction.PanZoom(xScale, null);
   center.registerInteraction(panZoom);

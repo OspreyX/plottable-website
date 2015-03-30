@@ -29,7 +29,7 @@ d3.csv("ships.csv", function(error, data) {
   // Layout and render
   new Plottable.Component.Table([
     [null,  title],
-    [yAxis, lines.merge(plot)],
+    [yAxis, lines.below(plot)],
     [null,  xAxis]
   ])
   .renderTo("svg#example-class-histogram");
