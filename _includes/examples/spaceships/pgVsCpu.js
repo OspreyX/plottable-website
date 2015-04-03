@@ -73,7 +73,7 @@ $.when(
 Plottable.Core.RenderController.flush();
 
 // Attach tooltips with qTip2 (which uses the "title" attribute by default)
-$("svg .tooltipped circle").qtip({
+$("svg .tooltipped path").qtip({
   position : {
     my : "bottom middle",
     at : "top middle"
