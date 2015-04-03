@@ -25,7 +25,7 @@ function commitScatterPlot(commitData) {
     .attr("x", "parsedDate", xScale)
     .attr("y", hourAccessor, yScale)
     .attr("fill", "authorName", colorScale)
-    .attr("r", 5)
+    .attr("size", 10)
     .attr("opacity", 0.4 );
 
   // Finally, merge the pieces together into a StandardChart, render it, and
