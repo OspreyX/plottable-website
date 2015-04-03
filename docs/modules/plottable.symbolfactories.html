@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="shortcut icon" href="/favicon.ico" sizes="16x16 32x32" type="image/x-icon">
-	<title>RenderController | Plottable</title>
+	<title>SymbolFactories | Plottable</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -71,189 +71,191 @@
 					<a href="plottable.html">Plottable</a>
 				</li>
 				<li>
-					<a href="plottable.core.html">Core</a>
-				</li>
-				<li>
-					<a href="plottable.core.rendercontroller.html">RenderController</a>
+					<a href="plottable.symbolfactories.html">SymbolFactories</a>
 				</li>
 			</ul>
-			<h1>Module RenderController</h1>
+			<h1>Module SymbolFactories</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>The RenderController is responsible for enqueueing and synchronizing
-						layout and render calls for Plottable components.</p>
-					</div>
-					<p>Layouts and renders occur inside an animation callback
-					(window.requestAnimationFrame if available).</p>
-					<p>If you require immediate rendering, call RenderController.flush() to
-					perform enqueued layout and rendering serially.</p>
-					<p>If you want to always have immediate rendering (useful for debugging),
-					call</p>
-					<pre><code class="lang-typescript">Plottable.Core.RenderController.setRenderPolicy(
-  <span class="hljs-keyword">new</span> Plottable.Core.RenderController.RenderPolicy.Immediate()
-);
-</code></pre>
-				</div>
-			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section tsd-is-not-exported">
-							<h3>Modules</h3>
+							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-module tsd-parent-kind-module tsd-is-not-exported"><a href="plottable.core.rendercontroller.renderpolicy.html" class="tsd-kind-icon">Render<wbr>Policy</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section tsd-is-not-exported">
-							<h3>Variables</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported"><a href="plottable.core.rendercontroller.html#_renderpolicy" class="tsd-kind-icon">_render<wbr>Policy</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="plottable.symbolfactories.html#stringaccessor" class="tsd-kind-icon">String<wbr>Accessor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="plottable.core.rendercontroller.html#flush" class="tsd-kind-icon">flush</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="plottable.core.rendercontroller.html#registertocomputelayout" class="tsd-kind-icon">register<wbr>ToCompute<wbr>Layout</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="plottable.core.rendercontroller.html#registertorender" class="tsd-kind-icon">register<wbr>ToRender</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="plottable.core.rendercontroller.html#setrenderpolicy" class="tsd-kind-icon">set<wbr>Render<wbr>Policy</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="plottable.symbolfactories.html#circle" class="tsd-kind-icon">circle</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="plottable.symbolfactories.html#cross" class="tsd-kind-icon">cross</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="plottable.symbolfactories.html#diamond" class="tsd-kind-icon">diamond</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="plottable.symbolfactories.html#square" class="tsd-kind-icon">square</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="plottable.symbolfactories.html#triangledown" class="tsd-kind-icon">triangle<wbr>Down</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="plottable.symbolfactories.html#triangleup" class="tsd-kind-icon">triangle<wbr>Up</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
-				<h2>Variables</h2>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
-					<a name="_renderpolicy" class="tsd-anchor"></a>
-					<h3>_render<wbr>Policy</h3>
-					<div class="tsd-signature tsd-kind-icon">_render<wbr>Policy<span class="tsd-signature-symbol">:</span> <a href="../interfaces/plottable.core.rendercontroller.renderpolicy.renderpolicy.html" class="tsd-signature-type">RenderPolicy</a></div>
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+					<a name="stringaccessor" class="tsd-anchor"></a>
+					<h3>String<wbr>Accessor</h3>
+					<div class="tsd-signature tsd-kind-icon">String<wbr>Accessor<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in plottable.d.ts:670</li>
+							<li>Defined in plottable.d.ts:420</li>
 						</ul>
 					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>datum<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>datum: <span class="tsd-signature-type">any</span></h5>
+											</li>
+											<li>
+												<h5>index: <span class="tsd-signature-type">number</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns 
+											<span class="tsd-signature-type">string</span>
+										</h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
-					<a name="flush" class="tsd-anchor"></a>
-					<h3>flush</h3>
+					<a name="circle" class="tsd-anchor"></a>
+					<h3>circle</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">flush<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">circle<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="plottable.html#symbolfactory" class="tsd-signature-type">SymbolFactory</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:692</li>
+									<li>Defined in plottable.d.ts:421</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Render everything that is waiting to be rendered right now, instead of
-									waiting until the next frame.</p>
-								</div>
-								<p>Useful to call when debugging.</p>
-							</div>
 							<h4 class="tsd-returns-title">Returns 
-								<span class="tsd-signature-type">void</span>
+								<a href="plottable.html#symbolfactory" class="tsd-signature-type">SymbolFactory</a>
 							</h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
-					<a name="registertocomputelayout" class="tsd-anchor"></a>
-					<h3>register<wbr>ToCompute<wbr>Layout</h3>
+					<a name="cross" class="tsd-anchor"></a>
+					<h3>cross</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">register<wbr>ToCompute<wbr>Layout<span class="tsd-signature-symbol">(</span>c<span class="tsd-signature-symbol">: </span><a href="../classes/plottable.component.abstractcomponent.html" class="tsd-signature-type">AbstractComponent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">cross<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="plottable.html#symbolfactory" class="tsd-signature-type">SymbolFactory</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:685</li>
+									<li>Defined in plottable.d.ts:423</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>If the RenderController is enabled, we enqueue the component for
-									layout and render. Otherwise, it is rendered immediately.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>c: <a href="../classes/plottable.component.abstractcomponent.html" class="tsd-signature-type">AbstractComponent</a></h5>
-								</li>
-							</ul>
 							<h4 class="tsd-returns-title">Returns 
-								<span class="tsd-signature-type">void</span>
+								<a href="plottable.html#symbolfactory" class="tsd-signature-type">SymbolFactory</a>
 							</h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
-					<a name="registertorender" class="tsd-anchor"></a>
-					<h3>register<wbr>ToRender</h3>
+					<a name="diamond" class="tsd-anchor"></a>
+					<h3>diamond</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">register<wbr>ToRender<span class="tsd-signature-symbol">(</span>c<span class="tsd-signature-symbol">: </span><a href="../classes/plottable.component.abstractcomponent.html" class="tsd-signature-type">AbstractComponent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">diamond<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="plottable.html#symbolfactory" class="tsd-signature-type">SymbolFactory</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:678</li>
+									<li>Defined in plottable.d.ts:424</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>If the RenderController is enabled, we enqueue the component for
-									render. Otherwise, it is rendered immediately.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>c: <a href="../classes/plottable.component.abstractcomponent.html" class="tsd-signature-type">AbstractComponent</a></h5>
-								</li>
-							</ul>
 							<h4 class="tsd-returns-title">Returns 
-								<span class="tsd-signature-type">void</span>
+								<a href="plottable.html#symbolfactory" class="tsd-signature-type">SymbolFactory</a>
 							</h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
-					<a name="setrenderpolicy" class="tsd-anchor"></a>
-					<h3>set<wbr>Render<wbr>Policy</h3>
+					<a name="square" class="tsd-anchor"></a>
+					<h3>square</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Render<wbr>Policy<span class="tsd-signature-symbol">(</span>policy<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/plottable.core.rendercontroller.renderpolicy.renderpolicy.html" class="tsd-signature-type">RenderPolicy</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">square<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="plottable.html#symbolfactory" class="tsd-signature-type">SymbolFactory</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:671</li>
+									<li>Defined in plottable.d.ts:422</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>policy: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/plottable.core.rendercontroller.renderpolicy.renderpolicy.html" class="tsd-signature-type">RenderPolicy</a></h5>
-								</li>
-							</ul>
 							<h4 class="tsd-returns-title">Returns 
-								<span class="tsd-signature-type">void</span>
+								<a href="plottable.html#symbolfactory" class="tsd-signature-type">SymbolFactory</a>
+							</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+					<a name="triangledown" class="tsd-anchor"></a>
+					<h3>triangle<wbr>Down</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">triangle<wbr>Down<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="plottable.html#symbolfactory" class="tsd-signature-type">SymbolFactory</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in plottable.d.ts:426</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns 
+								<a href="plottable.html#symbolfactory" class="tsd-signature-type">SymbolFactory</a>
+							</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+					<a name="triangleup" class="tsd-anchor"></a>
+					<h3>triangle<wbr>Up</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">triangle<wbr>Up<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="plottable.html#symbolfactory" class="tsd-signature-type">SymbolFactory</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in plottable.d.ts:425</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns 
+								<a href="plottable.html#symbolfactory" class="tsd-signature-type">SymbolFactory</a>
 							</h4>
 						</li>
 					</ul>
@@ -287,18 +289,8 @@
 							<li class=" tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
 								<a href="plottable.config.html">Config</a>
 							</li>
-							<li class="current tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
+							<li class=" tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
 								<a href="plottable.core.html">Core</a>
-								<ul>
-									<li class="current tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
-										<a href="plottable.core.rendercontroller.html">Render<wbr>Controller</a>
-										<ul>
-											<li class=" tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
-												<a href="plottable.core.rendercontroller.renderpolicy.html">Render<wbr>Policy</a>
-											</li>
-										</ul>
-									</li>
-								</ul>
 							</li>
 							<li class=" tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
 								<a href="plottable.dispatcher.html">Dispatcher</a>
@@ -315,7 +307,7 @@
 							<li class=" tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
 								<a href="plottable.scale.html">Scale</a>
 							</li>
-							<li class=" tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
+							<li class="current tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
 								<a href="plottable.symbolfactories.html">Symbol<wbr>Factories</a>
 							</li>
 							<li class=" tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
@@ -330,20 +322,26 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
-						<a href="plottable.core.rendercontroller.html#_renderpolicy" class="tsd-kind-icon">_render<wbr>Policy</a>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+						<a href="plottable.symbolfactories.html#stringaccessor" class="tsd-kind-icon">String<wbr>Accessor</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
-						<a href="plottable.core.rendercontroller.html#flush" class="tsd-kind-icon">flush</a>
+						<a href="plottable.symbolfactories.html#circle" class="tsd-kind-icon">circle</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
-						<a href="plottable.core.rendercontroller.html#registertocomputelayout" class="tsd-kind-icon">register<wbr>ToCompute<wbr>Layout</a>
+						<a href="plottable.symbolfactories.html#cross" class="tsd-kind-icon">cross</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
-						<a href="plottable.core.rendercontroller.html#registertorender" class="tsd-kind-icon">register<wbr>ToRender</a>
+						<a href="plottable.symbolfactories.html#diamond" class="tsd-kind-icon">diamond</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
-						<a href="plottable.core.rendercontroller.html#setrenderpolicy" class="tsd-kind-icon">set<wbr>Render<wbr>Policy</a>
+						<a href="plottable.symbolfactories.html#square" class="tsd-kind-icon">square</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+						<a href="plottable.symbolfactories.html#triangledown" class="tsd-kind-icon">triangle<wbr>Down</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+						<a href="plottable.symbolfactories.html#triangleup" class="tsd-kind-icon">triangle<wbr>Up</a>
 					</li>
 				</ul>
 			</nav>

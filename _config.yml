@@ -19,5 +19,5 @@ company               : 'Palantir'
 title                 : 'Palantir'
 google_analytics      : ''
 baseurl               :
-plottable_version     : 0.50.0
+plottable_version     : 0.51.0
 minifiedSuffix        : '.min'
