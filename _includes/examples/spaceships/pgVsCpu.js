@@ -44,7 +44,7 @@ $.when(
       .addDataset(ships)
       .project("x", "A", xScale)
       .project("y", "SH", yScale)
-      .project("r", function(d) {return getHullSize(d) + 2; })
+      .project("size", function(d) {return 2 * (getHullSize(d) + 2); })
       .project("stroke", "Tech", techScale)
       .project("stroke-width", 2)
       .project("opacity", 1)

@@ -13,7 +13,7 @@ d3.tsv("data.tsv", function(error, data) {
                       .addDataset(data)
                       .project("x", "sepalWidth", xScale)
                       .project("y", "sepalLength", yScale)
-                      .project("r", 3.5)
+                      .project("size", 7)
                       .project("fill", "species", colorScale);
 
   var legend = new Plottable.Component.Legend(colorScale);
