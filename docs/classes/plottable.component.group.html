@@ -128,6 +128,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="plottable.component.group.html#_anchor" class="tsd-kind-icon">_anchor</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-not-exported"><a href="plottable.component.group.html#_computelayout" class="tsd-kind-icon">_compute<wbr>Layout</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported"><a href="plottable.component.group.html#_dorender" class="tsd-kind-icon">_do<wbr>Render</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected tsd-is-not-exported"><a href="plottable.component.group.html#_getsize" class="tsd-kind-icon">_get<wbr>Size</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported"><a href="plottable.component.group.html#_invalidatelayout" class="tsd-kind-icon">_invalidate<wbr>Layout</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-not-exported"><a href="plottable.component.group.html#_isfixedheight" class="tsd-kind-icon">_is<wbr>Fixed<wbr>Height</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-not-exported"><a href="plottable.component.group.html#_isfixedwidth" class="tsd-kind-icon">_is<wbr>Fixed<wbr>Width</a></li>
@@ -178,7 +179,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in plottable.d.ts:1882</li>
+									<li>Defined in plottable.d.ts:1892</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -348,7 +349,7 @@
 									<a href="plottable.component.abstractcomponentcontainer.html">AbstractComponentContainer</a>.<a href="plottable.component.abstractcomponentcontainer.html#_addcomponent">_addComponent</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1852</li>
+									<li>Defined in plottable.d.ts:1862</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -382,7 +383,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#_anchor">_anchor</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1849</li>
+									<li>Defined in plottable.d.ts:1859</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -410,7 +411,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#_computelayout">_computeLayout</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1899</li>
+									<li>Defined in plottable.d.ts:1909</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -447,12 +448,51 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#_dorender">_doRender</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1646</li>
+									<li>Defined in plottable.d.ts:1650</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns 
 								<span class="tsd-signature-type">void</span>
 							</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected tsd-is-not-exported">
+					<a name="_getsize" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _get<wbr>Size</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">_get<wbr>Size<span class="tsd-signature-symbol">(</span>availableWidth<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, availableHeight<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overwrites 
+									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#_getsize">_getSize</a>
+								</p>
+								<ul>
+									<li>Defined in plottable.d.ts:1910</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>availableWidth: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>availableHeight: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns 
+								<span class="tsd-signature-type">object</span>
+							</h4>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter">
+									<h5>height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li class="tsd-parameter">
+									<h5>width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
 						</li>
 					</ul>
 				</section>
@@ -469,7 +509,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#_invalidatelayout">_invalidateLayout</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1649</li>
+									<li>Defined in plottable.d.ts:1653</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns 
@@ -491,7 +531,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#_isfixedheight">_isFixedHeight</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1901</li>
+									<li>Defined in plottable.d.ts:1915</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns 
@@ -513,7 +553,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#_isfixedwidth">_isFixedWidth</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1900</li>
+									<li>Defined in plottable.d.ts:1914</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns 
@@ -535,7 +575,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#_merge">_merge</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1898</li>
+									<li>Defined in plottable.d.ts:1908</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -566,7 +606,7 @@
 									<a href="plottable.component.abstractcomponentcontainer.html">AbstractComponentContainer</a>.<a href="plottable.component.abstractcomponentcontainer.html#_removecomponent">_removeComponent</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1851</li>
+									<li>Defined in plottable.d.ts:1861</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -597,7 +637,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#_render">_render</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1850</li>
+									<li>Defined in plottable.d.ts:1860</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns 
@@ -619,7 +659,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#_requestedspace">_requestedSpace</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1897</li>
+									<li>Defined in plottable.d.ts:1907</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -683,7 +723,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#_uselastcalculatedlayout">_useLastCalculatedLayout</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1873</li>
+									<li>Defined in plottable.d.ts:1883</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns 
@@ -699,7 +739,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#_uselastcalculatedlayout">_useLastCalculatedLayout</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1874</li>
+									<li>Defined in plottable.d.ts:1884</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -727,7 +767,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#above">above</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1752</li>
+									<li>Defined in plottable.d.ts:1762</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -770,7 +810,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#background">background</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1831</li>
+									<li>Defined in plottable.d.ts:1841</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -800,7 +840,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#below">below</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1766</li>
+									<li>Defined in plottable.d.ts:1776</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -844,12 +884,12 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#classed">classed</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1722</li>
+									<li>Defined in plottable.d.ts:1725</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Adds/removes a given CSS class to/from the Component, or checks if the Component has a particular CSS class.</p>
+									<p>Checks if the Component has a given CSS class.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -857,14 +897,14 @@
 								<li>
 									<h5>cssClass: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>The CSS class to add/remove/check for.</p>
+										<p>The CSS class to check for.</p>
 									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns 
 								<span class="tsd-signature-type">boolean</span>
 							</h4>
-							<p>Whether the Component has the given CSS class, or the calling Component (if addClass is supplied).</p>
+							<p>Whether the Component has the given CSS class.</p>
 						</li>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
@@ -872,21 +912,33 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#classed">classed</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1723</li>
+									<li>Defined in plottable.d.ts:1733</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Adds/removes a given CSS class to/from the Component.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>cssClass: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The CSS class to add or remove.</p>
+									</div>
 								</li>
 								<li>
 									<h5>addClass: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>If true, adds the provided CSS class; otherwise, removes it.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns 
 								<a href="plottable.component.abstractcomponent.html" class="tsd-signature-type">AbstractComponent</a>
 							</h4>
+							<p>The calling Component.</p>
 						</li>
 					</ul>
 				</section>
@@ -903,7 +955,7 @@
 									<a href="plottable.component.abstractcomponentcontainer.html">AbstractComponentContainer</a>.<a href="plottable.component.abstractcomponentcontainer.html#components">components</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1858</li>
+									<li>Defined in plottable.d.ts:1868</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -931,7 +983,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#content">content</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1822</li>
+									<li>Defined in plottable.d.ts:1832</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -961,7 +1013,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#detach">detach</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1775</li>
+									<li>Defined in plottable.d.ts:1785</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -991,7 +1043,7 @@
 									<a href="plottable.component.abstractcomponentcontainer.html">AbstractComponentContainer</a>.<a href="plottable.component.abstractcomponentcontainer.html#detachall">detachAll</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1871</li>
+									<li>Defined in plottable.d.ts:1881</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1020,7 +1072,7 @@
 									<a href="plottable.component.abstractcomponentcontainer.html">AbstractComponentContainer</a>.<a href="plottable.component.abstractcomponentcontainer.html#empty">empty</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1864</li>
+									<li>Defined in plottable.d.ts:1874</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1048,7 +1100,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#foreground">foreground</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1813</li>
+									<li>Defined in plottable.d.ts:1823</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1100,7 +1152,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#height">height</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1792</li>
+									<li>Defined in plottable.d.ts:1802</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1128,7 +1180,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#hitbox">hitBox</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1840</li>
+									<li>Defined in plottable.d.ts:1850</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1158,7 +1210,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#origin">origin</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1798</li>
+									<li>Defined in plottable.d.ts:1808</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1186,7 +1238,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#origintosvg">originToSVG</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1804</li>
+									<li>Defined in plottable.d.ts:1814</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1214,7 +1266,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#redraw">redraw</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1665</li>
+									<li>Defined in plottable.d.ts:1669</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1244,7 +1296,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#registerinteraction">registerInteraction</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1714</li>
+									<li>Defined in plottable.d.ts:1718</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1284,7 +1336,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#remove">remove</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1872</li>
+									<li>Defined in plottable.d.ts:1882</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns 
@@ -1306,7 +1358,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#renderto">renderTo</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1656</li>
+									<li>Defined in plottable.d.ts:1660</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1343,7 +1395,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#width">width</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1786</li>
+									<li>Defined in plottable.d.ts:1796</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1371,7 +1423,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#xalign">xAlign</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1677</li>
+									<li>Defined in plottable.d.ts:1681</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1412,7 +1464,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#xoffset">xOffset</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1698</li>
+									<li>Defined in plottable.d.ts:1702</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1451,7 +1503,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#yalign">yAlign</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1689</li>
+									<li>Defined in plottable.d.ts:1693</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1492,7 +1544,7 @@
 									<a href="plottable.component.abstractcomponent.html">AbstractComponent</a>.<a href="plottable.component.abstractcomponent.html#yoffset">yOffset</a>
 								</p>
 								<ul>
-									<li>Defined in plottable.d.ts:1707</li>
+									<li>Defined in plottable.d.ts:1711</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1638,6 +1690,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported">
 								<a href="plottable.component.group.html#_dorender" class="tsd-kind-icon">_do<wbr>Render</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected tsd-is-not-exported">
+								<a href="plottable.component.group.html#_getsize" class="tsd-kind-icon">_get<wbr>Size</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported">
 								<a href="plottable.component.group.html#_invalidatelayout" class="tsd-kind-icon">_invalidate<wbr>Layout</a>
