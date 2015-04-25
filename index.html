@@ -180,18 +180,18 @@ page_id: page-overview
           });
         }
 
-        // Preview Plots
-        // plots
-        var innerTable = new Plottable.Component.Table();
-        innerTable.addComponent(0, 0, makeXYPlotMulti('area'));
-        innerTable.addComponent(0, 1, makeXYPlotMulti('line'));
-        innerTable.addComponent(0, 2, verticalBarPlot());
-        innerTable.addComponent(0, 3, makeXYPlot('area'));
-
-        var table = new Plottable.Component.Table();
-        table.addComponent(0, 0, innerTable);
+        var multiAreaPlot = makeXYPlotMulti('area');
+        var multiLinePlot = makeXYPlotMulti('line');
+        var vBP = verticalBarPlot();
+        var areaPlot = makeXYPlot('area');
+        var table = new Plottable.Component.Table([
+          [multiAreaPlot, multiLinePlot, vBP, areaPlot]
+        ]);
         table.renderTo("#preview-plot");
-        var clickInteraction = new Plottable.Interaction.Click(table).callback(function() {table.renderTo("#preview-plot")});
+        var clickInteraction = new Plottable.Interaction.Click();
+        clickInteraction.onClick(function() {
+          table.renderTo("#preview-plot");
+        });
         table.registerInteraction(clickInteraction);
 
       }); // ready
