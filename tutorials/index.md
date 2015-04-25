@@ -843,30 +843,7 @@ Tutorial 5 - Bars
 
 Creating bar charts and histograms are relatively similar to what we've
 done in previous tutorials. The main difference is the introduction of
-an Ordinal Scale instead of a Linear Scale. Additionally, we'll need a
-function that sets the rangeType (i.e. the range bounds for the bar) as
-either **bands** or **points** (concepts native to D3). Bands is the
-default, and the recommended, so we'll focus only on bands and forgo a
-discussion on points.
-
-Simply put, bands are used as the rangeType when you want to create bar
-charts; the width of the band is set by the scale (if you want to adjust
-the width of the bars, you need to set padding parameters in the
-function). In the diagram below, the bars are separated by a **step**.
-The step is a set size, the padding between the bars is set as a
-proportion of the step itself, and the bars take up the remaining length
-of the step.
-
-You can also specify the distance to the left of the first bar and the
-right of the last bar.
-
-![]({{ site.baseurl }}/build/images/tutorials/bands.png)
-
-The D3 documentation on each of these concepts is comprehensive and we
-recommend you look there before continuing:
-
--   [Bands](https://github.com/mbostock/d3/wiki/Ordinal-Scales#ordinal_rangeBands)
--   [Points](https://github.com/mbostock/d3/wiki/Ordinal-Scales#ordinal_rangePoints)
+an Category Scale instead of a Linear Scale.
 
 The following example will walk you through the creation of a bar chart.
 Here we are using a simple data set just to introduce the topic of bar
@@ -903,7 +880,7 @@ As always, we start with the html code:
 {% highlight xml %}
 <html>
   <head>
-    <title>Plottable Tutorial 5: Using Ordinal Scales and Category Axes</title>
+    <title>Plottable Tutorial 5: Using Category Scales and Category Axes</title>
 
     <link rel="stylesheet" type="text/css" href="../plottable.css" />
 
@@ -922,10 +899,10 @@ As always, we start with the html code:
 The majority of the code in `barChart.js` follows what we did in
 previous tutorials. We create axes, scales, plots, and projectors before
 putting everything into a table to create the chart. The new classes used in
-this example are the Ordinal scale and the Bar plot.
+this example are the Category scale and the Bar plot.
 
 As always, we start by defining our scales. Here, since this is a
-bar chart, we want the x scale to be ordinal, and the y scale can
+bar chart, we want the x scale to be Category, and the y scale can
 remain linear.
 
 {% highlight javascript %}
@@ -989,7 +966,7 @@ function makeBarChart() {
 ![]({{ site.baseurl }}/build/images/tutorials/barChart.png)
 
 If we want to make a horizontal Bar plot, we can pass `false` as the third
-parameter to the constructor. We also need to change the Y scale to Ordinal
+parameter to the constructor. We also need to change the Y scale to Category
 and the X scale to Linear, and swap the axes and projectors as well:
 
 {% highlight javascript %}
