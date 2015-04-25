@@ -47,7 +47,7 @@ $.when(
     .addDataset(ships)
     .project("x", "shipKey", xScale)
     .project("y", "raceKey", yScale)
-    .project("size", getHullSize * 2)
+    .project("size", getHullSize)
     .project("stroke", "Tech", techScale)
     .project("stroke-width", 2)
     .project("opacity", 1)
